@@ -259,7 +259,7 @@ export function PostCard({ post }: { post: Post }) {
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className="group flex h-[425px] w-full max-w-[300px] flex-col gap-[10px] overflow-hidden rounded-[12px] bg-card p-2 shadow-[var(--clireo-shadow)] transition-[background-color,box-shadow] duration-300 ease-out hover:bg-accent-coral/10 hover:shadow-[var(--clireo-shadow-md)]"
+      className="group flex h-[425px] w-full max-w-none flex-col gap-[10px] overflow-hidden rounded-[12px] bg-card p-2 shadow-[var(--clireo-shadow)] transition-[background-color,box-shadow] duration-300 ease-out hover:bg-accent-coral/10 hover:shadow-[var(--clireo-shadow-md)] lg:max-w-[300px]"
     >
       <div className="relative min-h-0 flex-1 overflow-hidden rounded-[10px] bg-hero">
         <Image

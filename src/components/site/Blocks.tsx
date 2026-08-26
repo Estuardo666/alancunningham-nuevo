@@ -178,7 +178,7 @@ export function MediosDePago({
     <div className="flex w-full flex-col gap-8">
       <ul
         className={cn(
-          "grid w-full gap-4",
+          "grid w-full grid-cols-2 gap-4",
           layout === "row"
             ? "sm:grid-cols-2 lg:grid-cols-5"
             : "sm:grid-cols-2 lg:grid-cols-3",

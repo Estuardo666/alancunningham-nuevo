@@ -129,7 +129,12 @@ export function SiteNav({ overLight = false }: { overLight?: boolean } = {}) {
           </div>
         </div>
 
-        {/* Always mounted: a CSS transition runs off the main thread and, unlike
+        {/* Hangs *below* the bar rather than inside it: in the flow it added its
+            own height to the nav, and the bar's navy fill painted that height as
+            a block even with the panel invisible. Absolute keeps the bar 68px
+            tall and lets the panel carry its own background.
+
+            Always mounted: a CSS transition runs off the main thread and, unlike
             a mount/unmount animation, cannot be skipped when the thread is busy
             — which is exactly when a tap on the menu happens. `inert` keeps the
             closed panel out of the tab order and out of the a11y tree. */}
@@ -141,32 +146,34 @@ export function SiteNav({ overLight = false }: { overLight?: boolean } = {}) {
             transitionTimingFunction: abierto ? RESORTE : CIERRE,
           }}
           className={cn(
-            "flex w-full max-w-[1300px] origin-top flex-col items-start gap-5 overflow-hidden pt-3 lg:hidden",
-            "transition-[opacity,scale,translate,padding-bottom] motion-reduce:transition-opacity",
+            "absolute inset-x-0 top-full origin-top bg-hero px-5 lg:hidden",
+            "transition-[opacity,scale,translate] motion-reduce:transition-opacity",
             abierto
-              ? "translate-y-0 scale-y-100 pb-8 opacity-100 duration-[520ms]"
-              : "pointer-events-none -translate-y-[8px] scale-y-[0.86] pb-0 opacity-0 duration-[180ms]",
+              ? "translate-y-0 scale-y-100 opacity-100 duration-[520ms]"
+              : "pointer-events-none -translate-y-[8px] scale-y-[0.86] opacity-0 duration-[180ms]",
           )}
         >
-          {LINKS.map((link, indice) => (
-            <ItemMenu key={link.label} abierto={abierto} indice={indice}>
-              <Link
-                href={link.href}
-                onClick={() => setAbierto(false)}
-                className="block text-[23px] leading-[31px] tracking-[-0.9px] text-white"
-              >
-                {tr(link.label)}
-              </Link>
+          <div className="mx-auto flex w-full max-w-[1300px] flex-col items-start gap-5 pt-3 pb-8">
+            {LINKS.map((link, indice) => (
+              <ItemMenu key={link.label} abierto={abierto} indice={indice}>
+                <Link
+                  href={link.href}
+                  onClick={() => setAbierto(false)}
+                  className="block text-[23px] leading-[31px] tracking-[-0.9px] text-white"
+                >
+                  {tr(link.label)}
+                </Link>
+              </ItemMenu>
+            ))}
+            <ItemMenu abierto={abierto} indice={LINKS.length} className="mt-2">
+              <PrimaryButton
+                label="Agendá tu consulta"
+                href={whatsappHref()}
+                variant="dark"
+                className="rounded-[12px]"
+              />
             </ItemMenu>
-          ))}
-          <ItemMenu abierto={abierto} indice={LINKS.length} className="mt-2">
-            <PrimaryButton
-              label="Agendá tu consulta"
-              href={whatsappHref()}
-              variant="dark"
-              className="rounded-[12px]"
-            />
-          </ItemMenu>
+          </div>
         </div>
       </nav>
     </>

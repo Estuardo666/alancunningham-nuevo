@@ -259,7 +259,7 @@ export function HomeTurismo() {
           <CtaConMicrocopy contexto="turismo odontológico" />
         </div>
 
-        <div className="flex flex-col gap-4 rounded-[20px] bg-card p-8 shadow-[var(--clireo-shadow)]">
+        <div className="flex flex-col gap-4 rounded-[20px] bg-card p-5 shadow-[var(--clireo-shadow)] lg:p-8">
           <h3 className="text-[22px] leading-[29.7px] tracking-[-0.88px] text-foreground">
             <T>Cuántos días necesitás</T>
           </h3>

@@ -1,6 +1,16 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import { BadgeCheck, BookOpen, GraduationCap, Wrench } from "lucide-react";
+import {
+  BadgeCheck,
+  BookOpen,
+  ChevronDown,
+  GraduationCap,
+  Wrench,
+} from "lucide-react";
+import { motion } from "framer-motion";
+import { useState, type ReactNode } from "react";
 import { SectionEyebrow } from "../shared/SectionEyebrow";
 import { RevealText } from "../shared/RevealText";
 import { CtaConMicrocopy } from "@/components/site/PageShell";
@@ -81,15 +91,21 @@ export function DoctorsSection() {
               </article>
             ))}
             <div className="flex flex-col items-start gap-6">
-              {EQUIPO[0].bio.slice(0, 2).map((parrafo) => (
-                <p
-                  key={parrafo.slice(0, 40)}
-                  className="text-[17px] leading-[23.46px] tracking-[-0.34px] text-muted-foreground"
-                >
-                  <T>{parrafo}</T>
-                </p>
+              {EQUIPO[0].bio.slice(0, 2).map((parrafo, index) => (
+                index === 1 ? (
+                  <ExpandableBioParagraph key={parrafo.slice(0, 40)}>
+                    <T>{parrafo}</T>
+                  </ExpandableBioParagraph>
+                ) : (
+                  <p
+                    key={parrafo.slice(0, 40)}
+                    className="text-[17px] leading-[23.46px] tracking-[-0.34px] text-muted-foreground"
+                  >
+                    <T>{parrafo}</T>
+                  </p>
+                )
               ))}
-              <ul className="grid w-full gap-3 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4">
+              <ul className="grid w-full grid-cols-2 gap-3 lg:col-span-2 lg:grid-cols-4">
                 {EQUIPO[0].formacion.map((item, index) => {
                   const Icon = FORMACION_ICONS[index % FORMACION_ICONS.length];
                   const tone = FORMACION_TONES[index % FORMACION_TONES.length];
@@ -122,5 +138,51 @@ export function DoctorsSection() {
         <CtaConMicrocopy contexto="una consulta inicial" align="center" />
       </div>
     </section>
+  );
+}
+
+function ExpandableBioParagraph({ children }: { children: ReactNode }) {
+  const [abierto, setAbierto] = useState(false);
+
+  return (
+    <div className="w-full">
+      <div className="lg:hidden">
+        <motion.div
+          id="bio-tecnico"
+          initial={false}
+          animate={{ height: abierto ? "auto" : "5.9rem" }}
+          transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+          className="relative overflow-hidden text-[17px] leading-[23.46px] tracking-[-0.34px] text-muted-foreground"
+        >
+          <p>{children}</p>
+          {!abierto ? (
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-x-0 bottom-0 h-8 bg-gradient-to-t from-surface-secondary to-transparent"
+            />
+          ) : null}
+        </motion.div>
+        <motion.button
+          type="button"
+          aria-expanded={abierto}
+          aria-controls="bio-tecnico"
+          onClick={() => setAbierto((actual) => !actual)}
+          className="mt-2 inline-flex items-center gap-1 text-[15px] font-medium text-foreground underline decoration-foreground/35 underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+        >
+          {abierto ? "Ver menos" : "Ver más"}
+          <motion.span
+            animate={{ rotate: abierto ? 180 : 0 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+            aria-hidden
+          >
+            <ChevronDown className="h-4 w-4" />
+          </motion.span>
+        </motion.button>
+      </div>
+
+      <p className="hidden text-[17px] leading-[23.46px] tracking-[-0.34px] text-muted-foreground lg:block">
+        {children}
+      </p>
+    </div>
   );
 }

@@ -15,7 +15,7 @@ import { T } from "@/i18n/LanguageProvider";
  */
 export function HeroSection() {
   return (
-    <section className="relative flex min-h-[900px] flex-col items-center justify-center overflow-hidden bg-hero px-5 lg:px-8">
+    <section className="relative flex min-h-[900px] flex-col items-center justify-end overflow-hidden bg-hero px-5 pb-12 lg:justify-center lg:px-8 lg:pb-0">
       <div className="absolute inset-0 z-0 scale-[1.008]">
         <Image
           src="/images/DSC_0110-1024x683.jpg"
@@ -29,7 +29,7 @@ export function HeroSection() {
         <div className="hero-overlay-vertical absolute inset-0" />
       </div>
 
-      <div className="relative z-10 flex w-full max-w-[1300px] flex-col items-start gap-10 py-24 lg:gap-[70px]">
+      <div className="relative z-10 flex w-full max-w-[1300px] flex-col items-start gap-10 pt-24 lg:gap-[70px] lg:py-24">
         <div className="flex max-w-[640px] flex-col items-start justify-center gap-[14px]">
           <div className="flex flex-col items-start gap-[10px]">
             <p className="text-[15px] leading-[21px] tracking-[1.26px] text-white/80 uppercase">

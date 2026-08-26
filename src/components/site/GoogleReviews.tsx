@@ -197,11 +197,11 @@ export function GoogleReviews() {
         </a>
 
         {data.reviews.length > 1 ? (
-          <div className="absolute right-0 hidden items-center gap-2 sm:flex">
+          <div className="pointer-events-none absolute inset-x-0 top-1/2 flex -translate-y-1/2 items-center justify-between gap-2">
             <button
               type="button"
               onClick={() => scroll(-1)}
-              className="rounded-full border border-transparent bg-accent-coral p-2 text-accent-coral-foreground transition-colors hover:bg-accent-yellow"
+              className="pointer-events-auto rounded-full border border-transparent bg-accent-coral p-2 text-accent-coral-foreground transition-colors hover:bg-accent-yellow"
               aria-label={tr("Ver reseñas anteriores")}
             >
               <ChevronLeft className="h-4 w-4" aria-hidden />
@@ -209,7 +209,7 @@ export function GoogleReviews() {
             <button
               type="button"
               onClick={() => scroll(1)}
-              className="rounded-full border border-transparent bg-secondary p-2 text-secondary-foreground transition-colors hover:bg-accent-yellow"
+              className="pointer-events-auto rounded-full border border-transparent bg-secondary p-2 text-secondary-foreground transition-colors hover:bg-accent-yellow"
               aria-label={tr("Ver más reseñas")}
             >
               <ChevronRight className="h-4 w-4" aria-hidden />

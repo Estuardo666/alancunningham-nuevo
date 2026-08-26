@@ -101,7 +101,7 @@ export function AboutSection() {
           </div>
 
           <motion.ul
-            className="grid w-full gap-4 md:grid-cols-3"
+            className="grid w-full grid-cols-2 gap-4 md:grid-cols-3"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
@@ -124,7 +124,7 @@ export function AboutSection() {
                     rotate: index % 2 === 0 ? -1 : 1,
                     transition: { duration: 0.25, ease: "easeOut" },
                   }}
-                  className={`relative flex min-h-[340px] flex-col justify-between gap-10 overflow-hidden rounded-[18px] p-8 shadow-[var(--clireo-shadow-md)] lg:min-h-[360px] lg:p-10 ${tone.surface} ${tone.ink}`}
+                  className={`relative flex min-h-[340px] flex-col justify-between gap-10 overflow-hidden rounded-[18px] p-5 shadow-[var(--clireo-shadow-md)] sm:p-8 lg:min-h-[360px] lg:p-10 ${index === 0 ? "col-span-2 md:col-span-1" : ""} ${tone.surface} ${tone.ink}`}
                 >
                   <div className="relative z-10 flex w-full items-start justify-between">
                     <span className="flex h-[62px] w-[62px] items-center justify-center overflow-hidden rounded-[12px] bg-foreground">
