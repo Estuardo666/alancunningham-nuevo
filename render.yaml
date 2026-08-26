@@ -1,0 +1,76 @@
+# Render Blueprint — static site.
+#
+# `output: "export"` writes a fully static tree to ./out, so nothing here needs
+# a Node runtime. Two things do NOT come along for the ride and are declared
+# below instead:
+#   - next.config.ts `redirects()` is ignored by `output: export`, so the 301s
+#     live here as Render routes.
+#   - Security headers, which normally would come from middleware.
+services:
+  - type: web
+    name: alancunningham
+    runtime: static
+    buildCommand: npm ci && npm run build
+    staticPublishPath: ./out
+    # Next writes clean directories (trailingSlash: true), so no rewrite rules
+    # are needed for page routing; Render serves out/<ruta>/index.html.
+    envVars:
+      - key: NODE_VERSION
+        value: "24"
+      # Prototype: point this at the .onrender.com URL Render assigns, so
+      # canonicals, OG images and the sitemap do not advertise a domain the
+      # site is not served from yet.
+      - key: NEXT_PUBLIC_SITE_URL
+        value: https://alancunningham.onrender.com
+      # Closes the prototype to crawlers (robots.txt + a noindex meta tag on
+      # every page). Set to "false" — or delete it — on the real domain.
+      - key: NEXT_PUBLIC_NOINDEX
+        value: "true"
+      # Google reviews are fetched once at build time and written to
+      # /api/google-reviews. Without this key the build still succeeds and the
+      # component falls back to a link to the Google profile.
+      - key: GOOGLE_MAPS_PLACES_API_KEY
+        sync: false
+
+    routes:
+      # Legacy English routes from the template.
+      - type: redirect
+        source: /treatments/cosmetic-care
+        destination: /tratamientos/estetica-dental
+      - type: redirect
+        source: /treatments/*
+        destination: /tratamientos
+      - type: redirect
+        source: /treatments
+        destination: /tratamientos
+      - type: redirect
+        source: /contact
+        destination: /contacto
+      # Legacy routes from the previous site on the same domain.
+      - type: redirect
+        source: /blogs/*
+        destination: /blog/*
+      - type: redirect
+        source: /blogs
+        destination: /blog
+      - type: redirect
+        source: /galeria
+        destination: /tratamientos
+      - type: redirect
+        source: /quienes-somos
+        destination: /nosotros
+
+    headers:
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: Referrer-Policy
+        value: strict-origin-when-cross-origin
+      - path: /*
+        name: X-Frame-Options
+        value: SAMEORIGIN
+      # Hashed build assets never change under the same URL.
+      - path: /_next/static/*
+        name: Cache-Control
+        value: public, max-age=31536000, immutable

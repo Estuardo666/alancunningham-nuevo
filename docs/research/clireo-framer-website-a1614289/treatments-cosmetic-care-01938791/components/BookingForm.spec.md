@@ -1,0 +1,11 @@
+# BookingForm Specification
+- Target: .../treatments-cosmetic-care-01938791/BookingForm.tsx  ("use client")
+- Interaction: formulario controlado; sticky top 75px
+- wrapper: position sticky; top 75px; bg var(--card); border-radius 15px; padding 34px; width 470px; sombra var(--clireo-shadow)
+- form: flex column; gap 16px
+- label: 16px, color var(--foreground); asterisco en var(--accent-coral)
+- campo: div bg var(--secondary); border-radius 10px; padding 13px 16px; input transparente, sin borde, 16px, outline none
+- textarea: mismo contenedor, min-height 120px
+- botón submit: width 100%; height 47px; border-radius 40px; bg var(--brand); color var(--primary-foreground); hover bg var(--brand-hover)
+- Campos: Nombre completo* (ph "Jordan Feliz"→"Nombre y apellido"), Teléfono (+54), Fecha y horario* (date + select: Seleccioná horario / 10 a 12 h / 14 a 16 h), ¿En qué podemos ayudarte?* (select: Seleccioná… / Rehabilitación dentobucomaxilar / Carillas de porcelana / Diseño de sonrisa digital / Odontología estética guiada / Prótesis y estética / Consulta general), Mensaje* (textarea)
+- submit: preventDefault + estado "enviado" (prototipo, sin backend)

@@ -1,0 +1,11 @@
+# ContactSection Specification
+- Target: .../contact-4eb95063/ContactSection.tsx (+ ContactForm.tsx "use client")
+- Interaction model: click/typing (formulario controlado, sin backend)
+- section: padding 128px 32px 110px (móvil 100px 20px 80px); bg var(--secondary)
+- grid: [455px, 1fr] con gap 120px en lg; stack en móvil
+- form card: bg var(--card); radius 15px; padding 30px 24px; gap 16px; shadow var(--clireo-shadow)
+- campo: label 16/23.2/-0.24; shell bg var(--background) radius 10px padding 13px 16px
+- fila 1: Nombre completo* | Teléfono (2 columnas, 333px)
+- luego: Fecha y horario* (date + select) · ¿En qué podemos ayudarte?* (select) · Mensaje* (textarea)
+- submit: alto 47px, radius 40px, bg var(--brand), hover var(--brand-hover)
+- call card: bg var(--card); radius 12px; padding 30px; gap 20px; título 22/29.7/-0.88; texto 17/23.46/-0.34; botón pill radius 11px alto 39px bg var(--accent-coral)

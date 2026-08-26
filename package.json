@@ -32,12 +32,16 @@
     "start": "next start",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
-    "check": "npm run lint && npm run typecheck && npm run build"
+    "check": "npm run lint && npm run typecheck && npm run audit:contenido && npm run build",
+    "audit:contenido": "node scripts/audit-contenido.mjs",
+    "qa:rutas": "node scripts/qa-rutas.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.3.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "framer-motion": "^13.1.1",
+    "lenis": "^1.3.26",
     "lucide-react": "^1.6.0",
     "next": "16.3.0",
     "react": "19.2.4",
