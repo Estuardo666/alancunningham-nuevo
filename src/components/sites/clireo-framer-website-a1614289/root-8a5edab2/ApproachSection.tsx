@@ -139,7 +139,7 @@ export function ApproachSection() {
                 className="max-w-[700px] text-[34px] leading-[38px] tracking-[-1.8px] text-foreground lg:text-[46px] lg:leading-[49.68px] lg:tracking-[-2.53px]"
               />
               <p className="max-w-[600px] text-[18px] leading-[24.3px] tracking-[-0.54px] text-muted-foreground">
-                De la consulta inicial sin cargo al control de mantenimiento:
+                De la evaluación inicial al control de mantenimiento:
                 qué pasa en cada etapa y qué te llevás de cada una.
               </p>
             </div>

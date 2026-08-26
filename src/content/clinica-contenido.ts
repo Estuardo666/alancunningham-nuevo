@@ -156,16 +156,16 @@ export const TECNOLOGIA: Tecnologia[] = [
 /** The clinic's clinical process, shown on the home (plan §3.2, block 09). */
 export const COMO_TRABAJAMOS = [
   {
-    titulo: "Consulta inicial sin cargo",
+    titulo: "Evaluación inicial",
     descripcion:
-      "40 minutos de evaluación completa: encías, piezas, mordida y los registros que hagan falta. Sin compromiso de contratar nada.",
+      "Una primera evaluación de 40 minutos para revisar encías, piezas y mordida, y tomar los registros que hagan falta. Te explicamos el diagnóstico y el próximo paso, sin compromiso.",
     imagen: {
       src: "/images/thumbnail_image1-2-jpg-1440x800.webp",
       alt: "Consultorio equipado con sillón dental y lámpara de trabajo",
     },
   },
   {
-    titulo: "Plan por escrito",
+    titulo: "Plan",
     descripcion:
       "Te llevás el plan con lo que hay que hacer, en qué orden, cuánto lleva y cuánto cuesta. Separado en urgente, conveniente y opcional.",
     imagen: {
@@ -174,7 +174,7 @@ export const COMO_TRABAJAMOS = [
     },
   },
   {
-    titulo: "Tratamiento con registro digital",
+    titulo: "Tratamiento",
     descripcion:
       "Escaneo intraoral en lugar de moldes, prueba en boca antes de lo definitivo y control de mordida en cada etapa.",
     imagen: {
@@ -183,7 +183,7 @@ export const COMO_TRABAJAMOS = [
     },
   },
   {
-    titulo: "Controles de mantenimiento",
+    titulo: "Controles",
     descripcion:
       "El tratamiento no termina cuando se cementa la última pieza. Quedan los controles que hacen que el trabajo dure.",
     imagen: {
