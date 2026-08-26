@@ -151,6 +151,7 @@ export default function TurismoPage() {
         bajada={TURISMO_META.bajada}
         migas={MIGAS}
         imagen={{ src: FOTOS_BUENOS_AIRES[8].src }}
+        fondoAleatorio={false}
       >
         {/* The city photograph is the hero background now, so the inline card
             that used to sit here would just show Buenos Aires twice. */}

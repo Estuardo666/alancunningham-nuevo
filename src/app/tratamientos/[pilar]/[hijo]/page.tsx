@@ -103,6 +103,7 @@ export default async function TratamientoPage({
         bajada={tratamiento.resumen}
         migas={migas}
         imagen={{ src: tratamiento.imagen.src }}
+        fondoAleatorio={false}
       />
 
       <Section banda="background">

@@ -102,6 +102,7 @@ export default async function PilarPage({
         bajada={pilar.resumen}
         migas={migas}
         imagen={{ src: pilar.imagen.src }}
+        fondoAleatorio={false}
       />
 
       <Section banda="background">

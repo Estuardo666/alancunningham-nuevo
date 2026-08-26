@@ -19,6 +19,21 @@ const BANDA: Record<Banda, string> = {
   strong: "bg-surface-strong",
 };
 
+const HERO_BACKGROUNDS = [
+  "/images/bg heros/1073.jpg",
+  "/images/bg heros/1554.jpg",
+  "/images/bg heros/190.jpg",
+  "/images/bg heros/24578.jpg",
+  "/images/bg heros/31453.jpg",
+  "/images/bg heros/7450.jpg",
+] as const;
+
+function heroAleatorio() {
+  return HERO_BACKGROUNDS[
+    Math.floor(Math.random() * HERO_BACKGROUNDS.length)
+  ];
+}
+
 /**
  * Internal page hero: navy band with a real photograph behind it and the
  * system's two gradient overlays on top, plus a flat tint so the copy holds
@@ -34,6 +49,7 @@ export function PageHero({
   bajada,
   migas,
   imagen,
+  fondoAleatorio = true,
   children,
 }: {
   eyebrow: string;
@@ -42,14 +58,20 @@ export function PageHero({
   migas: Miga[];
   /** Background photograph. The alt stays empty: it is decorative here. */
   imagen?: { src: string };
+  /** Internal pages use a fresh clinic photograph unless explicitly disabled. */
+  fondoAleatorio?: boolean;
   children?: ReactNode;
 }) {
+  const imagenHero = fondoAleatorio
+    ? { src: heroAleatorio() }
+    : imagen;
+
   return (
     <section className="relative flex min-h-[500px] items-end justify-center overflow-hidden bg-hero px-5 pt-[130px] pb-12 lg:min-h-[640px] lg:px-8 lg:pt-[170px] lg:pb-16">
-      {imagen ? (
+      {imagenHero ? (
         <div className="absolute inset-0 z-0">
           <Image
-            src={imagen.src}
+            src={imagenHero.src}
             alt=""
             fill
             priority

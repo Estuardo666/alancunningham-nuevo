@@ -66,6 +66,7 @@ export default function TratamientosPage() {
         bajada="Explorá especialidades, procesos y tiempos para elegir con claridad. La consulta inicial te ayuda a definir el próximo paso."
         migas={MIGAS}
         imagen={{ src: "/images/DSC_0136-1024x683.jpg" }}
+        fondoAleatorio={false}
       >
         <div className="flex flex-wrap items-center gap-6 pt-2">
           <CtaConMicrocopy contexto="tratamientos" variant="dark" />
