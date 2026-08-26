@@ -7,6 +7,7 @@ import { rutaPilar, rutaTratamiento } from "@/content/tratamientos";
 import type { Caso } from "@/content/casos";
 import type { Post } from "@/content/posts";
 import type { Intencion } from "@/content/intenciones";
+import { T } from "@/i18n/LanguageProvider";
 
 const POST_CATEGORY_TONES: Record<string, string> = {
   Precios: "bg-accent-coral/18 text-accent-coral-strong",
@@ -29,7 +30,7 @@ const PILAR_CARD_TONES = [
 function VerMas({ label = "Ver tratamiento" }: { label?: string }) {
   return (
     <span className="flex items-center gap-1 text-[17px] leading-[23.46px] tracking-[-0.34px] text-accent-coral-strong">
-      {label}
+      <T>{label}</T>
       <span className="relative flex h-6 w-6 shrink-0 items-center justify-center overflow-hidden">
         <ArrowUpRightIcon className="h-[22px] w-[22px] transition-transform duration-300 ease-out group-hover:translate-x-full group-hover:-translate-y-full" />
         <ArrowUpRightIcon className="absolute h-[22px] w-[22px] -translate-x-full translate-y-full transition-transform duration-300 ease-out group-hover:translate-x-0 group-hover:translate-y-0" />
@@ -77,13 +78,13 @@ export function PilarCard({
 
         <div className="flex min-h-0 flex-1 flex-col gap-2 px-2 pb-2">
           <h3 className="line-clamp-2 text-[20px] font-medium leading-[25px] tracking-[-0.5px] text-foreground">
-            {pilar.nombre}
+            <T>{pilar.nombre}</T>
           </h3>
           <p className="line-clamp-3 flex-1 text-[14px] leading-[19px] tracking-[-0.14px] text-muted-foreground">
-            {pilar.tarjeta}
+            <T>{pilar.tarjeta}</T>
           </p>
           <span className="group/cta inline-flex w-fit items-center gap-2 rounded-[10px] border border-button-primary-bg bg-transparent px-3 py-2 text-[14px] leading-[18px] tracking-[-0.14px] text-button-primary-bg transition-colors duration-300 group-hover:bg-button-primary-bg group-hover:text-button-primary-foreground">
-            Ver tratamiento
+            <T>Ver tratamiento</T>
             <span className="relative flex h-5 w-5 shrink-0 items-center justify-center overflow-hidden">
               <ArrowUpRightIcon className="h-4 w-4 transition-transform duration-300 ease-out group-hover/cta:translate-x-0.5 group-hover/cta:-translate-y-0.5" />
             </span>
@@ -118,10 +119,10 @@ export function PilarCard({
 
       <div className="flex flex-1 flex-col gap-[10px] px-1">
         <h3 className="text-[26px] leading-[31.2px] tracking-[-0.91px] text-foreground">
-          {pilar.nombre}
+          <T>{pilar.nombre}</T>
         </h3>
         <p className="flex-1 text-[15px] leading-[21px] tracking-[-0.15px] text-muted-foreground">
-          {pilar.tarjeta}
+          <T>{pilar.tarjeta}</T>
         </p>
         <VerMas />
       </div>
@@ -164,15 +165,15 @@ export function TratamientoCard({
       </div>
       <div className="flex min-h-0 flex-1 flex-col gap-2 px-2 pb-2">
         <h3 className="line-clamp-2 text-[20px] font-medium leading-[25px] tracking-[-0.5px] text-foreground">
-          {tratamiento.nombre}
+          <T>{tratamiento.nombre}</T>
         </h3>
         {!sinResumen ? (
           <p className="line-clamp-3 flex-1 text-[14px] leading-[19px] tracking-[-0.14px] text-muted-foreground">
-            {tratamiento.resumen}
+            <T>{tratamiento.resumen}</T>
           </p>
         ) : null}
         <span className="group/cta inline-flex w-fit items-center gap-2 rounded-[10px] border border-button-primary-bg bg-transparent px-3 py-2 text-[14px] leading-[18px] tracking-[-0.14px] text-button-primary-bg transition-colors duration-300 group-hover:bg-button-primary-bg group-hover:text-button-primary-foreground">
-          Ver tratamiento
+          <T>Ver tratamiento</T>
           <span className="relative flex h-5 w-5 shrink-0 items-center justify-center overflow-hidden">
             <ArrowUpRightIcon className="h-4 w-4 transition-transform duration-300 ease-out group-hover/cta:translate-x-0.5 group-hover/cta:-translate-y-0.5" />
           </span>
@@ -198,13 +199,13 @@ export function CasoCard({ caso }: { caso: Caso }) {
           className="object-cover transition-transform duration-700 ease-[cubic-bezier(0.2,0.65,0.3,1)] group-hover:scale-110"
         />
         <span className="absolute top-3 left-3 rounded-full bg-card/90 px-3 py-1 text-[13px] leading-[18px] tracking-[-0.1px] text-foreground">
-          {caso.etiqueta}
+          <T>{caso.etiqueta}</T>
         </span>
       </div>
       <div className="flex w-full flex-col gap-3 px-2 pb-2">
         <div className="flex w-full flex-col gap-1.5">
           <p className="text-[13px] leading-[18px] tracking-[-0.1px] text-muted-foreground">
-            {caso.tratamiento} · {caso.duracion}
+            <T>{caso.tratamiento}</T> · <T>{caso.duracion}</T>
           </p>
           <h3 className="line-clamp-2 text-[18px] font-medium leading-[23px] tracking-[-0.45px] text-foreground">
             {caso.titulo}
@@ -212,7 +213,7 @@ export function CasoCard({ caso }: { caso: Caso }) {
         </div>
         <div className="flex w-full items-center justify-between gap-3">
           <span className="rounded-full bg-accent-coral/18 px-3 py-1 text-[14px] leading-[18px] text-accent-coral-strong">
-            Ver el caso
+            <T>Ver el caso</T>
           </span>
           <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-[10px] bg-foreground text-background transition-colors duration-300 group-hover:bg-accent-coral group-hover:text-accent-coral-foreground">
             <ArrowUpRightIcon className="h-5 w-5" />
@@ -235,13 +236,13 @@ export function IntentCard({ intencion }: { intencion: Intencion }) {
     >
       <div className="flex flex-col gap-3">
         <p className="text-[14px] leading-[18.2px] tracking-[1.26px] text-accent-coral-strong uppercase">
-          {intencion.etiqueta}
+          <T>{intencion.etiqueta}</T>
         </p>
         <h3 className="text-[26px] leading-[31.2px] tracking-[-0.91px] text-foreground">
-          {intencion.titulo}
+          <T>{intencion.titulo}</T>
         </h3>
         <p className="text-[15px] leading-[21px] tracking-[-0.15px] text-muted-foreground">
-          {intencion.descripcion}
+          <T>{intencion.descripcion}</T>
         </p>
       </div>
       <VerMas label="Entrar" />
@@ -282,7 +283,7 @@ export function PostCard({ post }: { post: Post }) {
           <span
             className={`rounded-full px-3 py-1 text-[14px] leading-[18px] ${categoryTone}`}
           >
-            {post.categoria}
+            <T>{post.categoria}</T>
           </span>
           <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-[10px] bg-foreground text-background transition-colors duration-300 group-hover:bg-accent-coral group-hover:text-accent-coral-foreground">
             <ArrowUpRightIcon className="h-5 w-5" />

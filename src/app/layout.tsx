@@ -1,4 +1,5 @@
 import "./globals.css";
+import { LanguageProvider } from "@/i18n/LanguageProvider";
 import { JsonLd } from "@/components/site/JsonLd";
 import {
   dentistSchema,
@@ -38,7 +39,8 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <script
           dangerouslySetInnerHTML={{
-            __html: `try { const theme = localStorage.getItem("clireo-theme"); const root = document.documentElement; root.classList.remove("dark", "light"); if (theme === "dark" || theme === "light") { root.classList.add(theme); root.style.colorScheme = theme; } else { root.classList.add("light"); root.style.colorScheme = "light"; } } catch {}`,
+            __html: `try { const lang = localStorage.getItem("sdc-lang"); if (lang === "en") document.documentElement.lang = "en"; } catch {}
+try { const theme = localStorage.getItem("clireo-theme"); const root = document.documentElement; root.classList.remove("dark", "light"); if (theme === "dark" || theme === "light") { root.classList.add(theme); root.style.colorScheme = theme; } else { root.classList.add("light"); root.style.colorScheme = "light"; } } catch {}`,
           }}
         />
         {/* Global graph: Dentist + LocalBusiness, Organization, WebSite, Person. */}
@@ -49,7 +51,7 @@ export default function RootLayout({
             ...EQUIPO.map((p) => personSchema(p.slug)),
           ])}
         />
-        {children}
+        <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>
   );

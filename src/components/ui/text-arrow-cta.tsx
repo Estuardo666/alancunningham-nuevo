@@ -5,6 +5,7 @@ import { motion, type Transition, type Variants } from "framer-motion";
 import { useState, type ComponentPropsWithoutRef, type ReactNode } from "react";
 
 import { cn } from "@/lib/utils";
+import { useTr } from "@/i18n/LanguageProvider";
 
 /**
  * Text link CTA modelled on the Framer "Text Arrow CTA" component:
@@ -71,6 +72,7 @@ export function TextArrowCTA({
   ...props
 }: TextArrowCTAProps) {
   const [active, setActive] = useState(false);
+  const tr = useTr();
 
   return (
     <Link
@@ -96,7 +98,7 @@ export function TextArrowCTA({
         <Arrow />
       </motion.span>
 
-      <span>{children}</span>
+      <span>{typeof children === "string" ? tr(children) : children}</span>
 
       <motion.span
         variants={arrowRight}

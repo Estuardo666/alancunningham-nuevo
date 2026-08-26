@@ -5,6 +5,7 @@ import { FaqBlock } from "@/components/site/FaqBlock";
 import { FAQS_HOME } from "@/content/faqs";
 import { CTA_PRIMARIO, whatsappHref } from "@/content/clinica";
 import { TextArrowCTA } from "@/components/ui/text-arrow-cta";
+import { T } from "@/i18n/LanguageProvider";
 
 /**
  * 13 · FAQ. The six questions are the ones that decide the appointment —
@@ -31,7 +32,9 @@ export function FaqsSection() {
 
           <div className="flex max-w-[280px] flex-col items-start gap-4">
             <p className="text-[17px] leading-[23.46px] tracking-[-0.34px] text-muted-foreground">
-              ¿Tenés otra consulta? Escribinos y te respondemos el mismo día.
+              <T>
+                ¿Tenés otra consulta? Escribinos y te respondemos el mismo día.
+              </T>
             </p>
             <PrimaryButton
               label={CTA_PRIMARIO}

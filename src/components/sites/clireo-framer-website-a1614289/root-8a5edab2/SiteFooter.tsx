@@ -8,6 +8,7 @@ import { CLINICA, CTA_PRIMARIO, whatsappHref } from "@/content/clinica";
 import { PILARES, rutaPilar } from "@/content/tratamientos";
 import { INTENCIONES } from "@/content/intenciones";
 import { GoogleRatingSummary } from "@/components/site/GoogleReviews";
+import { T } from "@/i18n/LanguageProvider";
 
 const COLUMNS: { heading: string; links: { label: string; href: string }[] }[] =
   [
@@ -171,8 +172,10 @@ export function SiteFooter({
 
                 <div className="flex max-w-[520px] flex-col items-center gap-7">
                   <p className="text-center text-[17px] leading-[23.46px] tracking-[-0.34px] text-white">
-                    Contanos qué necesitás. Salís con un plan claro y un
-                    presupuesto por escrito.
+                    <T>
+                      Contanos qué necesitás. Salís con un plan claro y un
+                      presupuesto por escrito.
+                    </T>
                   </p>
 
                   <div className="flex flex-col items-center gap-6 sm:flex-row">
@@ -226,7 +229,9 @@ export function SiteFooter({
                     strokeWidth={1.8}
                     aria-hidden
                   />
-                  <span>{CLINICA.horariosTexto}</span>
+                  <span>
+                    <T>{CLINICA.horariosTexto}</T>
+                  </span>
                 </span>
               </address>
               <div
@@ -252,7 +257,7 @@ export function SiteFooter({
               {COLUMNS.map((column, columnIndex) => (
                 <div key={column.heading} className="flex flex-col gap-3">
                   <p className="text-[14px] leading-[18.2px] tracking-[1.26px] text-white uppercase">
-                    {column.heading}
+                    <T>{column.heading}</T>
                   </p>
                   {column.links.map((link) => (
                     <Link
@@ -260,7 +265,7 @@ export function SiteFooter({
                       href={link.href}
                       className={`text-[15px] font-normal leading-[21px] tracking-[-0.24px] text-white transition-colors duration-300 ${FOOTER_HOVER_TONES[columnIndex]}`}
                     >
-                      {link.label}
+                      <T>{link.label}</T>
                     </Link>
                   ))}
                 </div>
@@ -273,7 +278,7 @@ export function SiteFooter({
       <div className="w-full px-5 lg:px-8">
         <div className="mx-auto flex w-full max-w-[1300px] flex-col items-center justify-between gap-2 py-10 sm:flex-row">
           <p className="text-[16px] leading-[23.2px] tracking-[-0.24px] text-white">
-            © 2026 {CLINICA.nombre}. Todos los derechos reservados.
+            © 2026 {CLINICA.nombre}. <T>Todos los derechos reservados.</T>
           </p>
           <p className="text-[16px] leading-[23.2px] tracking-[-0.24px] text-white">
             {CLINICA.titular} · M.N. 42463 · Núñez, Buenos Aires

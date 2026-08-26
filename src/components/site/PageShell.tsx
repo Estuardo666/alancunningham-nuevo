@@ -7,6 +7,7 @@ import { RevealText } from "@/components/sites/clireo-framer-website-a1614289/sh
 import { PrimaryButton } from "@/components/sites/clireo-framer-website-a1614289/shared/PrimaryButton";
 import { Breadcrumbs, type Miga } from "./Breadcrumbs";
 import { CTA_PRIMARIO, whatsappHref } from "@/content/clinica";
+import { T } from "@/i18n/LanguageProvider";
 
 /** The four background bands of the system, in Tailwind form. */
 export type Banda = "hero" | "background" | "secondary" | "strong";
@@ -86,7 +87,7 @@ export function PageHero({
         </div>
         {bajada ? (
           <p className="max-w-[640px] text-[18px] leading-[24.3px] tracking-[-0.54px] text-white/80">
-            {bajada}
+            <T>{bajada}</T>
           </p>
         ) : null}
         {children}
@@ -123,11 +124,11 @@ export function PageHeaderCompacto({
         <Breadcrumbs items={migas} tone="dark" />
         <SectionEyebrow>{eyebrow}</SectionEyebrow>
         <h1 className="max-w-[900px] text-[32px] leading-[36px] tracking-[-1.6px] text-foreground lg:text-[46px] lg:leading-[49.68px] lg:tracking-[-2.53px]">
-          {h1}
+          <T>{h1}</T>
         </h1>
         {bajada ? (
           <p className="max-w-[720px] text-[18px] leading-[24.3px] tracking-[-0.54px] text-muted-foreground">
-            {bajada}
+            <T>{bajada}</T>
           </p>
         ) : null}
         {datos?.length ? (
@@ -155,7 +156,7 @@ export function PageHeaderCompacto({
                         aria-hidden
                       />
                     ) : null}
-                    {dato.etiqueta}
+                    <T>{dato.etiqueta}</T>
                   </dt>
                   <dd className="min-w-0 truncate text-[14px] leading-[19px] tracking-[-0.14px]">
                     {dato.valor}
@@ -250,7 +251,7 @@ export function SectionHeading({
             align === "center" && "text-center",
           )}
         >
-          {bajada}
+          <T>{bajada}</T>
         </p>
       ) : null}
     </div>
@@ -281,7 +282,7 @@ export function Prose({
             tone === "light" ? "text-white/85" : "text-muted-foreground",
           )}
         >
-          {p}
+          <T>{p}</T>
         </p>
       ))}
     </div>
@@ -324,7 +325,7 @@ export function Checklist({
               tone === "light" ? "text-white/85" : "text-muted-foreground",
             )}
           >
-            {item}
+            <T>{item}</T>
           </span>
         </li>
       ))}
@@ -383,7 +384,7 @@ export function Pasos({
               tone === "light" ? "text-white" : "text-foreground",
             )}
           >
-            {paso.titulo}
+            <T>{paso.titulo}</T>
           </h3>
           <p
             className={cn(
@@ -393,7 +394,7 @@ export function Pasos({
               tone === "light" ? "text-white/80" : "text-muted-foreground",
             )}
           >
-            {paso.descripcion}
+            <T>{paso.descripcion}</T>
           </p>
         </li>
       ))}

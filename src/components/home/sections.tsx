@@ -21,6 +21,7 @@ import { TextArrowCTA } from "@/components/ui/text-arrow-cta";
 import { PrimaryButton } from "@/components/sites/clireo-framer-website-a1614289/shared/PrimaryButton";
 import { CalendarDays, FileText, MessageCircle } from "lucide-react";
 import type { MediaAsset } from "@/content/types";
+import { T } from "@/i18n/LanguageProvider";
 
 const TURISMO_STEP_ICONS = [MessageCircle, FileText, CalendarDays] as const;
 
@@ -110,7 +111,7 @@ export function HomePrecioCobertura() {
       <div className="grid w-full gap-10 lg:grid-cols-2">
         <div className="flex flex-col gap-6">
           <h3 className="text-[22px] leading-[29.7px] tracking-[-0.88px] text-foreground">
-            Rangos orientativos
+            <T>Rangos orientativos</T>
           </h3>
           <PriceTable
             slugs={[
@@ -131,7 +132,7 @@ export function HomePrecioCobertura() {
 
         <div className="flex flex-col gap-6">
           <h3 className="text-[22px] leading-[29.7px] tracking-[-0.88px] text-foreground">
-            Medios de pago y coberturas
+            <T>Medios de pago y coberturas</T>
           </h3>
           <MediosDePago conImagenes={false} />
           <CoverageBadges />
@@ -248,7 +249,9 @@ export function HomeTurismo() {
                   <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[10px] bg-accent-coral/15 text-accent-coral-strong">
                     <Icon className="h-5 w-5" strokeWidth={1.8} aria-hidden />
                   </span>
-                  <span>{paso.titulo.split(" · ")[1]}</span>
+                  <span>
+                    <T>{paso.titulo.split(" · ")[1]}</T>
+                  </span>
                 </li>
               );
             })}
@@ -258,7 +261,7 @@ export function HomeTurismo() {
 
         <div className="flex flex-col gap-4 rounded-[20px] bg-card p-8 shadow-[var(--clireo-shadow)]">
           <h3 className="text-[22px] leading-[29.7px] tracking-[-0.88px] text-foreground">
-            Cuántos días necesitás
+            <T>Cuántos días necesitás</T>
           </h3>
           <ul className="flex flex-col gap-0 overflow-hidden rounded-[12px]">
             {TIEMPOS_ESTADIA.slice(0, 5).map((t) => (
@@ -277,10 +280,10 @@ export function HomeTurismo() {
                   className="h-12 w-12 shrink-0 rounded-[9px] object-cover"
                 />
                 <span className="min-w-0 flex-1 text-[15px] leading-[21px] tracking-[-0.15px] text-foreground">
-                  {t.tratamiento}
+                  <T>{t.tratamiento}</T>
                 </span>
                 <span className="shrink-0 text-right text-[15px] leading-[21px] tracking-[-0.15px] text-accent-coral-strong">
-                  {t.estadia}
+                  <T>{t.estadia}</T>
                 </span>
               </li>
             ))}

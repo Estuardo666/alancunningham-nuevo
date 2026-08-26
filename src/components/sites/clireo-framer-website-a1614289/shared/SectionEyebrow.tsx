@@ -1,4 +1,7 @@
+"use client";
+
 import { cn } from "@/lib/utils";
+import { useTr } from "@/i18n/LanguageProvider";
 
 /**
  * The small uppercase label that opens most sections, preceded by a solid
@@ -13,6 +16,7 @@ export function SectionEyebrow({
   className?: string;
   tone?: "navy" | "light" | "coral" | "yellow";
 }) {
+  const tr = useTr();
   const color =
     tone === "coral"
       ? "text-accent-coral-strong"
@@ -43,7 +47,7 @@ export function SectionEyebrow({
           color,
         )}
       >
-        {children}
+        {tr(children)}
       </p>
     </div>
   );

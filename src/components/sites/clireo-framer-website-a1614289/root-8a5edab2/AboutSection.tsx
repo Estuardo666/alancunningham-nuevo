@@ -8,6 +8,7 @@ import { asset } from "../shared/assets";
 import { SectionEyebrow } from "../shared/SectionEyebrow";
 import { PrimaryButton } from "../shared/PrimaryButton";
 import { SOBRE_LA_CLINICA } from "@/content/clinica-contenido";
+import { T, useTr } from "@/i18n/LanguageProvider";
 import { CASOS } from "@/content/casos";
 
 const CARD_TONES = [
@@ -91,9 +92,9 @@ export function AboutSection() {
                   ))}
                 </span>
                 <span className="text-[15px] leading-[21px] tracking-[-0.15px] text-foreground">
-                  Ver casos reales
+                  <T>Ver casos reales</T>
                   <br />
-                  Antes y después
+                  <T>Antes y después</T>
                 </span>
               </Link>
             </div>
@@ -142,12 +143,12 @@ export function AboutSection() {
 
                   <div className="relative z-10 flex flex-col gap-3">
                     <h3 className="text-[26px] leading-[31.2px] tracking-[-0.91px]">
-                      {tarjeta.titulo}
+                      <T>{tarjeta.titulo}</T>
                     </h3>
                     <p
                       className={`text-[17px] leading-[23.46px] tracking-[-0.34px] ${tone.muted}`}
                     >
-                      {tarjeta.descripcion}
+                      <T>{tarjeta.descripcion}</T>
                     </p>
                   </div>
                 </motion.li>
@@ -183,7 +184,7 @@ export function progresoDeReveal(top: number, alto: number) {
 function WordReveal({ text, className }: { text: string; className?: string }) {
   const ref = useRef<HTMLParagraphElement>(null);
   const [progreso, setProgreso] = useState(0);
-  const palabras = text.split(" ");
+  const palabras = useTr()(text).split(" ");
 
   useEffect(() => {
     const node = ref.current;

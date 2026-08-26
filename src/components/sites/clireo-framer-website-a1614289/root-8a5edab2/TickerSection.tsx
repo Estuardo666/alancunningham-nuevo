@@ -1,6 +1,7 @@
 import { SparkleIcon } from "../shared/icons";
 
 import { PILARES } from "@/content/tratamientos";
+import { T } from "@/i18n/LanguageProvider";
 
 const ITEMS = PILARES.map((pilar) => pilar.nombre);
 const SPARKLE_COLORS = [
@@ -32,7 +33,7 @@ export function TickerSection() {
               {ITEMS.map((item, index) => (
                 <li key={item} className="flex items-center gap-[60px] px-2">
                   <span className="block py-2 text-[40px] leading-[1.1] tracking-[-2.4px] whitespace-nowrap text-foreground lg:text-[74px] lg:tracking-[-4.588px]">
-                    {item}
+                    <T>{item}</T>
                   </span>
                   <SparkleIcon
                     className={`h-8 w-8 shrink-0 lg:h-11 lg:w-11 ${SPARKLE_COLORS[index % SPARKLE_COLORS.length]}`}

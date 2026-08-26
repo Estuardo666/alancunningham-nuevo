@@ -5,6 +5,7 @@ import { motion, MotionConfig } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import type { SVGProps } from "react";
 import { COMO_TRABAJAMOS } from "@/content/clinica-contenido";
+import { T } from "@/i18n/LanguageProvider";
 
 import { SectionEyebrow } from "../shared/SectionEyebrow";
 import { RevealText } from "../shared/RevealText";
@@ -139,8 +140,10 @@ export function ApproachSection() {
                 className="max-w-[700px] text-[34px] leading-[38px] tracking-[-1.8px] text-foreground lg:text-[46px] lg:leading-[49.68px] lg:tracking-[-2.53px]"
               />
               <p className="max-w-[600px] text-[18px] leading-[24.3px] tracking-[-0.54px] text-muted-foreground">
-                De la evaluación inicial al control de mantenimiento:
-                qué pasa en cada etapa y qué te llevás de cada una.
+                <T>
+                  De la evaluación inicial al control de mantenimiento: qué
+                  pasa en cada etapa y qué te llevás de cada una.
+                </T>
               </p>
             </div>
             <TextArrowCTA
@@ -199,13 +202,13 @@ export function ApproachSection() {
                           className={`h-[30px] w-[30px] ${tone.icon}`}
                         />
                         <h3 className="text-[26px] leading-[31.2px] tracking-[-0.91px]">
-                          {step.title}
+                          <T>{step.title}</T>
                         </h3>
                       </div>
                       <p
                         className={`text-[17px] leading-[23.46px] tracking-[-0.34px] ${tone.muted}`}
                       >
-                        {step.description}
+                        <T>{step.description}</T>
                       </p>
                     </div>
                   </motion.article>
@@ -244,7 +247,7 @@ function StepPill({
         style={{ backgroundColor: tone.marker }}
       />
       <span className="text-[18px] leading-[24.3px] tracking-[-0.54px]">
-        {label}
+        <T>{label}</T>
       </span>
     </motion.div>
   );

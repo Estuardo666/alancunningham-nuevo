@@ -6,6 +6,8 @@ import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import { PrimaryButton } from "../shared/PrimaryButton";
 import { ThemeToggle } from "../shared/ThemeToggle";
+import { LanguageSwitch } from "@/i18n/LanguageSwitch";
+import { useTr } from "@/i18n/LanguageProvider";
 import type { NavLink } from "@/types/clireo";
 import { CLINICA, whatsappHref } from "@/content/clinica";
 
@@ -39,6 +41,7 @@ const ESCALON = 45;
  * sentinel at the top of the page scrolls out of view it gains the navy fill.
  */
 export function SiteNav({ overLight = false }: { overLight?: boolean } = {}) {
+  const tr = useTr();
   const sentinel = useRef<HTMLDivElement>(null);
   const [scrolled, setScrolled] = useState(false);
   const [abierto, setAbierto] = useState(false);
@@ -63,7 +66,7 @@ export function SiteNav({ overLight = false }: { overLight?: boolean } = {}) {
     <>
       <div ref={sentinel} aria-hidden className="absolute top-0 h-px w-full" />
       <nav
-        aria-label="Navegación principal"
+        aria-label={tr("Navegación principal")}
         className={cn(
           "fixed inset-x-0 top-0 z-50 flex flex-col items-center px-5 transition-colors duration-300 ease-out lg:px-8",
           scrolled || abierto ? "bg-hero" : "bg-transparent",
@@ -93,7 +96,7 @@ export function SiteNav({ overLight = false }: { overLight?: boolean } = {}) {
           <div className="hidden items-center gap-7 lg:flex lg:gap-8">
             {LINKS.map((link) => (
               <Link key={link.label} href={link.href} className="group">
-                <SwapLabel label={link.label} className={textClass} />
+                <SwapLabel label={tr(link.label)} className={textClass} />
               </Link>
             ))}
           </div>
@@ -106,11 +109,13 @@ export function SiteNav({ overLight = false }: { overLight?: boolean } = {}) {
               className="hidden rounded-[11px] lg:flex"
             />
 
+            <LanguageSwitch onDark={onDark || abierto} />
+
             <ThemeToggle onDark={onDark || abierto} />
 
             <button
               type="button"
-              aria-label={abierto ? "Cerrar menú" : "Abrir menú"}
+              aria-label={tr(abierto ? "Cerrar menú" : "Abrir menú")}
               aria-expanded={abierto}
               aria-controls="menu-mobile"
               onClick={() => setAbierto((v) => !v)}
@@ -150,7 +155,7 @@ export function SiteNav({ overLight = false }: { overLight?: boolean } = {}) {
                 onClick={() => setAbierto(false)}
                 className="block text-[23px] leading-[31px] tracking-[-0.9px] text-white"
               >
-                {link.label}
+                {tr(link.label)}
               </Link>
             </ItemMenu>
           ))}

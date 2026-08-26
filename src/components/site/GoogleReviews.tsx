@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import { useTr } from "@/i18n/LanguageProvider";
 import { asset } from "@/components/sites/clireo-framer-website-a1614289/shared/assets";
 import { GOOGLE_REVIEWS } from "@/content/testimonios";
 import type { GoogleReview, GoogleReviewsPayload } from "@/lib/google-reviews";
@@ -102,6 +103,7 @@ function ReviewCard({ review }: { review: GoogleReview }) {
 }
 
 export function GoogleReviews() {
+  const tr = useTr();
   const [data, setData] = useState<GoogleReviewsPayload | null>(null);
   const [hasError, setHasError] = useState(false);
   const [requestVersion, setRequestVersion] = useState(0);
@@ -163,7 +165,7 @@ export function GoogleReviews() {
     return (
       <div
         className="h-[236px] w-full animate-pulse motion-reduce:animate-none rounded-[13px] bg-foreground/5"
-        aria-label="Cargando reseñas de Google"
+        aria-label={tr("Cargando reseñas de Google")}
       />
     );
   }
@@ -183,7 +185,7 @@ export function GoogleReviews() {
           </span>
           <ReviewStars rating={data.rating} />
           <span className="text-[15px] leading-[20px] font-medium text-foreground">
-            {data.reviewCount} reseñas
+            {data.reviewCount} {tr("reseñas")}
           </span>
           <Image
             src={asset("lTrIrSG4mvwiX5mimYjf66IFlQ.png")}
@@ -200,7 +202,7 @@ export function GoogleReviews() {
               type="button"
               onClick={() => scroll(-1)}
               className="rounded-full border border-transparent bg-accent-coral p-2 text-accent-coral-foreground transition-colors hover:bg-accent-yellow"
-              aria-label="Ver reseñas anteriores"
+              aria-label={tr("Ver reseñas anteriores")}
             >
               <ChevronLeft className="h-4 w-4" aria-hidden />
             </button>
@@ -208,7 +210,7 @@ export function GoogleReviews() {
               type="button"
               onClick={() => scroll(1)}
               className="rounded-full border border-transparent bg-secondary p-2 text-secondary-foreground transition-colors hover:bg-accent-yellow"
-              aria-label="Ver más reseñas"
+              aria-label={tr("Ver más reseñas")}
             >
               <ChevronRight className="h-4 w-4" aria-hidden />
             </button>
@@ -237,6 +239,7 @@ export function GoogleRatingSummary({
 }: {
   className?: string;
 }) {
+  const tr = useTr();
   const [data, setData] = useState<GoogleReviewsPayload | null>(null);
 
   useEffect(() => {
@@ -264,7 +267,7 @@ export function GoogleRatingSummary({
       target="_blank"
       rel="noopener noreferrer"
       className={`flex items-center gap-2 transition-opacity hover:opacity-70 ${className}`}
-      aria-label="Ver calificación y reseñas reales en Google"
+      aria-label={tr("Ver calificación y reseñas reales en Google")}
     >
       {data ? (
         <>
@@ -273,7 +276,7 @@ export function GoogleRatingSummary({
           </span>
           <ReviewStars rating={data.rating} tone="on-dark" />
           <span className="text-[15px] leading-[20px] text-current">
-            {data.reviewCount} reseñas
+            {data.reviewCount} {tr("reseñas")}
           </span>
         </>
       ) : (

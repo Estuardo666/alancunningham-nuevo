@@ -3,6 +3,7 @@ import { RevealText } from "../shared/RevealText";
 import { PrimaryButton } from "../shared/PrimaryButton";
 import { TextArrowCTA } from "@/components/ui/text-arrow-cta";
 import { GoogleRatingSummary } from "@/components/site/GoogleReviews";
+import { T } from "@/i18n/LanguageProvider";
 
 /**
  * Home hero. Two corrections from the plan land here:
@@ -32,7 +33,7 @@ export function HeroSection() {
         <div className="flex max-w-[640px] flex-col items-start justify-center gap-[14px]">
           <div className="flex flex-col items-start gap-[10px]">
             <p className="text-[15px] leading-[21px] tracking-[1.26px] text-white/80 uppercase">
-              Odontología con planificación digital
+              <T>Odontología con planificación digital</T>
             </p>
             <RevealText
               as="h1"
@@ -42,8 +43,10 @@ export function HeroSection() {
             />
           </div>
           <p className="max-w-[480px] text-[18px] leading-[25px] tracking-[-0.6px] text-white/90 lg:text-[20px] lg:leading-[27px] lg:tracking-[-0.8px]">
-            Planificamos en digital y te mostramos el resultado antes de tocar
-            un diente.
+            <T>
+              Planificamos en digital y te mostramos el resultado antes de
+              tocar un diente.
+            </T>
           </p>
         </div>
 
@@ -56,7 +59,7 @@ export function HeroSection() {
               variant="dark"
             />
             <TextArrowCTA href="/obras-sociales" className="text-white">
-              ¿Trabajan con mi obra social?
+              <T>¿Trabajan con mi obra social?</T>
             </TextArrowCTA>
           </div>
 

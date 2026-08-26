@@ -10,6 +10,7 @@ import { RevealText } from "../shared/RevealText";
 import { ProgressiveBlur } from "../shared/ProgressiveBlur";
 import { colorPilar } from "../shared/pilarColores";
 import { PILARES, rutaPilar, type Pilar } from "@/content/tratamientos";
+import { T, useTr } from "@/i18n/LanguageProvider";
 
 const CARD_WIDTH = 407;
 const CARD_GAP = 12;
@@ -105,8 +106,12 @@ export function ServicesSection() {
             >
               <span className="block h-6 overflow-hidden text-[18px] leading-[24.3px] tracking-[-0.54px] whitespace-nowrap text-accent-coral">
                 <span className="block transition-transform duration-300 ease-out group-hover:-translate-y-6">
-                  <span className="block">Ver todos los tratamientos</span>
-                  <span className="block">Ver todos los tratamientos</span>
+                  <span className="block">
+                    <T>Ver todos los tratamientos</T>
+                  </span>
+                  <span className="block">
+                    <T>Ver todos los tratamientos</T>
+                  </span>
                 </span>
               </span>
               <span className="relative flex h-7 w-7 shrink-0 items-center justify-center overflow-hidden text-accent-coral">
@@ -130,10 +135,12 @@ function CarouselButton({
   icon: string;
   onClick: () => void;
 }) {
+  const tr = useTr();
+
   return (
     <button
       type="button"
-      aria-label={label}
+      aria-label={tr(label)}
       onClick={onClick}
       className="flex h-11 w-11 items-center justify-center rounded-[20px] bg-secondary text-secondary-foreground transition-colors duration-300 hover:bg-button-tinted-hover"
     >
@@ -188,13 +195,13 @@ function ServiceTile({ pilar }: { pilar: Pilar }) {
       <div className="relative z-20 flex flex-col items-start gap-4">
         <div className="flex flex-col gap-[6px] transition-colors duration-300 group-hover:text-[var(--tile-ink)] group-focus-visible:text-[var(--tile-ink)]">
           <h3 className="text-[26px] leading-[31.2px] tracking-[-0.91px] text-white transition-colors duration-300 group-hover:text-[var(--tile-ink)] group-focus-visible:text-[var(--tile-ink)]">
-            {pilar.nombre}
+            <T>{pilar.nombre}</T>
           </h3>
           <p className="text-[15px] leading-[21px] tracking-[-0.15px] text-white opacity-80 transition-[color,opacity] duration-300 group-hover:text-[var(--tile-ink)] group-hover:opacity-100 group-focus-visible:text-[var(--tile-ink)] group-focus-visible:opacity-100">
-            {pilar.tarjeta}
+            <T>{pilar.tarjeta}</T>
           </p>
           <span className="mt-1 flex items-center gap-1 text-[16px] leading-[22px] tracking-[-0.32px] text-white opacity-0 transition-[opacity,translate] duration-300 group-hover:text-[var(--tile-ink)] group-hover:opacity-100 group-focus-visible:text-[var(--tile-ink)] group-focus-visible:opacity-100 motion-safe:translate-y-1 motion-safe:group-hover:translate-y-0 motion-safe:group-focus-visible:translate-y-0">
-            Ver tratamiento
+            <T>Ver tratamiento</T>
             <ArrowUpRightIcon className="h-5 w-5" aria-hidden />
           </span>
         </div>

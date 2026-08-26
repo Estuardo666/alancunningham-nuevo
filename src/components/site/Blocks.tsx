@@ -9,6 +9,8 @@ import {
   Stethoscope,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { T } from "@/i18n/LanguageProvider";
+import { EtiquetaPrecioTraducida } from "./EtiquetaPrecio";
 import {
   PRECIOS,
   MEDIOS_DE_PAGO,
@@ -59,18 +61,7 @@ function TableHeading({
 }
 
 function EtiquetaPrecio({ etiqueta }: { etiqueta: string }) {
-  const partes = etiqueta.match(/^(.*?)(\s*\([^)]*\))$/);
-
-  if (!partes) return <>{etiqueta}</>;
-
-  return (
-    <>
-      {partes[1]}
-      <span className="text-[13px] leading-[18px] tracking-[-0.13px] text-muted-foreground">
-        {partes[2]}
-      </span>
-    </>
-  );
+  return <EtiquetaPrecioTraducida etiqueta={etiqueta} />;
 }
 
 /**
@@ -88,13 +79,19 @@ export function PriceTable({ slugs }: { slugs?: string[] }) {
         <thead>
           <tr className="border-b border-border">
             <th scope="col" className={TH}>
-              <TableHeading icon={Stethoscope}>Tratamiento</TableHeading>
+              <TableHeading icon={Stethoscope}>
+                <T>Tratamiento</T>
+              </TableHeading>
             </th>
             <th scope="col" className={TH}>
-              <TableHeading icon={Banknote}>Desde</TableHeading>
+              <TableHeading icon={Banknote}>
+                <T>Desde</T>
+              </TableHeading>
             </th>
             <th scope="col" className={TH}>
-              <TableHeading icon={Coins}>Moneda</TableHeading>
+              <TableHeading icon={Coins}>
+                <T>Moneda</T>
+              </TableHeading>
             </th>
           </tr>
         </thead>
@@ -113,7 +110,7 @@ export function PriceTable({ slugs }: { slugs?: string[] }) {
                 </Link>
                 {precio!.nota ? (
                   <span className="mt-1 block text-[15px] leading-[21px] tracking-[-0.15px] text-muted-foreground">
-                    {precio!.nota}
+                    <T>{precio!.nota}</T>
                   </span>
                 ) : null}
               </td>
@@ -150,15 +147,17 @@ export function PrecioDesde({
       )}
     >
       <p className="text-[15px] leading-[21px] tracking-[-0.15px] text-muted-foreground">
-        Precio orientativo
+        <T>Precio orientativo</T>
       </p>
       <p className="text-[40px] leading-[44px] tracking-[-1.8px] text-accent-coral-strong">
         {formatearDesde(precio)}
       </p>
       <p className="text-[15px] leading-[21px] tracking-[-0.15px] text-muted-foreground">
-        {precio?.desde === null
-          ? "Estamos actualizando los rangos publicados. El presupuesto definitivo se entrega por escrito luego de la evaluación inicial."
-          : "Rango orientativo. El presupuesto definitivo se entrega por escrito luego de la evaluación inicial."}
+        <T>
+          {precio?.desde === null
+            ? "Estamos actualizando los rangos publicados. El presupuesto definitivo se entrega por escrito luego de la evaluación inicial."
+            : "Rango orientativo. El presupuesto definitivo se entrega por escrito luego de la evaluación inicial."}
+        </T>
       </p>
       <TextArrowCTA href="/precios" className={centrado ? "self-center" : undefined}>
         Ver todos los precios y medios de pago
@@ -193,10 +192,10 @@ export function MediosDePago({
             <PaymentVisual nombre={medio.nombre} />
             <div className="flex flex-col gap-1">
               <p className="min-h-[42px] max-w-[96px] text-[18px] leading-[21px] font-medium tracking-[-0.54px] text-foreground">
-                {medio.nombre}
+                <T>{medio.nombre}</T>
               </p>
               <p className="text-[14px] leading-[18px] tracking-[-0.14px] text-muted-foreground">
-                {medio.detalle}
+                <T>{medio.detalle}</T>
               </p>
             </div>
           </li>
@@ -224,7 +223,7 @@ export function MediosDePago({
             key={c.texto}
             className="text-[12px] leading-[18px] tracking-[-0.06px] text-foreground/55"
           >
-            * {c.texto}
+            * <T>{c.texto}</T>
           </li>
         ))}
       </ul>
@@ -336,7 +335,9 @@ export function StayTimeTable() {
         <thead>
           <tr className="border-b border-border">
             <th scope="col" className={TH}>
-              <TableHeading icon={Stethoscope}>Tratamiento</TableHeading>
+              <TableHeading icon={Stethoscope}>
+                <T>Tratamiento</T>
+              </TableHeading>
             </th>
             <th scope="col" className={TH}>
               <TableHeading icon={CalendarDays}>Sesiones</TableHeading>

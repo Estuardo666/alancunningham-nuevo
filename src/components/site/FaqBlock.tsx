@@ -3,6 +3,7 @@
 import { MotionConfig, motion } from "framer-motion";
 import { useState } from "react";
 import type { Faq } from "@/content/types";
+import { useTr } from "@/i18n/LanguageProvider";
 
 /**
  * Framer Motion accordion, driven by the content layer. It starts with the
@@ -17,6 +18,7 @@ export function FaqBlock({
   faqs: Faq[];
 }) {
   const [open, setOpen] = useState<number | null>(null);
+  const tr = useTr();
 
   const answerTransition = {
     duration: 0.28,
@@ -47,7 +49,7 @@ export function FaqBlock({
                   className="group flex min-h-[60px] w-full items-center gap-3 p-4 text-left"
                 >
                   <span className="faq-accordion__question min-w-0 flex-1 text-[18px] font-medium leading-[140%] tracking-[-0.04em]">
-                    {faq.pregunta}
+                    {tr(faq.pregunta)}
                   </span>
                   <span className="faq-accordion__icon relative flex h-7 min-h-7 w-7 min-w-7 flex-none items-center justify-center rounded-full transition-colors duration-200">
                     <span
@@ -76,7 +78,7 @@ export function FaqBlock({
               >
                 <div className="px-4 pt-1 pb-5 sm:px-6 sm:pb-6">
                   <p className="faq-accordion__answer text-[16px] leading-[140%] tracking-[-0.04em]">
-                    {faq.respuesta}
+                    {tr(faq.respuesta)}
                   </p>
                 </div>
               </motion.div>

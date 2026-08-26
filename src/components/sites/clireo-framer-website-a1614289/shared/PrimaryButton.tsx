@@ -1,5 +1,8 @@
+"use client";
+
 import type { ComponentPropsWithoutRef } from "react";
 import { cn } from "@/lib/utils";
+import { useTr } from "@/i18n/LanguageProvider";
 import { ArrowUpRightIcon } from "./icons";
 
 /**
@@ -16,6 +19,7 @@ export function PrimaryButton({
   label: string;
   variant?: "dark" | "primary" | "secondary";
 } & ComponentPropsWithoutRef<"a">) {
+  const texto = useTr()(label);
   const isDark = variant === "dark";
   const isSecondary = variant === "secondary";
 
@@ -43,8 +47,8 @@ export function PrimaryButton({
         )}
       >
         <span className="block transition-transform duration-300 ease-out group-hover:-translate-y-[23px]">
-          <span className="block">{label}</span>
-          <span className="block">{label}</span>
+          <span className="block">{texto}</span>
+          <span className="block">{texto}</span>
         </span>
       </span>
 

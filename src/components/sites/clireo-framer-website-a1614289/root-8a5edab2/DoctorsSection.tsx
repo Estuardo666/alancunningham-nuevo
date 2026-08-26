@@ -6,6 +6,7 @@ import { RevealText } from "../shared/RevealText";
 import { CtaConMicrocopy } from "@/components/site/PageShell";
 import { EQUIPO, EQUIPO_CARRUSEL } from "@/content/equipo";
 import { TeamCarousel } from "@/components/site/TeamCarousel";
+import { T } from "@/i18n/LanguageProvider";
 
 const FORMACION_ICONS = [GraduationCap, BadgeCheck, Wrench, BookOpen] as const;
 const FORMACION_TONES = [
@@ -72,7 +73,8 @@ export function DoctorsSection() {
                       {profesional.nombre}
                     </h3>
                     <p className="text-[17px] leading-[23.46px] tracking-[-0.34px] text-white/90">
-                      {profesional.especialidad} · {profesional.matricula}
+                      <T>{profesional.especialidad}</T> ·{" "}
+                      {profesional.matricula}
                     </p>
                   </div>
                 </Link>
@@ -84,7 +86,7 @@ export function DoctorsSection() {
                   key={parrafo.slice(0, 40)}
                   className="text-[17px] leading-[23.46px] tracking-[-0.34px] text-muted-foreground"
                 >
-                  {parrafo}
+                  <T>{parrafo}</T>
                 </p>
               ))}
               <ul className="grid w-full gap-3 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4">
@@ -105,7 +107,7 @@ export function DoctorsSection() {
                         />
                       </span>
                       <span className="text-[14px] leading-[19px] tracking-[-0.14px] text-foreground">
-                        {item}
+                        <T>{item}</T>
                       </span>
                     </li>
                   );

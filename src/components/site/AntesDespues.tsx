@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useId, useState } from "react";
 import type { Imagen } from "@/content/types";
+import { T, useTr } from "@/i18n/LanguageProvider";
 
 /**
  * Drag-to-compare for the clinic's real cases. Same anatomy as the template's
@@ -23,6 +24,7 @@ export function AntesDespues({
 }) {
   const [position, setPosition] = useState(50);
   const id = useId();
+  const tr = useTr();
 
   return (
     <figure className="flex w-full flex-col gap-3">
@@ -49,10 +51,10 @@ export function AntesDespues({
         </div>
 
         <span className="absolute top-4 left-4 rounded-[8px] bg-card/90 px-3 py-1 text-[15px] leading-[21px] tracking-[-0.15px] text-foreground">
-          Antes
+          <T>Antes</T>
         </span>
         <span className="absolute top-4 right-4 rounded-[8px] bg-card/90 px-3 py-1 text-[15px] leading-[21px] tracking-[-0.15px] text-foreground">
-          Después
+          <T>Después</T>
         </span>
 
         <div
@@ -67,7 +69,7 @@ export function AntesDespues({
         </div>
 
         <label htmlFor={id} className="sr-only">
-          {`Comparar antes y después — ${etiqueta}`}
+          {`${tr("Comparar antes y después")} — ${tr(etiqueta)}`}
         </label>
         <input
           id={id}
@@ -82,11 +84,11 @@ export function AntesDespues({
 
       <figcaption className="flex flex-wrap items-baseline gap-x-3 px-1">
         <span className="text-[20px] leading-[27px] tracking-[-0.8px] text-foreground">
-          {etiqueta}
+          <T>{etiqueta}</T>
         </span>
         {duracion ? (
           <span className="text-[16px] leading-[23.2px] tracking-[-0.24px] text-muted-foreground">
-            {duracion}
+            <T>{duracion}</T>
           </span>
         ) : null}
       </figcaption>

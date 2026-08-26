@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import type { ElementType } from "react";
+import { useTr } from "@/i18n/LanguageProvider";
 
 /**
  * Framer's per-word text effect: every word starts at `opacity: 0.001`,
@@ -36,6 +37,7 @@ export function RevealText({
 }) {
   const ref = useRef<HTMLElement>(null);
   const [shown, setShown] = useState(false);
+  const tr = useTr();
 
   useEffect(() => {
     const node = ref.current;
@@ -67,7 +69,7 @@ export function RevealText({
     return () => observer.disconnect();
   }, []);
 
-  const words = text.split(" ");
+  const words = tr(text).split(" ");
 
   return (
     <Tag ref={ref} className={className}>
