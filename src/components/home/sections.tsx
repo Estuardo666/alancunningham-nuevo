@@ -108,8 +108,8 @@ export function HomePrecioCobertura() {
         bajada="Los rangos orientativos por tratamiento, los medios de pago y las coberturas, visibles acá y en detalle en su propia página."
       />
 
-      <div className="grid w-full gap-10 lg:grid-cols-2">
-        <div className="flex flex-col gap-6">
+      <div className="grid w-full min-w-0 gap-10 lg:grid-cols-2">
+        <div className="flex min-w-0 flex-col gap-6">
           <h3 className="text-[22px] leading-[29.7px] tracking-[-0.88px] text-foreground">
             <T>Rangos orientativos</T>
           </h3>
@@ -130,7 +130,7 @@ export function HomePrecioCobertura() {
           />
         </div>
 
-        <div className="flex flex-col gap-6">
+        <div className="flex min-w-0 flex-col gap-6">
           <h3 className="text-[22px] leading-[29.7px] tracking-[-0.88px] text-foreground">
             <T>Medios de pago y coberturas</T>
           </h3>

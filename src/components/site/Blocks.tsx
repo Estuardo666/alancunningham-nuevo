@@ -34,7 +34,7 @@ export { Galeria } from "./Galeria";
 /** Wrapper that keeps wide tables scrollable inside the band, never the page. */
 function TablaScroll({ children }: { children: React.ReactNode }) {
   return (
-    <div className="w-full overflow-x-auto rounded-[16px] bg-card shadow-[var(--clireo-shadow)]">
+    <div className="min-w-0 w-full max-w-full overflow-x-auto rounded-[16px] bg-card shadow-[var(--clireo-shadow)]">
       {children}
     </div>
   );
