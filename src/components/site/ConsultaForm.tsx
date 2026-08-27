@@ -23,6 +23,7 @@ export function ConsultaForm({
   tratamientos,
   internacional = false,
   sticky = false,
+  sinPaddingMobile = false,
   className,
 }: {
   titulo?: string;
@@ -33,6 +34,8 @@ export function ConsultaForm({
   /** Adds country and city of origin — used on the dental tourism page. */
   internacional?: boolean;
   sticky?: boolean;
+  /** Removes the card inset on small screens when the form fills its panel. */
+  sinPaddingMobile?: boolean;
   className?: string;
 }) {
   // Unique per instance so two forms on the same page never share ids.
@@ -85,6 +88,7 @@ export function ConsultaForm({
       className={cn(
         "w-full rounded-[20px] bg-card p-[30px] shadow-[var(--clireo-shadow-md)]",
         sticky && "lg:sticky lg:top-[90px]",
+        sinPaddingMobile && "!p-0 lg:!p-[30px]",
         className,
       )}
     >

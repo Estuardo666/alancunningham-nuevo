@@ -120,7 +120,10 @@ export default function NosotrosPage() {
           titulo="Llegá sabiendo dónde te sentás"
           bajada="Un espacio limpio, luminoso y tranquilo."
         />
-        <Galeria imagenes={INSTALACIONES.slice(0, 6)} />
+        <Galeria
+          imagenes={INSTALACIONES.slice(0, 7)}
+          mobileLayout="three-then-two"
+        />
         <TextArrowCTA href="/nosotros/instalaciones">
           Ver más imágenes
         </TextArrowCTA>

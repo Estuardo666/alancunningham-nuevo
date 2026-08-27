@@ -187,7 +187,7 @@ export function MediosDePago({
         {MEDIOS_DE_PAGO.map((medio) => (
           <li
             key={medio.nombre}
-            className="group flex min-h-[178px] flex-col gap-5 rounded-[15px] bg-card p-5 shadow-[var(--clireo-shadow)] transition-[box-shadow,background-color] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:bg-accent-yellow/5 hover:shadow-[var(--clireo-shadow-md)]"
+            className="group flex min-h-[178px] flex-col gap-5 rounded-[15px] border border-primary/10 bg-primary/10 p-5 shadow-[var(--clireo-shadow)] transition-[box-shadow,background-color] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:bg-primary/15 hover:shadow-[var(--clireo-shadow-md)]"
           >
             <PaymentVisual nombre={medio.nombre} />
             <div className="flex flex-col gap-1">
@@ -268,13 +268,13 @@ const COBERTURA_LOGOS: Record<string, string> = {
 function PaymentVisual({ nombre }: { nombre: string }) {
   if (nombre === "Efectivo") {
     return (
-      <span className="flex h-10 w-[74px] items-center justify-center rounded-[10px] bg-accent-yellow/30">
+      <span className="flex h-10 w-[86px] items-center justify-center rounded-[10px] bg-transparent">
         <Image
           src="/images/pago2.png"
           alt=""
           width={1200}
           height={300}
-          className="h-auto w-[72px] object-contain"
+          className="h-auto w-[83px] object-contain"
         />
       </span>
     );

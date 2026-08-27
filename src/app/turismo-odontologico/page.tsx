@@ -309,6 +309,7 @@ export default function TurismoPage() {
           <ConsultaForm
             titulo="Consulta internacional"
             contexto="turismo odontológico"
+            sinPaddingMobile
             tratamientos={PILARES.map((p) => ({
               slug: p.slug,
               nombre: p.nombre,

@@ -175,7 +175,7 @@ export function TeamCarousel({
       aria-label="Equipo del consultorio"
     >
       <div
-        className="relative w-full [--alto:clamp(360px,92vw,500px)] [--ancho:clamp(240px,72vw,340px)] [--gap:24px] [--paso:calc(var(--ancho)+var(--gap))] [--reveal:36%] lg:[--gap:36px]"
+        className="relative w-full [--alto:clamp(460px,125vw,600px)] [--ancho:100%] [--gap:24px] [--paso:calc(var(--ancho)+var(--gap))] [--reveal:36%] lg:[--alto:clamp(360px,92vw,500px)] lg:[--ancho:clamp(240px,72vw,340px)] lg:[--gap:36px]"
         onKeyDown={(event) => {
           if (event.key === "ArrowRight") ir(activo + 1);
           if (event.key === "ArrowLeft") ir(activo - 1);
@@ -421,11 +421,11 @@ function Flecha({
       disabled={disabled}
       aria-label={lado === "izquierda" ? "Anterior" : "Siguiente"}
       className={cn(
-        "absolute top-1/2 z-20 hidden h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full sm:flex",
+        "absolute top-1/2 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full",
         "border border-foreground/10 bg-background/70 text-foreground shadow-[var(--clireo-shadow)] backdrop-blur-md",
         "transition-[scale,opacity] duration-150 ease-out active:scale-[0.94] motion-reduce:transition-none",
         "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground",
-        "disabled:pointer-events-none disabled:opacity-0",
+        "disabled:pointer-events-none disabled:opacity-30",
         lado === "izquierda" ? "left-3 lg:left-6" : "right-3 lg:right-6",
       )}
     >

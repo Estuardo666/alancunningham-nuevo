@@ -1,4 +1,5 @@
 import "./globals.css";
+import localFont from "next/font/local";
 import { LanguageProvider } from "@/i18n/LanguageProvider";
 import { JsonLd } from "@/components/site/JsonLd";
 import {
@@ -10,6 +11,14 @@ import {
 import { EQUIPO } from "@/content/equipo";
 import { buildMetadata } from "@/lib/seo";
 import { CLINICA } from "@/content/clinica";
+
+const helveticaRounded = localFont({
+  src: "../../public/fonts/HelveticaRoundedLTStd-Bd.woff2",
+  weight: "700",
+  style: "normal",
+  display: "swap",
+  variable: "--font-helvetica-rounded",
+});
 
 export const metadata = {
   ...buildMetadata({
@@ -34,7 +43,7 @@ export default function RootLayout({
       // The anti-flash script below stamps `dark`/`light` on <html> before
       // hydration, so the class list legitimately differs from the SSR output.
       suppressHydrationWarning
-      className="light h-full antialiased"
+      className={`${helveticaRounded.variable} light h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <script

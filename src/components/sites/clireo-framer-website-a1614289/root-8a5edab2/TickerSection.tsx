@@ -32,7 +32,7 @@ export function TickerSection() {
             >
               {ITEMS.map((item, index) => (
                 <li key={item} className="flex items-center gap-[60px] px-2">
-                  <span className="block py-2 text-[40px] leading-[1.1] tracking-[-2.4px] whitespace-nowrap text-foreground lg:text-[74px] lg:tracking-[-4.588px]">
+                  <span className="font-heading block py-2 text-[40px] leading-[1.1] font-bold tracking-[-2.4px] whitespace-nowrap text-foreground lg:text-[74px] lg:tracking-[-4.588px]">
                     <T>{item}</T>
                   </span>
                   <SparkleIcon

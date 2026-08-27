@@ -67,9 +67,9 @@ export function PageHero({
     : imagen;
 
   return (
-    <section className="relative flex min-h-[500px] items-end justify-center overflow-hidden bg-hero px-5 pt-[130px] pb-12 lg:min-h-[640px] lg:px-8 lg:pt-[170px] lg:pb-16">
+    <section className="page-hero relative flex min-h-[620px] items-end justify-center overflow-hidden bg-hero px-5 pt-[130px] pb-12 lg:min-h-[640px] lg:px-8 lg:pt-[170px] lg:pb-16">
       {imagenHero ? (
-        <div className="absolute inset-0 z-0">
+        <div className="hero-background absolute inset-0 z-0">
           <Image
             src={imagenHero.src}
             alt=""
@@ -97,22 +97,33 @@ export function PageHero({
       ) : null}
 
       <div className="relative z-10 flex w-full max-w-[1300px] flex-col items-start gap-6">
-        <Breadcrumbs items={migas} />
+        <div className="hero-entrance hero-entrance-1">
+          <Breadcrumbs items={migas} />
+        </div>
         <div className="flex flex-col items-start gap-[10px]">
-          <SectionEyebrow tone="light">{eyebrow}</SectionEyebrow>
-          <RevealText
-            as="h1"
-            text={h1}
-            blur={5}
-            className="max-w-[900px] text-[36px] leading-[40px] tracking-[-2px] text-white lg:text-[54px] lg:leading-[56.16px] lg:tracking-[-3.24px]"
-          />
+          <div className="hero-entrance hero-entrance-2">
+            <SectionEyebrow tone="light">{eyebrow}</SectionEyebrow>
+          </div>
+          <div className="hero-entrance hero-entrance-3">
+            <RevealText
+              as="h1"
+              text={h1}
+              blur={5}
+              duration={0.45}
+              className="max-w-[900px] text-[43px] leading-[46px] tracking-[-2.4px] text-white lg:text-[64px] lg:leading-[66px] lg:tracking-[-3.84px]"
+            />
+          </div>
         </div>
         {bajada ? (
-          <p className="max-w-[640px] text-[18px] leading-[24.3px] tracking-[-0.54px] text-white/80">
-            <T>{bajada}</T>
-          </p>
+          <div className="hero-entrance hero-entrance-4">
+            <p className="max-w-[640px] text-[16px] leading-[21.6px] tracking-[-0.48px] text-white/80 lg:text-[18px] lg:leading-[24.3px] lg:tracking-[-0.54px]">
+              <T>{bajada}</T>
+            </p>
+          </div>
         ) : null}
-        {children}
+        {children ? (
+          <div className="hero-entrance hero-entrance-5 w-full">{children}</div>
+        ) : null}
       </div>
     </section>
   );

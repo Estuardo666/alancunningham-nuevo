@@ -57,9 +57,13 @@ export default function ContactoPage() {
         ])}
       />
 
-      <Section banda="background">
+      <Section banda="background" className="pt-[68px] lg:py-[120px]">
         <div className="grid w-full gap-12 lg:grid-cols-[1fr_440px] lg:items-start">
-          <div className="flex flex-col gap-10">
+          <div className="lg:col-start-2 lg:row-start-1">
+            <MapaContacto />
+          </div>
+
+          <div className="flex flex-col gap-10 lg:col-start-1 lg:row-start-1">
             <div className="flex flex-col gap-6">
               <SectionHeading
                 eyebrow="Información de contacto"
@@ -119,7 +123,6 @@ export default function ContactoPage() {
             </div>
           </div>
 
-          <MapaContacto />
         </div>
       </Section>
 
@@ -150,7 +153,7 @@ export default function ContactoPage() {
 function MapaContacto() {
   return (
     <div className="w-full lg:sticky lg:top-[90px]">
-      <div className="relative h-[420px] w-full overflow-hidden rounded-[16px] bg-primary/10 shadow-[var(--clireo-shadow-md)] lg:h-[620px]">
+      <div className="relative h-[500px] w-full overflow-hidden rounded-[16px] bg-primary/10 shadow-[var(--clireo-shadow-md)] lg:h-[620px]">
         <iframe
           title="Ubicación del consultorio en Arribeños 2659, Núñez, Buenos Aires"
           src={MAP_SRC}
