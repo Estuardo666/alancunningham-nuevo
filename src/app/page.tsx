@@ -57,7 +57,7 @@ export const metadata = buildMetadata({
  */
 export default function Home() {
   return (
-    <div className="relative">
+    <div className="relative min-w-0 w-full">
       <SmoothScroll />
       <JsonLd
         data={grafo([

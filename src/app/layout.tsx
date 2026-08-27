@@ -45,7 +45,7 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${helveticaRounded.variable} light h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full min-w-0 flex flex-col overflow-x-clip">
         <script
           dangerouslySetInnerHTML={{
             __html: `try { const lang = localStorage.getItem("sdc-lang"); if (lang === "en") document.documentElement.lang = "en"; } catch {}

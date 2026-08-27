@@ -287,6 +287,20 @@
   body {
     @apply bg-background text-foreground;
   }
+  /* Horizontal rails belong to their own overflow containers. Keep any
+     accidental child width from turning the document itself into a sideways
+     scroller on narrow screens. */
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: clip;
+  }
+  @supports not (overflow: clip) {
+    html,
+    body {
+      overflow-x: hidden;
+    }
+  }
   html {
     @apply font-sans;
   }
