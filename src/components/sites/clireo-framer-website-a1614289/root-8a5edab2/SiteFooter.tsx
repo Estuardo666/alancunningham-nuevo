@@ -5,7 +5,7 @@ import { asset } from "../shared/assets";
 import { PrimaryButton } from "../shared/PrimaryButton";
 import { RevealText } from "../shared/RevealText";
 import { CLINICA, CTA_PRIMARIO, whatsappHref } from "@/content/clinica";
-import { PILARES, rutaPilar } from "@/content/tratamientos";
+import { TRATAMIENTOS, rutaTratamiento } from "@/content/tratamientos";
 import { INTENCIONES } from "@/content/intenciones";
 import { GoogleRatingSummary } from "@/components/site/GoogleReviews";
 import { T } from "@/i18n/LanguageProvider";
@@ -14,10 +14,13 @@ const COLUMNS: { heading: string; links: { label: string; href: string }[] }[] =
   [
     {
       heading: "Tratamientos",
-      links: PILARES.slice(0, 5).map((p) => ({
-        label: p.nombre,
-        href: rutaPilar(p.slug),
-      })),
+      links: [
+        ...TRATAMIENTOS.slice(0, 5).map((t) => ({
+          label: t.nombre,
+          href: rutaTratamiento(t),
+        })),
+        { label: "Ver todos los tratamientos", href: "/tratamientos" },
+      ],
     },
     {
       heading: "Secciones",
@@ -34,7 +37,6 @@ const COLUMNS: { heading: string; links: { label: string; href: string }[] }[] =
       heading: "Información",
       links: [
         { label: "Precios y medios de pago", href: "/precios" },
-        { label: "Obras sociales", href: "/obras-sociales" },
         { label: "Preguntas frecuentes", href: "/faq" },
         { label: "Dentista en Núñez", href: "/dentista-en-nunez" },
         { label: "Contacto", href: "/contacto" },

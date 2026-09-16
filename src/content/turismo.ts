@@ -217,10 +217,10 @@ export const TIEMPOS_ESTADIA: TiempoEstadia[] = [
 
 /** Treatments most requested by travelling patients. */
 export const TRATAMIENTOS_DESTACADOS = [
-  "estetica-dental",
-  "rehabilitacion-oral",
-  "implantes-dentales",
-  "odontologia-general",
+  "diseno-de-sonrisa",
+  "carillas-de-porcelana",
+  "implantes-unitarios",
+  "rehabilitacion-sobre-implantes",
 ];
 
 /** The ten real Buenos Aires photos from the old site. */

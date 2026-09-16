@@ -7,7 +7,7 @@ import {
   Section,
   SectionHeading,
 } from "@/components/site/PageShell";
-import { PilarCard } from "@/components/site/Cards";
+import { TratamientoCard } from "@/components/site/Cards";
 import { Carrusel } from "@/components/site/Carrusel";
 import { TimelineSteps } from "@/components/site/TimelineSteps";
 import { ConsultaForm } from "@/components/site/ConsultaForm";
@@ -25,7 +25,7 @@ import {
   webPageSchema,
 } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
-import { PILARES, pilarPorSlug } from "@/content/tratamientos";
+import { TRATAMIENTOS, tratamientoPorSlug } from "@/content/tratamientos";
 import { urlAbsoluta } from "@/content/clinica";
 import {
   COMO_FUNCIONA,
@@ -95,9 +95,9 @@ export const metadata = buildMetadata({
  * exactly the number a travelling patient needs to book a flight.
  */
 export default function TurismoPage() {
-  const destacados = TRATAMIENTOS_DESTACADOS.map((s) => pilarPorSlug(s)).filter(
-    (p): p is (typeof PILARES)[number] => Boolean(p),
-  );
+  const destacados = TRATAMIENTOS_DESTACADOS.map((s) =>
+    tratamientoPorSlug(s),
+  ).filter((t): t is (typeof TRATAMIENTOS)[number] => Boolean(t));
 
   return (
     <SitePage contexto="turismo odontológico">
@@ -254,9 +254,13 @@ export default function TurismoPage() {
           titulo="Lo que más resuelven quienes viajan"
         />
         <div className="grid w-full gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {destacados.map((pilar, index) => (
-            <ScrollReveal key={pilar.slug} delay={index * 100} className="h-full">
-              <PilarCard pilar={pilar} variante="blog" indice={index} />
+          {destacados.map((tratamiento, index) => (
+            <ScrollReveal
+              key={tratamiento.slug}
+              delay={index * 100}
+              className="h-full"
+            >
+              <TratamientoCard tratamiento={tratamiento} indice={index} />
             </ScrollReveal>
           ))}
         </div>
@@ -310,9 +314,9 @@ export default function TurismoPage() {
             titulo="Consulta internacional"
             contexto="turismo odontológico"
             sinPaddingMobile
-            tratamientos={PILARES.map((p) => ({
-              slug: p.slug,
-              nombre: p.nombre,
+            tratamientos={TRATAMIENTOS.map((t) => ({
+              slug: t.slug,
+              nombre: t.nombre,
             }))}
             internacional
           />

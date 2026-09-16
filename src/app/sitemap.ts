@@ -1,11 +1,6 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/content/clinica";
-import {
-  PILARES,
-  TRATAMIENTOS,
-  rutaPilar,
-  rutaTratamiento,
-} from "@/content/tratamientos";
+import { TRATAMIENTOS, rutaTratamiento } from "@/content/tratamientos";
 import { CASOS } from "@/content/casos";
 import { POSTS } from "@/content/posts";
 import { EQUIPO } from "@/content/equipo";
@@ -39,12 +34,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entrada("/turismo-odontologico", 0.9),
     entrada("/contacto", 0.8),
     entrada("/precios", 0.9),
-    entrada("/obras-sociales", 0.9),
     entrada("/faq", 0.7),
     entrada("/blog", 0.7, "weekly"),
     entrada("/dentista-en-nunez", 0.7),
-    ...PILARES.map((p) => entrada(rutaPilar(p.slug), 0.8)),
-    ...TRATAMIENTOS.map((t) => entrada(rutaTratamiento(t), 0.7)),
+    ...TRATAMIENTOS.map((t) => entrada(rutaTratamiento(t), 0.8)),
     ...COMPARATIVAS.map((c) => entrada(`/${c.slug}`, 0.7)),
     ...CASOS.map((c) => entrada(`/casos/${c.slug}`, 0.8)),
     ...EQUIPO.map((p) => entrada(`/equipo/${p.slug}`, 0.6)),

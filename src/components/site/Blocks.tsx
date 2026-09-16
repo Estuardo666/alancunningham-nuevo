@@ -19,7 +19,6 @@ import {
   formatearDesde,
   precioPorTratamiento,
 } from "@/content/precios";
-import { COBERTURAS } from "@/content/obras-sociales";
 import { TIEMPOS_ESTADIA } from "@/content/turismo";
 import {
   rutaPorSlug,
@@ -230,40 +229,6 @@ export function MediosDePago({
     </div>
   );
 }
-
-/** Coverage badges — visible without interaction (the DOHO P1 correction). */
-export function CoverageBadges() {
-  return (
-    <div className="flex w-full flex-col gap-6">
-      <ul className="flex flex-wrap gap-3">
-        {COBERTURAS.map((c) => (
-          <li
-            key={c.nombre}
-            className="flex items-center gap-3 rounded-[12px] bg-card px-4 py-3 text-[16px] leading-[21px] font-semibold tracking-[-0.32px] text-foreground shadow-[var(--clireo-shadow)]"
-          >
-            <Image
-              src={COBERTURA_LOGOS[c.nombre]}
-              alt={`${c.nombre} logo`}
-              width={28}
-              height={28}
-              className="h-7 w-7 rounded-[6px] object-contain"
-            />
-            {c.nombre}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-const COBERTURA_LOGOS: Record<string, string> = {
-  OSDE: "/brand-logos/osde.png",
-  "Swiss Medical": "/brand-logos/swiss-medical.png",
-  Galeno: "/brand-logos/galeno.png",
-  Medifé: "/brand-logos/medife.png",
-  OMINT: "/brand-logos/omint.png",
-  Premedic: "/brand-logos/premedic.png",
-};
 
 function PaymentVisual({ nombre }: { nombre: string }) {
   if (nombre === "Efectivo") {

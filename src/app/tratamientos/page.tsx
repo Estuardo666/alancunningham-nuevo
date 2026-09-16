@@ -5,7 +5,7 @@ import {
   Section,
   SectionHeading,
 } from "@/components/site/PageShell";
-import { PilarCard } from "@/components/site/Cards";
+import { TratamientoCard } from "@/components/site/Cards";
 import { FaqBlock } from "@/components/site/FaqBlock";
 import { JsonLd } from "@/components/site/JsonLd";
 import {
@@ -15,7 +15,7 @@ import {
   webPageSchema,
 } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
-import { PILARES } from "@/content/tratamientos";
+import { TRATAMIENTOS } from "@/content/tratamientos";
 import { TECNOLOGIA } from "@/content/clinica-contenido";
 import { faqsPorBloque } from "@/content/faqs";
 import { TextArrowCTA } from "@/components/ui/text-arrow-cta";
@@ -28,7 +28,7 @@ import { CTA_PRIMARIO, whatsappHref } from "@/content/clinica";
 const TITLE =
   "Tratamientos Odontológicos en Núñez, Buenos Aires | Smile Design Center";
 const DESCRIPTION =
-  "Siete áreas de tratamiento con página propia: estética, rehabilitación, implantes, ortodoncia, endodoncia, cirugía láser y odontología general. Consulta sin cargo.";
+  "Todos los tratamientos con página propia: diseño de sonrisa, carillas, blanqueamiento, coronas, implantes, alineadores, conductos, cirugía láser, limpieza y más. Consulta sin cargo.";
 const PATH = "/tratamientos";
 
 const MIGAS = [
@@ -63,7 +63,7 @@ export default function TratamientosPage() {
       <PageHero
         eyebrow="Un plan para tu salud bucal"
         h1="Tratamientos para cuidar tu sonrisa"
-        bajada="Explorá especialidades, procesos y tiempos para elegir con claridad. La consulta inicial te ayuda a definir el próximo paso."
+        bajada="Explorá cada tratamiento, su proceso y sus tiempos para elegir con claridad. La consulta inicial te ayuda a definir el próximo paso."
         migas={MIGAS}
         imagen={{ src: "/images/DSC_0136-1024x683.jpg" }}
         fondoAleatorio={false}
@@ -78,16 +78,15 @@ export default function TratamientosPage() {
 
       <Section banda="background">
         <SectionHeading
-          eyebrow="Áreas de atención"
-          titulo="Una especialidad para cada etapa de tu sonrisa"
-          bajada="Conocé cómo trabajamos cada área y encontrá el punto de partida que mejor se adapta a lo que necesitás. Cada tarjeta abre una página propia, con proceso, tiempos y próximos pasos."
+          eyebrow="Todos los tratamientos"
+          titulo="Elegí el tratamiento que estás buscando"
+          bajada="Todos al mismo nivel, sin categorías intermedias. Cada tarjeta abre una página propia, con proceso, tiempos, precio orientativo y próximos pasos."
         />
         <div className="grid w-full gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {PILARES.map((pilar, index) => (
-            <PilarCard
-              key={pilar.slug}
-              pilar={pilar}
-              variante="blog"
+          {TRATAMIENTOS.map((tratamiento, index) => (
+            <TratamientoCard
+              key={tratamiento.slug}
+              tratamiento={tratamiento}
               indice={index}
             />
           ))}

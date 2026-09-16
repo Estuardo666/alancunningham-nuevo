@@ -7,7 +7,7 @@ import {
   Section,
   SectionHeading,
 } from "@/components/site/PageShell";
-import { PilarCard } from "@/components/site/Cards";
+import { TratamientoCard } from "@/components/site/Cards";
 import { Galeria } from "@/components/site/Blocks";
 import { ContextualFaq } from "@/components/site/ContextualFaq";
 import { ConsultaForm } from "@/components/site/ConsultaForm";
@@ -20,7 +20,7 @@ import {
 } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
 import { CLINICA } from "@/content/clinica";
-import { PILARES } from "@/content/tratamientos";
+import { TRATAMIENTOS } from "@/content/tratamientos";
 import { INSTALACIONES } from "@/content/clinica-contenido";
 import { faqsPorBloque } from "@/content/faqs";
 import { TITULAR } from "@/content/equipo";
@@ -96,9 +96,9 @@ export default function DentistaEnNunezPage() {
           <ConsultaForm
             titulo="Pedí tu turno"
             contexto="un turno en Núñez"
-            tratamientos={PILARES.map((p) => ({
-              slug: p.slug,
-              nombre: p.nombre,
+            tratamientos={TRATAMIENTOS.map((t) => ({
+              slug: t.slug,
+              nombre: t.nombre,
             }))}
             sticky
           />
@@ -111,8 +111,12 @@ export default function DentistaEnNunezPage() {
           titulo="Qué resolvemos en el consultorio"
         />
         <div className="grid w-full gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {PILARES.map((pilar) => (
-            <PilarCard key={pilar.slug} pilar={pilar} />
+          {TRATAMIENTOS.map((tratamiento, index) => (
+            <TratamientoCard
+              key={tratamiento.slug}
+              tratamiento={tratamiento}
+              indice={index}
+            />
           ))}
         </div>
       </Section>

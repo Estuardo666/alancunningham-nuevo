@@ -11,7 +11,8 @@ export interface Caso extends ConFuente {
   antes: Imagen;
   despues: Imagen;
   /** Pillar slug this case belongs to. */
-  pilar: string;
+  /** Slug of the treatment this case documents. */
+  tratamientoSlug: string;
   tratamiento: string;
   duracion: string;
   sesiones: string;
@@ -44,7 +45,7 @@ export const CASOS: Caso[] = [
       src: "/images/patricia2-jpg.webp",
       alt: "Después de la rehabilitación oral: dientes restaurados con forma y color natural",
     },
-    pilar: "rehabilitacion-oral",
+    tratamientoSlug: "coronas-dentales",
     tratamiento: "Rehabilitación oral con restauraciones y coronas",
     duracion: "Plan por etapas",
     sesiones: "Varias sesiones planificadas",
@@ -80,7 +81,7 @@ export const CASOS: Caso[] = [
       src: "/images/sofia2-jpg.webp",
       alt: "Después del diseño de sonrisa: cierre de espacios y armonía en la línea de los dientes",
     },
-    pilar: "estetica-dental",
+    tratamientoSlug: "diseno-de-sonrisa",
     tratamiento: "Diseño de sonrisa con cierre de diastemas",
     duracion: "Plan estético en pocas semanas",
     sesiones: "Planificación, prueba y ejecución",
@@ -116,7 +117,7 @@ export const CASOS: Caso[] = [
       src: "/images/puchi1-jpg.webp",
       alt: "Después del tratamiento: sonrisa renovada con dientes alineados y blanqueados",
     },
-    pilar: "ortodoncia",
+    tratamientoSlug: "alineadores-invisibles",
     tratamiento: "Alineación seguida de blanqueamiento dental",
     duracion: "Tratamiento en etapas: primero alinear, después aclarar",
     sesiones: "Controles de alineación más sesiones de blanqueamiento",
@@ -139,8 +140,4 @@ export const CASOS: Caso[] = [
 
 export function casoPorSlug(slug: string) {
   return CASOS.find((c) => c.slug === slug);
-}
-
-export function casosPorPilar(pilar: string) {
-  return CASOS.filter((c) => c.pilar === pilar);
 }

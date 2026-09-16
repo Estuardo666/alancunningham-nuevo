@@ -19,7 +19,11 @@ import {
 } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
 import { EQUIPO, profesionalPorSlug } from "@/content/equipo";
-import { PILARES, pilarPorSlug, rutaPilar } from "@/content/tratamientos";
+import {
+  TRATAMIENTOS,
+  tratamientoPorSlug,
+  rutaTratamiento,
+} from "@/content/tratamientos";
 
 export function generateStaticParams() {
   return EQUIPO.map((p) => ({ slug: p.slug }));
@@ -111,16 +115,16 @@ export default async function ProfesionalPage({
         />
         <ul className="grid w-full gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {profesional.tratamientos
-            .map((s) => pilarPorSlug(s))
-            .filter((p): p is (typeof PILARES)[number] => Boolean(p))
-            .map((pilar) => (
-              <li key={pilar.slug}>
+            .map((s) => tratamientoPorSlug(s))
+            .filter((t): t is (typeof TRATAMIENTOS)[number] => Boolean(t))
+            .map((tratamiento) => (
+              <li key={tratamiento.slug}>
                 <Link
-                  href={rutaPilar(pilar.slug)}
+                  href={rutaTratamiento(tratamiento)}
                   className="flex h-full flex-col gap-2 rounded-[15px] bg-card p-6 shadow-[var(--clireo-shadow)] transition-opacity duration-300 hover:opacity-90"
                 >
                   <span className="text-[20px] leading-[27px] tracking-[-0.8px] text-foreground">
-                    {pilar.nombre}
+                    {tratamiento.nombre}
                   </span>
                   <span className="text-[14px] leading-[20px] tracking-[-0.14px] text-accent-coral-strong">
                     Ver tratamiento →
@@ -141,9 +145,9 @@ export default async function ProfesionalPage({
           <ConsultaForm
             titulo="Pedí tu turno"
             contexto={`una consulta con ${profesional.nombre}`}
-            tratamientos={PILARES.map((p) => ({
-              slug: p.slug,
-              nombre: p.nombre,
+            tratamientos={TRATAMIENTOS.map((t) => ({
+              slug: t.slug,
+              nombre: t.nombre,
             }))}
           />
         </div>

@@ -32,7 +32,6 @@ export const EN: Record<string, string> = {
   "Planificamos en digital y te mostramos el resultado antes de tocar un diente.":
     "We plan it digitally and show you the result before touching a tooth.",
   "Ver precios y medios de pago": "See prices and payment",
-  "¿Trabajan con mi obra social?": "Do you take my insurance?",
 
   // ─── About block ───────────────────────────────────────────────────────────
   "Sobre el consultorio": "About the practice",
@@ -51,29 +50,20 @@ export const EN: Record<string, string> = {
   "Te llevás qué hay que hacer y en qué orden, con lo urgente separado de lo conveniente y de lo opcional. Sin presión y sin tratamientos inventados.":
     "What to do and in what order, with urgent, advisable and optional kept apart. No pressure, no invented treatments.",
 
-  // ─── Ticker · treatment pillars ────────────────────────────────────────────
-  "Áreas de tratamiento": "Treatment areas",
-  "Estética dental y diseño de sonrisa": "Cosmetic dentistry",
-  "Rehabilitación oral y prótesis": "Oral rehabilitation",
-  "Implantes dentales": "Dental implants",
-  Ortodoncia: "Orthodontics",
-  Endodoncia: "Root canal",
-  "Cirugía y periodoncia láser": "Laser gum surgery",
-  "Odontología general y prevención": "General dentistry",
-  "Diseño de sonrisa digital, carillas de porcelana y blanqueamiento. Vas a ver el resultado antes de empezar el tratamiento.":
-    "Digital smile design, porcelain veneers and whitening. You see the result before we start.",
-  "Coronas, incrustaciones cerámicas y de resina, y reemplazo de amalgamas. Recuperás la función de masticar y la estética al mismo tiempo.":
-    "Crowns, ceramic and resin inlays, amalgam replacement. Chewing and looks recovered together.",
-  "Reemplazamos la pieza perdida sin tocar los dientes de al lado, con planificación digital de la posición y de la corona final.":
-    "We replace the missing tooth without touching its neighbours, planning position and crown digitally.",
-  "Alineadores invisibles y brackets. Planificamos el movimiento en digital y te mostramos a dónde va a llegar cada diente.":
-    "Clear aligners and braces. We plan each movement digitally and show you where every tooth lands.",
-  "Tratamiento de conducto y reconstrucción con postes. El objetivo siempre es conservar tu diente, no reemplazarlo.":
-    "Root canal and post build-ups. The goal is always to keep your tooth, not replace it.",
-  "Extracciones, frenectomía, gingivectomía y tratamiento de retracciones. Trabajamos con láser para un postoperatorio más corto.":
-    "Extractions, frenectomy, gingivectomy and recession treatment, with laser for a shorter recovery.",
-  "Limpieza profunda, restauraciones de caries y controles. Es la base sobre la que se apoya todo lo demás.":
-    "Deep cleaning, fillings and check-ups. The base everything else rests on.",
+  // ─── Ticker · treatments ───────────────────────────────────────────────────
+  "Extracciones dentales": "Tooth extractions",
+  "Frenectomía láser": "Laser frenectomy",
+  "Gingivectomía láser": "Laser gingivectomy",
+  "Retracciones gingivales": "Gum recession treatment",
+  "Postes y reconstrucción": "Posts and build-ups",
+  "Implantes unitarios": "Single implants",
+  "Restauraciones de caries": "Fillings",
+  "Alineadores invisibles": "Clear aligners",
+  Brackets: "Braces",
+  "Coronas dentales": "Dental crowns",
+  "Incrustaciones cerámicas": "Ceramic inlays",
+  "Incrustaciones de resina": "Resin inlays",
+  "Cambio de amalgamas": "Amalgam replacement",
 
   // ─── Cases ─────────────────────────────────────────────────────────────────
   "Resultados reales": "Real results",
@@ -94,16 +84,14 @@ export const EN: Record<string, string> = {
   "El profesional detrás de cada tratamiento":
     "The professional behind every treatment",
 
-  // ─── Price and coverage ────────────────────────────────────────────────────
-  "Precio y cobertura": "Price and coverage",
+  // ─── Prices and payment ────────────────────────────────────────────────────
   "Cuánto cuesta y con qué se paga, sin tener que preguntar":
     "What it costs and how you pay, without asking",
-  "Los rangos orientativos por tratamiento, los medios de pago y las coberturas, visibles acá y en detalle en su propia página.":
-    "Guide prices per treatment, payment methods and coverage, summarised here and detailed on their own page.",
+  "Los rangos orientativos por tratamiento y los medios de pago, visibles acá y en detalle en su propia página.":
+    "Guide prices per treatment and payment methods, summarised here and detailed on their own page.",
   "Rangos orientativos": "Guide prices",
   "Ver precios y condiciones": "See prices and terms",
-  "Medios de pago y coberturas": "Payment and coverage",
-  "Consultar tu obra social": "Check your insurance",
+  "Medios de pago": "Payment methods",
   "Rango orientativo. El presupuesto definitivo se entrega por escrito luego de la evaluación inicial.":
     "Guide range. The final quote is given in writing after the first visit.",
   "Estamos actualizando los rangos publicados. El presupuesto definitivo se entrega por escrito luego de la evaluación inicial.":
@@ -184,14 +172,13 @@ export const EN: Record<string, string> = {
 
   // ─── FAQ ───────────────────────────────────────────────────────────────────
   "Preguntas frecuentes": "FAQ",
-  "Precios, coberturas y primera consulta": "Prices, coverage, first visit",
+  "Precios, tratamientos y primera consulta": "Prices, treatments, first visit",
   "¿Tenés otra consulta? Escribinos y te respondemos el mismo día.":
     "Another question? Message us and we answer the same day.",
   "Ver todas las preguntas": "See all questions",
-  "¿Trabajan con obras sociales o prepagas?":
-    "Do you work with insurance plans?",
-  "Estamos actualizando el listado de coberturas vigentes. Escribinos por WhatsApp con el nombre de tu obra social o prepaga y tu plan, y te confirmamos tu caso el mismo día.":
-    "We are updating the list of accepted plans. Send us your insurer and plan on WhatsApp and we confirm the same day.",
+  "¿Se puede pagar por etapas?": "Can I pay in stages?",
+  "En tratamientos largos el plan se organiza en etapas y cada etapa se abona al realizarse. Eso se define junto con el plan, antes de empezar.":
+    "Long treatments are organised in stages and each stage is paid as it is done. That is agreed with the plan, before starting.",
   "¿Cuánto cuesta un implante dental?": "What does an implant cost?",
   "El presupuesto de un implante contempla dos etapas: el implante y la corona. Los rangos orientativos están en la página de precios y el presupuesto definitivo se entrega por escrito después de la consulta inicial, que es sin cargo.":
     "An implant is quoted in two stages, the implant and the crown. Guide ranges are on the pricing page; the final quote is written up after the free first visit.",
@@ -222,7 +209,6 @@ export const EN: Record<string, string> = {
   "Compará opciones": "Compare options",
   "Casos clínicos": "Clinical cases",
   "Precios y medios de pago": "Prices and payment",
-  "Obras sociales": "Insurance",
   "Dentista en Núñez": "Dentist in Núñez",
   "Lunes a viernes de 9 a 19 h · Sábados de 9 a 13 h":
     "Monday to Friday 9–19 h · Saturday 9–13 h",
@@ -270,14 +256,10 @@ export const EN: Record<string, string> = {
   Tecnología: "Technology",
 
   // ─── Intent cards ──────────────────────────────────────────────────────────
-  "Obras sociales y prepagas": "Insurance and health plans",
   "Para quien quiere saber cuánto cuesta": "If you want to know the cost",
-  "Para quien tiene cobertura": "If you have coverage",
   "Para quien compara: qué me conviene": "If you are comparing options",
   "Rangos orientativos por tratamiento, medios de pago disponibles y condiciones, en una sola página.":
     "Guide ranges per treatment, payment methods and terms, on one page.",
-  "Cómo consultar tu plan, qué suele cubrir una prepaga en odontología y qué queda a cargo tuyo.":
-    "How to check your plan, what dental insurance usually covers and what you pay.",
   "Cuánto diente conserva cada opción, en qué casos se indica una u otra y qué esperar de cada una.":
     "How much tooth each option keeps, when each is indicated and what to expect.",
   "Qué resuelve mejor cada técnica, cuánto pesa la disciplina de uso y cómo se decide por diagnóstico.":

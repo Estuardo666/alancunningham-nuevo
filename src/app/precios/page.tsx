@@ -23,7 +23,6 @@ import { faqsPorBloque } from "@/content/faqs";
 import { PRECIOS } from "@/content/precios";
 import { CLINICA, urlAbsoluta } from "@/content/clinica";
 import { rutaPorSlug } from "@/content/tratamientos";
-import { TextArrowCTA } from "@/components/ui/text-arrow-cta";
 
 const TITLE =
   "Precios de tratamientos odontológicos en Núñez | Smile Design Center";
@@ -135,14 +134,10 @@ export default function PreciosPage() {
                 más económica que resuelve tu caso, se plantea.
               </p>
               <p>
-                Aceptamos {CLINICA.monedas.join(" y ")}. Si tenés obra social o
-                prepaga, consultá tu cobertura antes de presupuestar como
-                paciente particular.
+                Aceptamos {CLINICA.monedas.join(" y ")}. La atención es
+                particular: el presupuesto que recibís es el total a abonar.
               </p>
             </div>
-            <TextArrowCTA href="/obras-sociales">
-              Ver obras sociales y prepagas
-            </TextArrowCTA>
           </div>
         </div>
       </Section>

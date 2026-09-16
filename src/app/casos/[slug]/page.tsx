@@ -21,7 +21,10 @@ import {
 } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
 import { CASOS, casoPorSlug } from "@/content/casos";
-import { pilarPorSlug, rutaPilar } from "@/content/tratamientos";
+import {
+  tratamientoPorSlug,
+  rutaTratamiento,
+} from "@/content/tratamientos";
 import { urlAbsoluta } from "@/content/clinica";
 import { TextArrowCTA } from "@/components/ui/text-arrow-cta";
 
@@ -55,7 +58,7 @@ export default async function CasoPage({
   const caso = casoPorSlug(slug);
   if (!caso) notFound();
 
-  const pilar = pilarPorSlug(caso.pilar);
+  const tratamiento = tratamientoPorSlug(caso.tratamientoSlug);
   const path = `/casos/${caso.slug}`;
   const migas = [
     { label: "Inicio", href: "/" },
@@ -132,10 +135,10 @@ export default async function CasoPage({
               </div>
             </div>
 
-            {pilar ? (
+            {tratamiento ? (
               <div className="flex flex-wrap items-center gap-x-6 gap-y-4 pt-2 lg:flex-nowrap">
-                <TextArrowCTA href={rutaPilar(pilar.slug)}>
-                  Ver tratamiento completo
+                <TextArrowCTA href={rutaTratamiento(tratamiento)}>
+                  Ver {tratamiento.nombre.toLowerCase()}
                 </TextArrowCTA>
                 <CtaConMicrocopy
                   contexto={`un turno por ${caso.etiqueta.toLowerCase()}`}

@@ -17,7 +17,7 @@ import { BLOQUES_FAQ, FAQS, faqsPorBloque } from "@/content/faqs";
 
 const TITLE = "Preguntas frecuentes | Smile Design Center, Núñez";
 const DESCRIPTION =
-  "25 preguntas sobre tratamientos, precios, obras sociales, primera consulta y turismo odontológico, respondidas sin vueltas. Consultorio en Núñez.";
+  "21 preguntas sobre tratamientos, precios, primera consulta y turismo odontológico, respondidas sin vueltas. Consultorio en Núñez.";
 const PATH = "/faq";
 
 const MIGAS = [
@@ -45,7 +45,7 @@ export default function FaqPage() {
       <PageHero
         eyebrow="Preguntas frecuentes"
         h1="Preguntas frecuentes sobre odontología en Núñez"
-        bajada={`${FAQS.length} preguntas agrupadas por tema: tratamientos, precios, coberturas, primera consulta y turismo odontológico.`}
+        bajada={`${FAQS.length} preguntas agrupadas por tema: tratamientos, precios, primera consulta y turismo odontológico.`}
         migas={MIGAS}
         imagen={{ src: "/images/thumbnail_image0-5-jpg-1440x800.webp" }}
       >

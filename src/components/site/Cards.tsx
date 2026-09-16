@@ -2,8 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { ArrowUpRightIcon } from "@/components/sites/clireo-framer-website-a1614289/shared/icons";
-import type { Pilar, Tratamiento } from "@/content/tratamientos";
-import { rutaPilar, rutaTratamiento } from "@/content/tratamientos";
+import type { Tratamiento } from "@/content/tratamientos";
+import { rutaTratamiento } from "@/content/tratamientos";
 import type { Caso } from "@/content/casos";
 import type { Post } from "@/content/posts";
 import type { Intencion } from "@/content/intenciones";
@@ -39,98 +39,8 @@ function VerMas({ label = "Ver tratamiento" }: { label?: string }) {
   );
 }
 
-/**
- * Pillar card used on the home and on the treatments hub. It is a full link —
- * the direct correction of DOHO's P1 (eleven unclickable cards).
- */
-export function PilarCard({
-  pilar,
-  variante = "standard",
-  indice = 0,
-}: {
-  pilar: Pilar;
-  variante?: "standard" | "blog";
-  indice?: number;
-}) {
-  if (variante === "blog") {
-    return (
-      <Link
-        href={rutaPilar(pilar.slug)}
-        className={`group flex h-full min-h-[430px] flex-col gap-[10px] overflow-hidden rounded-[14px] border p-2 shadow-[var(--clireo-shadow)] transition-[background-color,box-shadow] duration-300 ease-out hover:shadow-[var(--clireo-shadow-md)] ${PILAR_CARD_TONES[indice % PILAR_CARD_TONES.length]}`}
-      >
-        <div className="relative h-[235px] shrink-0 overflow-hidden rounded-[16px] bg-hero sm:h-[260px]">
-          <Image
-            src={pilar.imagen.src}
-            alt={pilar.imagen.alt}
-            fill
-            sizes="(min-width: 1024px) 420px, 100vw"
-            className="object-cover transition-transform duration-700 ease-[cubic-bezier(0.2,0.65,0.3,1)] group-hover:scale-110"
-          />
-          <div
-            aria-hidden
-            className="absolute inset-x-0 bottom-0 h-20"
-            style={{
-              background:
-                "linear-gradient(transparent, color-mix(in srgb, var(--hero) 64%, transparent))",
-            }}
-          />
-        </div>
-
-        <div className="flex min-h-0 flex-1 flex-col gap-2 px-2 pb-2">
-          <h3 className="line-clamp-2 text-[20px] font-medium leading-[25px] tracking-[-0.5px] text-foreground">
-            <T>{pilar.nombre}</T>
-          </h3>
-          <p className="line-clamp-3 flex-1 text-[14px] leading-[19px] tracking-[-0.14px] text-muted-foreground">
-            <T>{pilar.tarjeta}</T>
-          </p>
-          <span className="group/cta inline-flex w-fit items-center gap-2 rounded-[10px] border border-button-primary-bg bg-transparent px-3 py-2 text-[14px] leading-[18px] tracking-[-0.14px] text-button-primary-bg transition-colors duration-300 group-hover:bg-button-primary-bg group-hover:text-button-primary-foreground">
-            <T>Ver tratamiento</T>
-            <span className="relative flex h-5 w-5 shrink-0 items-center justify-center overflow-hidden">
-              <ArrowUpRightIcon className="h-4 w-4 transition-transform duration-300 ease-out group-hover/cta:translate-x-0.5 group-hover/cta:-translate-y-0.5" />
-            </span>
-          </span>
-        </div>
-      </Link>
-    );
-  }
-
-  return (
-    <Link
-      href={rutaPilar(pilar.slug)}
-      className="group flex h-full flex-col gap-[14px]"
-    >
-      <div className="relative h-[240px] w-full overflow-hidden rounded-[12px] bg-hero sm:h-[300px]">
-        <Image
-          src={pilar.imagen.src}
-          alt={pilar.imagen.alt}
-          fill
-          sizes="(min-width: 1024px) 420px, 100vw"
-          className="object-cover transition-transform duration-[600ms] ease-[cubic-bezier(0.4,0,0.2,1)] group-hover:scale-105"
-        />
-        <div
-          aria-hidden
-          className="absolute inset-x-0 bottom-0 h-[114px]"
-          style={{
-            background:
-              "linear-gradient(transparent 1.57%, color-mix(in srgb, var(--hero) 60%, transparent) 69.46%)",
-          }}
-        />
-      </div>
-
-      <div className="flex flex-1 flex-col gap-[10px] px-1">
-        <h3 className="text-[26px] leading-[31.2px] tracking-[-0.91px] text-foreground">
-          <T>{pilar.nombre}</T>
-        </h3>
-        <p className="flex-1 text-[15px] leading-[21px] tracking-[-0.15px] text-muted-foreground">
-          <T>{pilar.tarjeta}</T>
-        </p>
-        <VerMas />
-      </div>
-    </Link>
-  );
-}
-
-/** Compact card for child treatments and for "related treatments" rails. */
+/** Treatment card — every treatment sits at the same level, so this is the
+ * only card the site uses for them. */
 export function TratamientoCard({
   tratamiento,
   compacto = false,

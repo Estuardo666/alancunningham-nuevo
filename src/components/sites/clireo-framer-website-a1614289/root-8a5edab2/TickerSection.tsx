@@ -1,9 +1,9 @@
 import { SparkleIcon } from "../shared/icons";
 
-import { PILARES } from "@/content/tratamientos";
+import { TRATAMIENTOS } from "@/content/tratamientos";
 import { T } from "@/i18n/LanguageProvider";
 
-const ITEMS = PILARES.map((pilar) => pilar.nombre);
+const ITEMS = TRATAMIENTOS.map((t) => t.nombre);
 const SPARKLE_COLORS = [
   "text-accent-coral",
   "text-accent-yellow",

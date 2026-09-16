@@ -8,8 +8,12 @@ import { SectionEyebrow } from "../shared/SectionEyebrow";
 import { ArrowUpRightIcon } from "../shared/icons";
 import { RevealText } from "../shared/RevealText";
 import { ProgressiveBlur } from "../shared/ProgressiveBlur";
-import { colorPilar } from "../shared/pilarColores";
-import { PILARES, rutaPilar, type Pilar } from "@/content/tratamientos";
+import { colorTile } from "../shared/pilarColores";
+import {
+  TRATAMIENTOS,
+  rutaTratamiento,
+  type Tratamiento,
+} from "@/content/tratamientos";
 import { T, useTr } from "@/i18n/LanguageProvider";
 
 const CARD_WIDTH = 407;
@@ -20,9 +24,9 @@ const STEP = CARD_WIDTH + CARD_GAP;
  * A `framer-slideshow` on the source site: a manually driven carousel with
  * Previous / Next controls. It does NOT auto-advance.
  *
- * The anatomy is untouched; what changed is the content — the seven real
- * treatment pillars — and the fact that **every card is now a link** to its
- * pillar page, which is the DOHO P1 correction (plan §2.1).
+ * The anatomy is untouched; what changed is the content — the real treatments,
+ * all at the same level — and the fact that **every card is now a link** to its
+ * own page, which is the DOHO P1 correction (plan §2.1).
  */
 export function ServicesSection() {
   const [index, setIndex] = useState(0);
@@ -41,7 +45,7 @@ export function ServicesSection() {
     return () => window.removeEventListener("resize", measure);
   }, []);
 
-  const maxIndex = Math.max(0, PILARES.length - perView);
+  const maxIndex = Math.max(0, TRATAMIENTOS.length - perView);
   const clamped = Math.min(index, maxIndex);
 
   // The source slideshow wraps rather than dead-ending on either control.
@@ -77,9 +81,9 @@ export function ServicesSection() {
                   transform: `translateX(-${clamped * STEP}px)`,
                 }}
               >
-                {PILARES.map((pilar) => (
-                  <li key={pilar.slug} className="shrink-0">
-                    <ServiceTile pilar={pilar} />
+                {TRATAMIENTOS.map((tratamiento, i) => (
+                  <li key={tratamiento.slug} className="shrink-0">
+                    <ServiceTile tratamiento={tratamiento} indice={i} />
                   </li>
                 ))}
               </ul>
@@ -155,18 +159,24 @@ function CarouselButton({
   );
 }
 
-function ServiceTile({ pilar }: { pilar: Pilar }) {
-  const color = colorPilar(pilar.slug);
+function ServiceTile({
+  tratamiento,
+  indice,
+}: {
+  tratamiento: Tratamiento;
+  indice: number;
+}) {
+  const color = colorTile(indice);
 
   return (
     <Link
-      href={rutaPilar(pilar.slug)}
+      href={rutaTratamiento(tratamiento)}
       style={{ "--tile-ink": color.fg, "--tile-bg": color.bg } as CSSProperties}
       className="group relative flex h-[446px] w-[300px] items-end overflow-hidden rounded-[15px] bg-surface-strong p-6 outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-surface-strong lg:w-[407px]"
     >
       <Image
-        src={pilar.imagen.src}
-        alt={pilar.imagen.alt}
+        src={tratamiento.imagen.src}
+        alt={tratamiento.imagen.alt}
         fill
         sizes="407px"
         className="absolute inset-0 object-cover transition-[scale] duration-[600ms] ease-out group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
@@ -195,10 +205,10 @@ function ServiceTile({ pilar }: { pilar: Pilar }) {
       <div className="relative z-20 flex flex-col items-start gap-4">
         <div className="flex flex-col gap-[6px] transition-colors duration-300 group-hover:text-[var(--tile-ink)] group-focus-visible:text-[var(--tile-ink)]">
           <h3 className="text-[26px] leading-[31.2px] tracking-[-0.91px] text-white transition-colors duration-300 group-hover:text-[var(--tile-ink)] group-focus-visible:text-[var(--tile-ink)]">
-            <T>{pilar.nombre}</T>
+            <T>{tratamiento.nombre}</T>
           </h3>
           <p className="text-[15px] leading-[21px] tracking-[-0.15px] text-white opacity-80 transition-[color,opacity] duration-300 group-hover:text-[var(--tile-ink)] group-hover:opacity-100 group-focus-visible:text-[var(--tile-ink)] group-focus-visible:opacity-100">
-            <T>{pilar.tarjeta}</T>
+            <T>{tratamiento.resumen}</T>
           </p>
           <span className="mt-1 flex items-center gap-1 text-[16px] leading-[22px] tracking-[-0.32px] text-white opacity-0 transition-[opacity,translate] duration-300 group-hover:text-[var(--tile-ink)] group-hover:opacity-100 group-focus-visible:text-[var(--tile-ink)] group-focus-visible:opacity-100 motion-safe:translate-y-1 motion-safe:group-hover:translate-y-0 motion-safe:group-focus-visible:translate-y-0">
             <T>Ver tratamiento</T>

@@ -88,13 +88,13 @@ export default function NosotrosPage() {
             <CtaConMicrocopy contexto="una consulta inicial" />
 
             <div className="flex w-full flex-col gap-4 pt-2">
-              <PilarCard
+              <ValorCard
                 eyebrow="Misión"
                 titulo="Por qué existe el consultorio"
                 texto={MISION.texto}
                 tono="bg-accent-coral/15"
               />
-              <PilarCard
+              <ValorCard
                 eyebrow="Visión"
                 titulo="Hacia dónde vamos"
                 texto={VISION.texto}
@@ -148,7 +148,7 @@ export default function NosotrosPage() {
 }
 
 /** Mission / vision card: same type scale as every other card on the site. */
-function PilarCard({
+function ValorCard({
   eyebrow,
   titulo,
   texto,

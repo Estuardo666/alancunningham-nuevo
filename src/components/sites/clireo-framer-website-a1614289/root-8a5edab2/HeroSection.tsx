@@ -1,6 +1,5 @@
 import { RevealText } from "../shared/RevealText";
 import { PrimaryButton } from "../shared/PrimaryButton";
-import { TextArrowCTA } from "@/components/ui/text-arrow-cta";
 import { GoogleRatingSummary } from "@/components/site/GoogleReviews";
 import { T } from "@/i18n/LanguageProvider";
 
@@ -67,9 +66,6 @@ export function HeroSection() {
               href="/precios"
               variant="dark"
             />
-            <TextArrowCTA href="/obras-sociales" className="text-white">
-              <T>¿Trabajan con mi obra social?</T>
-            </TextArrowCTA>
           </div>
 
           <div className="flex flex-wrap items-center gap-x-6 gap-y-3">

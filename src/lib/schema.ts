@@ -1,6 +1,6 @@
 import { CLINICA, SITE_URL, urlAbsoluta } from "@/content/clinica";
 import { EQUIPO, TITULAR, FECHA_REVISION } from "@/content/equipo";
-import { PILARES, TRATAMIENTOS, rutaPilar, rutaTratamiento } from "@/content/tratamientos";
+import { TRATAMIENTOS, rutaTratamiento, nombrePorSlug } from "@/content/tratamientos";
 import type { Faq } from "@/content/types";
 
 /** Stable @id anchors so every graph node can reference the same entities. */
@@ -33,10 +33,7 @@ export function personSchema(slug: string): Json | null {
       "@type": "EducationalOccupationalCredential",
       name: c,
     })),
-    knowsAbout: p.tratamientos.map((slugPilar) => {
-      const pilar = PILARES.find((x) => x.slug === slugPilar);
-      return pilar?.nombre ?? slugPilar;
-    }),
+    knowsAbout: p.tratamientos.map((slug) => nombrePorSlug(slug)),
     worksFor: { "@id": ID.clinica },
   };
 }
@@ -75,19 +72,12 @@ export function dentistSchema(): Json {
       closes: h.hasta,
     })),
     areaServed: CLINICA.zonas.map((z) => ({ "@type": "Place", name: z })),
-    medicalSpecialty: PILARES.map((p) => p.nombre),
-    availableService: [
-      ...PILARES.map((p) => ({
-        "@type": "MedicalProcedure",
-        name: p.nombre,
-        url: urlAbsoluta(rutaPilar(p.slug)),
-      })),
-      ...TRATAMIENTOS.map((t) => ({
-        "@type": "MedicalProcedure",
-        name: t.nombre,
-        url: urlAbsoluta(rutaTratamiento(t)),
-      })),
-    ],
+    medicalSpecialty: TRATAMIENTOS.map((t) => t.nombre),
+    availableService: TRATAMIENTOS.map((t) => ({
+      "@type": "MedicalProcedure",
+      name: t.nombre,
+      url: urlAbsoluta(rutaTratamiento(t)),
+    })),
     currenciesAccepted: CLINICA.monedas.join(", "),
     paymentAccepted: CLINICA.mediosDePago.join(", "),
     founder: { "@id": ID.titular },

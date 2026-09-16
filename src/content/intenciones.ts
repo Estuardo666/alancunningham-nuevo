@@ -18,13 +18,6 @@ export const INTENCIONES: Intencion[] = [
     href: "/precios",
   },
   {
-    titulo: "Obras sociales y prepagas",
-    etiqueta: "Para quien tiene cobertura",
-    descripcion:
-      "Cómo consultar tu plan, qué suele cubrir una prepaga en odontología y qué queda a cargo tuyo.",
-    href: "/obras-sociales",
-  },
-  {
     titulo: "Carillas o coronas",
     etiqueta: "Para quien compara: qué me conviene",
     descripcion:

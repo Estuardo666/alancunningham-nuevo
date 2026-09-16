@@ -9,7 +9,7 @@ import { JsonLd } from "@/components/site/JsonLd";
 import { breadcrumbSchema, grafo, ID, webPageSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
 import { CLINICA, whatsappHref } from "@/content/clinica";
-import { PILARES } from "@/content/tratamientos";
+import { TRATAMIENTOS } from "@/content/tratamientos";
 import { TextArrowCTA } from "@/components/ui/text-arrow-cta";
 import { AtSign, Clock3, MapPin, MessageCircle } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
@@ -138,9 +138,9 @@ export default function ContactoPage() {
           <ConsultaForm
             titulo="Dejanos tus datos"
             contexto="una consulta por mail"
-            tratamientos={PILARES.map((p) => ({
-              slug: p.slug,
-              nombre: p.nombre,
+            tratamientos={TRATAMIENTOS.map((t) => ({
+              slug: t.slug,
+              nombre: t.nombre,
             }))}
             className="max-w-[720px]"
           />

@@ -25,10 +25,7 @@ import {
 } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
 import {
-  PILARES,
-  PILAR_EYEBROWS,
-  pilarPorSlug,
-  rutaPilar,
+  TRATAMIENTOS,
   rutaTratamiento,
   tratamientoPorSlug,
   tituloQueEs,
@@ -36,17 +33,15 @@ import {
 } from "@/content/tratamientos";
 
 export function generateStaticParams() {
-  return PILARES.flatMap((p) =>
-    p.hijos.map((h) => ({ pilar: p.slug, hijo: h.slug })),
-  );
+  return TRATAMIENTOS.map((t) => ({ slug: t.slug }));
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ pilar: string; hijo: string }>;
+  params: Promise<{ slug: string }>;
 }) {
-  const { hijo: slug } = await params;
+  const { slug } = await params;
   const tratamiento = tratamientoPorSlug(slug);
   if (!tratamiento) return {};
   return buildMetadata({
@@ -60,18 +55,16 @@ export async function generateMetadata({
 export default async function TratamientoPage({
   params,
 }: {
-  params: Promise<{ pilar: string; hijo: string }>;
+  params: Promise<{ slug: string }>;
 }) {
-  const { pilar: slugPilar, hijo: slugHijo } = await params;
-  const tratamiento = tratamientoPorSlug(slugHijo);
-  const pilar = pilarPorSlug(slugPilar);
-  if (!tratamiento || !pilar || tratamiento.pilar !== pilar.slug) notFound();
+  const { slug } = await params;
+  const tratamiento = tratamientoPorSlug(slug);
+  if (!tratamiento) notFound();
 
   const path = rutaTratamiento(tratamiento);
   const migas = [
     { label: "Inicio", href: "/" },
     { label: "Tratamientos", href: "/tratamientos" },
-    { label: pilar.nombre, href: rutaPilar(pilar.slug) },
     { label: tratamiento.nombre, href: path },
   ];
 
@@ -90,7 +83,6 @@ export default async function TratamientoPage({
             descripcion: tratamiento.resumen,
             path,
             imagen: tratamiento.imagen.src,
-            parte: rutaPilar(pilar.slug),
           }),
           breadcrumbSchema(migas),
           faqSchema(tratamiento.faqs),
@@ -98,7 +90,7 @@ export default async function TratamientoPage({
       />
 
       <PageHero
-        eyebrow={`Tratamiento · ${PILAR_EYEBROWS[pilar.slug] ?? pilar.eyebrow}`}
+        eyebrow="Tratamiento"
         h1={tituloVisible(tratamiento.h1)}
         bajada={tratamiento.resumen}
         migas={migas}

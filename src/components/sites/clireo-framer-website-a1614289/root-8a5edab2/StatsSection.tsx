@@ -10,7 +10,7 @@ import { useEffect, useRef, useState } from "react";
 import type { Stat } from "@/types/clireo";
 import { RevealText } from "../shared/RevealText";
 import { SectionEyebrow } from "../shared/SectionEyebrow";
-import { PILARES, TRATAMIENTOS } from "@/content/tratamientos";
+import { TRATAMIENTOS } from "@/content/tratamientos";
 import { CASOS } from "@/content/casos";
 import { TITULAR } from "@/content/equipo";
 
@@ -24,7 +24,6 @@ const STATS: Stat[] = [
     value: TITULAR.matricula.replace("M.N. ", ""),
     label: "Matrícula Nacional del titular",
   },
-  { value: `${PILARES.length}`, label: "Áreas de tratamiento" },
   { value: `${TRATAMIENTOS.length}`, label: "Tratamientos con página propia" },
   { value: `${CASOS.length}`, label: "Casos documentados con antes y después" },
 ];

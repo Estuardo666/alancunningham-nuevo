@@ -10,7 +10,7 @@ export interface Profesional extends ConFuente {
   foto: Imagen;
   bio: string[];
   formacion: string[];
-  /** Slugs of the pillars this professional works on. */
+  /** Slugs of the treatments this professional works on. */
   tratamientos: string[];
   /** Universities, for `alumniOf` in the Person schema. */
   alumniOf: string[];
@@ -43,12 +43,12 @@ export const EQUIPO: Profesional[] = [
       "Docente de la Universidad de Buenos Aires (UBA)",
     ],
     tratamientos: [
-      "rehabilitacion-oral",
-      "implantes-dentales",
-      "estetica-dental",
-      "endodoncia",
-      "cirugia-y-periodoncia",
-      "odontologia-general",
+      "diseno-de-sonrisa",
+      "carillas-de-porcelana",
+      "coronas-dentales",
+      "implantes-unitarios",
+      "rehabilitacion-sobre-implantes",
+      "tratamiento-de-conducto",
     ],
     alumniOf: ["Universidad de Buenos Aires"],
     credenciales: [

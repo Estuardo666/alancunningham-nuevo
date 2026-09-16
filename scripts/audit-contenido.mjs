@@ -17,7 +17,7 @@ const RAIZ = new URL("..", import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, "
 const CONTENIDO = join(RAIZ, "src", "content");
 
 /** Files whose unvalidated content blocks a production deploy. */
-const BLOQUEANTES = ["precios.ts", "obras-sociales.ts"];
+const BLOQUEANTES = ["precios.ts"];
 
 function archivos(dir) {
   return readdirSync(dir).flatMap((nombre) => {

@@ -7,10 +7,14 @@ import { CIRUGIA_Y_PERIODONCIA } from "./cirugia-y-periodoncia";
 import { ODONTOLOGIA_GENERAL } from "./odontologia-general";
 import type { Pilar, Tratamiento } from "./tipos";
 
-export type { Pilar, Tratamiento };
+export type { Tratamiento };
 
-/** The seven pillars, in the order they appear on the home and on the hub. */
-export const PILARES: Pilar[] = [
+/**
+ * Source files are still grouped by clinical area, but the site has no
+ * hierarchy: every treatment is a sibling of every other one, with its own URL
+ * directly under /tratamientos. The grouping never reaches the UI.
+ */
+const ARCHIVOS: Pilar[] = [
   ESTETICA_DENTAL,
   REHABILITACION_ORAL,
   IMPLANTES_DENTALES,
@@ -19,17 +23,6 @@ export const PILARES: Pilar[] = [
   CIRUGIA_Y_PERIODONCIA,
   ODONTOLOGIA_GENERAL,
 ];
-
-/** Editorial labels used in the visual eyebrow of each treatment page. */
-export const PILAR_EYEBROWS: Record<string, string> = {
-  "estetica-dental": "Diseño y armonía",
-  "rehabilitacion-oral": "Función y recuperación",
-  "implantes-dentales": "Planificación implantológica",
-  ortodoncia: "Alineación y mordida",
-  endodoncia: "Conservación dental",
-  "cirugia-y-periodoncia": "Encías y cirugía",
-  "odontologia-general": "Salud bucal",
-};
 
 /** Keeps location terms available for metadata without repeating them in H1s. */
 export function tituloVisible(titulo: string) {
@@ -65,34 +58,22 @@ export function tituloQueEs(tratamiento: Pick<Tratamiento, "slug" | "nombre">) {
   );
 }
 
-/** Every child treatment, flattened. 19 in total. */
-export const TRATAMIENTOS: Tratamiento[] = PILARES.flatMap((p) => p.hijos);
-
-export function pilarPorSlug(slug: string) {
-  return PILARES.find((p) => p.slug === slug);
-}
+/** The 19 treatments, all at the same level. */
+export const TRATAMIENTOS: Tratamiento[] = ARCHIVOS.flatMap((p) => p.hijos);
 
 export function tratamientoPorSlug(slug: string) {
   return TRATAMIENTOS.find((t) => t.slug === slug);
 }
 
-export function rutaPilar(slug: string) {
-  return `/tratamientos/${slug}`;
+export function rutaTratamiento(t: Pick<Tratamiento, "slug">) {
+  return `/tratamientos/${t.slug}`;
 }
 
-export function rutaTratamiento(t: Tratamiento) {
-  return `/tratamientos/${t.pilar}/${t.slug}`;
-}
-
-/** Resolves a slug to its URL regardless of whether it is a pillar or a child. */
+/** Resolves any treatment slug to its URL, or to the hub when unknown. */
 export function rutaPorSlug(slug: string) {
-  const hijo = tratamientoPorSlug(slug);
-  if (hijo) return rutaTratamiento(hijo);
-  return rutaPilar(slug);
+  return tratamientoPorSlug(slug) ? `/tratamientos/${slug}` : "/tratamientos";
 }
 
 export function nombrePorSlug(slug: string) {
-  return (
-    tratamientoPorSlug(slug)?.nombre ?? pilarPorSlug(slug)?.nombre ?? slug
-  );
+  return tratamientoPorSlug(slug)?.nombre ?? slug;
 }

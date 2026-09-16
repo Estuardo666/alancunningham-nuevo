@@ -7,11 +7,7 @@ import {
 } from "@/components/site/PageShell";
 import { AntesDespues } from "@/components/site/AntesDespues";
 import { IntentCard } from "@/components/site/Cards";
-import {
-  CoverageBadges,
-  MediosDePago,
-  PriceTable,
-} from "@/components/site/Blocks";
+import { MediosDePago, PriceTable } from "@/components/site/Blocks";
 import { CASOS } from "@/content/casos";
 import { INTENCIONES } from "@/content/intenciones";
 import { INSTALACIONES } from "@/content/clinica-contenido";
@@ -96,16 +92,16 @@ export function HomeCasos() {
 }
 
 /**
- * 05 · Price and coverage. Reuses the Stats band anatomy (navy, centred, large
- * figures) to put the two dominant objections above the 40% scroll mark.
+ * 05 · Prices and payment. Reuses the Stats band anatomy (navy, centred, large
+ * figures) to put the dominant objection above the 40% scroll mark.
  */
 export function HomePrecioCobertura() {
   return (
     <Section banda="background" id="precios">
       <SectionHeading
-        eyebrow="Precio y cobertura"
+        eyebrow="Precios y medios de pago"
         titulo="Cuánto cuesta y con qué se paga, sin tener que preguntar"
-        bajada="Los rangos orientativos por tratamiento, los medios de pago y las coberturas, visibles acá y en detalle en su propia página."
+        bajada="Los rangos orientativos por tratamiento y los medios de pago, visibles acá y en detalle en su propia página."
       />
 
       <div className="grid w-full min-w-0 gap-10 lg:grid-cols-2">
@@ -132,13 +128,9 @@ export function HomePrecioCobertura() {
 
         <div className="flex min-w-0 flex-col gap-6">
           <h3 className="text-[22px] leading-[29.7px] tracking-[-0.88px] text-foreground">
-            <T>Medios de pago y coberturas</T>
+            <T>Medios de pago</T>
           </h3>
           <MediosDePago conImagenes={false} />
-          <CoverageBadges />
-          <TextArrowCTA href="/obras-sociales">
-            Consultar tu obra social
-          </TextArrowCTA>
         </div>
       </div>
     </Section>

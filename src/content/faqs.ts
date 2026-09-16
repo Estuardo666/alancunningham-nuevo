@@ -1,10 +1,9 @@
 import type { Faq } from "./types";
 
-/** 25 questions in 5 blocks — the DOHO model (plan §4.8). */
+/** 21 questions in 4 blocks — the DOHO model (plan §4.8). */
 export const BLOQUES_FAQ = [
   "Tratamientos",
   "Precios y pagos",
-  "Obras sociales",
   "Primera consulta",
   "Turismo odontológico",
 ] as const;
@@ -103,35 +102,6 @@ export const FAQS: Faq[] = [
     respuesta:
       "En tratamientos largos el plan se organiza en etapas y cada etapa se abona al realizarse. Eso se define junto con el plan, antes de empezar.",
   },
-  // ---- Obras sociales ----
-  {
-    _fuente: "pendiente-validacion",
-    bloque: "Obras sociales",
-    pregunta: "¿Trabajan con obras sociales o prepagas?",
-    respuesta:
-      "Estamos actualizando el listado de coberturas vigentes. Escribinos por WhatsApp con el nombre de tu obra social o prepaga y tu plan, y te confirmamos tu caso el mismo día.",
-  },
-  {
-    _fuente: "pendiente-validacion",
-    bloque: "Obras sociales",
-    pregunta: "¿Qué cubre normalmente una prepaga en odontología?",
-    respuesta:
-      "En general las coberturas alcanzan prestaciones básicas como consulta, limpieza y restauraciones simples, y dejan fuera o cubren parcialmente los tratamientos estéticos, la ortodoncia y los implantes. El alcance exacto depende de tu plan.",
-  },
-  {
-    _fuente: "ia",
-    bloque: "Obras sociales",
-    pregunta: "¿Cómo consulto por mi cobertura?",
-    respuesta:
-      "Mandanos el nombre de la obra social y del plan por WhatsApp. Te respondemos qué alcanza tu cobertura, qué queda a cargo tuyo y con qué medios de pago se puede abonar la diferencia.",
-  },
-  {
-    _fuente: "ia",
-    bloque: "Obras sociales",
-    pregunta: "¿Puedo atenderme como paciente particular?",
-    respuesta:
-      "Sí. La mayor parte de los tratamientos estéticos y de rehabilitación se realizan de forma particular, con presupuesto por escrito y los medios de pago disponibles.",
-  },
   // ---- Primera consulta ----
   {
     _fuente: "ia",
@@ -201,7 +171,7 @@ export function faqsPorBloque(bloque: string) {
  * interaction (plan §3.2, block 13).
  */
 export const FAQS_HOME: Faq[] = [
-  FAQS.find((f) => f.pregunta.startsWith("¿Trabajan con obras sociales"))!,
+  FAQS.find((f) => f.pregunta.startsWith("¿Se puede pagar por etapas"))!,
   FAQS.find((f) => f.pregunta.startsWith("¿Cuánto cuesta un implante"))!,
   FAQS.find((f) => f.pregunta.startsWith("¿Qué medios de pago"))!,
   FAQS.find((f) => f.pregunta.startsWith("¿Qué pasa en la primera consulta"))!,

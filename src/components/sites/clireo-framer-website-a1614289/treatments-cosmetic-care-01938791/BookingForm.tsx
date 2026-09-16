@@ -1,5 +1,5 @@
 import { ConsultaForm } from "@/components/site/ConsultaForm";
-import { PILARES } from "@/content/tratamientos";
+import { TRATAMIENTOS } from "@/content/tratamientos";
 
 /**
  * Sticky booking card (top: 75px) that trails an article column.
@@ -19,7 +19,7 @@ export function BookingForm({
     <ConsultaForm
       titulo={titulo ?? "Agendá tu consulta"}
       contexto={contexto}
-      tratamientos={PILARES.map((p) => ({ slug: p.slug, nombre: p.nombre }))}
+      tratamientos={TRATAMIENTOS.map((t) => ({ slug: t.slug, nombre: t.nombre }))}
       sticky
     />
   );

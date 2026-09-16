@@ -99,12 +99,6 @@ export const ODONTOLOGIA_GENERAL: Pilar = {
       respuesta:
         "No. La primera consulta es sin cargo e incluye evaluación, diagnóstico y plan de tratamiento por escrito, sin compromiso.",
     },
-    {
-      _fuente: "pendiente-validacion",
-      pregunta: "¿Trabajan con obras sociales?",
-      respuesta:
-        "Las coberturas vigentes están detalladas en la página de obras sociales. Si la tuya no figura, escribinos y te contamos cómo se puede resolver el caso.",
-    },
   ],
   hijos: [
     {
