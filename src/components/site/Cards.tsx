@@ -16,13 +16,13 @@ const POST_CATEGORY_TONES: Record<string, string> = {
 };
 
 const PILAR_CARD_TONES = [
-  "bg-[#fff1ed] border-[#f1c9bf]",
-  "bg-[#f1edff] border-[#d7ccf7]",
-  "bg-[#e9fbf9] border-[#bce9e5]",
-  "bg-[#f4f8e2] border-[#dce8af]",
-  "bg-[#f5effb] border-[#ddc9ef]",
-  "bg-[#fff6df] border-[#f0dca8]",
-  "bg-[#edf5ff] border-[#c9def4]",
+  "bg-[#fff1ed] border-[#f1c9bf] dark:bg-[#321c1a] dark:border-[#7d4a43]",
+  "bg-[#f1edff] border-[#d7ccf7] dark:bg-[#272044] dark:border-[#6253a3]",
+  "bg-[#e9fbf9] border-[#bce9e5] dark:bg-[#163d3b] dark:border-[#3f8580]",
+  "bg-[#f4f8e2] border-[#dce8af] dark:bg-[#343d1b] dark:border-[#6a7b32]",
+  "bg-[#f5effb] border-[#ddc9ef] dark:bg-[#302040] dark:border-[#765196]",
+  "bg-[#fff6df] border-[#f0dca8] dark:bg-[#413316] dark:border-[#8c6d2f]",
+  "bg-[#edf5ff] border-[#c9def4] dark:bg-[#20334a] dark:border-[#4f79a1]",
 ];
 
 /** The "Ver tratamiento →" affordance every card carries. Never a dead card. */

@@ -54,26 +54,26 @@ const MIGAS = [
 ];
 
 const REASON_TONES = [
-  "bg-[#f8f0eb] border-[#ecd0c5]",
-  "bg-[#eff8f7] border-[#c8e7e3]",
-  "bg-[#f2efff] border-[#d9cff7]",
-  "bg-[#f8f5e8] border-[#e8dbaf]",
+  "bg-[#f8f0eb] border-[#ecd0c5] dark:bg-[#321c1a] dark:border-[#7d4a43]",
+  "bg-[#eff8f7] border-[#c8e7e3] dark:bg-[#163d3b] dark:border-[#3f8580]",
+  "bg-[#f2efff] border-[#d9cff7] dark:bg-[#272044] dark:border-[#6253a3]",
+  "bg-[#f8f5e8] border-[#e8dbaf] dark:bg-[#343d1b] dark:border-[#6a7b32]",
 ];
 
 const SERVICE_TONES = [
-  "bg-[#fff1ed] border-[#f1c9bf]",
-  "bg-[#f1edff] border-[#d7ccf7]",
-  "bg-[#e9fbf9] border-[#bce9e5]",
-  "bg-[#f4f8e2] border-[#dce8af]",
-  "bg-[#edf5ff] border-[#c9def4]",
+  "bg-[#fff1ed] border-[#f1c9bf] dark:bg-[#321c1a] dark:border-[#7d4a43]",
+  "bg-[#f1edff] border-[#d7ccf7] dark:bg-[#272044] dark:border-[#6253a3]",
+  "bg-[#e9fbf9] border-[#bce9e5] dark:bg-[#163d3b] dark:border-[#3f8580]",
+  "bg-[#f4f8e2] border-[#dce8af] dark:bg-[#343d1b] dark:border-[#6a7b32]",
+  "bg-[#edf5ff] border-[#c9def4] dark:bg-[#20334a] dark:border-[#4f79a1]",
 ];
 
 const SERVICE_ICON_TONES = [
   "bg-accent-coral/20 text-accent-coral-strong",
-  "bg-[#d7ccf7] text-[#4d2c98]",
-  "bg-[#bce9e5] text-[#147a76]",
-  "bg-[#dce8af] text-[#68751f]",
-  "bg-[#c9def4] text-[#2d5f8f]",
+  "bg-[#d7ccf7] text-[#4d2c98] dark:bg-[#6253a3] dark:text-white",
+  "bg-[#bce9e5] text-[#147a76] dark:bg-[#3f8580] dark:text-white",
+  "bg-[#dce8af] text-[#68751f] dark:bg-[#6a7b32] dark:text-white",
+  "bg-[#c9def4] text-[#2d5f8f] dark:bg-[#4f79a1] dark:text-white",
 ];
 
 const SERVICE_ICONS = [CarFront, BusFront, Hotel, MapPinned, UtensilsCrossed];

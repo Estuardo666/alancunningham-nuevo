@@ -377,9 +377,9 @@ export function Pasos({
   compact?: boolean;
 }) {
   const compactTones = [
-    "border-[#f1c9bf] bg-[#fff1ed]",
-    "border-[#bce9e5] bg-[#e9fbf9]",
-    "border-[#dce8af] bg-[#f4f8e2]",
+    "border-[#f1c9bf] bg-[#fff1ed] dark:border-[#7d4a43] dark:bg-[#321c1a]",
+    "border-[#bce9e5] bg-[#e9fbf9] dark:border-[#3f8580] dark:bg-[#163d3b]",
+    "border-[#dce8af] bg-[#f4f8e2] dark:border-[#6a7b32] dark:bg-[#343d1b]",
   ];
 
   return (
