@@ -95,9 +95,9 @@ const CARD_TONES = [
   },
   {
     surface: "bg-accent-yellow",
-    ink: "text-accent-yellow-strong",
-    muted: "text-accent-yellow-strong/75",
-    icon: "text-foreground",
+    ink: "text-secondary-foreground",
+    muted: "text-secondary-foreground/75",
+    icon: "text-secondary-foreground",
   },
 ] as const;
 

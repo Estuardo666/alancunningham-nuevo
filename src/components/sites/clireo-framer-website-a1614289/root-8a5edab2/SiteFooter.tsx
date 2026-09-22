@@ -227,7 +227,7 @@ export function SiteFooter({
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={label}
-                    className="flex h-8 w-8 items-center justify-center rounded-full border border-white/25 text-white transition-colors duration-200 hover:border-accent-yellow hover:bg-accent-yellow hover:text-accent-yellow-strong"
+                    className="flex h-8 w-8 items-center justify-center rounded-full border border-white/25 text-white transition-colors duration-200 hover:border-accent-yellow hover:bg-accent-yellow hover:text-secondary-foreground"
                   >
                     <SocialIcon name={icon} />
                   </a>

@@ -170,7 +170,7 @@ export function PageHeaderCompacto({
               const tonos = [
                 "bg-accent-coral/15 text-accent-coral-strong",
                 "bg-secondary/20 text-secondary-foreground",
-                "bg-accent-yellow/30 text-accent-yellow-strong",
+                "bg-accent-yellow/30 text-secondary-foreground",
               ];
 
               return (

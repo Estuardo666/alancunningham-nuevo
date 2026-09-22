@@ -22,7 +22,7 @@ const FORMACION_ICONS = [GraduationCap, BadgeCheck, Wrench, BookOpen] as const;
 const FORMACION_TONES = [
   "bg-accent-coral/18 text-accent-coral-strong",
   "bg-secondary/18 text-secondary-foreground",
-  "bg-accent-yellow/30 text-accent-yellow-strong",
+  "bg-accent-yellow/30 text-secondary-foreground",
   "bg-surface-strong/10 text-foreground",
 ] as const;
 

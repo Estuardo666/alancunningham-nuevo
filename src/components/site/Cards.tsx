@@ -11,7 +11,7 @@ import { T } from "@/i18n/LanguageProvider";
 
 const POST_CATEGORY_TONES: Record<string, string> = {
   "Estética dental": "bg-secondary/18 text-secondary-foreground",
-  Prevención: "bg-accent-yellow/30 text-accent-yellow-strong",
+  Prevención: "bg-accent-yellow/30 text-secondary-foreground",
   "Primera visita": "bg-surface-strong/10 text-foreground",
 };
 

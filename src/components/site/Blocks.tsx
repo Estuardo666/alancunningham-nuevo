@@ -157,7 +157,7 @@ function PaymentVisual({ nombre }: { nombre: string }) {
   const Icon = nombre === "Transferencia bancaria" ? Landmark : Banknote;
 
   return (
-    <span className="flex h-10 w-10 items-center justify-center rounded-[10px] bg-accent-yellow/30 text-accent-yellow-strong">
+    <span className="flex h-10 w-10 items-center justify-center rounded-[10px] bg-accent-yellow/30 text-secondary-foreground">
       <Icon className="h-6 w-6" strokeWidth={1.8} aria-hidden />
     </span>
   );

@@ -19,7 +19,7 @@ const STEP_ICONS = [
 
 const STEP_ACCENTS = [
   "bg-accent-coral/20 text-accent-coral-strong",
-  "bg-accent-yellow/45 text-accent-yellow-strong",
+  "bg-accent-yellow/45 text-secondary-foreground",
   "bg-secondary/30 text-secondary-foreground",
   "bg-[#e9fbf9] text-[#147a76]",
   "bg-[#f5effb] text-[#74449c]",
@@ -56,7 +56,7 @@ export function TimelineSteps({
                 className={cn(
                   "flex h-10 w-10 shrink-0 items-center justify-center rounded-[12px]",
                   claro
-                    ? "bg-accent-yellow text-accent-yellow-strong"
+                    ? "bg-accent-yellow text-secondary-foreground"
                     : STEP_ACCENTS[index % STEP_ACCENTS.length],
                 )}
               >
