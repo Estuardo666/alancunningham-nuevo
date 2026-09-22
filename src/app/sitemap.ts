@@ -33,7 +33,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entrada("/nosotros/tecnologia", 0.6),
     entrada("/turismo-odontologico", 0.9),
     entrada("/contacto", 0.8),
-    entrada("/precios", 0.9),
     entrada("/faq", 0.7),
     entrada("/blog", 0.7, "weekly"),
     entrada("/dentista-en-nunez", 0.7),

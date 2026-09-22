@@ -27,74 +27,10 @@ export interface Post extends ConFuente {
 export const POSTS: Post[] = [
   {
     _fuente: "ia",
-    slug: "cuanto-cuesta-un-implante-dental-en-buenos-aires",
-    titulo: "Cuánto cuesta un implante dental en Buenos Aires y de qué depende",
-    h1: "Cuánto cuesta un implante dental en Buenos Aires y de qué depende",
-    title: "Cuánto Cuesta un Implante Dental en Buenos Aires | Smile Design Center",
-    description:
-      "Qué incluye realmente el presupuesto de un implante dental, por qué varía tanto entre consultorios y qué preguntas hacer antes de comparar precios.",
-    categoria: "Precios",
-    fecha: "2026-08-05",
-    fechaTexto: "5 de agosto de 2026",
-    actualizado: "agosto de 2026",
-    lectura: "6 min",
-    imagen: {
-      src: "/images/implan1-jpg.webp",
-      alt: "Implante dental que reemplaza una pieza perdida, antes y después",
-    },
-    entradilla:
-      "Es la pregunta más buscada del rubro y la peor respondida: casi ningún sitio explica qué entra en el precio. Esto es lo que hay que mirar antes de comparar dos presupuestos.",
-    secciones: [
-      {
-        titulo: "El presupuesto son dos cosas, no una",
-        parrafos: [
-          "Cuando alguien pregunta cuánto sale un implante, en general está preguntando por el diente terminado. Pero un implante y una corona sobre implante son dos etapas distintas, con materiales, tiempos y costos distintos, y la primera fuente de confusión al comparar presupuestos es que un consultorio cotice sólo la primera y otro cotice las dos.",
-          "La etapa quirúrgica incluye el implante en sí —el tornillo de titanio— y su colocación. La etapa protésica incluye el pilar y la corona que va encima, y es la que define cómo se ve y cómo mastica la pieza. Un presupuesto serio dice explícitamente qué etapas cubre y en qué momento se abona cada una.",
-        ],
-      },
-      {
-        titulo: "Qué hace variar el precio entre un caso y otro",
-        parrafos: [
-          "Dos personas con la misma pieza faltante pueden recibir presupuestos muy distintos, y no necesariamente porque una esté cara. Estas son las variables que más pesan:",
-        ],
-        lista: [
-          "Estado del hueso: si hace falta un procedimiento previo para tener volumen suficiente, el plan cambia.",
-          "Sector de la boca: una pieza anterior tiene una exigencia estética que una posterior no tiene.",
-          "Material de la corona: no todas las cerámicas cuestan lo mismo ni se comportan igual.",
-          "Cantidad de piezas: cuando faltan varias, no siempre corresponde un implante por diente.",
-          "Estado general de la boca: si hay enfermedad periodontal activa, primero hay que sanear.",
-        ],
-      },
-      {
-        titulo: "Las preguntas que conviene hacer antes de comparar",
-        parrafos: [
-          "Comparar precios sin comparar contenidos lleva a decisiones malas. Antes de poner dos presupuestos uno al lado del otro, conviene chequear que ambos respondan lo mismo: ¿incluye la corona? ¿Qué pasa si hace falta un procedimiento previo, ya está contemplado o se cotiza aparte? ¿Cuántos controles posteriores incluye? ¿Qué marca de implante se usa y hay repuestos disponibles en el país?",
-          "Esa última pregunta parece técnica y es de las más importantes a diez años. Si el sistema de implante que te colocaron no tiene componentes disponibles localmente, cualquier reparación futura se complica.",
-        ],
-      },
-      {
-        titulo: "Por qué el precio bajo a veces sale caro",
-        parrafos: [
-          "En implantología, la mayor parte del costo real no está en el tornillo: está en la planificación, en el tiempo de sillón y en el seguimiento. Un presupuesto muy por debajo del promedio suele estar ahorrando en alguna de esas tres cosas, y las tres son las que determinan si el implante dura.",
-          "Eso no significa que lo más caro sea automáticamente mejor. Significa que el precio, solo, no alcanza como criterio: hay que leerlo junto con lo que incluye, con quién lo hace y con qué pasa después.",
-        ],
-      },
-      {
-        titulo: "Cómo lo manejamos en el consultorio",
-        parrafos: [
-          "La consulta inicial es sin cargo y de ahí sale un plan por escrito, con las etapas separadas, lo que incluye cada una y los medios de pago disponibles. Los rangos orientativos por tratamiento están publicados en la página de precios, así que podés hacerte una idea antes de venir.",
-          "Y si el caso no es viable o hay una alternativa más conservadora, se dice. Un implante bien indicado es una gran solución; uno mal indicado es un problema caro.",
-        ],
-      },
-    ],
-    relacionados: ["implantes-unitarios", "rehabilitacion-sobre-implantes", "extracciones-dentales"],
-  },
-  {
-    _fuente: "ia",
     slug: "carillas-de-porcelana-lo-que-nadie-te-cuenta",
     titulo: "Carillas de porcelana: lo que conviene saber antes de decidir",
     h1: "Carillas de porcelana en Buenos Aires: lo que conviene saber antes de decidir",
-    title: "Carillas de Porcelana: Qué Saber Antes de Decidir | Smile Design Center",
+    title: "Carillas de Porcelana: Qué Saber Antes de Decidir | Estudio Cunningham",
     description:
       "Cuánto diente se desgasta, cuánto duran, qué pasa con el bruxismo y por qué la planificación previa define el resultado de unas carillas de porcelana.",
     categoria: "Estética dental",
@@ -152,7 +88,7 @@ export const POSTS: Post[] = [
     slug: "por-que-sangran-las-encias",
     titulo: "Por qué sangran las encías y por qué no hay que ignorarlo",
     h1: "Por qué sangran las encías: qué hacer, explicado en Núñez, Buenos Aires",
-    title: "Por Qué Sangran las Encías | Smile Design Center",
+    title: "Por Qué Sangran las Encías | Estudio Cunningham",
     description:
       "El sangrado de encías no es normal ni se resuelve cepillando más fuerte. Qué lo causa, cómo se trata y por qué es la principal causa de pérdida de dientes.",
     categoria: "Prevención",
@@ -216,9 +152,9 @@ export const POSTS: Post[] = [
     slug: "escaner-intraoral-vs-moldes-de-pasta",
     titulo: "Escáner intraoral o moldes de pasta: qué cambia para el paciente",
     h1: "Escáner intraoral o moldes de pasta: qué cambia para el paciente en Buenos Aires",
-    title: "Escáner Intraoral vs Moldes de Pasta | Smile Design Center",
+    title: "Escáner Intraoral vs Moldes de Pasta | Estudio Cunningham",
     description:
-      "Qué diferencia hay entre un registro digital con escáner 3Shape y una impresión con pasta, en precisión, en comodidad y en cantidad de visitas.",
+      "Qué diferencia hay entre un registro digital con escáner Runyes 3DS y una impresión con pasta, en precisión, en comodidad y en cantidad de visitas.",
     categoria: "Tecnología",
     fecha: "2026-06-24",
     fechaTexto: "24 de junio de 2026",
@@ -226,7 +162,7 @@ export const POSTS: Post[] = [
     lectura: "5 min",
     imagen: {
       src: "/images/DSC_0136-1024x683.jpg",
-      alt: "Escáner intraoral 3Shape en uso durante un registro digital",
+      alt: "Escáner intraoral Runyes 3DS en uso durante un registro digital",
     },
     entradilla:
       "La cubeta con pasta es uno de los peores recuerdos que la gente tiene del odontólogo. Hace rato que dejó de ser necesaria.",
@@ -262,7 +198,7 @@ export const POSTS: Post[] = [
         titulo: "¿Sirve para todo?",
         parrafos: [
           "Para la enorme mayoría de los procedimientos, sí. Hay situaciones particulares en las que todavía puede convenir una técnica convencional, y en esos casos se explica por qué.",
-          "En el consultorio trabajamos con escáner 3Shape para registros de rehabilitación, estética, ortodoncia e implantes. La regla es simple: si se puede hacer en digital, se hace en digital.",
+          "En el consultorio trabajamos con escáner Runyes 3DS para registros de rehabilitación, estética, ortodoncia e implantes. La regla es simple: si se puede hacer en digital, se hace en digital.",
         ],
       },
     ],
@@ -273,7 +209,7 @@ export const POSTS: Post[] = [
     slug: "bruxismo-como-saber-si-aprietas-los-dientes",
     titulo: "Bruxismo: cómo saber si apretás los dientes y qué hacer",
     h1: "Bruxismo: cómo saber si apretás los dientes, explicado en Núñez, Buenos Aires",
-    title: "Bruxismo: Cómo Saber si Apretás los Dientes | Smile Design Center",
+    title: "Bruxismo: Cómo Saber si Apretás los Dientes | Estudio Cunningham",
     description:
       "Señales del bruxismo, por qué desgasta y fractura los dientes y qué hace realmente una placa de descarga. Consultorio odontológico en Núñez.",
     categoria: "Prevención",
@@ -331,7 +267,7 @@ export const POSTS: Post[] = [
     slug: "primera-consulta-que-esperar",
     titulo: "Primera consulta odontológica: qué esperar y cómo prepararse",
     h1: "Primera consulta odontológica en Núñez: qué esperar y cómo prepararse",
-    title: "Primera Consulta Odontológica: Qué Esperar | Smile Design Center",
+    title: "Primera Consulta Odontológica: Qué Esperar | Estudio Cunningham",
     description:
       "Qué pasa en una primera consulta odontológica, cuánto dura, qué llevar y qué información deberías salir teniendo. Consultorio en Núñez, Buenos Aires.",
     categoria: "Primera visita",
@@ -349,7 +285,7 @@ export const POSTS: Post[] = [
       {
         titulo: "Cuánto dura y qué incluye",
         parrafos: [
-          "En nuestro consultorio la primera consulta dura alrededor de 40 minutos y es sin cargo. Incluye una revisión completa de la boca: estado de las encías, de cada pieza, de las restauraciones existentes y de cómo contactan los dientes al morder.",
+          "En nuestro consultorio la primera consulta dura alrededor de 40 minutos. Incluye una revisión completa de la boca: estado de las encías, de cada pieza, de las restauraciones existentes y de cómo contactan los dientes al morder.",
           "Cuando hace falta, se toman los registros correspondientes. No se hace tratamiento en esa cita, salvo que haya una urgencia que contener.",
         ],
       },

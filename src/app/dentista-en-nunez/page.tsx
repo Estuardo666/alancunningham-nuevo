@@ -26,9 +26,9 @@ import { faqsPorBloque } from "@/content/faqs";
 import { TITULAR } from "@/content/equipo";
 import { TextArrowCTA } from "@/components/ui/text-arrow-cta";
 
-const TITLE = "Dentista en Núñez, CABA | Smile Design Center";
+const TITLE = "Dentista en Núñez, CABA | Estudio Odontológico Cunningham";
 const DESCRIPTION =
-  "Consultorio odontológico en Núñez, Arribeños 2659. Implantes, rehabilitación, estética y odontología general. Consulta inicial sin cargo, a metros de Belgrano.";
+  "Estudio odontológico en Núñez, Manuel Ugarte 2548. Implantes, rehabilitación, estética y odontología general con planificación digital.";
 const PATH = "/dentista-en-nunez";
 
 const MIGAS = [
@@ -63,7 +63,7 @@ export default function DentistaEnNunezPage() {
 
       <PageHero
         eyebrow="Núñez, CABA"
-        h1="Dentista en Núñez: consultorio odontológico en Arribeños 2659"
+        h1="Dentista en Núñez: Estudio Odontológico Cunningham"
         bajada={`${TITULAR.nombre}, ${TITULAR.especialidad}, ${TITULAR.matricula}. ${CLINICA.horariosTexto}.`}
         migas={MIGAS}
         imagen={{ src: INSTALACIONES[0].src }}
@@ -80,8 +80,8 @@ export default function DentistaEnNunezPage() {
             <Prose
               parrafos={[
                 `El consultorio está en ${CLINICA.direccion.calle}, en pleno ${CLINICA.direccion.barrio}, a pocas cuadras del límite con Belgrano. Atendemos ${CLINICA.horariosTexto.toLowerCase()}.`,
-                "La consulta inicial dura alrededor de 40 minutos, es sin cargo y termina con un plan de tratamiento por escrito, con lo urgente separado de lo conveniente y de lo opcional. No hay tratamientos inventados ni urgencias fabricadas para cerrar una venta.",
-                "Trabajamos con escáner intraoral 3Shape para los registros —sin pasta de impresión— y con láser para los procedimientos de tejido blando, lo que acorta el postoperatorio.",
+                "La consulta inicial dura alrededor de 40 minutos y termina con un plan de tratamiento por escrito, con lo urgente separado de lo conveniente y de lo opcional. No hay tratamientos inventados ni urgencias fabricadas para cerrar una venta.",
+                "Trabajamos con escáner intraoral Runyes 3DS para los registros —sin pasta de impresión— y con láser para los procedimientos de tejido blando, lo que acorta el postoperatorio.",
               ]}
             />
 

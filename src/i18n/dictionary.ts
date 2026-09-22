@@ -14,7 +14,6 @@ export const EN: Record<string, string> = {
   Tratamientos: "Treatments",
   Casos: "Cases",
   "Turismo odontológico": "Dental tourism",
-  Precios: "Pricing",
   Contacto: "Contact",
   Inicio: "Home",
   "Agendá tu consulta": "Book a visit",
@@ -26,17 +25,16 @@ export const EN: Record<string, string> = {
   "Redes y ubicación": "Social and location",
 
   // ─── Hero ──────────────────────────────────────────────────────────────────
-  "Odontología con planificación digital": "Digitally planned dentistry",
-  "Implantes y diseño de sonrisa en Núñez":
-    "Implants and smile design in Núñez",
-  "Planificamos en digital y te mostramos el resultado antes de tocar un diente.":
-    "We plan it digitally and show you the result before touching a tooth.",
-  "Ver precios y medios de pago": "See prices and payment",
+  "Estudio Odontológico Cunningham": "Cunningham Dental Studio",
+  "Diseño de sonrisa e implantes guiados con planificación digital en Núñez":
+    "Digitally planned smile design and guided implants in Núñez",
+  "Antes de tocar tus dientes, visualizamos y planificamos cada etapa de tu tratamiento.":
+    "Before touching your teeth, we visualise and plan every stage of your treatment.",
 
   // ─── About block ───────────────────────────────────────────────────────────
   "Sobre el consultorio": "About the practice",
-  "Combinamos un especialista a cargo de cada caso, planificación digital y un plan de tratamiento por escrito, para que sepas qué necesitás, cuánto lleva y cuánto cuesta antes de empezar.":
-    "One specialist on every case, digital planning and a written treatment plan: you know what you need, how long it takes and what it costs before we start.",
+  "Combinamos un especialista a cargo de cada caso, planificación digital y un plan de tratamiento por escrito, para que sepas qué necesitás y cuánto lleva antes de empezar.":
+    "One specialist on every case, digital planning and a written treatment plan: you know what you need and how long it takes before we start.",
   "Conocé el consultorio": "See the practice",
   "Ver casos reales": "See real cases",
   "Antes y después": "Before and after",
@@ -84,18 +82,8 @@ export const EN: Record<string, string> = {
   "El profesional detrás de cada tratamiento":
     "The professional behind every treatment",
 
-  // ─── Prices and payment ────────────────────────────────────────────────────
-  "Cuánto cuesta y con qué se paga, sin tener que preguntar":
-    "What it costs and how you pay, without asking",
-  "Los rangos orientativos por tratamiento y los medios de pago, visibles acá y en detalle en su propia página.":
-    "Guide prices per treatment and payment methods, summarised here and detailed on their own page.",
-  "Rangos orientativos": "Guide prices",
-  "Ver precios y condiciones": "See prices and terms",
+  // ─── Payment methods ──────────────────────────────────────────────────────
   "Medios de pago": "Payment methods",
-  "Rango orientativo. El presupuesto definitivo se entrega por escrito luego de la evaluación inicial.":
-    "Guide range. The final quote is given in writing after the first visit.",
-  "Estamos actualizando los rangos publicados. El presupuesto definitivo se entrega por escrito luego de la evaluación inicial.":
-    "Published ranges are being updated. The final quote is given in writing after the first visit.",
   Efectivo: "Cash",
   "Transferencia bancaria": "Bank transfer",
   "Tarjeta de débito": "Debit card",
@@ -119,8 +107,8 @@ export const EN: Record<string, string> = {
   "Una primera evaluación de 40 minutos para revisar encías, piezas y mordida, y tomar los registros que hagan falta. Te explicamos el diagnóstico y el próximo paso, sin compromiso.":
     "A 40-minute check of gums, teeth and bite, plus any records needed. You get the diagnosis and the next step, with no commitment.",
   Plan: "Plan",
-  "Te llevás el plan con lo que hay que hacer, en qué orden, cuánto lleva y cuánto cuesta. Separado en urgente, conveniente y opcional.":
-    "You leave with what to do, in what order, how long it takes and what it costs. Split into urgent, advisable and optional.",
+  "Te llevás el plan con lo que hay que hacer, en qué orden y cuánto lleva, separado en urgente, conveniente y opcional.":
+    "You leave with what to do, in what order and how long it takes, split into urgent, advisable and optional.",
   Tratamiento: "Treatment",
   "Escaneo intraoral en lugar de moldes, prueba en boca antes de lo definitivo y control de mordida en cada etapa.":
     "Intraoral scanning instead of impressions, a try-in before anything final, and bite checks at every stage.",
@@ -150,14 +138,14 @@ export const EN: Record<string, string> = {
   // ─── Dental tourism ────────────────────────────────────────────────────────
   "¿Venís de otra provincia o del exterior?":
     "Coming from abroad or another province?",
-  "La evaluación arranca online: nos mandás fotos y estudios, y te decimos si el caso se resuelve en los días que vas a estar en Buenos Aires. Llegás con el presupuesto por escrito y la agenda armada.":
-    "It starts online: send photos and X-rays, and we tell you whether your case fits the days you will be in Buenos Aires. You arrive with a written quote and the dates booked.",
+  "La evaluación arranca online: nos mandás fotos y estudios, y te decimos si el caso se resuelve en los días que vas a estar en Buenos Aires. Llegás con el plan de tratamiento por escrito y la agenda armada.":
+    "It starts online: send photos and X-rays, and we tell you whether your case fits the days you will be in Buenos Aires. You arrive with a written plan and the dates booked.",
   "Publicamos además los tiempos de estadía estimados por tratamiento, que es el dato que hace falta para planificar el viaje y que casi ninguna clínica publica.":
     "We also publish how many days each treatment takes — the one figure you need to plan a trip, and one almost no clinic publishes.",
   "Cuántos días necesitás": "How many days you need",
   "Ver la tabla completa y cómo funciona": "See the full table",
   "Consulta online": "Online consultation",
-  "Plan y presupuesto": "Plan and quote",
+  "Plan y agenda": "Plan and schedule",
   "Coordinación del viaje": "Trip coordination",
   "Blanqueamiento dental": "Teeth whitening",
   "Carillas de porcelana": "Porcelain veneers",
@@ -172,22 +160,15 @@ export const EN: Record<string, string> = {
 
   // ─── FAQ ───────────────────────────────────────────────────────────────────
   "Preguntas frecuentes": "FAQ",
-  "Precios, tratamientos y primera consulta": "Prices, treatments, first visit",
+  "Tratamientos, medios de pago, primera consulta y turismo odontológico":
+    "Treatments, payment methods, first visit and dental tourism",
   "¿Tenés otra consulta? Escribinos y te respondemos el mismo día.":
     "Another question? Message us and we answer the same day.",
   "Ver todas las preguntas": "See all questions",
-  "¿Se puede pagar por etapas?": "Can I pay in stages?",
-  "En tratamientos largos el plan se organiza en etapas y cada etapa se abona al realizarse. Eso se define junto con el plan, antes de empezar.":
-    "Long treatments are organised in stages and each stage is paid as it is done. That is agreed with the plan, before starting.",
-  "¿Cuánto cuesta un implante dental?": "What does an implant cost?",
-  "El presupuesto de un implante contempla dos etapas: el implante y la corona. Los rangos orientativos están en la página de precios y el presupuesto definitivo se entrega por escrito después de la consulta inicial, que es sin cargo.":
-    "An implant is quoted in two stages, the implant and the crown. Guide ranges are on the pricing page; the final quote is written up after the free first visit.",
   "¿Qué medios de pago aceptan?": "Which payment methods do you take?",
-  "Efectivo en pesos o en dólares, transferencia bancaria, Mercado Pago, tarjeta de débito y tarjeta de crédito. Las condiciones de cada medio están detalladas en la página de precios.":
-    "Cash in pesos or dollars, bank transfer, Mercado Pago, debit and credit card. Terms for each are on the pricing page.",
   "¿Qué pasa en la primera consulta?": "What happens at the first visit?",
-  "Dura alrededor de 40 minutos y es sin cargo. Se revisa la boca completa, se evalúan encías y piezas, se toman los registros que hagan falta y salís con un plan de tratamiento por escrito.":
-    "It takes about 40 minutes and is free. We check the whole mouth, gums and teeth, take any records needed, and you leave with a written plan.",
+  "Dura alrededor de 40 minutos. Se revisa la boca completa, se evalúan encías y piezas, se toman los registros que hagan falta y salís con un plan de tratamiento por escrito.":
+    "It takes about 40 minutes. We check the whole mouth, gums and teeth, take any records needed, and you leave with a written plan.",
   "¿Cuánto dura un diseño de sonrisa?": "How long does a smile design take?",
   "Entre cuatro y seis semanas en la mayoría de los casos, contando la planificación digital, la prueba en boca y la ejecución. Los casos que sólo requieren blanqueamiento y retoques se resuelven en dos o tres sesiones.":
     "Four to six weeks in most cases, including digital planning, the try-in and the work itself. Whitening-only cases take two or three sessions.",
@@ -202,40 +183,19 @@ export const EN: Record<string, string> = {
 
   // ─── Footer ────────────────────────────────────────────────────────────────
   "Empecemos por tu próximo paso": "Let us start with your next step",
-  "Contanos qué necesitás. Salís con un plan claro y un presupuesto por escrito.":
-    "Tell us what you need. You leave with a clear plan and a written quote.",
+  "Contanos qué necesitás. Salís con un plan claro y los próximos pasos definidos.":
+    "Tell us what you need. You leave with a clear plan and the next steps defined.",
   Secciones: "Sections",
   Información: "Information",
   "Compará opciones": "Compare options",
   "Casos clínicos": "Clinical cases",
-  "Precios y medios de pago": "Prices and payment",
   "Dentista en Núñez": "Dentist in Núñez",
-  "Lunes a viernes de 9 a 19 h · Sábados de 9 a 13 h":
-    "Monday to Friday 9–19 h · Saturday 9–13 h",
+  "Lunes a sábado de 9 a 20 h · Con turno previo":
+    "Monday to Saturday 9–20 h · By appointment",
   "Todos los derechos reservados.": "All rights reserved.",
   "Carillas o coronas": "Veneers or crowns",
   "Alineadores o brackets": "Aligners or braces",
   "Implantes o prótesis": "Implants or dentures",
-  // ─── Prices, payment methods and coverage rows ─────────────────────────────
-  "Precio orientativo": "Guide price",
-  Desde: "From",
-  Moneda: "Currency",
-  "Ver todos los precios y medios de pago": "See all prices and payment",
-  "Diseño de sonrisa (planificación digital)":
-    "Smile design (digital planning)",
-  "Carilla de porcelana (por pieza)": "Porcelain veneer (per tooth)",
-  "Corona dental (por pieza)": "Dental crown (per tooth)",
-  "Implante unitario (implante + corona)":
-    "Single implant (implant + crown)",
-  "Alineadores invisibles (tratamiento completo)":
-    "Clear aligners (full treatment)",
-  "Ortodoncia con brackets (tratamiento completo)":
-    "Braces (full treatment)",
-  "Limpieza profunda": "Deep cleaning",
-  "Rehabilitación sobre implantes": "Implant-supported rehabilitation",
-  "Restauración de caries (por pieza)": "Filling (per tooth)",
-  "El presupuesto depende del número de implantes y del tipo de prótesis.":
-    "The quote depends on how many implants and which type of prosthesis.",
   "Pago directo desde tu banco o billetera virtual.":
     "Straight from your bank or digital wallet.",
   "Con dinero en cuenta, débito o crédito.":
@@ -256,10 +216,7 @@ export const EN: Record<string, string> = {
   Tecnología: "Technology",
 
   // ─── Intent cards ──────────────────────────────────────────────────────────
-  "Para quien quiere saber cuánto cuesta": "If you want to know the cost",
   "Para quien compara: qué me conviene": "If you are comparing options",
-  "Rangos orientativos por tratamiento, medios de pago disponibles y condiciones, en una sola página.":
-    "Guide ranges per treatment, payment methods and terms, on one page.",
   "Cuánto diente conserva cada opción, en qué casos se indica una u otra y qué esperar de cada una.":
     "How much tooth each option keeps, when each is indicated and what to expect.",
   "Qué resuelve mejor cada técnica, cuánto pesa la disciplina de uso y cómo se decide por diagnóstico.":
@@ -269,8 +226,8 @@ export const EN: Record<string, string> = {
   // ─── The professional ──────────────────────────────────────────────────────
   "Especialista en rehabilitación dentobucomaxilar":
     "Specialist in oral rehabilitation",
-  "Alan Cunningham es odontólogo, especialista en rehabilitación dentobucomaxilar y docente de la Universidad de Buenos Aires. Es el titular de Smile Design Center, el consultorio de Arribeños 2659, en Núñez.":
-    "Alan Cunningham is a dentist, a specialist in oral rehabilitation and a lecturer at the University of Buenos Aires. He owns Smile Design Center, the practice at Arribeños 2659, in Núñez.",
+  "Alan Cunningham es odontólogo, especialista en rehabilitación dentobucomaxilar y docente de la Universidad de Buenos Aires. Es el titular de Estudio Odontológico Cunningham, el consultorio de Manuel Ugarte 2548, en Núñez.":
+    "Alan Cunningham is a dentist, a specialist in oral rehabilitation and a lecturer at the University of Buenos Aires. He owns Estudio Odontológico Cunningham, the practice at Manuel Ugarte 2548, in Núñez.",
   "Su formación tiene una particularidad que se nota en el trabajo diario: además de odontólogo es técnico de laboratorio. Eso significa que conoce de primera mano cómo se fabrica una corona, una carilla o una prótesis, y no sólo cómo se indica. La distancia entre lo que se diseña en el consultorio y lo que llega terminado desde el laboratorio se acorta cuando la misma persona entiende los dos lados del proceso.":
     "His training has one detail that shows in daily work: he is also a dental technician. He knows first-hand how a crown, a veneer or a prosthesis is made, not only how it is prescribed — and that closes the gap between what is designed in the chair and what comes back from the lab.",
   "Su práctica se concentra en rehabilitación oral, implantes y estética dental, con un criterio conservador: se desgasta lo mínimo indispensable, se conserva todo lo que sea conservable y cada plan se entrega por escrito, con lo urgente separado de lo conveniente y de lo opcional.":
@@ -282,13 +239,6 @@ export const EN: Record<string, string> = {
   "Docente de la Universidad de Buenos Aires (UBA)":
     "Lecturer at the University of Buenos Aires",
 
-  // ─── Payment conditions and case durations ─────────────────────────────────
-  "Transferencia bancaria, Mercado Pago y tarjeta de débito llevan el 21% de IVA correspondiente.":
-    "Bank transfer, Mercado Pago and debit card carry the 21% VAT.",
-  "El pago con tarjeta de crédito tiene un recargo del 38% por costos de financiación.":
-    "Credit card payments carry a 38% financing surcharge.",
-  "El presupuesto se entrega por escrito después de la consulta inicial y se sostiene por el plazo que allí se indica.":
-    "The quote is given in writing after the first visit and holds for the period stated on it.",
   "Tratamiento en etapas: primero alinear, después aclarar":
     "Staged treatment: align first, whiten after",
 };

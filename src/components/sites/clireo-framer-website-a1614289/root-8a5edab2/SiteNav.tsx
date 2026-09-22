@@ -20,7 +20,6 @@ const LINKS: NavLink[] = [
   { label: "Tratamientos", href: "/tratamientos" },
   { label: "Casos", href: "/casos" },
   { label: "Turismo odontológico", href: "/turismo-odontologico" },
-  { label: "Precios", href: "/precios" },
   { label: "Contacto", href: "/contacto" },
 ];
 

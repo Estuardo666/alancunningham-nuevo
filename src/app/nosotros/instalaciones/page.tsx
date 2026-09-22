@@ -12,9 +12,9 @@ import { buildMetadata } from "@/lib/seo";
 import { INSTALACIONES } from "@/content/clinica-contenido";
 import { CLINICA } from "@/content/clinica";
 
-const TITLE = "Instalaciones del consultorio en Núñez | Smile Design Center";
+const TITLE = "Instalaciones del estudio en Núñez | Estudio Odontológico Cunningham";
 const DESCRIPTION =
-  "Recorré las instalaciones del consultorio de Arribeños 2659, Núñez: recepción, sala de espera, boxes de atención y área de esterilización.";
+  "Recorré las instalaciones del estudio de Manuel Ugarte 2548, Núñez: recepción, sala de espera, boxes de atención y área de esterilización.";
 const PATH = "/nosotros/instalaciones";
 
 const MIGAS = [

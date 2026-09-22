@@ -36,7 +36,7 @@ const COLUMNS: { heading: string; links: { label: string; href: string }[] }[] =
     {
       heading: "Información",
       links: [
-        { label: "Precios y medios de pago", href: "/precios" },
+        { label: "Tecnología y planificación", href: "/nosotros/tecnologia" },
         { label: "Preguntas frecuentes", href: "/faq" },
         { label: "Dentista en Núñez", href: "/dentista-en-nunez" },
         { label: "Contacto", href: "/contacto" },
@@ -55,17 +55,7 @@ const COLUMNS: { heading: string; links: { label: string; href: string }[] }[] =
   ];
 
 const SOCIAL_LINKS = [
-  {
-    label: "Facebook",
-    href: "https://www.facebook.com/smiledesigncenter.ba",
-    icon: "facebook",
-  },
   { label: "Instagram", href: CLINICA.instagram, icon: "instagram" },
-  {
-    label: "TikTok",
-    href: "https://www.tiktok.com/@smiledesigncenter.ba",
-    icon: "tiktok",
-  },
   { label: "Google Maps", href: CLINICA.mapa, icon: "maps" },
 ] as const;
 
@@ -95,13 +85,6 @@ function SocialIcon({ name }: { name: (typeof SOCIAL_LINKS)[number]["icon"] }) {
       aria-hidden
       {...common}
     >
-      {name === "facebook" ? (
-        <path
-          fill="currentColor"
-          stroke="none"
-          d="M14 8h3V4h-3c-3.3 0-5 1.7-5 5v3H6v4h3v8h4v-8h3l1-4h-4V9c0-.7.3-1 1-1Z"
-        />
-      ) : null}
       {name === "instagram" ? (
         <>
           <rect x="3" y="3" width="18" height="18" rx="5" />
@@ -114,9 +97,6 @@ function SocialIcon({ name }: { name: (typeof SOCIAL_LINKS)[number]["icon"] }) {
             stroke="none"
           />
         </>
-      ) : null}
-      {name === "tiktok" ? (
-        <path d="M14 4v10.1a3.6 3.6 0 1 1-3-3.55M14 4c.7 2.1 2 3.3 4 3.7" />
       ) : null}
       {name === "maps" ? (
         <>
@@ -175,8 +155,8 @@ export function SiteFooter({
                 <div className="flex max-w-[520px] flex-col items-center gap-7">
                   <p className="text-center text-[17px] leading-[23.46px] tracking-[-0.34px] text-white">
                     <T>
-                      Contanos qué necesitás. Salís con un plan claro y un
-                      presupuesto por escrito.
+                      Contanos qué necesitás. Salís con un plan claro y los
+                      próximos pasos definidos.
                     </T>
                   </p>
 

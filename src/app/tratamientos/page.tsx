@@ -26,9 +26,9 @@ import { PrimaryButton } from "@/components/sites/clireo-framer-website-a1614289
 import { CTA_PRIMARIO, whatsappHref } from "@/content/clinica";
 
 const TITLE =
-  "Tratamientos Odontológicos en Núñez, Buenos Aires | Smile Design Center";
+  "Tratamientos odontológicos en Núñez | Estudio Odontológico Cunningham";
 const DESCRIPTION =
-  "Todos los tratamientos con página propia: diseño de sonrisa, carillas, blanqueamiento, coronas, implantes, alineadores, conductos, cirugía láser, limpieza y más. Consulta sin cargo.";
+  "Diseño de sonrisa, carillas, blanqueamiento, coronas, implantes, alineadores, conductos, cirugía láser, limpieza y más, con planificación digital en Núñez.";
 const PATH = "/tratamientos";
 
 const MIGAS = [
@@ -62,7 +62,7 @@ export default function TratamientosPage() {
 
       <PageHero
         eyebrow="Un plan para tu salud bucal"
-        h1="Tratamientos para cuidar tu sonrisa"
+        h1="Tratamientos odontológicos en Núñez"
         bajada="Explorá cada tratamiento, su proceso y sus tiempos para elegir con claridad. La consulta inicial te ayuda a definir el próximo paso."
         migas={MIGAS}
         imagen={{ src: "/images/DSC_0136-1024x683.jpg" }}
@@ -70,8 +70,8 @@ export default function TratamientosPage() {
       >
         <div className="flex flex-wrap items-center gap-6 pt-2">
           <CtaConMicrocopy contexto="tratamientos" variant="dark" />
-          <TextArrowCTA href="/precios" className="text-white">
-            Ver precios y medios de pago
+          <TextArrowCTA href="/faq" className="text-white">
+            Resolver dudas frecuentes
           </TextArrowCTA>
         </div>
       </PageHero>
@@ -80,7 +80,7 @@ export default function TratamientosPage() {
         <SectionHeading
           eyebrow="Todos los tratamientos"
           titulo="Elegí el tratamiento que estás buscando"
-          bajada="Todos al mismo nivel, sin categorías intermedias. Cada tarjeta abre una página propia, con proceso, tiempos, precio orientativo y próximos pasos."
+          bajada="Todos al mismo nivel, sin categorías intermedias. Cada tarjeta abre una página propia, con proceso, tiempos y próximos pasos."
         />
         <div className="grid w-full gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {TRATAMIENTOS.map((tratamiento, index) => (

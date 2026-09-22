@@ -24,7 +24,7 @@ export function FaqsSection() {
             <SectionEyebrow>Preguntas frecuentes</SectionEyebrow>
             <RevealText
               as="h2"
-              text="Precios, tratamientos y primera consulta"
+              text="Tratamientos, primera consulta y medios de pago"
               blur={8}
               className="max-w-[440px] text-[36px] leading-[40px] tracking-[-2px] text-foreground lg:text-[54px] lg:leading-[56.16px] lg:tracking-[-3.24px]"
             />

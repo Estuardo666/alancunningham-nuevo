@@ -5,9 +5,9 @@ export const ESTETICA_DENTAL: Pilar = {
   slug: "estetica-dental",
   nombre: "Estética dental y diseño de sonrisa",
   h1: "Estética dental y diseño de sonrisa en Núñez, Buenos Aires",
-  title: "Diseño de Sonrisa y Estética Dental en Núñez | Smile Design Center",
+  title: "Diseño de Sonrisa y Estética Dental en Núñez | Estudio Cunningham",
   description:
-    "Diseño de sonrisa digital, carillas de porcelana y blanqueamiento en Núñez. Te mostramos el resultado antes de tocar un diente. Consulta inicial sin cargo.",
+    "Diseño de sonrisa digital, carillas de porcelana y blanqueamiento en Núñez. Te mostramos el resultado antes de tocar un diente. Consulta inicial.",
   eyebrow: "Estética dental",
   resumen:
     "Planificación digital, carillas de porcelana y blanqueamiento con criterio conservador: primero simulamos el resultado, después lo ejecutamos.",
@@ -19,7 +19,7 @@ export const ESTETICA_DENTAL: Pilar = {
   },
   queEs: [
     "La estética dental es el conjunto de tratamientos que devuelven forma, proporción y color a los dientes visibles al sonreír. No se trata de fabricar una sonrisa igual para todos, sino de encontrar la que corresponde a tu cara: el ancho de los incisivos, la altura de la encía, la línea media y la curvatura del borde incisal cambian según la persona, y ahí está la diferencia entre un trabajo que se nota y uno que pasa por natural.",
-    "En el consultorio trabajamos con diseño de sonrisa digital. Tomamos fotografías clínicas, registramos el color con guía convencional y con toma digital, y escaneamos la boca con el escáner intraoral 3Shape. Con eso armamos una simulación del resultado antes de preparar ningún diente. Vos ves la propuesta, la discutimos y la ajustamos: la planificación es una conversación, no una entrega.",
+    "En el consultorio trabajamos con diseño de sonrisa digital. Tomamos fotografías clínicas, registramos el color con guía convencional y con toma digital, y escaneamos la boca con el escáner intraoral Runyes 3DS. Con eso armamos una simulación del resultado antes de preparar ningún diente. Vos ves la propuesta, la discutimos y la ajustamos: la planificación es una conversación, no una entrega.",
     "Cuando la simulación está aprobada, se ejecuta. Según el caso puede resolverse con blanqueamiento y correcciones de composite, con carillas de porcelana, o combinando estética con rehabilitación cuando además hay piezas desgastadas o restauraciones viejas. El criterio es siempre el mismo: usar la técnica menos invasiva que alcance el resultado planificado, porque el esmalte que se desgasta no vuelve.",
   ],
   paraQuien: [
@@ -39,7 +39,7 @@ export const ESTETICA_DENTAL: Pilar = {
     {
       titulo: "Registro y planificación digital",
       descripcion:
-        "Fotografía clínica, toma de color digital y convencional, y escaneo intraoral 3Shape. Con esos registros se diseña la sonrisa propuesta y se define qué técnica requiere cada pieza.",
+        "Fotografía clínica, toma de color digital y convencional, y escaneo intraoral Runyes 3DS. Con esos registros se diseña la sonrisa propuesta y se define qué técnica requiere cada pieza.",
     },
     {
       titulo: "Prueba en boca",
@@ -97,7 +97,7 @@ export const ESTETICA_DENTAL: Pilar = {
       _fuente: "pendiente-validacion",
       pregunta: "¿Cuánto cuesta un diseño de sonrisa?",
       respuesta:
-        "El presupuesto se arma por pieza y por técnica, así que varía entre un caso de dos carillas y una rehabilitación estética completa. En la consulta inicial, que es sin cargo, te entregamos el plan de tratamiento con el detalle y los medios de pago disponibles.",
+        "El plan de tratamiento se arma por pieza y por técnica, así que varía entre un caso de dos carillas y una rehabilitación estética completa. En la consulta inicial, te entregamos el plan de tratamiento con el detalle y los medios de pago disponibles.",
     },
     {
       _fuente: "ia",
@@ -114,9 +114,9 @@ export const ESTETICA_DENTAL: Pilar = {
       pilar: "estetica-dental",
       nombre: "Diseño de sonrisa",
       h1: "Diseño de sonrisa digital en Núñez, Buenos Aires",
-      title: "Diseño de Sonrisa Digital en Núñez | Smile Design Center",
+      title: "Diseño de Sonrisa Digital en Núñez | Estudio Cunningham",
       description:
-        "Diseño de sonrisa digital con escáner 3Shape en Núñez: simulamos y probamos el resultado en tu boca antes de tallar. Consulta inicial sin cargo.",
+        "Diseño de sonrisa digital con escáner Runyes 3DS en Núñez: simulamos y probamos el resultado en tu boca antes de tallar. Consulta inicial.",
       resumen:
         "Planificamos la sonrisa en digital, la probamos en tu boca y recién después la ejecutamos.",
       imagen: {
@@ -125,7 +125,7 @@ export const ESTETICA_DENTAL: Pilar = {
       },
       queEs: [
         "El diseño de sonrisa es el proceso de planificación que define, antes de tocar un diente, qué forma, qué proporción y qué color va a tener cada pieza visible. Se apoya en fotografía clínica, escaneo intraoral y análisis de la relación entre los dientes, la encía, los labios y la cara. El resultado de esta etapa no es un tratamiento: es un plan que se puede ver, discutir y corregir.",
-        "En el consultorio lo hacemos con escáner 3Shape y toma de color digital. Sobre el modelo escaneado se dibuja la sonrisa propuesta, y esa propuesta se lleva a la boca como ensayo provisorio: podés mirarte al espejo, hablar y sonreír con la forma nueva antes de aprobarla. Lo que se corrige en esta instancia no cuesta esmalte; lo que se corrige después, sí.",
+        "En el consultorio lo hacemos con escáner Runyes 3DS y toma de color digital. Sobre el modelo escaneado se dibuja la sonrisa propuesta, y esa propuesta se lleva a la boca como ensayo provisorio: podés mirarte al espejo, hablar y sonreír con la forma nueva antes de aprobarla. Lo que se corrige en esta instancia no cuesta esmalte; lo que se corrige después, sí.",
       ],
       paraQuien: [
         "Querés cambiar tu sonrisa pero no sabés qué te quedaría bien.",
@@ -137,7 +137,7 @@ export const ESTETICA_DENTAL: Pilar = {
         {
           titulo: "Registros",
           descripcion:
-            "Fotografía clínica, escaneo intraoral 3Shape y toma de color digital y convencional.",
+            "Fotografía clínica, escaneo intraoral Runyes 3DS y toma de color digital y convencional.",
         },
         {
           titulo: "Diseño",
@@ -184,9 +184,9 @@ export const ESTETICA_DENTAL: Pilar = {
       pilar: "estetica-dental",
       nombre: "Carillas de porcelana",
       h1: "Carillas de porcelana en Núñez, Buenos Aires",
-      title: "Carillas de Porcelana en Núñez, Buenos Aires | Smile Design Center",
+      title: "Carillas de Porcelana en Núñez, Buenos Aires | Estudio Cunningham",
       description:
-        "Carillas de porcelana planificadas en digital y probadas en boca antes de tallar. Consultorio en Núñez. Consulta inicial sin cargo.",
+        "Carillas de porcelana planificadas en digital y probadas en boca antes de tallar. Consultorio en Núñez. Consulta inicial.",
       resumen:
         "Láminas de porcelana adheridas a la cara visible del diente para corregir color, forma y proporción.",
       imagen: {
@@ -254,9 +254,9 @@ export const ESTETICA_DENTAL: Pilar = {
       pilar: "estetica-dental",
       nombre: "Blanqueamiento dental",
       h1: "Blanqueamiento dental en Núñez, Buenos Aires",
-      title: "Blanqueamiento Dental en Núñez, Buenos Aires | Smile Design Center",
+      title: "Blanqueamiento Dental en Núñez, Buenos Aires | Estudio Cunningham",
       description:
-        "Blanqueamiento dental profesional en Núñez, con control de sensibilidad y registro de color antes y después. Consulta inicial sin cargo.",
+        "Blanqueamiento dental profesional en Núñez, con control de sensibilidad y registro de color antes y después. Consulta inicial.",
       resumen:
         "Aclaramiento del color natural del diente con control profesional de la sensibilidad.",
       imagen: {

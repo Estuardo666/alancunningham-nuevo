@@ -5,9 +5,9 @@ export const IMPLANTES_DENTALES: Pilar = {
   slug: "implantes-dentales",
   nombre: "Implantes dentales",
   h1: "Implantes dentales en Núñez, Buenos Aires",
-  title: "Implantes Dentales en Núñez, Buenos Aires | Smile Design Center",
+  title: "Implantes Dentales en Núñez, Buenos Aires | Estudio Cunningham",
   description:
-    "Implantes dentales unitarios y rehabilitación sobre implantes en Núñez, con planificación digital y control de mordida. Consulta inicial sin cargo.",
+    "Implantes dentales unitarios y rehabilitación sobre implantes en Núñez, con planificación digital y control de mordida. Consulta inicial.",
   eyebrow: "Implantes",
   resumen:
     "Reemplazo de piezas perdidas con implante de titanio y corona planificada en digital, sin desgastar los dientes vecinos.",
@@ -20,7 +20,7 @@ export const IMPLANTES_DENTALES: Pilar = {
   queEs: [
     "Un implante dental es un tornillo de titanio que se coloca en el hueso maxilar y cumple la función de la raíz que se perdió. Sobre él se atornilla o cementa una corona, y el conjunto reemplaza a la pieza faltante sin apoyarse en los dientes vecinos. Esa es la diferencia central con un puente convencional: para hacer un puente hay que tallar los dientes de al lado, que muchas veces están sanos.",
     "El titanio tiene la propiedad de integrarse al hueso, un proceso que lleva algunos meses y que se llama osteointegración. Ese tiempo de espera no es negociable: la corona definitiva se coloca cuando el implante está firme, no antes. Mientras tanto, según el caso y la zona, se puede llevar una solución provisoria para no quedar con el espacio a la vista.",
-    "La planificación es la parte que define el resultado. Antes de colocar nada se estudia el volumen y la calidad del hueso, la distancia a estructuras anatómicas y, sobre todo, dónde va a quedar la corona: la posición del implante se decide desde el diente que se quiere lograr, no al revés. En el consultorio esa planificación se apoya en el escaneo intraoral 3Shape y en el estudio radiográfico correspondiente, y el diseño de la corona final lo lleva un especialista en rehabilitación dentobucomaxilar que además es técnico de laboratorio.",
+    "La planificación es la parte que define el resultado. Antes de colocar nada se estudia el volumen y la calidad del hueso, la distancia a estructuras anatómicas y, sobre todo, dónde va a quedar la corona: la posición del implante se decide desde el diente que se quiere lograr, no al revés. En el consultorio esa planificación se apoya en el escaneo intraoral Runyes 3DS y en el estudio radiográfico correspondiente, y el diseño de la corona final lo lleva un especialista en rehabilitación dentobucomaxilar que además es técnico de laboratorio.",
   ],
   paraQuien: [
     "Falta de una pieza por extracción, fractura o ausencia congénita.",
@@ -65,7 +65,7 @@ export const IMPLANTES_DENTALES: Pilar = {
     {
       titulo: "Registro sin pasta ni moldes",
       descripcion:
-        "El escaneo intraoral 3Shape reemplaza la impresión convencional, más incómoda y menos precisa.",
+        "El escaneo intraoral Runyes 3DS reemplaza la impresión convencional, más incómoda y menos precisa.",
     },
     {
       titulo: "Mantiene el hueso",
@@ -102,7 +102,7 @@ export const IMPLANTES_DENTALES: Pilar = {
       _fuente: "pendiente-validacion",
       pregunta: "¿Cuánto cuesta un implante dental?",
       respuesta:
-        "El presupuesto contempla dos etapas: el implante y la corona sobre implante. Se entrega por escrito después de la consulta inicial, que es sin cargo, con el detalle de cada etapa y los medios de pago disponibles.",
+        "El plan de tratamiento contempla dos etapas: el implante y la corona sobre implante. Se entrega por escrito después de la consulta inicial, con el detalle de cada etapa y los medios de pago disponibles.",
     },
   ],
   hijos: [
@@ -112,9 +112,9 @@ export const IMPLANTES_DENTALES: Pilar = {
       pilar: "implantes-dentales",
       nombre: "Implantes unitarios",
       h1: "Implante dental unitario en Núñez, Buenos Aires",
-      title: "Implante Dental Unitario en Núñez | Smile Design Center",
+      title: "Implante Dental Unitario en Núñez | Estudio Cunningham",
       description:
-        "Implante unitario en Núñez para reemplazar una pieza sin tallar los dientes vecinos. Planificación digital. Consulta inicial sin cargo.",
+        "Implante unitario en Núñez para reemplazar una pieza sin tallar los dientes vecinos. Planificación digital. Consulta inicial.",
       resumen:
         "Reemplazo de una sola pieza con implante de titanio y corona individual.",
       imagen: {
@@ -182,9 +182,9 @@ export const IMPLANTES_DENTALES: Pilar = {
       pilar: "implantes-dentales",
       nombre: "Rehabilitación sobre implantes",
       h1: "Rehabilitación sobre implantes en Núñez, Buenos Aires",
-      title: "Rehabilitación sobre Implantes en Núñez | Smile Design Center",
+      title: "Rehabilitación sobre Implantes en Núñez | Estudio Cunningham",
       description:
-        "Prótesis fija sobre implantes en Núñez para varias piezas ausentes, planificada por un especialista en rehabilitación. Consulta sin cargo.",
+        "Prótesis fija sobre implantes en Núñez para varias piezas ausentes, planificada por un especialista en rehabilitación. Consulta odontológica.",
       resumen:
         "Prótesis fija sobre varios implantes para resolver sectores o arcadas completas.",
       imagen: {

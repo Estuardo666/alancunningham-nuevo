@@ -10,7 +10,6 @@ export const EVENTOS = {
   formularioEnviado: "formulario_consulta_enviado",
   whatsappAbierto: "whatsapp_abierto",
   newsletterSuscripcion: "newsletter_suscripcion",
-  precioVisto: "precio_visto",
   casoAbierto: "caso_abierto",
 } as const;
 

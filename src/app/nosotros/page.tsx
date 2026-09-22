@@ -26,9 +26,9 @@ import { ConsultorioVideoCarousel } from "@/components/site/ConsultorioVideoCaro
 import { TextArrowCTA } from "@/components/ui/text-arrow-cta";
 
 const TITLE =
-  "Sobre el consultorio: Smile Design Center en Núñez | Buenos Aires";
+  "Sobre el estudio odontológico en Núñez | Estudio Odontológico Cunningham";
 const DESCRIPTION =
-  "Quiénes somos, cómo trabajamos y con qué equipamiento. Consultorio odontológico en Arribeños 2659, Núñez, a cargo de Od. Alan Cunningham, M.N. 42463.";
+  "Quiénes somos, cómo trabajamos y con qué equipamiento. Estudio odontológico en Manuel Ugarte 2548, Núñez, a cargo de Od. Alan Cunningham, M.N. 42463.";
 const PATH = "/nosotros";
 
 const MIGAS = [
@@ -60,7 +60,7 @@ export default function NosotrosPage() {
 
       <PageHero
         eyebrow="El consultorio"
-        h1="Smile Design Center, consultorio odontológico en Núñez"
+        h1="Estudio Odontológico Cunningham en Núñez"
         bajada={`${CLINICA.direccion.calle}, ${CLINICA.direccion.barrio}. ${CLINICA.horariosTexto}.`}
         migas={MIGAS}
         imagen={{ src: INSTALACIONES[0].src }}
@@ -73,7 +73,7 @@ export default function NosotrosPage() {
           <div className="relative aspect-[713/690] w-full overflow-hidden rounded-[14px] lg:sticky lg:top-24">
             <Image
               src="/images/Asset-13.png"
-              alt="Smile Design Center, identidad del consultorio"
+              alt="Identidad del Estudio Odontológico Cunningham"
               fill
               sizes="(min-width: 1024px) 620px, 100vw"
               className="object-contain"

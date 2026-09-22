@@ -11,10 +11,7 @@ import {
 } from "@/components/site/PageShell";
 import { ContextualFaq } from "@/components/site/ContextualFaq";
 import { ConsultaForm } from "@/components/site/ConsultaForm";
-import {
-  PrecioDesde,
-  Relacionados,
-} from "@/components/site/Blocks";
+import { Relacionados } from "@/components/site/Blocks";
 import { JsonLd } from "@/components/site/JsonLd";
 import {
   breadcrumbSchema,
@@ -167,17 +164,6 @@ export default async function TratamientoPage({
             ]}
             sticky
           />
-        </div>
-      </Section>
-
-      <Section banda="secondary" className="items-center">
-        <div className="mx-auto flex w-full max-w-[620px] flex-col items-center gap-6 text-center">
-          <SectionHeading
-            eyebrow="Precio orientativo"
-            titulo="Cuánto cuesta"
-            align="center"
-          />
-          <PrecioDesde slug={tratamiento.slug} centrado />
         </div>
       </Section>
 

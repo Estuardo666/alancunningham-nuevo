@@ -7,31 +7,30 @@
  */
 
 export const CLINICA = {
-  nombre: "Smile Design Center",
-  nombreLegal: "Smile Design Center",
+  nombre: "Estudio Odontológico Cunningham",
+  nombreLegal: "Estudio Odontológico Cunningham",
   titular: "Od. Alan Cunningham",
   descripcionCorta:
     "Consultorio odontológico en Núñez especializado en rehabilitación oral, implantes y diseño de sonrisa.",
   direccion: {
-    calle: "Arribeños 2659 5c",
+    calle: "Manuel Ugarte 2548, 6.º A",
     barrio: "Núñez",
     ciudad: "Ciudad Autónoma de Buenos Aires",
     provincia: "CABA",
-    codigoPostal: "C1429",
+    codigoPostal: "CP 1428",
     pais: "AR",
   },
   geo: { lat: -34.5449, lng: -58.4585 },
   telefono: "+54 9 11 2156 1445",
   telefonoE164: "+5491121561445",
   whatsapp: "5491121561445",
-  email: "turnos@cbsaludybienestar.com",
   horarios: [
-    { dias: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], desde: "09:00", hasta: "19:00" },
-    { dias: ["Saturday"], desde: "09:00", hasta: "13:00" },
+    { dias: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], desde: "09:00", hasta: "20:00" },
   ],
-  horariosTexto: "Lunes a viernes de 9 a 19 h · Sábados de 9 a 13 h",
+  horariosTexto: "Lunes a sábado de 9 a 20 h · Con turno previo",
+  modalidadAtencion: "Atención particular · No trabajamos con obras sociales ni prepagas.",
   instagram: "https://www.instagram.com/smiledesigncenter.ba/",
-  mapa: "https://maps.google.com/?q=Arribeños+2659,+Núñez,+Buenos+Aires",
+  mapa: "https://maps.google.com/?q=Manuel+Ugarte+2548,+Núñez,+Buenos+Aires",
   zonas: [
     "Núñez",
     "Belgrano",

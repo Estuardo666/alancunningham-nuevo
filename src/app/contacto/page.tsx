@@ -4,20 +4,19 @@ import {
   Section,
   SectionHeading,
 } from "@/components/site/PageShell";
-import { ConsultaForm } from "@/components/site/ConsultaForm";
 import { JsonLd } from "@/components/site/JsonLd";
 import { breadcrumbSchema, grafo, ID, webPageSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
 import { CLINICA, whatsappHref } from "@/content/clinica";
-import { TRATAMIENTOS } from "@/content/tratamientos";
 import { TextArrowCTA } from "@/components/ui/text-arrow-cta";
+import { PrimaryButton } from "@/components/sites/clireo-framer-website-a1614289/shared/PrimaryButton";
 import { AtSign, Clock3, MapPin, MessageCircle } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 const TITLE =
-  "Contacto — Consultorio odontológico en Núñez | Smile Design Center";
+  "Contacto — Estudio Odontológico Cunningham en Núñez";
 const DESCRIPTION =
-  "Arribeños 2659 5c, Núñez, CABA. Turnos por WhatsApp o formulario, horarios, cómo llegar en subte y colectivo, y el mapa del consultorio.";
+  "Manuel Ugarte 2548, 6.º A, Núñez, CABA. Coordiná tu consulta por WhatsApp, consultá los horarios y encontrá el estudio en el mapa.";
 const PATH = "/contacto";
 
 const MIGAS = [
@@ -26,13 +25,13 @@ const MIGAS = [
 ];
 
 const MAP_SRC =
-  "https://maps.google.com/maps?q=Arribe%C3%B1os%202659%2C%20N%C3%BA%C3%B1ez%2C%20Buenos%20Aires&z=16&output=embed";
+  "https://maps.google.com/maps?q=Manuel%20Ugarte%202548%2C%20N%C3%BA%C3%B1ez%2C%20Buenos%20Aires&z=16&output=embed";
 
 const COMO_LLEGAR = [
   "Subte: línea D, estación Congreso de Tucumán, a pocas cuadras.",
   "Tren: línea Mitre, estación Núñez.",
   "Colectivos: líneas que circulan por Cabildo y por Av. del Libertador.",
-  "Estacionamiento: hay cocheras sobre Arribeños y calles laterales.",
+  "Estacionamiento: hay cocheras sobre Manuel Ugarte y calles laterales.",
 ];
 
 export const metadata = buildMetadata({
@@ -67,7 +66,7 @@ export default function ContactoPage() {
             <div className="flex flex-col gap-6">
               <SectionHeading
                 eyebrow="Información de contacto"
-                titulo="Dónde encontrarnos y cuándo atendemos"
+                titulo="Dónde encontrarnos en Núñez y cuándo atendemos"
                 as="h1"
               />
               <dl className="grid gap-6 sm:grid-cols-2">
@@ -106,6 +105,9 @@ export default function ContactoPage() {
                   </TextArrowCTA>
                 </Dato>
               </dl>
+              <p className="max-w-[520px] text-[15px] leading-[21px] text-muted-foreground">
+                {CLINICA.modalidadAtencion}
+              </p>
             </div>
 
             <div className="flex flex-col gap-6">
@@ -130,19 +132,15 @@ export default function ContactoPage() {
         <div className="mx-auto flex w-full max-w-[760px] flex-col items-center gap-8">
           <SectionHeading
             eyebrow="Contacto directo"
-            titulo="¿Preferís escribirnos por mail?"
-            bajada={`Podés enviarnos tu consulta a ${CLINICA.email} y te respondemos para coordinar el próximo paso.`}
+            titulo="Coordiná tu consulta"
+            bajada="Escribinos por WhatsApp y contanos qué necesitás. Te ayudamos a encontrar el próximo turno disponible."
             align="center"
             compact
           />
-          <ConsultaForm
-            titulo="Dejanos tus datos"
-            contexto="una consulta por mail"
-            tratamientos={TRATAMIENTOS.map((t) => ({
-              slug: t.slug,
-              nombre: t.nombre,
-            }))}
-            className="max-w-[720px]"
+          <PrimaryButton
+            label="Escribir por WhatsApp"
+            href={whatsappHref("una consulta")}
+            variant="primary"
           />
         </div>
       </Section>
@@ -155,7 +153,7 @@ function MapaContacto() {
     <div className="w-full lg:sticky lg:top-[90px]">
       <div className="relative h-[500px] w-full overflow-hidden rounded-[16px] bg-primary/10 shadow-[var(--clireo-shadow-md)] lg:h-[620px]">
         <iframe
-          title="Ubicación del consultorio en Arribeños 2659, Núñez, Buenos Aires"
+          title="Ubicación del estudio en Manuel Ugarte 2548, Núñez, Buenos Aires"
           src={MAP_SRC}
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"

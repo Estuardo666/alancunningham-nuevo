@@ -5,9 +5,9 @@ export const ENDODONCIA: Pilar = {
   slug: "endodoncia",
   nombre: "Endodoncia",
   h1: "Endodoncia en Núñez, Buenos Aires",
-  title: "Endodoncia y Tratamiento de Conducto en Núñez | Smile Design Center",
+  title: "Endodoncia y Tratamiento de Conducto en Núñez | Estudio Cunningham",
   description:
-    "Tratamiento de conducto y reconstrucción con postes en Núñez. Salvamos la pieza en lugar de extraerla, con anestesia y control del dolor. Consulta sin cargo.",
+    "Tratamiento de conducto y reconstrucción con postes en Núñez. Salvamos la pieza en lugar de extraerla, con anestesia y control del dolor. Consulta odontológica.",
   eyebrow: "Endodoncia",
   resumen:
     "Cuando el nervio del diente está comprometido, el conducto permite conservar la pieza en lugar de perderla.",
@@ -103,7 +103,7 @@ export const ENDODONCIA: Pilar = {
       _fuente: "pendiente-validacion",
       pregunta: "¿Cuánto cuesta una endodoncia?",
       respuesta:
-        "El presupuesto varía según la pieza y el número de conductos, y contempla también la reconstrucción posterior. Se entrega por escrito después de la consulta inicial, que es sin cargo.",
+        "El plan de tratamiento varía según la pieza y el número de conductos, y contempla también la reconstrucción posterior. Se entrega por escrito después de la consulta inicial.",
     },
   ],
   hijos: [
@@ -113,9 +113,9 @@ export const ENDODONCIA: Pilar = {
       pilar: "endodoncia",
       nombre: "Tratamiento de conducto",
       h1: "Tratamiento de conducto en Núñez, Buenos Aires",
-      title: "Tratamiento de Conducto en Núñez, Buenos Aires | Smile Design Center",
+      title: "Tratamiento de Conducto en Núñez, Buenos Aires | Estudio Cunningham",
       description:
-        "Tratamiento de conducto en Núñez con anestesia y aislación: elimina el dolor y conserva la pieza. Consulta inicial sin cargo.",
+        "Tratamiento de conducto en Núñez con anestesia y aislación: elimina el dolor y conserva la pieza. Consulta inicial.",
       resumen:
         "Retiro del tejido pulpar comprometido, desinfección y sellado de los conductos.",
       imagen: {
@@ -183,9 +183,9 @@ export const ENDODONCIA: Pilar = {
       pilar: "endodoncia",
       nombre: "Postes y reconstrucción",
       h1: "Postes y reconstrucción endodóntica en Núñez, Buenos Aires",
-      title: "Postes y Reconstrucción Endodóntica en Núñez | Smile Design Center",
+      title: "Postes y Reconstrucción Endodóntica en Núñez | Estudio Cunningham",
       description:
-        "Reconstrucción de dientes endodonciados con postes de fibra en Núñez: devuelve resistencia y evita la fractura. Consulta sin cargo.",
+        "Reconstrucción de dientes endodonciados con postes de fibra en Núñez: devuelve resistencia y evita la fractura. Consulta odontológica.",
       resumen:
         "Reconstrucción del diente tratado con conducto para que vuelva a funcionar sin fracturarse.",
       imagen: {

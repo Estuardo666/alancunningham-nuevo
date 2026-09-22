@@ -170,7 +170,7 @@ export default function TurismoPage() {
             <SectionHeading
               eyebrow="Cómo funciona"
               titulo="De la primera foto por WhatsApp al control a distancia"
-              bajada="Cinco pasos, con el plan y el presupuesto cerrados antes de que compres el pasaje."
+              bajada="Cinco pasos, con la planificación y la agenda organizadas antes de que compres el pasaje."
             />
             <CtaConMicrocopy contexto="turismo odontológico" />
           </div>
@@ -221,7 +221,7 @@ export default function TurismoPage() {
         <SectionHeading
           eyebrow="Qué incluye"
           titulo="Lo que coordinamos además del tratamiento"
-          bajada="El tratamiento y los servicios de viaje se presupuestan por separado; lo que hacemos es que todo encaje con la agenda de sesiones."
+          bajada="El tratamiento y los servicios de viaje se coordinan por separado; lo que hacemos es que todo encaje con la agenda de sesiones."
         />
         <ul className="grid w-full gap-5 sm:grid-cols-2 lg:grid-cols-5">
           {SERVICIOS.map((servicio, index) => {
@@ -298,13 +298,10 @@ export default function TurismoPage() {
         />
         <Prose
           parrafos={[
-            "Aceptamos pesos y dólares en efectivo, además de transferencia bancaria, Mercado Pago y tarjetas. El presupuesto se entrega por escrito antes de que viajes, con las etapas separadas.",
+            "Aceptamos pesos y dólares en efectivo, además de transferencia bancaria, Mercado Pago y tarjetas. La modalidad se coordina antes de que viajes, con las etapas separadas.",
           ]}
         />
         <MediosDePago conImagenes={false} layout="row" />
-        <TextArrowCTA href="/precios">
-          Ver todos los precios y condiciones
-        </TextArrowCTA>
       </Section>
 
       {/* 10 · formulario internacional */}

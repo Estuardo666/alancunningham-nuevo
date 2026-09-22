@@ -1,9 +1,9 @@
 import type { Faq } from "./types";
 
-/** 21 questions in 4 blocks — the DOHO model (plan §4.8). */
+/** Questions grouped by the topics patients need before booking. */
 export const BLOQUES_FAQ = [
   "Tratamientos",
-  "Precios y pagos",
+  "Medios de pago",
   "Primera consulta",
   "Turismo odontológico",
 ] as const;
@@ -43,7 +43,7 @@ export const FAQS: Faq[] = [
     bloque: "Tratamientos",
     pregunta: "¿Qué tecnología usan?",
     respuesta:
-      "Escáner intraoral 3Shape para registros digitales sin pasta de impresión, láser para procedimientos de tejido blando, y planificación digital para diseño de sonrisa y para la posición de los implantes.",
+      "Escáner intraoral Runyes 3DS para registros digitales sin pasta de impresión, láser para procedimientos de tejido blando y planificación digital para diseño de sonrisa y para la posición de los implantes.",
   },
   {
     _fuente: "ia",
@@ -59,48 +59,13 @@ export const FAQS: Faq[] = [
     respuesta:
       "El bruxismo es la principal causa de fractura de restauraciones y carillas. Cuando está presente, la placa de descarga forma parte del tratamiento: no es un accesorio opcional.",
   },
-  // ---- Precios y pagos ----
-  {
-    _fuente: "pendiente-validacion",
-    bloque: "Precios y pagos",
-    pregunta: "¿Cuánto cuesta un implante dental?",
-    respuesta:
-      "El presupuesto de un implante contempla dos etapas: el implante y la corona. Los rangos orientativos están en la página de precios y el presupuesto definitivo se entrega por escrito después de la consulta inicial, que es sin cargo.",
-  },
-  {
-    _fuente: "pendiente-validacion",
-    bloque: "Precios y pagos",
-    pregunta: "¿Cuánto cuestan las carillas de porcelana?",
-    respuesta:
-      "Se presupuestan por pieza, así que el total depende de cuántas piezas entren en el plan. En la página de precios están los rangos desde y en la consulta inicial se te entrega el detalle por escrito.",
-  },
+  // ---- Medios de pago ----
   {
     _fuente: "real",
-    bloque: "Precios y pagos",
+    bloque: "Medios de pago",
     pregunta: "¿Qué medios de pago aceptan?",
     respuesta:
-      "Efectivo en pesos o en dólares, transferencia bancaria, Mercado Pago, tarjeta de débito y tarjeta de crédito. Las condiciones de cada medio están detalladas en la página de precios.",
-  },
-  {
-    _fuente: "pendiente-validacion",
-    bloque: "Precios y pagos",
-    pregunta: "¿Se puede pagar en cuotas?",
-    respuesta:
-      "Sí, con tarjeta de crédito. En la página de precios está la condición de financiación que aplica a ese medio de pago.",
-  },
-  {
-    _fuente: "ia",
-    bloque: "Precios y pagos",
-    pregunta: "¿El presupuesto tiene costo?",
-    respuesta:
-      "No. La consulta inicial es sin cargo e incluye evaluación, diagnóstico y plan de tratamiento por escrito, sin compromiso de contratar nada.",
-  },
-  {
-    _fuente: "ia",
-    bloque: "Precios y pagos",
-    pregunta: "¿Se puede pagar por etapas?",
-    respuesta:
-      "En tratamientos largos el plan se organiza en etapas y cada etapa se abona al realizarse. Eso se define junto con el plan, antes de empezar.",
+      "Efectivo en pesos o dólares, transferencia bancaria, Mercado Pago, tarjeta de débito y tarjeta de crédito. La modalidad se coordina al definir el plan.",
   },
   // ---- Primera consulta ----
   {
@@ -115,7 +80,7 @@ export const FAQS: Faq[] = [
     bloque: "Primera consulta",
     pregunta: "¿Qué pasa en la primera consulta?",
     respuesta:
-      "Dura alrededor de 40 minutos y es sin cargo. Se revisa la boca completa, se evalúan encías y piezas, se toman los registros que hagan falta y salís con un plan de tratamiento por escrito.",
+      "Dura alrededor de 40 minutos. Se revisa la boca completa, se evalúan encías y piezas, se toman los registros que hagan falta y salís con un plan de tratamiento por escrito.",
   },
   {
     _fuente: "ia",
@@ -129,14 +94,14 @@ export const FAQS: Faq[] = [
     bloque: "Primera consulta",
     pregunta: "¿Dónde queda el consultorio?",
     respuesta:
-      "En Arribeños 2659 5c, barrio de Núñez, Ciudad de Buenos Aires. Atendemos también a pacientes de Belgrano, Saavedra, Colegiales, Coghlan, Vicente López y Olivos.",
+      "En Manuel Ugarte 2548, 6.º A, barrio de Núñez, Ciudad de Buenos Aires. Atendemos también a pacientes de Belgrano, Saavedra, Colegiales, Coghlan, Vicente López y Olivos.",
   },
   {
     _fuente: "real",
     bloque: "Primera consulta",
     pregunta: "¿Cuál es el horario de atención?",
     respuesta:
-      "Lunes a viernes de 9 a 19 h y sábados de 9 a 13 h. Los turnos se coordinan con anticipación por WhatsApp.",
+      "Lunes a sábado de 9 a 20 h, con turno previo. Los turnos se coordinan por WhatsApp.",
   },
   // ---- Turismo odontológico ----
   {
@@ -167,12 +132,11 @@ export function faqsPorBloque(bloque: string) {
 }
 
 /**
- * The six questions shown on the home — price and coverage visible without
- * interaction (plan §3.2, block 13).
+ * The questions shown on the home — the most useful answers without
+ * requiring another click.
  */
 export const FAQS_HOME: Faq[] = [
-  FAQS.find((f) => f.pregunta.startsWith("¿Se puede pagar por etapas"))!,
-  FAQS.find((f) => f.pregunta.startsWith("¿Cuánto cuesta un implante"))!,
+  FAQS.find((f) => f.pregunta.startsWith("¿Qué tecnología usan"))!,
   FAQS.find((f) => f.pregunta.startsWith("¿Qué medios de pago"))!,
   FAQS.find((f) => f.pregunta.startsWith("¿Qué pasa en la primera consulta"))!,
   FAQS.find((f) => f.pregunta.startsWith("¿Cuánto dura un diseño de sonrisa"))!,

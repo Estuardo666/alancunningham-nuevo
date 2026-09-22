@@ -32,7 +32,7 @@ export const EQUIPO: Profesional[] = [
       alt: "Od. Alan Cunningham, titular del consultorio",
     },
     bio: [
-      "Alan Cunningham es odontólogo, especialista en rehabilitación dentobucomaxilar y docente de la Universidad de Buenos Aires. Es el titular de Smile Design Center, el consultorio de Arribeños 2659, en Núñez.",
+      "Alan Cunningham es odontólogo, especialista en rehabilitación dentobucomaxilar y docente de la Universidad de Buenos Aires. Es el titular del Estudio Odontológico Cunningham, en Núñez. El estudio está acreditado por Invisalign y los parámetros estéticos se definen tomando como referencia bibliográfica a Fradiani.",
       "Su formación tiene una particularidad que se nota en el trabajo diario: además de odontólogo es técnico de laboratorio. Eso significa que conoce de primera mano cómo se fabrica una corona, una carilla o una prótesis, y no sólo cómo se indica. La distancia entre lo que se diseña en el consultorio y lo que llega terminado desde el laboratorio se acorta cuando la misma persona entiende los dos lados del proceso.",
       "Su práctica se concentra en rehabilitación oral, implantes y estética dental, con un criterio conservador: se desgasta lo mínimo indispensable, se conserva todo lo que sea conservable y cada plan se entrega por escrito, con lo urgente separado de lo conveniente y de lo opcional.",
     ],
@@ -55,22 +55,13 @@ export const EQUIPO: Profesional[] = [
       "Matrícula Nacional 42463",
       "Especialidad en rehabilitación dentobucomaxilar",
       "Técnico de laboratorio dental",
+      "Acreditado por Invisalign",
     ],
     revisor: true,
   },
 ];
 
 export const TITULAR = EQUIPO[0];
-
-const FOTO_MIEMBRO_2: Imagen = {
-  src: "/team/miembro 2.jpg",
-  alt: "Profesional del equipo del consultorio",
-};
-
-const FOTO_MIEMBRO_3: Imagen = {
-  src: "/team/Miembro 3.jpeg",
-  alt: "Profesional del equipo del consultorio",
-};
 
 export function profesionalPorSlug(slug: string) {
   return EQUIPO.find((p) => p.slug === slug);
@@ -80,9 +71,8 @@ export function profesionalPorSlug(slug: string) {
 export const FECHA_REVISION = "2026-08-21";
 
 /**
- * Carousel roster. Only the owner has an individual page; the rest are
- * placeholders for the section layout and are flagged so
- * `npm run audit:contenido` blocks them before production.
+ * Carousel roster. Only the owner is published until the clinic provides the
+ * names, biographies and photos of the remaining professionals.
  */
 export interface MiembroCarrusel extends ConFuente {
   slug: string;
@@ -110,50 +100,5 @@ export const EQUIPO_CARRUSEL: MiembroCarrusel[] = [
     foto: TITULAR.foto,
     tono: "titular",
     ficha: true,
-  },
-  {
-    _fuente: "pendiente-validacion",
-    slug: "martina-rossi",
-    nombre: "Od. Martina Rossi",
-    especialidad: "Ortodoncia y alineadores invisibles",
-    etiqueta: "Ortodoncia",
-    foto: FOTO_MIEMBRO_2,
-    tono: "coral",
-  },
-  {
-    _fuente: "pendiente-validacion",
-    slug: "julian-ferrer",
-    nombre: "Od. Julián Ferrer",
-    especialidad: "Implantología y cirugía guiada",
-    etiqueta: "Implantes",
-    foto: TITULAR.foto,
-    tono: "cyan",
-  },
-  {
-    _fuente: "pendiente-validacion",
-    slug: "camila-duarte",
-    nombre: "Od. Camila Duarte",
-    especialidad: "Endodoncia y microscopía",
-    etiqueta: "Endodoncia",
-    foto: FOTO_MIEMBRO_3,
-    tono: "lima",
-  },
-  {
-    _fuente: "pendiente-validacion",
-    slug: "tomas-aguirre",
-    nombre: "Od. Tomás Aguirre",
-    especialidad: "Cirugía y periodoncia",
-    etiqueta: "Periodoncia",
-    foto: TITULAR.foto,
-    tono: "violeta",
-  },
-  {
-    _fuente: "pendiente-validacion",
-    slug: "paula-nieva",
-    nombre: "Lic. Paula Nieva",
-    especialidad: "Higiene dental y prevención",
-    etiqueta: "Prevención",
-    foto: FOTO_MIEMBRO_2,
-    tono: "blanca",
   },
 ];

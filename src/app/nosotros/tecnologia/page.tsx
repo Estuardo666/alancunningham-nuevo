@@ -12,10 +12,9 @@ import { buildMetadata } from "@/lib/seo";
 import { TECNOLOGIA } from "@/content/clinica-contenido";
 import { ScrollReveal } from "@/components/site/ScrollReveal";
 
-const TITLE =
-  "Tecnología: escáner 3Shape y láser en Núñez | Smile Design Center";
+const TITLE = "Tecnología Runyes 3DS y láser en Núñez | Estudio Cunningham";
 const DESCRIPTION =
-  "Escáner intraoral 3Shape, láser para tejido blando y planificación digital: qué equipo usamos en el consultorio de Núñez y qué cambia para el paciente.";
+  "Escáner intraoral Runyes 3DS, láser para tejido blando y planificación digital: qué equipo usamos en el estudio de Núñez y qué cambia para el paciente.";
 const PATH = "/nosotros/tecnologia";
 
 const MIGAS = [
@@ -48,7 +47,7 @@ export default function TecnologiaPage() {
 
       <PageHero
         eyebrow="Tecnología aplicada"
-        h1="Equipamiento que mejora cada etapa del tratamiento"
+        h1="Tecnología odontológica en Núñez para cada etapa del tratamiento"
         bajada="Escáner intraoral, láser y planificación digital para diagnosticar con precisión y mostrarte el plan antes de empezar."
         migas={MIGAS}
         imagen={{ src: TECNOLOGIA[0].imagen.src }}

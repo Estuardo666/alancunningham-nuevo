@@ -2,11 +2,12 @@ import { RevealText } from "../shared/RevealText";
 import { PrimaryButton } from "../shared/PrimaryButton";
 import { GoogleRatingSummary } from "@/components/site/GoogleReviews";
 import { T } from "@/i18n/LanguageProvider";
+import { CTA_PRIMARIO, whatsappHref } from "@/content/clinica";
 
 /**
  * Home hero. Two corrections from the plan land here:
  *  · the H1 carries treatment + geo modifier (DOHO P2),
- *  · the price anchor and condensed proof are visible above the fold (AM P2).
+ *  · the primary appointment CTA and condensed proof are visible above the fold.
  * The form is not shown here — it stays the single conversion point lower on
  * the page and in the footer, so the hero reads as headline + proof, not a
  * form landing page.
@@ -35,13 +36,13 @@ export function HeroSection() {
           <div className="flex flex-col items-start gap-[10px]">
             <div className="hero-entrance hero-entrance-1">
               <p className="text-[15px] leading-[21px] tracking-[1.26px] text-white/80 uppercase">
-                <T>Odontología con planificación digital</T>
+                <T>Estudio Odontológico Cunningham</T>
               </p>
             </div>
             <div className="hero-entrance hero-entrance-2">
               <RevealText
                 as="h1"
-                text="Implantes y diseño de sonrisa en Núñez"
+                text="Diseño de sonrisa e implantes guiados con planificación digital en Núñez"
                 blur={5}
                 duration={0.45}
                 className="max-w-[640px] text-[46px] leading-[48px] tracking-[-2.3px] text-white lg:text-[74px] lg:leading-[72px] lg:tracking-[-4px]"
@@ -51,19 +52,19 @@ export function HeroSection() {
           <div className="hero-entrance hero-entrance-3">
             <p className="max-w-[480px] text-[18px] leading-[25px] tracking-[-0.6px] text-white/90 lg:text-[20px] lg:leading-[27px] lg:tracking-[-0.8px]">
               <T>
-                Planificamos en digital y te mostramos el resultado antes de
-                tocar un diente.
+                Antes de tocar tus dientes, visualizamos y planificamos cada
+                etapa de tu tratamiento.
               </T>
             </p>
           </div>
         </div>
 
-        {/* Price anchor + condensed proof, before the first scroll (AM P2). */}
+        {/* Primary appointment CTA + condensed proof, before the first scroll. */}
         <div className="hero-entrance hero-entrance-4 flex flex-col items-start gap-5">
           <div className="hero-entrance hero-entrance-5 flex flex-wrap items-center gap-x-6 gap-y-3">
             <PrimaryButton
-              label="Ver precios y medios de pago"
-              href="/precios"
+              label={CTA_PRIMARIO}
+              href={whatsappHref()}
               variant="dark"
             />
           </div>

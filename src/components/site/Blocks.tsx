@@ -3,29 +3,19 @@ import Link from "next/link";
 import {
   Banknote,
   CalendarDays,
-  Coins,
   Landmark,
   MapPinned,
   Stethoscope,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { T } from "@/i18n/LanguageProvider";
-import { EtiquetaPrecioTraducida } from "./EtiquetaPrecio";
-import {
-  PRECIOS,
-  MEDIOS_DE_PAGO,
-  IMAGENES_PAGO,
-  CONDICIONES_PAGO,
-  formatearDesde,
-  precioPorTratamiento,
-} from "@/content/precios";
+import { MEDIOS_DE_PAGO, IMAGENES_PAGO } from "@/content/pagos";
 import { TIEMPOS_ESTADIA } from "@/content/turismo";
 import {
   rutaPorSlug,
   tratamientoPorSlug,
 } from "@/content/tratamientos";
 
-import { TextArrowCTA } from "@/components/ui/text-arrow-cta";
 import { TratamientoCard } from "./Cards";
 
 export { Galeria } from "./Galeria";
@@ -59,113 +49,7 @@ function TableHeading({
   );
 }
 
-function EtiquetaPrecio({ etiqueta }: { etiqueta: string }) {
-  return <EtiquetaPrecioTraducida etiqueta={etiqueta} />;
-}
-
-/**
- * Price table. Ranges render as "$—" until the clinic validates them, which is
- * deliberate: the UI ships, the number is a data edit (plan §6.3).
- */
-export function PriceTable({ slugs }: { slugs?: string[] }) {
-  const filas = slugs
-    ? slugs.map((s) => precioPorTratamiento(s)).filter(Boolean)
-    : PRECIOS;
-
-  return (
-    <TablaScroll>
-      <table className="w-full border-collapse">
-        <thead>
-          <tr className="border-b border-border">
-            <th scope="col" className={TH}>
-              <TableHeading icon={Stethoscope}>
-                <T>Tratamiento</T>
-              </TableHeading>
-            </th>
-            <th scope="col" className={TH}>
-              <TableHeading icon={Banknote}>
-                <T>Desde</T>
-              </TableHeading>
-            </th>
-            <th scope="col" className={TH}>
-              <TableHeading icon={Coins}>
-                <T>Moneda</T>
-              </TableHeading>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {filas.map((precio) => (
-            <tr
-              key={precio!.tratamiento}
-              className="border-b border-border even:bg-foreground/[0.035] transition-colors hover:bg-accent-yellow/10 last:border-0"
-            >
-              <td className={TD}>
-                <Link
-                  href={rutaPorSlug(precio!.tratamiento)}
-                  className="transition-opacity duration-300 hover:opacity-70"
-                >
-                  <EtiquetaPrecio etiqueta={precio!.etiqueta} />
-                </Link>
-                {precio!.nota ? (
-                  <span className="mt-1 block text-[15px] leading-[21px] tracking-[-0.15px] text-muted-foreground">
-                    <T>{precio!.nota}</T>
-                  </span>
-                ) : null}
-              </td>
-              <td
-                className={cn(TD, "whitespace-nowrap text-accent-coral-strong")}
-              >
-                {formatearDesde(precio!)}
-              </td>
-              <td className={cn(TD, "whitespace-nowrap text-muted-foreground")}>
-                {precio!.moneda}
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </TablaScroll>
-  );
-}
-
-/** Single "desde" anchor used on pillar and treatment pages. */
-export function PrecioDesde({
-  slug,
-  centrado = false,
-}: {
-  slug: string;
-  centrado?: boolean;
-}) {
-  const precio = precioPorTratamiento(slug);
-  return (
-    <div
-      className={cn(
-        "flex w-full flex-col gap-2 rounded-[16px] bg-card p-8 shadow-[var(--clireo-shadow)]",
-        centrado && "items-center text-center",
-      )}
-    >
-      <p className="text-[15px] leading-[21px] tracking-[-0.15px] text-muted-foreground">
-        <T>Precio orientativo</T>
-      </p>
-      <p className="text-[40px] leading-[44px] tracking-[-1.8px] text-accent-coral-strong">
-        {formatearDesde(precio)}
-      </p>
-      <p className="text-[15px] leading-[21px] tracking-[-0.15px] text-muted-foreground">
-        <T>
-          {precio?.desde === null
-            ? "Estamos actualizando los rangos publicados. El presupuesto definitivo se entrega por escrito luego de la evaluación inicial."
-            : "Rango orientativo. El presupuesto definitivo se entrega por escrito luego de la evaluación inicial."}
-        </T>
-      </p>
-      <TextArrowCTA href="/precios" className={centrado ? "self-center" : undefined}>
-        Ver todos los precios y medios de pago
-      </TextArrowCTA>
-    </div>
-  );
-}
-
-/** Payment methods, positives first and the condition stated once after. */
+/** Payment methods available for coordinating treatment. */
 export function MediosDePago({
   conImagenes = true,
   layout = "grid",
@@ -216,16 +100,6 @@ export function MediosDePago({
         </div>
       ) : null}
 
-      <ul className="flex flex-col gap-2">
-        {CONDICIONES_PAGO.map((c) => (
-          <li
-            key={c.texto}
-            className="text-[12px] leading-[18px] tracking-[-0.06px] text-foreground/55"
-          >
-            * <T>{c.texto}</T>
-          </li>
-        ))}
-      </ul>
     </div>
   );
 }

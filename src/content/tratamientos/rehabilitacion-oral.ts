@@ -5,9 +5,9 @@ export const REHABILITACION_ORAL: Pilar = {
   slug: "rehabilitacion-oral",
   nombre: "Rehabilitación oral y prótesis",
   h1: "Rehabilitación oral y prótesis en Núñez, Buenos Aires",
-  title: "Rehabilitación Oral y Prótesis en Núñez | Smile Design Center",
+  title: "Rehabilitación Oral y Prótesis en Núñez | Estudio Cunningham",
   description:
-    "Coronas, incrustaciones cerámicas y de resina y cambio de amalgamas en Núñez. Especialista en rehabilitación dentobucomaxilar. Consulta inicial sin cargo.",
+    "Coronas, incrustaciones cerámicas y de resina y cambio de amalgamas en Núñez. Especialista en rehabilitación dentobucomaxilar. Consulta inicial.",
   eyebrow: "Rehabilitación oral",
   resumen:
     "Devolvemos forma, función y color a dientes desgastados, fracturados o con restauraciones vencidas, con criterio de mordida y no sólo estético.",
@@ -20,7 +20,7 @@ export const REHABILITACION_ORAL: Pilar = {
   queEs: [
     "La rehabilitación oral es la especialidad que se ocupa de reconstruir dientes que perdieron estructura y de reorganizar la mordida cuando ese desgaste ya afectó al conjunto. No es un tratamiento suelto: es un plan que ordena en qué orden se resuelve cada pieza para que el resultado final funcione como sistema.",
     "El punto de partida siempre es el mismo diagnóstico: cuánta estructura sana queda, cómo contactan los dientes al morder y al desplazar la mandíbula, y si hay bruxismo o pérdida de dimensión vertical. Con eso se decide la técnica. Una pieza con una fractura acotada se resuelve con una incrustación, que conserva más diente que una corona. Una pieza muy destruida o endodonciada necesita cobertura total. Y una boca con desgaste generalizado requiere plan completo, no parches sucesivos.",
-    "El titular del consultorio es especialista en rehabilitación dentobucomaxilar y además técnico de laboratorio. Eso cambia el trabajo en un punto concreto: el diseño de la pieza y su ejecución técnica se piensan juntos, y los ajustes de forma, contacto y color se resuelven con criterio de laboratorio y no sólo de sillón. Los registros se toman con escáner intraoral 3Shape, lo que evita las cubetas de pasta y mejora la precisión del ajuste marginal.",
+    "El titular del consultorio es especialista en rehabilitación dentobucomaxilar y además técnico de laboratorio. Eso cambia el trabajo en un punto concreto: el diseño de la pieza y su ejecución técnica se piensan juntos, y los ajustes de forma, contacto y color se resuelven con criterio de laboratorio y no sólo de sillón. Los registros se toman con escáner intraoral Runyes 3DS, lo que evita las cubetas de pasta y mejora la precisión del ajuste marginal.",
   ],
   paraQuien: [
     "Dientes fracturados o con caries extensas que ya no se resuelven con una restauración simple.",
@@ -61,7 +61,7 @@ export const REHABILITACION_ORAL: Pilar = {
     {
       titulo: "Registro digital, sin pasta ni moldes",
       descripcion:
-        "El escaneo intraoral 3Shape reemplaza la impresión convencional: más preciso y bastante menos incómodo.",
+        "El escaneo intraoral Runyes 3DS reemplaza la impresión convencional: más preciso y bastante menos incómodo.",
     },
     {
       titulo: "Criterio de laboratorio en el consultorio",
@@ -103,7 +103,7 @@ export const REHABILITACION_ORAL: Pilar = {
       _fuente: "pendiente-validacion",
       pregunta: "¿Cuánto cuesta una rehabilitación?",
       respuesta:
-        "El presupuesto se arma por pieza y por técnica, y se entrega por escrito después de la consulta inicial, que es sin cargo. En la página de precios están los rangos orientativos y los medios de pago disponibles.",
+        "El plan de tratamiento se arma por pieza y por técnica, y se entrega por escrito después de la consulta. Allí se explican las etapas y los medios de pago disponibles.",
     },
   ],
   caso: "rehabilitacion-oral-restauracion-forma-y-color-natural",
@@ -114,9 +114,9 @@ export const REHABILITACION_ORAL: Pilar = {
       pilar: "rehabilitacion-oral",
       nombre: "Coronas dentales",
       h1: "Coronas dentales en Núñez, Buenos Aires",
-      title: "Coronas Dentales en Núñez, Buenos Aires | Smile Design Center",
+      title: "Coronas Dentales en Núñez, Buenos Aires | Estudio Cunningham",
       description:
-        "Coronas dentales con registro digital 3Shape en Núñez: ajuste preciso, estética natural y control de mordida. Consulta inicial sin cargo.",
+        "Coronas dentales con registro digital Runyes 3DS en Núñez: ajuste preciso, estética natural y control de mordida. Consulta inicial.",
       resumen:
         "Cobertura total de la pieza para devolverle forma, resistencia y estética cuando perdió demasiada estructura.",
       imagen: {
@@ -125,7 +125,7 @@ export const REHABILITACION_ORAL: Pilar = {
       },
       queEs: [
         "Una corona es una funda que cubre el diente completo y toma a su cargo la forma y la resistencia que la pieza ya no puede sostener sola. Se indica cuando queda poca estructura sana: fracturas amplias, caries extensas o dientes endodonciados que sin cobertura terminan partiéndose.",
-        "El trabajo se hace con registro digital: se prepara la pieza con el desgaste que la técnica necesita, se escanea con 3Shape y se confecciona la cerámica sobre ese modelo. Mientras tanto llevás un provisorio que ya tiene la forma prevista, así se puede verificar cómo mastica y cómo se ve antes de cementar lo definitivo. En el cementado se controlan los contactos en mordida y en movimiento lateral, porque una corona alta molesta y una corona sin contacto deja de trabajar.",
+        "El trabajo se hace con registro digital: se prepara la pieza con el desgaste que la técnica necesita, se escanea con Runyes 3DS y se confecciona la cerámica sobre ese modelo. Mientras tanto llevás un provisorio que ya tiene la forma prevista, así se puede verificar cómo mastica y cómo se ve antes de cementar lo definitivo. En el cementado se controlan los contactos en mordida y en movimiento lateral, porque una corona alta molesta y una corona sin contacto deja de trabajar.",
       ],
       paraQuien: [
         "Dientes con fractura amplia o caries que dejó poca pared sana.",
@@ -142,7 +142,7 @@ export const REHABILITACION_ORAL: Pilar = {
         {
           titulo: "Escaneo y provisorio",
           descripcion:
-            "Registro intraoral 3Shape y colocación de un provisorio con la forma prevista para probar función y estética.",
+            "Registro intraoral Runyes 3DS y colocación de un provisorio con la forma prevista para probar función y estética.",
         },
         {
           titulo: "Cementado",
@@ -184,9 +184,9 @@ export const REHABILITACION_ORAL: Pilar = {
       pilar: "rehabilitacion-oral",
       nombre: "Incrustaciones cerámicas",
       h1: "Incrustaciones cerámicas en Núñez, Buenos Aires",
-      title: "Incrustaciones Cerámicas en Núñez | Smile Design Center",
+      title: "Incrustaciones Cerámicas en Núñez | Estudio Cunningham",
       description:
-        "Incrustaciones cerámicas en Núñez: reponen la parte dañada del molar conservando las paredes sanas. Registro digital 3Shape. Consulta sin cargo.",
+        "Incrustaciones cerámicas en Núñez: reponen la parte dañada del molar conservando las paredes sanas. Registro digital Runyes 3DS. Consulta odontológica.",
       resumen:
         "Restauración de laboratorio que repone sólo la parte perdida del diente y conserva el resto.",
       imagen: {
@@ -254,9 +254,9 @@ export const REHABILITACION_ORAL: Pilar = {
       pilar: "rehabilitacion-oral",
       nombre: "Incrustaciones de resina",
       h1: "Incrustaciones de resina en Núñez, Buenos Aires",
-      title: "Incrustaciones de Resina en Núñez | Smile Design Center",
+      title: "Incrustaciones de Resina en Núñez | Estudio Cunningham",
       description:
-        "Incrustaciones de resina en Núñez: restauran la superficie masticatoria con buena anatomía y menor costo que la cerámica. Consulta sin cargo.",
+        "Incrustaciones de resina en Núñez: restauran la superficie masticatoria con buena anatomía y una alternativa más flexible que la cerámica. Consulta odontológica.",
       resumen:
         "Alternativa de laboratorio en resina para restaurar molares con anatomía y contacto bien definidos.",
       imagen: {
@@ -264,12 +264,12 @@ export const REHABILITACION_ORAL: Pilar = {
         alt: "Incrustación de resina que restaura la superficie masticatoria",
       },
       queEs: [
-        "La incrustación de resina cumple la misma función que la cerámica: repone la porción perdida del diente con una pieza confeccionada fuera de la boca y adherida después. Cambia el material, y con él el comportamiento: la resina es algo más elástica, se desgasta más rápido que la cerámica y tiene un costo menor.",
-        "Es una buena opción cuando se busca resolver la pieza con anatomía correcta y buen punto de contacto sin ir al costo de la cerámica, o cuando conviene un material menos rígido frente al diente antagonista. En la consulta se explica la diferencia entre ambas alternativas con el caso concreto adelante, porque la elección depende de la carga masticatoria de esa pieza y de la presencia de bruxismo.",
+        "La incrustación de resina cumple la misma función que la cerámica: repone la porción perdida del diente con una pieza confeccionada fuera de la boca y adherida después. Cambia el material, y con él el comportamiento: la resina es algo más elástica y se desgasta más rápido que la cerámica.",
+        "Es una buena opción cuando se busca resolver la pieza con anatomía correcta y buen punto de contacto, o cuando conviene un material menos rígido frente al diente antagonista. En la consulta se explica la diferencia entre ambas alternativas con el caso concreto adelante, porque la elección depende de la carga masticatoria de esa pieza y de la presencia de bruxismo.",
       ],
       paraQuien: [
         "Molares con caries o restauraciones amplias que necesitan reconstrucción.",
-        "Pacientes que buscan una alternativa de menor costo que la cerámica.",
+        "Pacientes que buscan una alternativa de distinta rigidez y comportamiento que la cerámica.",
         "Casos donde se prefiere un material menos rígido.",
         "Restauraciones provisionales de mediano plazo dentro de un plan por etapas.",
       ],
@@ -324,9 +324,9 @@ export const REHABILITACION_ORAL: Pilar = {
       pilar: "rehabilitacion-oral",
       nombre: "Cambio de amalgamas",
       h1: "Cambio de amalgamas en Núñez, Buenos Aires",
-      title: "Cambio de Amalgamas en Núñez, Buenos Aires | Smile Design Center",
+      title: "Cambio de Amalgamas en Núñez, Buenos Aires | Estudio Cunningham",
       description:
-        "Reemplazo de amalgamas por restauraciones estéticas en Núñez, con criterio clínico: se cambian las que fallan, no todas. Consulta sin cargo.",
+        "Reemplazo de amalgamas por restauraciones estéticas en Núñez, con criterio clínico: se cambian las que fallan, no todas. Consulta odontológica.",
       resumen:
         "Reemplazo de restauraciones metálicas antiguas por materiales estéticos adheridos.",
       imagen: {

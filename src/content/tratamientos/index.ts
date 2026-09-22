@@ -24,9 +24,9 @@ const ARCHIVOS: Pilar[] = [
   ODONTOLOGIA_GENERAL,
 ];
 
-/** Keeps location terms available for metadata without repeating them in H1s. */
+/** Keeps the location modifier in both metadata and the visible H1. */
 export function tituloVisible(titulo: string) {
-  return titulo.replace(/\s+en Núñez, Buenos Aires$/, "");
+  return titulo;
 }
 
 const TITULOS_QUE_ES: Record<string, string> = {

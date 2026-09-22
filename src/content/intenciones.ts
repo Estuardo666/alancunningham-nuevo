@@ -11,13 +11,6 @@ export interface Intencion {
 
 export const INTENCIONES: Intencion[] = [
   {
-    titulo: "Precios y medios de pago",
-    etiqueta: "Para quien quiere saber cuánto cuesta",
-    descripcion:
-      "Rangos orientativos por tratamiento, medios de pago disponibles y condiciones, en una sola página.",
-    href: "/precios",
-  },
-  {
     titulo: "Carillas o coronas",
     etiqueta: "Para quien compara: qué me conviene",
     descripcion:
@@ -68,9 +61,9 @@ export const COMPARATIVAS: Comparativa[] = [
     _fuente: "ia",
     slug: "carillas-vs-coronas",
     h1: "Carillas o coronas: cuál conviene en cada caso — Núñez, Buenos Aires",
-    title: "Carillas o Coronas: Cuál Conviene | Smile Design Center",
+    title: "Carillas o Coronas: Cuál Conviene | Estudio Odontológico Cunningham",
     description:
-      "Diferencias reales entre carillas de porcelana y coronas dentales: cuánto diente conserva cada una, cuándo se indica y qué esperar. Consulta sin cargo en Núñez.",
+      "Diferencias reales entre carillas de porcelana y coronas dentales: cuánto diente conserva cada una, cuándo se indica y qué esperar en Núñez.",
     resumen: "Cuánto diente conserva cada opción y cuándo se indica una u otra.",
     eyebrow: "Qué me conviene",
     intro: [
@@ -139,16 +132,16 @@ export const COMPARATIVAS: Comparativa[] = [
       },
     ],
     cierre: [
-      "En la consulta inicial, que es sin cargo, se evalúa pieza por pieza y se te entrega el plan por escrito con la técnica indicada para cada una y el motivo clínico de esa indicación.",
+      "En la consulta inicial, se evalúa pieza por pieza y se te entrega el plan por escrito con la técnica indicada para cada una y el motivo clínico de esa indicación.",
     ],
   },
   {
     _fuente: "ia",
     slug: "alineadores-vs-brackets",
     h1: "Alineadores o brackets: cuál conviene en cada caso — Núñez, Buenos Aires",
-    title: "Alineadores o Brackets: Cuál Conviene | Smile Design Center",
+    title: "Alineadores o Brackets: Cuál Conviene | Estudio Odontológico Cunningham",
     description:
-      "Diferencias reales entre alineadores invisibles y brackets: qué resuelve mejor cada técnica y cómo se decide por diagnóstico. Consulta sin cargo en Núñez.",
+      "Diferencias reales entre alineadores invisibles y brackets: qué resuelve mejor cada técnica y cómo se decide por diagnóstico en Núñez.",
     resumen: "Qué resuelve mejor cada técnica y cuánto pesa la disciplina de uso.",
     eyebrow: "Qué me conviene",
     intro: [
@@ -224,9 +217,9 @@ export const COMPARATIVAS: Comparativa[] = [
     _fuente: "ia",
     slug: "implantes-vs-protesis",
     h1: "Implantes o prótesis: cuál conviene en cada caso — Núñez, Buenos Aires",
-    title: "Implantes o Prótesis: Cuál Conviene | Smile Design Center",
+    title: "Implantes o Prótesis: Cuál Conviene | Estudio Odontológico Cunningham",
     description:
-      "Diferencias entre implantes dentales, puente y prótesis removible: qué implica cada opción para los dientes vecinos y para el hueso. Consulta sin cargo en Núñez.",
+      "Diferencias entre implantes dentales, puente y prótesis removible: qué implica cada opción para los dientes vecinos y para el hueso en Núñez.",
     resumen: "Qué le pasa a los dientes vecinos y al hueso con cada solución.",
     eyebrow: "Qué me conviene",
     intro: [
@@ -294,7 +287,7 @@ export const COMPARATIVAS: Comparativa[] = [
       },
     ],
     cierre: [
-      "El plan se define con el estudio del hueso y de la mordida adelante. En la consulta inicial, sin cargo, se te explican las alternativas viables para tu caso con el costo biológico de cada una.",
+      "El plan se define con el estudio del hueso y de la mordida adelante. En la consulta inicial, se te explican las alternativas viables para tu caso con el costo biológico de cada una.",
     ],
   },
 ];

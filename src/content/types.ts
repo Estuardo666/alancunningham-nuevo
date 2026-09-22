@@ -44,13 +44,3 @@ export interface MediaAsset extends Imagen {
   tipo?: "image" | "video";
   poster?: string;
 }
-
-export interface RangoPrecio extends ConFuente {
-  /** Treatment slug this range belongs to. */
-  tratamiento: string;
-  etiqueta: string;
-  /** `null` renders as "$—" until the clinic validates the number. */
-  desde: number | null;
-  moneda: "ARS" | "USD";
-  nota?: string;
-}

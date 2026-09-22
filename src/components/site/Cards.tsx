@@ -10,7 +10,6 @@ import type { Intencion } from "@/content/intenciones";
 import { T } from "@/i18n/LanguageProvider";
 
 const POST_CATEGORY_TONES: Record<string, string> = {
-  Precios: "bg-accent-coral/18 text-accent-coral-strong",
   "Estética dental": "bg-secondary/18 text-secondary-foreground",
   Prevención: "bg-accent-yellow/30 text-accent-yellow-strong",
   "Primera visita": "bg-surface-strong/10 text-foreground",

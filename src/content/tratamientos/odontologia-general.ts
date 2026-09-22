@@ -5,9 +5,9 @@ export const ODONTOLOGIA_GENERAL: Pilar = {
   slug: "odontologia-general",
   nombre: "Odontología general y prevención",
   h1: "Odontología general y prevención en Núñez, Buenos Aires",
-  title: "Odontología General y Prevención en Núñez | Smile Design Center",
+  title: "Odontología General y Prevención en Núñez | Estudio Cunningham",
   description:
-    "Limpieza profunda, restauraciones de caries y controles preventivos en Núñez. La base sobre la que se apoya cualquier tratamiento. Consulta sin cargo.",
+    "Limpieza profunda, restauraciones de caries y controles preventivos en Núñez. La base sobre la que se apoya cualquier tratamiento. Consulta odontológica.",
   eyebrow: "Odontología general",
   resumen:
     "Limpieza, restauraciones y control periódico: lo que evita que un problema chico se convierta en una rehabilitación.",
@@ -34,7 +34,7 @@ export const ODONTOLOGIA_GENERAL: Pilar = {
     {
       titulo: "Consulta inicial",
       descripcion:
-        "Revisión completa de la boca, evaluación de encías y de piezas, y estudio radiográfico cuando corresponde. La consulta inicial es sin cargo y dura alrededor de 40 minutos.",
+        "Revisión completa de la boca, evaluación de encías y de piezas, y estudio radiográfico cuando corresponde. La consulta inicial dura alrededor de 40 minutos.",
     },
     {
       titulo: "Plan por escrito",
@@ -54,7 +54,7 @@ export const ODONTOLOGIA_GENERAL: Pilar = {
   ],
   beneficios: [
     {
-      titulo: "Consulta inicial sin cargo",
+      titulo: "Consulta inicial",
       descripcion:
         "40 minutos de evaluación, diagnóstico y plan por escrito, sin compromiso de tratamiento.",
     },
@@ -95,9 +95,9 @@ export const ODONTOLOGIA_GENERAL: Pilar = {
     },
     {
       _fuente: "ia",
-      pregunta: "¿La consulta inicial tiene costo?",
+      pregunta: "¿Qué incluye la consulta inicial?",
       respuesta:
-        "No. La primera consulta es sin cargo e incluye evaluación, diagnóstico y plan de tratamiento por escrito, sin compromiso.",
+        "Incluye evaluación, diagnóstico y plan de tratamiento por escrito, sin compromiso.",
     },
   ],
   hijos: [
@@ -107,9 +107,9 @@ export const ODONTOLOGIA_GENERAL: Pilar = {
       pilar: "odontologia-general",
       nombre: "Limpieza profunda",
       h1: "Limpieza dental profunda en Núñez, Buenos Aires",
-      title: "Limpieza Dental Profunda en Núñez | Smile Design Center",
+      title: "Limpieza Dental Profunda en Núñez | Estudio Cunningham",
       description:
-        "Limpieza profunda y tratamiento periodontal en Núñez: elimina el sarro subgingival y frena la enfermedad de encías. Consulta sin cargo.",
+        "Limpieza profunda y tratamiento periodontal en Núñez: elimina el sarro subgingival y frena la enfermedad de encías. Consulta odontológica.",
       resumen:
         "Remoción del sarro por encima y por debajo del margen de la encía, con corrección de la técnica de higiene.",
       imagen: {
@@ -177,9 +177,9 @@ export const ODONTOLOGIA_GENERAL: Pilar = {
       pilar: "odontologia-general",
       nombre: "Restauraciones de caries",
       h1: "Restauraciones y tratamiento de caries en Núñez, Buenos Aires",
-      title: "Tratamiento de Caries y Restauraciones en Núñez | Smile Design Center",
+      title: "Tratamiento de Caries y Restauraciones en Núñez | Estudio Cunningham",
       description:
-        "Restauraciones estéticas de caries en Núñez: composite del color del diente, con anatomía y punto de contacto bien reconstruidos. Consulta sin cargo.",
+        "Restauraciones estéticas de caries en Núñez: composite del color del diente, con anatomía y punto de contacto bien reconstruidos. Consulta odontológica.",
       resumen:
         "Eliminación de la caries y reconstrucción de la pieza con material estético adherido.",
       imagen: {

@@ -51,7 +51,7 @@ const VALORES: ValueEntry[] = [
   {
     title: "Registro digital",
     description:
-      "Escáner intraoral 3Shape en lugar de moldes de pasta, para registros más precisos y bastante más cómodos.",
+      "Escáner intraoral Runyes 3DS en lugar de moldes de pasta, para registros más precisos y bastante más cómodos.",
     Icon: ValueTrustIcon,
   },
   {
@@ -79,8 +79,8 @@ export function ValuesSection() {
             />
           </div>
           <p className="max-w-[550px] text-center text-[18px] leading-[24.3px] tracking-[-0.54px] text-muted-foreground">
-            Planificación digital, criterio conservador y presupuesto por
-            escrito antes de empezar.
+            Planificación digital, criterio conservador y un plan claro antes
+            de empezar.
           </p>
         </div>
 

@@ -14,7 +14,6 @@ import { WhatsAppButton } from "@/components/sites/clireo-framer-website-a161428
 import {
   HomeCasos,
   HomeInstalaciones,
-  HomePrecioCobertura,
   HomeTurismo,
 } from "@/components/home/sections";
 import { JsonLd } from "@/components/site/JsonLd";
@@ -28,9 +27,9 @@ import { FAQS_HOME } from "@/content/faqs";
 import { buildMetadata } from "@/lib/seo";
 import { CLINICA } from "@/content/clinica";
 
-const TITLE = "Dentista en Núñez: Implantes y Estética | Smile Design Center";
+const TITLE = "Diseño de sonrisa e implantes en Núñez | Estudio Odontológico Cunningham";
 const DESCRIPTION =
-  "Consultorio odontológico en Núñez, Buenos Aires. Implantes, rehabilitación oral y diseño de sonrisa con planificación digital. Consulta inicial sin cargo.";
+  "Planificación digital de diseño de sonrisa e implantes guiados en Núñez. Antes de tocar tus dientes, visualizamos y planificamos cada etapa.";
 
 export const metadata = buildMetadata({
   title: TITLE,
@@ -78,9 +77,7 @@ export default function Home() {
         <HomeCasos />
         {/* 05 secondary */}
         <DoctorsSection />
-        {/* 06 background */}
-        <HomePrecioCobertura />
-        {/* 07 strong — the treatments carousel */}
+        {/* 06 strong — the treatments carousel */}
         <ServicesSection />
         {/* 08 secondary */}
         <ApproachSection />

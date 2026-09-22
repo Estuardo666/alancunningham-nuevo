@@ -47,7 +47,6 @@ export function dentistSchema(): Json {
     description: CLINICA.descripcionCorta,
     url: SITE_URL,
     telephone: CLINICA.telefonoE164,
-    email: CLINICA.email,
     priceRange: "$$",
     image: urlAbsoluta("/images/thumbnail_image0-jpg-1440x800.webp"),
     logo: urlAbsoluta("/logo.png"),

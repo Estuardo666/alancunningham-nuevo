@@ -5,9 +5,9 @@ export const CIRUGIA_Y_PERIODONCIA: Pilar = {
   slug: "cirugia-y-periodoncia",
   nombre: "Cirugía y periodoncia láser",
   h1: "Cirugía y periodoncia láser en Núñez, Buenos Aires",
-  title: "Cirugía Oral y Periodoncia Láser en Núñez | Smile Design Center",
+  title: "Cirugía Oral y Periodoncia Láser en Núñez | Estudio Cunningham",
   description:
-    "Extracciones, frenectomía y gingivectomía con láser y tratamiento de retracciones gingivales en Núñez. Menos sangrado y mejor postoperatorio. Consulta sin cargo.",
+    "Extracciones, frenectomía y gingivectomía con láser y tratamiento de retracciones gingivales en Núñez. Menos sangrado y mejor postoperatorio. Consulta odontológica.",
   eyebrow: "Cirugía y periodoncia",
   resumen:
     "Procedimientos sobre encía y tejidos de soporte resueltos con láser, que reduce sangrado y acorta el postoperatorio.",
@@ -103,7 +103,7 @@ export const CIRUGIA_Y_PERIODONCIA: Pilar = {
       _fuente: "pendiente-validacion",
       pregunta: "¿Cuánto cuesta una extracción o una cirugía de encía?",
       respuesta:
-        "Depende de la complejidad del procedimiento. El presupuesto se entrega por escrito después de la consulta inicial, que es sin cargo, con el detalle de lo que incluye.",
+        "Depende de la complejidad del procedimiento. El plan de tratamiento se entrega por escrito después de la consulta inicial, con el detalle de lo que incluye.",
     },
   ],
   hijos: [
@@ -113,9 +113,9 @@ export const CIRUGIA_Y_PERIODONCIA: Pilar = {
       pilar: "cirugia-y-periodoncia",
       nombre: "Extracciones dentales",
       h1: "Extracciones dentales en Núñez, Buenos Aires",
-      title: "Extracciones Dentales en Núñez, Buenos Aires | Smile Design Center",
+      title: "Extracciones Dentales en Núñez, Buenos Aires | Estudio Cunningham",
       description:
-        "Extracciones dentales en Núñez con anestesia local e indicaciones postoperatorias claras, y plan para reponer la pieza. Consulta sin cargo.",
+        "Extracciones dentales en Núñez con anestesia local e indicaciones postoperatorias claras, y plan para reponer la pieza. Consulta odontológica.",
       resumen:
         "Retiro de piezas no recuperables, con plan de reposición definido desde la misma consulta.",
       imagen: {
@@ -183,9 +183,9 @@ export const CIRUGIA_Y_PERIODONCIA: Pilar = {
       pilar: "cirugia-y-periodoncia",
       nombre: "Frenectomía láser",
       h1: "Frenectomía con láser en Núñez, Buenos Aires",
-      title: "Frenectomía Láser en Núñez, Buenos Aires | Smile Design Center",
+      title: "Frenectomía Láser en Núñez, Buenos Aires | Estudio Cunningham",
       description:
-        "Frenectomía labial y lingual con láser en Núñez: procedimiento breve, poco sangrado y recuperación rápida. Consulta inicial sin cargo.",
+        "Frenectomía labial y lingual con láser en Núñez: procedimiento breve, poco sangrado y recuperación rápida. Consulta inicial.",
       resumen:
         "Liberación del frenillo labial o lingual con láser, con mínimo sangrado y sin sutura en la mayoría de los casos.",
       imagen: {
@@ -253,9 +253,9 @@ export const CIRUGIA_Y_PERIODONCIA: Pilar = {
       pilar: "cirugia-y-periodoncia",
       nombre: "Gingivectomía láser",
       h1: "Gingivectomía con láser en Núñez, Buenos Aires",
-      title: "Gingivectomía Láser en Núñez, Buenos Aires | Smile Design Center",
+      title: "Gingivectomía Láser en Núñez, Buenos Aires | Estudio Cunningham",
       description:
-        "Gingivectomía con láser en Núñez para armonizar el contorno de la encía y corregir la sonrisa gingival. Consulta inicial sin cargo.",
+        "Gingivectomía con láser en Núñez para armonizar el contorno de la encía y corregir la sonrisa gingival. Consulta inicial.",
       resumen:
         "Remodelado del contorno gingival con láser para equilibrar la proporción de la sonrisa.",
       imagen: {
@@ -323,9 +323,9 @@ export const CIRUGIA_Y_PERIODONCIA: Pilar = {
       pilar: "cirugia-y-periodoncia",
       nombre: "Retracciones gingivales",
       h1: "Tratamiento de retracciones gingivales en Núñez, Buenos Aires",
-      title: "Retracciones Gingivales en Núñez | Smile Design Center",
+      title: "Retracciones Gingivales en Núñez | Estudio Cunningham",
       description:
-        "Tratamiento de retracciones gingivales en Núñez: cubre la raíz expuesta, reduce la sensibilidad y frena la progresión. Consulta sin cargo.",
+        "Tratamiento de retracciones gingivales en Núñez: cubre la raíz expuesta, reduce la sensibilidad y frena la progresión. Consulta odontológica.",
       resumen:
         "Tratamiento de la encía retraída que deja la raíz expuesta y genera sensibilidad.",
       imagen: {

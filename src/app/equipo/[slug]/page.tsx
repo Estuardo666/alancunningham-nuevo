@@ -39,7 +39,7 @@ export async function generateMetadata({
   if (!p) return {};
   return buildMetadata({
     title: `${p.nombre}, ${p.matricula} — Odontólogo en Núñez, Buenos Aires`,
-    description: `${p.nombre}, ${p.especialidad}, ${p.matricula}. Atiende en Arribeños 2659, Núñez, Buenos Aires. Consulta inicial sin cargo.`,
+    description: `${p.nombre}, ${p.especialidad}, ${p.matricula}. Atiende en Manuel Ugarte 2548, Núñez, Buenos Aires. Consulta inicial con diagnóstico y plan de tratamiento.`,
     path: `/equipo/${p.slug}`,
     image: p.foto.src,
   });
@@ -140,7 +140,7 @@ export default async function ProfesionalPage({
           <SectionHeading
             eyebrow="Turnos"
             titulo={`Agendá con ${profesional.nombre}`}
-            bajada="Consulta inicial de 40 minutos, sin cargo, con diagnóstico y plan de tratamiento por escrito."
+            bajada="Consulta inicial de 40 minutos, con diagnóstico y plan de tratamiento por escrito."
           />
           <ConsultaForm
             titulo="Pedí tu turno"

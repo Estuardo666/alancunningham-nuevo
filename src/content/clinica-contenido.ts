@@ -1,13 +1,12 @@
 import type { ConFuente, Imagen, MediaAsset } from "./types";
 
 /**
- * Mission and vision, taken from the old site's `/quienes-somos` and corrected:
- * "Desing" → "Design", "Tecnologias" → "Tecnologías".
+ * Mission and vision, rewritten for the current clinic identity.
  */
 export const MISION: ConFuente & { texto: string } = {
   _fuente: "real",
   texto:
-    "La clínica de alta tecnología de Smile Design Center nace con el objetivo de cambiar la calidad de vida de sus pacientes a través de la salud dental, mediante una excelente calidad de atención odontológica enmarcada en el profesionalismo y la honestidad de sus especialistas. Nuestra experiencia avala el compromiso con nuestros pacientes.",
+    "El Estudio Odontológico Cunningham nace con el objetivo de mejorar la calidad de vida de sus pacientes a través de una atención odontológica profesional, honesta y apoyada en la planificación digital.",
 };
 
 export const HISTORIA: ConFuente & {
@@ -19,7 +18,7 @@ export const HISTORIA: ConFuente & {
   eyebrow: "Nuestra historia",
   titulo: "Las primeras impresiones comienzan con una sonrisa",
   texto:
-    "La clínica de altas tecnologías de Smile Design Center nace con el objetivo de cambiar la calidad de vida de sus pacientes a través de la salud dental, mediante una excelente calidad de atención odontológica enmarcada en el profesionalismo y la honestidad de sus especialistas. Nuestra experiencia avala el compromiso con nuestros pacientes.",
+    "El Estudio Odontológico Cunningham nace con el objetivo de mejorar la calidad de vida de sus pacientes a través de una atención odontológica profesional, honesta y apoyada en la planificación digital.",
 };
 
 export const VISION: ConFuente & { texto: string } = {
@@ -36,7 +35,7 @@ export const VISION: ConFuente & { texto: string } = {
 export const SOBRE_LA_CLINICA = {
   eyebrow: "Sobre el consultorio",
   titular:
-    "Combinamos un especialista a cargo de cada caso, planificación digital y un plan de tratamiento por escrito, para que sepas qué necesitás, cuánto lleva y cuánto cuesta antes de empezar.",
+    "Combinamos un especialista a cargo de cada caso, planificación digital y un plan de tratamiento por escrito, para que sepas qué necesitás y cuánto lleva antes de empezar.",
   tarjetas: [
     {
       titulo: "Atención integral",
@@ -122,12 +121,12 @@ export interface Tecnologia extends ConFuente {
 export const TECNOLOGIA: Tecnologia[] = [
   {
     _fuente: "real",
-    nombre: "Escáner intraoral 3Shape",
+    nombre: "Escáner intraoral Runyes 3DS",
     descripcion:
       "Reemplaza la impresión con pasta por un registro digital de la boca. Más preciso para el ajuste de coronas, carillas e incrustaciones, y bastante más cómodo: no hay cubeta, no hay arcadas.",
     imagen: {
       src: "/images/escaner-intraoral-3shape.jpg",
-      alt: "Escáner intraoral 3Shape en uso durante un registro digital",
+      alt: "Escáner intraoral en uso durante un registro digital",
     },
   },
   {
@@ -167,7 +166,7 @@ export const COMO_TRABAJAMOS = [
   {
     titulo: "Plan",
     descripcion:
-      "Te llevás el plan con lo que hay que hacer, en qué orden, cuánto lleva y cuánto cuesta. Separado en urgente, conveniente y opcional.",
+      "Te llevás el plan con lo que hay que hacer, en qué orden y cuánto lleva, separado en urgente, conveniente y opcional.",
     imagen: {
       src: "/images/DSC_0135-1-1024x683.jpg",
       alt: "Registro clínico y planificación del tratamiento",
@@ -179,7 +178,7 @@ export const COMO_TRABAJAMOS = [
       "Escaneo intraoral en lugar de moldes, prueba en boca antes de lo definitivo y control de mordida en cada etapa.",
     imagen: {
       src: "/images/DSC_0136-1024x683.jpg",
-      alt: "Escáner intraoral 3Shape en uso durante un registro digital",
+      alt: "Escáner intraoral en uso durante un registro digital",
     },
   },
   {
@@ -208,11 +207,11 @@ export const DIFERENCIALES = [
   {
     titulo: "Equipamiento con nombre propio",
     descripcion:
-      "Escáner intraoral 3Shape y láser para tejido blando. No decimos «última generación»: decimos qué equipo y para qué sirve.",
+      "Escáner intraoral Runyes 3DS y láser para tejido blando. Comunicamos qué equipo usamos y para qué sirve.",
   },
   {
-    titulo: "Presupuesto por escrito y sin presión",
+    titulo: "Acreditados por Invisalign",
     descripcion:
-      "Te decimos qué necesitás y qué no. Sin tratamientos inventados y sin urgencias fabricadas para cerrar la venta.",
+      "Estamos acreditados por Invisalign y definimos los parámetros estéticos del diseño tomando como referencia bibliográfica a Fradiani.",
   },
 ];

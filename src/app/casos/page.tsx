@@ -11,7 +11,7 @@ import { breadcrumbSchema, grafo, webPageSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
 import { CASOS } from "@/content/casos";
 
-const TITLE = "Casos Clínicos: Antes y Después en Núñez | Smile Design Center";
+const TITLE = "Casos clínicos: antes y después en Núñez | Estudio Odontológico Cunningham";
 const DESCRIPTION =
   "Casos clínicos reales tratados en el consultorio de Núñez, con el diagnóstico, el tratamiento realizado y su duración. Antes y después comparables.";
 const PATH = "/casos";
@@ -40,7 +40,7 @@ export default function CasosPage() {
 
       <PageHero
         eyebrow="Casos documentados"
-        h1="Resultados reales, explicados paso a paso"
+        h1="Resultados reales en Núñez, explicados paso a paso"
         bajada="Conocé el punto de partida, el tratamiento realizado y el tiempo de cada caso. Sin retoques: con el detalle clínico a la vista."
         migas={MIGAS}
         imagen={{ src: CASOS[0].despues.src }}

@@ -7,14 +7,12 @@ import {
 } from "@/components/site/PageShell";
 import { AntesDespues } from "@/components/site/AntesDespues";
 import { IntentCard } from "@/components/site/Cards";
-import { MediosDePago, PriceTable } from "@/components/site/Blocks";
 import { CASOS } from "@/content/casos";
 import { INTENCIONES } from "@/content/intenciones";
 import { INSTALACIONES } from "@/content/clinica-contenido";
 import { COMO_FUNCIONA, TIEMPOS_ESTADIA } from "@/content/turismo";
 import { tratamientoPorSlug } from "@/content/tratamientos";
 import { TextArrowCTA } from "@/components/ui/text-arrow-cta";
-import { PrimaryButton } from "@/components/sites/clireo-framer-website-a1614289/shared/PrimaryButton";
 import { CalendarDays, FileText, MessageCircle } from "lucide-react";
 import type { MediaAsset } from "@/content/types";
 import { T } from "@/i18n/LanguageProvider";
@@ -87,52 +85,6 @@ export function HomeCasos() {
       >
         Ver todos los casos clínicos
       </TextArrowCTA>
-    </Section>
-  );
-}
-
-/**
- * 05 · Prices and payment. Reuses the Stats band anatomy (navy, centred, large
- * figures) to put the dominant objection above the 40% scroll mark.
- */
-export function HomePrecioCobertura() {
-  return (
-    <Section banda="background" id="precios">
-      <SectionHeading
-        eyebrow="Precios y medios de pago"
-        titulo="Cuánto cuesta y con qué se paga, sin tener que preguntar"
-        bajada="Los rangos orientativos por tratamiento y los medios de pago, visibles acá y en detalle en su propia página."
-      />
-
-      <div className="grid w-full min-w-0 gap-10 lg:grid-cols-2">
-        <div className="flex min-w-0 flex-col gap-6">
-          <h3 className="text-[22px] leading-[29.7px] tracking-[-0.88px] text-foreground">
-            <T>Rangos orientativos</T>
-          </h3>
-          <PriceTable
-            slugs={[
-              "implantes-unitarios",
-              "carillas-de-porcelana",
-              "coronas-dentales",
-              "alineadores-invisibles",
-              "limpieza-profunda",
-            ]}
-          />
-          <PrimaryButton
-            label="Ver precios y condiciones"
-            href="/precios"
-            variant="primary"
-            className="self-start"
-          />
-        </div>
-
-        <div className="flex min-w-0 flex-col gap-6">
-          <h3 className="text-[22px] leading-[29.7px] tracking-[-0.88px] text-foreground">
-            <T>Medios de pago</T>
-          </h3>
-          <MediosDePago conImagenes={false} />
-        </div>
-      </div>
     </Section>
   );
 }
@@ -225,7 +177,7 @@ export function HomeTurismo() {
           />
           <Prose
             parrafos={[
-              "La evaluación arranca online: nos mandás fotos y estudios, y te decimos si el caso se resuelve en los días que vas a estar en Buenos Aires. Llegás con el presupuesto por escrito y la agenda armada.",
+              "La evaluación arranca online: nos mandás fotos y estudios, y te decimos si el caso se resuelve en los días que vas a estar en Buenos Aires. Llegás con el plan de tratamiento por escrito y la agenda armada.",
               "Publicamos además los tiempos de estadía estimados por tratamiento, que es el dato que hace falta para planificar el viaje y que casi ninguna clínica publica.",
             ]}
           />

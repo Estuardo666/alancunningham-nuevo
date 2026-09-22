@@ -33,8 +33,8 @@ export const CASOS: Caso[] = [
     slug: "rehabilitacion-oral-restauracion-forma-y-color-natural",
     etiqueta: "Rehabilitación oral",
     titulo: "Rehabilitación oral: forma y color natural recuperados",
-    h1: "Rehabilitación oral: forma y color natural recuperados",
-    title: "Caso: Rehabilitación Oral en Núñez | Smile Design Center",
+    h1: "Rehabilitación oral en Núñez: forma y color natural recuperados",
+    title: "Caso: Rehabilitación Oral en Núñez | Estudio Odontológico Cunningham",
     description:
       "Caso clínico real de rehabilitación oral en Núñez: piezas restauradas con forma, función y color natural. Antes y después con detalle del tratamiento.",
     antes: {
@@ -53,7 +53,7 @@ export const CASOS: Caso[] = [
       "Desgaste generalizado con pérdida de anatomía en el sector posterior y restauraciones antiguas con margen abierto en el sector visible. El color de las restauraciones existentes ya no coincidía con el de las piezas naturales, y los contactos estaban desorganizados por el desgaste acumulado.",
     realizado: [
       "Saneamiento previo: control de encías y resolución de las lesiones activas.",
-      "Registro digital de la mordida con escáner intraoral 3Shape.",
+      "Registro digital de la mordida con escáner intraoral Runyes 3DS.",
       "Plan de rehabilitación por etapas, empezando por las piezas en riesgo.",
       "Restauración de forma y anatomía pieza por pieza, con control de contactos.",
       "Selección de color con toma digital y guía convencional.",
@@ -69,8 +69,8 @@ export const CASOS: Caso[] = [
     slug: "diseno-de-sonrisa-cierre-de-espacios-y-armonia-dental",
     etiqueta: "Diseño de sonrisa",
     titulo: "Diseño de sonrisa: cierre de espacios y armonía dental",
-    h1: "Diseño de sonrisa: cierre de espacios y armonía dental",
-    title: "Caso: Diseño de Sonrisa en Núñez | Smile Design Center",
+    h1: "Diseño de sonrisa en Núñez: cierre de espacios y armonía dental",
+    title: "Caso: Diseño de Sonrisa en Núñez | Estudio Odontológico Cunningham",
     description:
       "Caso clínico real de diseño de sonrisa en Núñez: cierre de espacios y armonía en la línea de los dientes. Antes y después con el detalle del tratamiento.",
     antes: {
@@ -88,7 +88,7 @@ export const CASOS: Caso[] = [
     diagnostico:
       "Espacios entre las piezas del sector anterior y proporción despareja entre incisivos centrales y laterales, con una línea de bordes incisales irregular. La encía estaba sana, lo que permitió trabajar sin una etapa periodontal previa.",
     realizado: [
-      "Fotografía clínica y escaneo intraoral 3Shape.",
+      "Fotografía clínica y escaneo intraoral Runyes 3DS.",
       "Diseño digital de la sonrisa con corrección de proporción y línea media.",
       "Ensayo provisorio en boca para aprobar forma y color antes de ejecutar.",
       "Cierre de los espacios y armonización de la línea incisal.",
@@ -105,8 +105,8 @@ export const CASOS: Caso[] = [
     slug: "blanqueamiento-y-alineacion-sonrisa-renovada",
     etiqueta: "Blanqueamiento y alineación",
     titulo: "Blanqueamiento y alineación: sonrisa renovada",
-    h1: "Blanqueamiento y alineación: sonrisa renovada",
-    title: "Caso: Blanqueamiento y Alineación en Núñez | Smile Design Center",
+    h1: "Blanqueamiento y alineación en Núñez: sonrisa renovada",
+    title: "Blanqueamiento y alineación en Núñez | Estudio Cunningham",
     description:
       "Caso clínico real en Núñez: dientes alineados y blanqueados con criterio conservador. Antes y después con el detalle del tratamiento realizado.",
     antes: {

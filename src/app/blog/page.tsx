@@ -7,9 +7,9 @@ import { buildMetadata } from "@/lib/seo";
 import { POSTS } from "@/content/posts";
 import { urlAbsoluta } from "@/content/clinica";
 
-const TITLE = "Blog de odontología | Smile Design Center, Núñez";
+const TITLE = "Blog de odontología | Estudio Odontológico Cunningham, Núñez";
 const DESCRIPTION =
-  "Artículos sobre precios, tratamientos y prevención escritos desde el consultorio: qué mirar antes de decidir y qué preguntar en la consulta.";
+  "Artículos sobre tratamientos, planificación digital y prevención escritos desde el consultorio: qué mirar antes de decidir y qué preguntar en la consulta.";
 const PATH = "/blog";
 
 const MIGAS = [
@@ -49,8 +49,8 @@ export default function BlogPage() {
 
       <PageHero
         eyebrow="Odontología, sin vueltas"
-        h1="Información clara para cuidar tu sonrisa"
-        bajada="Ideas prácticas para entender tratamientos, precios y cuidados antes de tomar una decisión."
+        h1="Información odontológica clara en Núñez"
+        bajada="Ideas prácticas para entender tratamientos, planificación y cuidados antes de tomar una decisión."
         migas={MIGAS}
         imagen={{ src: "/images/thumbnail_image1-jpg-1440x800.webp" }}
       />

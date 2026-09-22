@@ -43,13 +43,13 @@ export default function RootLayout({
       // The anti-flash script below stamps `dark`/`light` on <html> before
       // hydration, so the class list legitimately differs from the SSR output.
       suppressHydrationWarning
-      className={`${helveticaRounded.variable} light h-full antialiased`}
+      className={`${helveticaRounded.variable} dark h-full antialiased`}
     >
       <body className="min-h-full min-w-0 flex flex-col overflow-x-clip">
         <script
           dangerouslySetInnerHTML={{
             __html: `try { const lang = localStorage.getItem("sdc-lang"); if (lang === "en") document.documentElement.lang = "en"; } catch {}
-try { const theme = localStorage.getItem("clireo-theme"); const root = document.documentElement; root.classList.remove("dark", "light"); if (theme === "dark" || theme === "light") { root.classList.add(theme); root.style.colorScheme = theme; } else { root.classList.add("light"); root.style.colorScheme = "light"; } } catch {}`,
+try { const theme = localStorage.getItem("clireo-theme"); const root = document.documentElement; root.classList.remove("dark", "light"); if (theme === "dark" || theme === "light") { root.classList.add(theme); root.style.colorScheme = theme; } else { root.classList.add("dark"); root.style.colorScheme = "dark"; } } catch {}`,
           }}
         />
         {/* Global graph: Dentist + LocalBusiness, Organization, WebSite, Person. */}

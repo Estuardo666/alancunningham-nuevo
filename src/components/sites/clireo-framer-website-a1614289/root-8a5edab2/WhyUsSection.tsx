@@ -21,17 +21,7 @@ interface Reason {
   Icon: IconComponent;
 }
 
-/**
- * The written-quote argument is already its own card in AboutSection and its
- * own step in ApproachSection, so it is filtered out here rather than stated a
- * third time. `DIFERENCIALES` itself is untouched — other pages still use it
- * whole.
- */
-const OMITIDOS = ["Presupuesto por escrito y sin presión"];
-
-const REASONS: Reason[] = DIFERENCIALES.filter(
-  (d) => !OMITIDOS.includes(d.titulo),
-).map((d, index) => ({
+const REASONS: Reason[] = DIFERENCIALES.map((d, index) => ({
   title: d.titulo,
   description: d.descripcion,
   Icon: [WhyUsIconOne, WhyUsIconTwo, WhyUsIconThree, ValuePersonalizedIcon][
@@ -95,7 +85,7 @@ export function WhyUsSection() {
             />
             <p className="max-w-[600px] text-center text-[18px] leading-[24.3px] tracking-[-0.54px] text-muted-foreground">
               Un especialista que planifica y ejecuta tu caso, equipamiento con
-              nombre propio y presupuesto por escrito antes de empezar.
+              nombre propio y un plan claro antes de empezar.
             </p>
           </div>
           <CtaConMicrocopy contexto="una consulta inicial" align="center" />

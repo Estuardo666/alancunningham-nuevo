@@ -2,11 +2,11 @@ import type { ConFuente, Imagen, Paso } from "./types";
 
 export const TURISMO_META = {
   h1: "Turismo odontológico en Buenos Aires",
-  title: "Turismo Odontológico en Buenos Aires | Smile Design Center",
+  title: "Turismo odontológico en Buenos Aires | Estudio Odontológico Cunningham",
   description:
     "Tratamiento odontológico en Buenos Aires con evaluación online previa, plan cerrado antes de viajar y tiempos de estadía estimados por tratamiento.",
   bajada:
-    "Evaluación online, presupuesto por escrito y agenda armada antes de que compres el pasaje.",
+    "Evaluación online, planificación clara y agenda armada antes de que compres el pasaje.",
 };
 
 /** Who the programme is for. */
@@ -37,7 +37,7 @@ export const RAZONES: {
   {
     titulo: "El plan se cierra antes de viajar",
     descripcion:
-      "La evaluación empieza online con fotos y estudios. Llegás con presupuesto por escrito, cantidad de sesiones y días de estadía estimados.",
+      "La evaluación empieza online con fotos y estudios. Llegás con el plan, la cantidad de sesiones y los días de estadía estimados.",
     imagen: {
       src: "/images/obelisco-buenos-aires.jpg",
       alt: "Obelisco de Buenos Aires al atardecer",
@@ -46,10 +46,10 @@ export const RAZONES: {
   {
     titulo: "Tecnología sin pasta de impresión",
     descripcion:
-      "Escáner intraoral 3Shape para todos los registros y láser para procedimientos de tejido blando, que acorta el postoperatorio: importa cuando tenés vuelo de vuelta.",
+      "Escáner intraoral Runyes 3DS para los registros y láser para procedimientos de tejido blando, que acorta el postoperatorio: importa cuando tenés vuelo de vuelta.",
     imagen: {
       src: "/images/escaner-intraoral-3shape.jpg",
-      alt: "Escáner intraoral 3Shape del consultorio",
+      alt: "Escáner intraoral del consultorio",
     },
   },
   {
@@ -80,9 +80,9 @@ export const COMO_FUNCIONA: Paso[] = [
       "Nos escribís por WhatsApp y nos mandás fotos de tu boca y los estudios que tengas. Hacemos una primera evaluación a distancia y te decimos si el caso es viable en el tiempo que vas a estar en Buenos Aires.",
   },
   {
-    titulo: "2 · Plan y presupuesto",
+    titulo: "2 · Plan y agenda",
     descripcion:
-      "Recibís el plan de tratamiento por escrito, con las etapas, la cantidad de sesiones, el rango de precio y los medios de pago disponibles. Todo antes de comprar el pasaje.",
+      "Recibís el plan de tratamiento por escrito, con las etapas, la cantidad de sesiones y los medios de pago disponibles. Todo antes de comprar el pasaje.",
   },
   {
     titulo: "3 · Coordinación del viaje",
@@ -112,7 +112,7 @@ export const SERVICIOS: ServicioTurismo[] = [
     _fuente: "real",
     nombre: "Traslado al consultorio",
     descripcion:
-      "Coordinamos cómo llegás a Arribeños 2659 el día de cada sesión, para que no pierdas tiempo resolviéndolo.",
+      "Coordinamos cómo llegás a Manuel Ugarte 2548 el día de cada sesión, para que no pierdas tiempo resolviéndolo.",
   },
   {
     _fuente: "real",
@@ -158,37 +158,37 @@ export const TIEMPOS_ESTADIA: TiempoEstadia[] = [
     _fuente: "pendiente-validacion",
     tratamiento: "Blanqueamiento dental",
     slug: "blanqueamiento-dental",
-    sesiones: "1 a 2",
-    estadia: "3 a 5 días",
+    sesiones: "1",
+    estadia: "1 día",
   },
   {
     _fuente: "pendiente-validacion",
     tratamiento: "Carillas de porcelana",
     slug: "carillas-de-porcelana",
     sesiones: "3 a 4",
-    estadia: "10 a 14 días",
+    estadia: "10 días",
     nota: "Incluye planificación, prueba en boca y cementado definitivo.",
   },
   {
     _fuente: "pendiente-validacion",
     tratamiento: "Diseño de sonrisa completo",
     slug: "diseno-de-sonrisa",
-    sesiones: "4 a 5",
-    estadia: "12 a 18 días",
+    sesiones: "2",
+    estadia: "2 días",
   },
   {
     _fuente: "pendiente-validacion",
     tratamiento: "Corona dental",
     slug: "coronas-dentales",
-    sesiones: "2 a 3",
-    estadia: "7 a 10 días",
+    sesiones: "2",
+    estadia: "5 días",
   },
   {
     _fuente: "pendiente-validacion",
     tratamiento: "Tratamiento de conducto",
     slug: "tratamiento-de-conducto",
-    sesiones: "1 a 2",
-    estadia: "4 a 7 días",
+    sesiones: "1",
+    estadia: "1 día",
     nota: "La reconstrucción posterior puede sumar días.",
   },
   {
@@ -196,7 +196,7 @@ export const TIEMPOS_ESTADIA: TiempoEstadia[] = [
     tratamiento: "Implante unitario",
     slug: "implantes-unitarios",
     sesiones: "2 etapas",
-    estadia: "Dos viajes o un viaje largo",
+    estadia: "A evaluar",
     nota: "Entre la colocación y la corona hay meses de integración al hueso.",
   },
   {
@@ -204,14 +204,21 @@ export const TIEMPOS_ESTADIA: TiempoEstadia[] = [
     tratamiento: "Rehabilitación sobre implantes",
     slug: "rehabilitacion-sobre-implantes",
     sesiones: "Por etapas",
-    estadia: "Se planifica caso por caso",
+    estadia: "A evaluar",
   },
   {
     _fuente: "pendiente-validacion",
     tratamiento: "Limpieza profunda",
     slug: "limpieza-profunda",
     sesiones: "1 a 2",
-    estadia: "2 a 4 días",
+    estadia: "1 día",
+  },
+  {
+    _fuente: "pendiente-validacion",
+    tratamiento: "Ortodoncia con Invisalign",
+    slug: "alineadores-invisibles",
+    sesiones: "A evaluar",
+    estadia: "A evaluar",
   },
 ];
 
@@ -259,7 +266,7 @@ export const FAQS_TURISMO = [
     _fuente: "ia" as const,
     pregunta: "¿En qué moneda se paga?",
     respuesta:
-      "Aceptamos pesos y dólares en efectivo, transferencia bancaria, Mercado Pago y tarjetas. Las condiciones de cada medio de pago están en la página de precios.",
+      "Aceptamos pesos y dólares en efectivo, transferencia bancaria, Mercado Pago y tarjetas. La modalidad se coordina antes de viajar.",
   },
   {
     _fuente: "ia" as const,
@@ -271,7 +278,7 @@ export const FAQS_TURISMO = [
     _fuente: "ia" as const,
     pregunta: "¿El programa incluye el alojamiento?",
     respuesta:
-      "Coordinamos y recomendamos, pero el tratamiento y los servicios de viaje se presupuestan por separado. Te ayudamos a que todo encaje con la agenda de sesiones.",
+      "Coordinamos y recomendamos, pero el tratamiento y los servicios de viaje se organizan por separado. Te ayudamos a que todo encaje con la agenda de sesiones.",
   },
   {
     _fuente: "ia" as const,

@@ -5,9 +5,9 @@ export const ORTODONCIA: Pilar = {
   slug: "ortodoncia",
   nombre: "Ortodoncia",
   h1: "Ortodoncia en Núñez, Buenos Aires",
-  title: "Ortodoncia y Alineadores Invisibles en Núñez | Smile Design Center",
+  title: "Ortodoncia y Alineadores Invisibles en Núñez | Estudio Cunningham",
   description:
-    "Alineadores invisibles y brackets en Núñez, con escaneo digital y plan de movimientos visible desde el inicio. Consulta inicial sin cargo.",
+    "Alineadores invisibles y brackets en Núñez, con escaneo digital y plan de movimientos visible desde el inicio. Consulta inicial.",
   eyebrow: "Ortodoncia",
   resumen:
     "Alineamos con alineadores transparentes o con brackets, según lo que el caso necesite y no según lo que esté de moda.",
@@ -20,7 +20,7 @@ export const ORTODONCIA: Pilar = {
   queEs: [
     "La ortodoncia mueve los dientes a través del hueso aplicando fuerzas controladas y sostenidas en el tiempo. El objetivo no es sólo que la sonrisa se vea pareja: un caso bien terminado mejora cómo contactan los dientes al morder, distribuye mejor la carga masticatoria y facilita la higiene, que es la principal defensa contra la caries y la enfermedad de encías.",
     "Hay dos caminos. Los alineadores transparentes son placas removibles que se cambian cada pocas semanas y van produciendo el movimiento por etapas; son cómodos, discretos y dependen de que el paciente los use las horas indicadas. Los brackets son fijos, no dependen de la disciplina diaria y siguen siendo la mejor herramienta para determinados movimientos complejos. La elección se hace por diagnóstico: la técnica se adapta al caso, no al revés.",
-    "En cualquiera de los dos casos el punto de partida es el mismo: registro fotográfico, escaneo intraoral 3Shape y estudio radiográfico. Con eso se arma el plan de movimientos, que se puede ver antes de empezar, y se define el tiempo estimado de tratamiento. Y hay una etapa que suele contarse poco y decide el resultado a largo plazo: la contención. Sin retención posterior, los dientes tienden a volver, y eso vale para alineadores y para brackets por igual.",
+    "En cualquiera de los dos casos el punto de partida es el mismo: registro fotográfico, escaneo intraoral Runyes 3DS y estudio radiográfico. Con eso se arma el plan de movimientos, que se puede ver antes de empezar, y se define el tiempo estimado de tratamiento. Y hay una etapa que suele contarse poco y decide el resultado a largo plazo: la contención. Sin retención posterior, los dientes tienden a volver, y eso vale para alineadores y para brackets por igual.",
   ],
   paraQuien: [
     "Dientes apiñados, girados o fuera de la línea del arco.",
@@ -34,7 +34,7 @@ export const ORTODONCIA: Pilar = {
     {
       titulo: "Diagnóstico y registros",
       descripcion:
-        "Fotografías clínicas, escaneo intraoral 3Shape y estudio radiográfico. Se evalúa también el estado de encías y caries: no se mueven dientes sobre una boca sin sanear.",
+        "Fotografías clínicas, escaneo intraoral Runyes 3DS y estudio radiográfico. Se evalúa también el estado de encías y caries: no se mueven dientes sobre una boca sin sanear.",
     },
     {
       titulo: "Plan de movimientos",
@@ -103,7 +103,7 @@ export const ORTODONCIA: Pilar = {
       _fuente: "pendiente-validacion",
       pregunta: "¿Cuánto cuesta la ortodoncia?",
       respuesta:
-        "El presupuesto depende de la técnica y de la duración estimada, e incluye los controles y la contención. Se entrega por escrito después de la consulta inicial, que es sin cargo.",
+        "El plan de tratamiento depende de la técnica y de la duración estimada, e incluye los controles y la contención. Se entrega por escrito después de la consulta inicial.",
     },
   ],
   caso: "blanqueamiento-y-alineacion-sonrisa-renovada",
@@ -112,11 +112,11 @@ export const ORTODONCIA: Pilar = {
       _fuente: "ia",
       slug: "alineadores-invisibles",
       pilar: "ortodoncia",
-      nombre: "Alineadores invisibles",
-      h1: "Alineadores invisibles en Núñez, Buenos Aires",
-      title: "Alineadores Invisibles en Núñez, Buenos Aires | Smile Design Center",
+      nombre: "Alineadores Invisalign",
+      h1: "Alineadores Invisalign en Núñez, Buenos Aires",
+      title: "Alineadores Invisalign en Núñez, Buenos Aires | Estudio Cunningham",
       description:
-        "Alineadores transparentes removibles en Núñez, con escaneo 3Shape y plan de movimientos visible antes de empezar. Consulta sin cargo.",
+        "Alineadores transparentes removibles en Núñez, con escaneo Runyes 3DS y plan de movimientos visible antes de empezar. Consulta odontológica.",
       resumen:
         "Placas transparentes removibles que alinean los dientes por etapas, sin brackets.",
       imagen: {
@@ -125,7 +125,7 @@ export const ORTODONCIA: Pilar = {
       },
       queEs: [
         "Los alineadores invisibles son placas transparentes hechas a medida que se cambian cada pocas semanas. Cada placa produce un movimiento pequeño y controlado, y la serie completa lleva los dientes desde la posición actual hasta la posición final planificada. Se retiran para comer y para higienizarse, lo que simplifica bastante la vida cotidiana frente a la aparatología fija.",
-        "El tratamiento arranca con un escaneo intraoral 3Shape: sobre ese modelo se proyecta la secuencia de movimientos y se puede ver la posición final antes de fabricar nada. La contrapartida es la disciplina: los alineadores trabajan mientras están puestos, así que el resultado depende de cumplir las horas de uso indicadas. Al terminar se pasa a la etapa de contención, igual que en cualquier ortodoncia.",
+        "El tratamiento arranca con un escaneo intraoral Runyes 3DS: sobre ese modelo se proyecta la secuencia de movimientos y se puede ver la posición final antes de fabricar nada. La contrapartida es la disciplina: los alineadores trabajan mientras están puestos, así que el resultado depende de cumplir las horas de uso indicadas. Al terminar se pasa a la etapa de contención, igual que en cualquier ortodoncia.",
       ],
       paraQuien: [
         "Apiñamiento leve a moderado o espacios entre los dientes.",
@@ -137,7 +137,7 @@ export const ORTODONCIA: Pilar = {
         {
           titulo: "Escaneo y plan",
           descripcion:
-            "Registro intraoral 3Shape y proyección digital de la secuencia de movimientos y de la posición final.",
+            "Registro intraoral Runyes 3DS y proyección digital de la secuencia de movimientos y de la posición final.",
         },
         {
           titulo: "Serie de alineadores",
@@ -180,9 +180,9 @@ export const ORTODONCIA: Pilar = {
       pilar: "ortodoncia",
       nombre: "Brackets",
       h1: "Ortodoncia con brackets en Núñez, Buenos Aires",
-      title: "Brackets y Ortodoncia Fija en Núñez | Smile Design Center",
+      title: "Brackets y Ortodoncia Fija en Núñez | Estudio Cunningham",
       description:
-        "Ortodoncia con brackets en Núñez: control preciso de movimientos complejos, sin depender del uso diario. Consulta inicial sin cargo.",
+        "Ortodoncia con brackets en Núñez: control preciso de movimientos complejos, sin depender del uso diario. Consulta inicial.",
       resumen:
         "Aparatología fija para movimientos que requieren control continuo y preciso.",
       imagen: {
