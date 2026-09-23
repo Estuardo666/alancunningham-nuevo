@@ -167,7 +167,7 @@ Aplicación directa del hub "Explorá por intención" de AM, que la auditoría m
 |---|---|
 | `/nosotros` | Historia, misión, visión, equipo resumido |
 | `/nosotros/instalaciones` | Las 7 fotos reales de la clínica |
-| `/nosotros/tecnologia` | Láser, escáner 3Shape, planificación digital |
+| `/nosotros/tecnologia` | Runyes 3DS V3 Pro, Straumann SIRIOS, escáner facial Omni (Italia), láser y planificación digital; fotos de los equipos pendientes de Alan |
 | `/equipo/alan-cunningham` | Ficha completa del titular |
 | `/equipo/[slug]` | Una por profesional que se sume |
 | `/dentista-en-nunez` | Landing local |
@@ -225,7 +225,7 @@ Secuencia correctiva: **deseo → prueba → persona → viabilidad → captura 
 | 08 | **Por qué elegirnos** | `WhyUsSection` | `background` | Values + Why us **fusionados** — hoy dicen lo mismo | **Fusión** |
 | 09 | **Cómo trabajamos** | `ApproachSection` | `secondary` | 3–4 pasos del proceso clínico | Existe |
 | 10 | **Testimonios** | `TestimonialsSection` | `background` | Reseñas + badge de Google | Existe (se separa de 03) |
-| 11 | **Instalaciones y tecnología** | `ServicesSection` (variante) | `strong` | 7 fotos reales + escáner 3Shape + láser | **Nueva** |
+| 11 | **Instalaciones y tecnología** | `ServicesSection` (variante) | `strong` | 7 fotos reales + escáneres Runyes 3DS V3 Pro y Straumann SIRIOS + escáner facial Omni (Italia) + láser; fotos de equipos pendientes de Alan | **Nueva** |
 | 12 | **Turismo odontológico** | `ApproachSection` (variante) | `background` | Bloque de derivación a la página propia | **Nueva** |
 | 13 | **FAQ** | `FaqsSection` | `secondary` | 6 preguntas **con precio y obras sociales visibles** | Existe |
 | 14 | **Blog** | `BlogSection` | `background` | 3 artículos | Existe |
@@ -252,7 +252,7 @@ Aplicación directa de los hallazgos de las auditorías:
 | Sin ancla de precio | AM P2 | En el hero: *"Tratamientos desde $X · Consulta inicial sin cargo"* |
 | Repetición de activos de prueba | AM P2 | Cada dato aparece **una vez dominante + una vez cerca de la conversión** |
 | Escasez artificial | AM P2 | **No usar** contadores falsos. Si hace falta, escasez estructural honesta |
-| Diferenciales genéricos | DOHO P2 | Nada de "tecnología de última generación" sin nombrar el equipo. Se nombra: escáner 3Shape, láser |
+| Diferenciales genéricos | DOHO P2 | Nada de "tecnología de última generación" sin nombrar el equipo. Se nombran los escáneres Runyes 3DS V3 Pro y Straumann SIRIOS, el escáner facial Omni y el láser |
 
 ---
 
@@ -272,7 +272,7 @@ Grilla de pilares    H2: "Nuestras especialidades"
 
 Explorá por intención  H2 + 5 tarjetas (precios, obras sociales, 3 comparativas)
 
-Tecnología           H2 + escáner 3Shape, láser, planificación digital
+Tecnología           H2 + escáneres Runyes 3DS V3 Pro y Straumann SIRIOS, escáner facial Omni, láser y planificación digital
 
 FAQ corta            4 preguntas transversales
 
@@ -326,7 +326,7 @@ Slugs de los 3 casos reales disponibles:
 ```
 /nosotros                  H1 + historia + misión + visión + equipo (grilla) + instalaciones + tecnología
 /nosotros/instalaciones    Galería de las 7 fotos reales
-/nosotros/tecnologia       Escáner 3Shape, láser, planificación digital
+/nosotros/tecnologia       Runyes 3DS V3 Pro, Straumann SIRIOS, escáner facial Omni (Italia), láser y planificación digital
 /equipo/alan-cunningham    H1 + foto + credenciales + M.N. 42463 + formación + tratamientos que realiza + CTA
 ```
 

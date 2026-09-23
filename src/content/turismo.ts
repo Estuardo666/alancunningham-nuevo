@@ -49,7 +49,7 @@ export const RAZONES: {
       "Escáner intraoral Runyes 3DS para los registros y láser para procedimientos de tejido blando, que acorta el postoperatorio: importa cuando tenés vuelo de vuelta.",
     imagen: {
       src: "/images/escaner-intraoral-3shape.jpg",
-      alt: "Escáner intraoral del consultorio",
+      alt: "Imagen ilustrativa de un escáner intraoral 3Shape",
     },
   },
   {

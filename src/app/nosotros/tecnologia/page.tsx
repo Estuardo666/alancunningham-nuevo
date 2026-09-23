@@ -12,9 +12,9 @@ import { buildMetadata } from "@/lib/seo";
 import { TECNOLOGIA } from "@/content/clinica-contenido";
 import { ScrollReveal } from "@/components/site/ScrollReveal";
 
-const TITLE = "Tecnología Runyes 3DS y láser en Núñez | Estudio Cunningham";
+const TITLE = "Escáneres dentales y tecnología en Núñez | Estudio Cunningham";
 const DESCRIPTION =
-  "Escáner intraoral Runyes 3DS, láser para tejido blando y planificación digital: qué equipo usamos en el estudio de Núñez y qué cambia para el paciente.";
+  "Conocé los escáneres intraorales Runyes 3DS V3 Pro y Straumann SIRIOS, el escáner facial Omni y la tecnología del estudio en Núñez.";
 const PATH = "/nosotros/tecnologia";
 
 const MIGAS = [
@@ -27,7 +27,7 @@ export const metadata = buildMetadata({
   title: TITLE,
   description: DESCRIPTION,
   path: PATH,
-  image: TECNOLOGIA[0].imagen.src,
+  image: TECNOLOGIA.find((equipo) => equipo.imagen)?.imagen?.src,
 });
 
 export default function TecnologiaPage() {
@@ -48,9 +48,8 @@ export default function TecnologiaPage() {
       <PageHero
         eyebrow="Tecnología aplicada"
         h1="Tecnología odontológica en Núñez para cada etapa del tratamiento"
-        bajada="Escáner intraoral, láser y planificación digital para diagnosticar con precisión y mostrarte el plan antes de empezar."
+        bajada="Escáneres intraorales y facial, láser y planificación digital para acompañar cada etapa del tratamiento."
         migas={MIGAS}
-        imagen={{ src: TECNOLOGIA[0].imagen.src }}
       />
 
       {TECNOLOGIA.map((t, index) => (
@@ -60,20 +59,24 @@ export default function TecnologiaPage() {
         >
           <ScrollReveal delay={index * 120} className="w-full">
             <div className="grid w-full gap-10 lg:grid-cols-2 lg:items-center">
+              {t.imagen ? (
+                <div
+                  className={`relative h-[280px] w-full overflow-hidden rounded-[14px] bg-hero lg:h-[380px] ${
+                    index % 2 === 1 ? "lg:order-last" : ""
+                  }`}
+                >
+                  <Image
+                    src={t.imagen.src}
+                    alt={t.imagen.alt}
+                    fill
+                    sizes="(min-width: 1024px) 620px, 100vw"
+                    className="object-cover"
+                  />
+                </div>
+              ) : null}
               <div
-                className={`relative h-[280px] w-full overflow-hidden rounded-[14px] bg-hero lg:h-[380px] ${
-                  index % 2 === 1 ? "lg:order-last" : ""
-                }`}
+                className={`flex flex-col gap-6 ${t.imagen ? "" : "lg:col-span-2"}`}
               >
-                <Image
-                  src={t.imagen.src}
-                  alt={t.imagen.alt}
-                  fill
-                  sizes="(min-width: 1024px) 620px, 100vw"
-                  className="object-cover"
-                />
-              </div>
-              <div className="flex flex-col gap-6">
                 <SectionHeading titulo={t.nombre} />
                 <Prose parrafos={[t.descripcion]} />
               </div>

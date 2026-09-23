@@ -111,7 +111,8 @@ export interface Tecnologia extends ConFuente {
   acercar?: boolean;
   nombre: string;
   descripcion: string;
-  imagen: Imagen;
+  /** Optional until the clinic supplies a photo of this exact device. */
+  imagen?: Imagen;
 }
 
 /**
@@ -121,13 +122,21 @@ export interface Tecnologia extends ConFuente {
 export const TECNOLOGIA: Tecnologia[] = [
   {
     _fuente: "real",
-    nombre: "Escáner intraoral Runyes 3DS",
+    nombre: "Escáner intraoral Runyes 3DS V3 Pro",
     descripcion:
-      "Reemplaza la impresión con pasta por un registro digital de la boca. Más preciso para el ajuste de coronas, carillas e incrustaciones, y bastante más cómodo: no hay cubeta, no hay arcadas.",
-    imagen: {
-      src: "/images/escaner-intraoral-3shape.jpg",
-      alt: "Escáner intraoral en uso durante un registro digital",
-    },
+      "Registra digitalmente dientes y encías para planificar tratamientos, sin recurrir a las impresiones convencionales con pasta.",
+  },
+  {
+    _fuente: "real",
+    nombre: "Escáner intraoral Straumann SIRIOS",
+    descripcion:
+      "Captura registros digitales de dientes y encías como apoyo a la planificación de tratamientos restauradores e implantológicos.",
+  },
+  {
+    _fuente: "real",
+    nombre: "Escáner facial Omni (Italia)",
+    descripcion:
+      "Registra rasgos faciales para complementar la planificación digital de la sonrisa y valorar su integración estética.",
   },
   {
     _fuente: "real",
@@ -207,7 +216,7 @@ export const DIFERENCIALES = [
   {
     titulo: "Equipamiento con nombre propio",
     descripcion:
-      "Escáner intraoral Runyes 3DS y láser para tejido blando. Comunicamos qué equipo usamos y para qué sirve.",
+      "Escáneres intraorales Runyes 3DS V3 Pro y Straumann SIRIOS, escáner facial Omni de Italia y láser para tejido blando.",
   },
   {
     titulo: "Acreditados por Invisalign",

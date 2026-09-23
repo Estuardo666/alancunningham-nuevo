@@ -162,7 +162,7 @@ export const POSTS: Post[] = [
     lectura: "5 min",
     imagen: {
       src: "/images/DSC_0136-1024x683.jpg",
-      alt: "Escáner intraoral Runyes 3DS en uso durante un registro digital",
+      alt: "Imagen ilustrativa de un escáner intraoral 3Shape",
     },
     entradilla:
       "La cubeta con pasta es uno de los peores recuerdos que la gente tiene del odontólogo. Hace rato que dejó de ser necesaria.",

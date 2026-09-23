@@ -37,20 +37,22 @@ export function TecnologiaCards({
             TONOS[index % TONOS.length],
           )}
         >
-          <div className="relative h-[180px] w-full overflow-hidden rounded-[12px] bg-hero">
-            <Image
-              src={t.imagen.src}
-              alt={t.imagen.alt}
-              fill
-              sizes="(min-width: 1024px) 400px, 100vw"
-              className={cn(
-                "object-cover transition-[scale] duration-[600ms] ease-out motion-reduce:transition-none",
-                t.acercar
-                  ? "scale-[1.35] group-hover:scale-[1.42]"
-                  : "scale-100 group-hover:scale-[1.06]",
-              )}
-            />
-          </div>
+          {t.imagen ? (
+            <div className="relative h-[180px] w-full overflow-hidden rounded-[12px] bg-hero">
+              <Image
+                src={t.imagen.src}
+                alt={t.imagen.alt}
+                fill
+                sizes="(min-width: 1024px) 400px, 100vw"
+                className={cn(
+                  "object-cover transition-[scale] duration-[600ms] ease-out motion-reduce:transition-none",
+                  t.acercar
+                    ? "scale-[1.35] group-hover:scale-[1.42]"
+                    : "scale-100 group-hover:scale-[1.06]",
+                )}
+              />
+            </div>
+          ) : null}
 
           <div className="flex flex-col gap-2 px-1 pb-1">
             <h3 className="text-[20px] leading-[26px] font-semibold tracking-[-0.8px] text-foreground">
