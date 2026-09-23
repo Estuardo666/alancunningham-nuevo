@@ -28,9 +28,9 @@ const MAP_SRC =
   "https://maps.google.com/maps?q=Manuel%20Ugarte%202548%2C%20N%C3%BA%C3%B1ez%2C%20Buenos%20Aires&z=16&output=embed";
 
 const COMO_LLEGAR = [
-  "Subte: línea D, estación Congreso de Tucumán, a pocas cuadras.",
-  "Tren: línea Mitre, estación Núñez.",
-  "Colectivos: líneas que circulan por Cabildo y por Av. del Libertador.",
+  "Subte: línea D, estación Congreso de Tucumán, a unos 8 minutos a pie.",
+  "Tren: línea Mitre, estación Núñez, a unos 7 minutos a pie.",
+  "Colectivos: paradas sobre Ugarte y en Av. Congreso y Av. Cabildo, a 3–5 minutos a pie. Pasan, entre otras, las líneas 41, 59, 133, 152, 168 y 169.",
   "Estacionamiento: hay cocheras sobre Manuel Ugarte y calles laterales.",
 ];
 

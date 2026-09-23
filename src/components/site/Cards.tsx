@@ -10,8 +10,8 @@ import type { Intencion } from "@/content/intenciones";
 import { T } from "@/i18n/LanguageProvider";
 
 const POST_CATEGORY_TONES: Record<string, string> = {
-  "Estética dental": "bg-secondary/18 text-secondary-foreground",
-  Prevención: "bg-accent-yellow/30 text-secondary-foreground",
+  "Estética dental": "bg-secondary/18 text-secondary-foreground dark:text-white",
+  Prevención: "bg-accent-yellow/30 text-secondary-foreground dark:text-white",
   "Primera visita": "bg-surface-strong/10 text-foreground",
 };
 
@@ -81,7 +81,7 @@ export function TratamientoCard({
             <T>{tratamiento.resumen}</T>
           </p>
         ) : null}
-        <span className="group/cta inline-flex w-fit items-center gap-2 rounded-[10px] border border-button-primary-bg bg-transparent px-3 py-2 text-[14px] leading-[18px] tracking-[-0.14px] text-button-primary-bg transition-colors duration-300 group-hover:bg-button-primary-bg group-hover:text-button-primary-foreground">
+        <span className="group/cta inline-flex w-fit items-center gap-2 rounded-[10px] border border-button-primary-bg bg-transparent px-3 py-2 text-[14px] leading-[18px] tracking-[-0.14px] text-button-primary-bg transition-colors duration-300 group-hover:bg-button-primary-bg group-hover:text-button-primary-foreground dark:border-white/70 dark:text-white">
           <T>Ver tratamiento</T>
           <span className="relative flex h-5 w-5 shrink-0 items-center justify-center overflow-hidden">
             <ArrowUpRightIcon className="h-4 w-4 transition-transform duration-300 ease-out group-hover/cta:translate-x-0.5 group-hover/cta:-translate-y-0.5" />

@@ -28,7 +28,7 @@ export function AntesDespues({
 
   return (
     <figure className="flex w-full flex-col gap-3">
-      <div className="relative h-[280px] w-full overflow-hidden rounded-[14px] bg-card lg:h-[459px]">
+      <div className="relative h-[280px] w-full overflow-hidden rounded-[14px] bg-card focus-within:ring-4 focus-within:ring-inset focus-within:ring-accent-yellow lg:h-[459px]">
         <Image
           src={despues.src}
           alt={despues.alt}
@@ -78,7 +78,7 @@ export function AntesDespues({
           max={100}
           value={position}
           onChange={(event) => setPosition(Number(event.target.value))}
-          className="absolute inset-0 h-full w-full cursor-ew-resize appearance-none bg-transparent opacity-0"
+          className="absolute inset-0 h-full w-full cursor-ew-resize appearance-none bg-transparent opacity-0 focus-visible:opacity-100 focus-visible:outline-none"
         />
       </div>
 

@@ -65,10 +65,12 @@ export function AboutSection() {
         <div className="flex w-full max-w-[1300px] flex-col items-center gap-10 lg:gap-[60px]">
           <div className="flex max-w-[720px] flex-col items-center gap-[18px]">
             <SectionEyebrow>{SOBRE_LA_CLINICA.eyebrow}</SectionEyebrow>
-            <WordReveal
-              text={SOBRE_LA_CLINICA.titular}
-              className="text-center text-[28px] leading-[33px] tracking-[-1.4px] lg:text-[40px] lg:leading-[44.8px] lg:tracking-[-2.72px]"
-            />
+            <h2>
+              <WordReveal
+                text={SOBRE_LA_CLINICA.titular}
+                className="text-center text-[28px] leading-[33px] tracking-[-1.4px] lg:text-[40px] lg:leading-[44.8px] lg:tracking-[-2.72px]"
+              />
+            </h2>
 
             <div className="flex flex-col items-center gap-6 pt-2 sm:flex-row sm:gap-11">
               <PrimaryButton

@@ -1,7 +1,7 @@
 "use client";
 
 import { MotionConfig, motion } from "framer-motion";
-import { useState } from "react";
+import { useId, useState } from "react";
 import type { Faq } from "@/content/types";
 import { useTr } from "@/i18n/LanguageProvider";
 
@@ -18,6 +18,7 @@ export function FaqBlock({
   faqs: Faq[];
 }) {
   const [open, setOpen] = useState<number | null>(null);
+  const accordionId = useId();
   const tr = useTr();
 
   const answerTransition = {
@@ -30,7 +31,7 @@ export function FaqBlock({
       <div className="faq-accordion flex w-full flex-col gap-1.5 overflow-hidden rounded-[24px] p-1">
         {faqs.map((faq, index) => {
           const isOpen = index === open;
-          const answerId = `faq-answer-${index}`;
+          const answerId = `${accordionId}-faq-answer-${index}`;
 
           return (
             <div

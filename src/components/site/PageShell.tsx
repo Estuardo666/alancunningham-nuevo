@@ -169,8 +169,8 @@ export function PageHeaderCompacto({
             {datos.map((dato, index) => {
               const tonos = [
                 "bg-accent-coral/15 text-accent-coral-strong",
-                "bg-secondary/20 text-secondary-foreground",
-                "bg-accent-yellow/30 text-secondary-foreground",
+                "bg-secondary/20 text-secondary-foreground dark:text-white",
+                "bg-accent-yellow/30 text-secondary-foreground dark:text-white",
               ];
 
               return (
