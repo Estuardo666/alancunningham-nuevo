@@ -35,7 +35,7 @@ export const VISION: ConFuente & { texto: string } = {
 export const SOBRE_LA_CLINICA = {
   eyebrow: "Sobre el consultorio",
   titular:
-    "Combinamos un especialista a cargo de cada caso, planificación digital y un plan de tratamiento por escrito, para que sepas qué necesitás y cuánto lleva antes de empezar.",
+    "Combinamos especialidades y especialistas para una rehabilitación cómoda y minuciosa, con un plan de tratamiento guiado por parámetros estéticos y una hoja de ruta clara.",
   tarjetas: [
     {
       titulo: "Atención integral",
@@ -44,9 +44,9 @@ export const SOBRE_LA_CLINICA = {
       icono: "SebajAOsz6a8sWPvrYcEDu50c.svg",
     },
     {
-      titulo: "Un especialista a cargo",
+      titulo: "Múltiples especialistas a cargo",
       descripcion:
-        "Rehabilitación dentobucomaxilar, docencia en la UBA y oficio de técnico de laboratorio. La misma persona planifica y ejecuta tu caso.",
+        "Distintas especialidades trabajan de forma coordinada para brindar mejores resultados en cada etapa de tu rehabilitación.",
       icono: "xa99qvpg8IUc9n1GZ7kGFxevJ0.svg",
     },
     {
@@ -61,48 +61,64 @@ export const SOBRE_LA_CLINICA = {
 /** The current facility photos supplied by the clinic. */
 export const INSTALACIONES: MediaAsset[] = [
   {
-    src: "/consultorio/fotos/image2.jpeg",
-    alt: "Instalaciones del consultorio odontológico en Núñez, vista interior 1",
+    src: "/images/estudio/DSC08092.jpg",
+    alt: "Sala de espera con sillones, planta y bar de agua",
   },
   {
-    src: "/consultorio/fotos/image3.jpeg",
-    alt: "Instalaciones del consultorio odontológico en Núñez, vista interior 2",
+    src: "/images/estudio/DSC08120.jpg",
+    alt: "Vista general de la sala de espera",
   },
   {
-    src: "/consultorio/fotos/image4.jpeg",
-    alt: "Instalaciones del consultorio odontológico en Núñez, vista interior 3",
+    src: "/images/estudio/DSC08098.jpg",
+    alt: "Sillones de la sala de espera junto a un retrato",
   },
   {
-    src: "/consultorio/fotos/image5.jpeg",
-    alt: "Instalaciones del consultorio odontológico en Núñez, vista interior 4",
+    src: "/images/estudio/DSC08115.jpg",
+    alt: "Rincón de lectura de la sala de espera",
   },
   {
-    src: "/consultorio/fotos/image6.jpeg",
-    alt: "Instalaciones del consultorio odontológico en Núñez, vista interior 5",
+    src: "/images/estudio/DSC08111.jpg",
+    alt: "Bar de agua iluminado en la sala de espera",
   },
   {
-    src: "/consultorio/fotos/image7.jpeg",
-    alt: "Instalaciones del consultorio odontológico en Núñez, vista interior 6",
+    src: "/images/estudio/DSC08113.jpg",
+    alt: "Detalle del mueble del bar de agua",
   },
   {
-    src: "/consultorio/fotos/image8.jpeg",
-    alt: "Instalaciones del consultorio odontológico en Núñez, vista interior 7",
+    src: "/images/estudio/DSC08063.jpg",
+    alt: "Consultorio con sillón odontológico y microscopio",
   },
   {
-    src: "/consultorio/fotos/image9.jpeg",
-    alt: "Instalaciones del consultorio odontológico en Núñez, vista interior 8",
+    src: "/images/estudio/DSC08074.jpg",
+    alt: "Consultorio luminoso con ventanal",
   },
   {
-    src: "/consultorio/fotos/image10.jpeg",
-    alt: "Instalaciones del consultorio odontológico en Núñez, vista interior 9",
+    src: "/images/estudio/DSC08075.jpg",
+    alt: "Sillón odontológico y equipo de trabajo",
   },
   {
-    src: "/consultorio/fotos/image11.jpeg",
-    alt: "Instalaciones del consultorio odontológico en Núñez, vista interior 10",
+    src: "/images/estudio/DSC08047.jpg",
+    alt: "Microscopio operatorio Newton",
   },
   {
-    src: "/consultorio/fotos/image12.jpeg",
-    alt: "Instalaciones del consultorio odontológico en Núñez, vista interior 11",
+    src: "/images/estudio/DSC08068.jpg",
+    alt: "Cabezal del microscopio operatorio",
+  },
+  {
+    src: "/images/estudio/DSC08084.jpg",
+    alt: "Mesada y cajoneras del consultorio",
+  },
+  {
+    src: "/images/estudio/DSC08053.jpg",
+    alt: "Jeringas de composite organizadas por tono",
+  },
+  {
+    src: "/images/estudio/DSC08054.jpg",
+    alt: "Materiales Ultradent sobre la mesada",
+  },
+  {
+    src: "/images/estudio/DSC08052.jpg",
+    alt: "Piezas de mano del equipo odontológico",
   },
 ];
 
@@ -125,12 +141,20 @@ export const TECNOLOGIA: Tecnologia[] = [
     nombre: "Escáner intraoral Runyes 3DS V3 Pro",
     descripcion:
       "Registra digitalmente dientes y encías para planificar tratamientos, sin recurrir a las impresiones convencionales con pasta.",
+    imagen: {
+      src: "/images/tecnologia/runyes-3ds-v3-pro.webp",
+      alt: "Escáner intraoral Runyes 3DS V3 Pro",
+    },
   },
   {
     _fuente: "real",
     nombre: "Escáner intraoral Straumann SIRIOS",
     descripcion:
       "Captura registros digitales de dientes y encías como apoyo a la planificación de tratamientos restauradores e implantológicos.",
+    imagen: {
+      src: "/images/tecnologia/straumann-sirios.webp",
+      alt: "Escáner intraoral Straumann SIRIOS",
+    },
   },
   {
     _fuente: "real",
@@ -168,8 +192,8 @@ export const COMO_TRABAJAMOS = [
     descripcion:
       "Una primera evaluación de 40 minutos para revisar encías, piezas y mordida, y tomar los registros que hagan falta. Te explicamos el diagnóstico y el próximo paso, sin compromiso.",
     imagen: {
-      src: "/images/thumbnail_image1-2-jpg-1440x800.webp",
-      alt: "Consultorio equipado con sillón dental y lámpara de trabajo",
+      src: "/images/estudio-16x9/paso-evaluacion.webp",
+      alt: "Odontólogo revisando a un paciente en el sillón del consultorio",
     },
   },
   {
@@ -177,8 +201,8 @@ export const COMO_TRABAJAMOS = [
     descripcion:
       "Te llevás el plan con lo que hay que hacer, en qué orden y cuánto lleva, separado en urgente, conveniente y opcional.",
     imagen: {
-      src: "/images/DSC_0135-1-1024x683.jpg",
-      alt: "Registro clínico y planificación del tratamiento",
+      src: "/images/estudio-16x9/paso-plan.webp",
+      alt: "Plan de tratamiento revisado sobre un escaneo digital",
     },
   },
   {
@@ -186,8 +210,8 @@ export const COMO_TRABAJAMOS = [
     descripcion:
       "Escaneo intraoral en lugar de moldes, prueba en boca antes de lo definitivo y control de mordida en cada etapa.",
     imagen: {
-      src: "/images/DSC_0136-1024x683.jpg",
-      alt: "Escáner intraoral en uso durante un registro digital",
+      src: "/images/estudio-16x9/paso-tratamiento.webp",
+      alt: "Escáner intraoral en mano junto al sillón odontológico",
     },
   },
   {
@@ -195,8 +219,8 @@ export const COMO_TRABAJAMOS = [
     descripcion:
       "El tratamiento no termina cuando se cementa la última pieza. Quedan los controles que hacen que el trabajo dure.",
     imagen: {
-      src: "/images/PERIODONCIA-jpg.webp",
-      alt: "Control periodontal con encías sanas tras el tratamiento",
+      src: "/images/estudio-16x9/paso-controles.webp",
+      alt: "Paciente revisando su sonrisa en un espejo durante un control",
     },
   },
 ];
@@ -204,9 +228,9 @@ export const COMO_TRABAJAMOS = [
 /** Why us — the merged Values + Why us block (plan §3.2, block 08). */
 export const DIFERENCIALES = [
   {
-    titulo: "Un especialista, no una cadena",
+    titulo: "Múltiples especialistas a cargo",
     descripcion:
-      "El titular es especialista en rehabilitación dentobucomaxilar, docente de la UBA y técnico de laboratorio. Tu caso lo planifica y lo ejecuta la misma persona.",
+      "El equipo integra rehabilitación dentobucomaxilar, endodoncia, microcirugía apical, ortodoncia y periodoncia, con una planificación coordinada para cada caso.",
   },
   {
     titulo: "Ves el resultado antes de empezar",

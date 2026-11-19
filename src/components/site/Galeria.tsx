@@ -18,10 +18,13 @@ export function Galeria({
   imagenes,
   columnas = 3,
   mobileLayout = "masonry",
+  compacto = false,
 }: {
   imagenes: MedioGaleria[];
   columnas?: 2 | 3 | 4;
   mobileLayout?: "masonry" | "three-then-two";
+  /** Uniform 4:5 tiles in a tight grid, for sections that must stay short. */
+  compacto?: boolean;
 }) {
   const [visible, setVisible] = useState(false);
   const [reduce, setReduce] = useState(false);
@@ -88,12 +91,17 @@ export function Galeria({
       <ul
         ref={gridRef}
         className={cn(
-          mobileLayout === "three-then-two"
+          compacto
+            ? cn(
+                "grid w-full grid-cols-2 gap-3 sm:grid-cols-3",
+                columnas === 4 && "lg:grid-cols-4",
+              )
+            : mobileLayout === "three-then-two"
             ? "grid w-full grid-cols-2 gap-4 lg:block"
             : "w-full columns-1 gap-4 sm:columns-2",
-          columnas === 2 && "lg:columns-2",
-          columnas === 3 && "lg:columns-3",
-          columnas === 4 && "lg:columns-4",
+          !compacto && columnas === 2 && "lg:columns-2",
+          !compacto && columnas === 3 && "lg:columns-3",
+          !compacto && columnas === 4 && "lg:columns-4",
         )}
       >
         {imagenes.map((medio, indice) => (
@@ -101,9 +109,12 @@ export function Galeria({
             key={medio.src}
             className={cn(
               "group relative mb-4 break-inside-avoid overflow-hidden rounded-[14px] bg-hero",
-              mobileLayout === "three-then-two" &&
+              compacto && "mb-0",
+              !compacto &&
+                mobileLayout === "three-then-two" &&
                 "mb-0 col-span-1 lg:col-auto lg:mb-4",
-              mobileLayout === "three-then-two" &&
+              !compacto &&
+                mobileLayout === "three-then-two" &&
                 indice < 3 && "col-span-2",
               "transition-[opacity,scale,filter] duration-[700ms] motion-reduce:transition-opacity",
               visible
@@ -122,7 +133,7 @@ export function Galeria({
               onClick={() => setLightboxIndex(indice)}
               aria-label={`Abrir imagen ${indice + 1} de ${imagenes.length}`}
             >
-              <Medio medio={medio} />
+              <Medio medio={medio} compacto={compacto} />
               <div
                 aria-hidden
                 className="pointer-events-none absolute inset-0 bg-hero/60 lg:hidden"
@@ -226,9 +237,16 @@ export function Galeria({
   );
 }
 
-function Medio({ medio }: { medio: MedioGaleria }) {
+function Medio({
+  medio,
+  compacto = false,
+}: {
+  medio: MedioGaleria;
+  compacto?: boolean;
+}) {
   const clases = cn(
     "h-auto w-full object-cover",
+    compacto && "aspect-[4/5]",
     "transition-[scale] duration-[700ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.07]",
     "motion-reduce:transition-none motion-reduce:group-hover:scale-100",
   );

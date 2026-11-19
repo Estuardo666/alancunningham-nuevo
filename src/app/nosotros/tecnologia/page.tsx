@@ -50,6 +50,8 @@ export default function TecnologiaPage() {
         h1="Tecnología odontológica en Núñez para cada etapa del tratamiento"
         bajada="Escáneres intraorales y facial, láser y planificación digital para acompañar cada etapa del tratamiento."
         migas={MIGAS}
+        imagen={{ src: "/images/estudio-16x9/hero-tecnologia.webp" }}
+        fondoAleatorio={false}
       />
 
       {TECNOLOGIA.map((t, index) => (

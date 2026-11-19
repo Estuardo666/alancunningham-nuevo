@@ -3,7 +3,7 @@ import { RevealText } from "../shared/RevealText";
 import { PrimaryButton } from "../shared/PrimaryButton";
 import { FaqBlock } from "@/components/site/FaqBlock";
 import { FAQS_HOME } from "@/content/faqs";
-import { CTA_PRIMARIO, whatsappHref } from "@/content/clinica";
+import { CTA_PRIMARIO, TURNOS_HREF } from "@/content/clinica";
 import { TextArrowCTA } from "@/components/ui/text-arrow-cta";
 import { T } from "@/i18n/LanguageProvider";
 
@@ -38,7 +38,7 @@ export function FaqsSection() {
             </p>
             <PrimaryButton
               label={CTA_PRIMARIO}
-              href={whatsappHref()}
+              href={TURNOS_HREF}
               variant="primary"
             />
             <TextArrowCTA

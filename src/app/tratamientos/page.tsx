@@ -65,7 +65,7 @@ export default function TratamientosPage() {
         h1="Tratamientos odontológicos en Núñez"
         bajada="Explorá cada tratamiento, su proceso y sus tiempos para elegir con claridad. La consulta inicial te ayuda a definir el próximo paso."
         migas={MIGAS}
-        imagen={{ src: "/images/DSC_0136-1024x683.jpg" }}
+        imagen={{ src: "/images/estudio-16x9/hero-tratamientos.webp" }}
         fondoAleatorio={false}
       >
         <div className="flex flex-wrap items-center gap-6 pt-2">

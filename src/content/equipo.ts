@@ -23,7 +23,7 @@ export const EQUIPO: Profesional[] = [
   {
     _fuente: "real",
     slug: "alan-cunningham",
-    nombre: "Od. Alan Cunningham",
+    nombre: "Dr. Esp. Alan Cunningham",
     titulo: "Odontólogo · M.N. 42463",
     matricula: "M.N. 42463",
     especialidad: "Especialista en rehabilitación dentobucomaxilar",
@@ -59,6 +59,23 @@ export const EQUIPO: Profesional[] = [
     ],
     revisor: true,
   },
+  {
+    _fuente: "real",
+    slug: "marcela-altamiranda",
+    nombre: "Dra. Esp. Marcela Altamiranda",
+    titulo: "Especialista en ortodoncia y alineadores",
+    matricula: "",
+    especialidad: "Especialista en ortodoncia y alineadores",
+    foto: {
+      src: "/team/marcela-altamiranda.jpg",
+      alt: "Dra. Esp. Marcela Altamiranda",
+    },
+    bio: ["Marcela es nuestra especialista en ortodoncia y alineadores. Cuenta con las acreditaciones correspondientes de Invisalign, Keep Smile, Line Up, Little Smile y UFORIA. Además, tiene conocimientos y experiencia en el diseño y la fabricación de alineadores."],
+    formacion: ["Especialista en ortodoncia", "Diseño y fabricación de alineadores"],
+    tratamientos: ["alineadores-invisibles", "brackets"],
+    alumniOf: [],
+    credenciales: ["Invisalign", "Keep Smile", "Line Up", "Little Smile", "UFORIA"],
+  },
 ];
 
 export const TITULAR = EQUIPO[0];
@@ -71,8 +88,7 @@ export function profesionalPorSlug(slug: string) {
 export const FECHA_REVISION = "2026-08-21";
 
 /**
- * Carousel roster. Only the owner is published until the clinic provides the
- * names, biographies and photos of the remaining professionals.
+ * Published portraits supplied and identified by the clinic.
  */
 export interface MiembroCarrusel extends ConFuente {
   slug: string;
@@ -87,6 +103,7 @@ export interface MiembroCarrusel extends ConFuente {
   tono: "titular" | "coral" | "cyan" | "lima" | "violeta" | "blanca";
   /** Only the owner links to a profile page. */
   ficha?: boolean;
+  bio?: string;
 }
 
 export const EQUIPO_CARRUSEL: MiembroCarrusel[] = [
@@ -100,5 +117,40 @@ export const EQUIPO_CARRUSEL: MiembroCarrusel[] = [
     foto: TITULAR.foto,
     tono: "titular",
     ficha: true,
+    bio: TITULAR.bio[0],
+  },
+  {
+    _fuente: "real",
+    slug: "marcela-altamiranda",
+    nombre: "Dra. Esp. Marcela Altamiranda",
+    especialidad: "Especialista en ortodoncia y alineadores",
+    etiqueta: "Ortodoncia y alineadores",
+    foto: {
+      src: "/team/marcela-altamiranda.jpg",
+      alt: "Dra. Esp. Marcela Altamiranda, especialista en ortodoncia y alineadores",
+    },
+    tono: "coral",
+    ficha: true,
+    bio: "Marcela es nuestra especialista en ortodoncia y alineadores. Cuenta con acreditaciones de Invisalign, Keep Smile, Line Up, Little Smile y UFORIA, además de conocimientos en diseño y fabricación de alineadores.",
   },
 ];
+
+/** Confirmed biographies; portraits will be supplied separately. */
+export const EQUIPO_PENDIENTE_FOTO = [
+  {
+    nombre: "Dr. Esp. Andrés Loyola",
+    bio: "Andrés es nuestro especialista en endodoncia y microcirugía apical, además de ser docente de la Universidad de Buenos Aires.",
+  },
+  {
+    nombre: "Dr. Esp. Estefano Alban",
+    bio: "Estefano es nuestro segundo especialista en endodoncia y microcirugía apical, además de ser docente de la Universidad de Buenos Aires. Se destaca por la eliminación de instrumentos fracturados y la atención de derivaciones de colegas.",
+  },
+  {
+    nombre: "Dra. Meryl Williams",
+    bio: "Meryl es nuestra especialista en periodoncia y está a cargo de las cirugías periodontales. Actualmente es docente de la Universidad de Buenos Aires.",
+  },
+  {
+    nombre: "Avril Peñalva",
+    bio: "Avril es nuestra asistente dental y está a cargo de la organización y el orden de nuestra clínica.",
+  },
+] as const;

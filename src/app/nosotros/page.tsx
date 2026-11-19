@@ -63,21 +63,33 @@ export default function NosotrosPage() {
         h1="Estudio Odontológico Cunningham en Núñez"
         bajada={`${CLINICA.direccion.calle}, ${CLINICA.direccion.barrio}. ${CLINICA.horariosTexto}.`}
         migas={MIGAS}
-        imagen={{ src: INSTALACIONES[0].src }}
+        imagen={{ src: "/images/estudio-16x9/hero-nosotros.webp" }}
+        fondoAleatorio={false}
       />
 
-      {/* Nuestra historia: the image holds one half while the story, the CTA
+      {/* Nuestra historia: two clinic photos hold one half while the story, the CTA
           and the mission/vision cards scroll past it on the other. */}
       <Section banda="secondary">
         <div className="grid w-full gap-10 lg:grid-cols-2 lg:items-start lg:gap-16">
-          <div className="relative aspect-[713/690] w-full overflow-hidden rounded-[14px] lg:sticky lg:top-24">
-            <Image
-              src="/images/Asset-13.png"
-              alt="Identidad del Estudio Odontológico Cunningham"
-              fill
-              sizes="(min-width: 1024px) 620px, 100vw"
-              className="object-contain"
-            />
+          <div className="grid w-full grid-cols-2 gap-4 lg:sticky lg:top-24">
+            <div className="relative aspect-[2/3] w-full overflow-hidden rounded-[14px]">
+              <Image
+                src="/images/estudio/DSC08092.jpg"
+                alt="Sala de espera del Estudio Odontológico Cunningham"
+                fill
+                sizes="(min-width: 1024px) 300px, 50vw"
+                className="object-cover"
+              />
+            </div>
+            <div className="relative mt-10 aspect-[2/3] w-full overflow-hidden rounded-[14px] lg:mt-16">
+              <Image
+                src="/images/estudio/DSC08063.jpg"
+                alt="Consultorio con sillón odontológico y microscopio"
+                fill
+                sizes="(min-width: 1024px) 300px, 50vw"
+                className="object-cover"
+              />
+            </div>
           </div>
           <div className="flex flex-col items-start gap-6">
             <SectionHeading
@@ -108,7 +120,7 @@ export default function NosotrosPage() {
       <Section banda="background">
         <SectionHeading
           eyebrow="El equipo"
-          titulo="Quién te va a atender"
+          titulo="Los profesionales a cargo de tu tratamiento"
           bajada="Tocá cada tarjeta para ver la formación y el área de trabajo de cada profesional."
         />
         <TeamCarousel miembros={EQUIPO_CARRUSEL} />
@@ -121,8 +133,9 @@ export default function NosotrosPage() {
           bajada="Un espacio limpio, luminoso y tranquilo."
         />
         <Galeria
-          imagenes={INSTALACIONES.slice(0, 7)}
-          mobileLayout="three-then-two"
+          imagenes={[0, 6, 9, 4, 1, 7, 12, 11].map((i) => INSTALACIONES[i])}
+          columnas={4}
+          compacto
         />
         <TextArrowCTA href="/nosotros/instalaciones">
           Ver más imágenes

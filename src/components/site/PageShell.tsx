@@ -6,7 +6,7 @@ import { SectionEyebrow } from "@/components/sites/clireo-framer-website-a161428
 import { RevealText } from "@/components/sites/clireo-framer-website-a1614289/shared/RevealText";
 import { PrimaryButton } from "@/components/sites/clireo-framer-website-a1614289/shared/PrimaryButton";
 import { Breadcrumbs, type Miga } from "./Breadcrumbs";
-import { CTA_PRIMARIO, whatsappHref } from "@/content/clinica";
+import { CTA_PRIMARIO, TURNOS_HREF } from "@/content/clinica";
 import { T } from "@/i18n/LanguageProvider";
 
 /** The four background bands of the system, in Tailwind form. */
@@ -439,7 +439,6 @@ export function Pasos({
  * The single primary CTA shared across the site.
  */
 export function CtaConMicrocopy({
-  contexto,
   variant = "primary",
   align = "left",
 }: {
@@ -457,7 +456,7 @@ export function CtaConMicrocopy({
     >
       <PrimaryButton
         label={CTA_PRIMARIO}
-        href={whatsappHref(contexto)}
+        href={TURNOS_HREF}
         variant={variant}
       />
     </div>

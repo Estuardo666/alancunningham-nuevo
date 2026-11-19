@@ -108,8 +108,7 @@ export default async function CasoPage({
             <AntesDespues
               antes={caso.antes}
               despues={caso.despues}
-              etiqueta={caso.etiqueta}
-              duracion={caso.duracion}
+              etiqueta={caso.titulo}
             />
           </div>
 

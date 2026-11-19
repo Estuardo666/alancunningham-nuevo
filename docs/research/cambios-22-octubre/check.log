@@ -1,0 +1,260 @@
+
+> ai-website-clone-template@0.4.0 check
+> npm run lint && npm run typecheck && npm run audit:contenido && npm run build
+
+
+> ai-website-clone-template@0.4.0 lint
+> eslint
+
+
+> ai-website-clone-template@0.4.0 typecheck
+> tsc --noEmit
+
+
+> ai-website-clone-template@0.4.0 audit:contenido
+> node scripts/audit-contenido.mjs
+
+
+Auditoría de contenido — banderas pendientes
+
+src/content/faqs.ts  —  13 ia · 0 pendiente-validacion
+   L  14  ia                    ¿Qué tratamientos hacen en el consultorio?
+   L  21  ia                    ¿Cuánto dura un diseño de sonrisa?
+   L  28  ia                    ¿Hay que desgastar los dientes para poner carillas?
+   L  35  ia                    ¿Duele el tratamiento de conducto?
+   L  42  ia                    ¿Qué tecnología usan?
+   L  49  ia                    ¿Alineadores o brackets?
+   L  56  ia                    ¿Qué pasa si aprieto los dientes de noche?
+   L  72  ia                    ¿Cómo pido un turno?
+   L  79  ia                    ¿Qué pasa en la primera consulta?
+   L  86  ia                    ¿Tengo que llevar algo?
+   L 108  ia                    ¿Atienden pacientes del exterior?
+   L 115  ia                    ¿Cuántos días tengo que quedarme?
+   L 122  ia                    ¿Qué incluye el programa?
+
+src/content/intenciones.ts  —  3 ia · 0 pendiente-validacion
+   L  61  ia                    carillas-vs-coronas
+   L 139  ia                    alineadores-vs-brackets
+   L 217  ia                    implantes-vs-protesis
+
+src/content/posts.ts  —  5 ia · 0 pendiente-validacion
+   L  29  ia                    carillas-de-porcelana-lo-que-nadie-te-cuenta
+   L  87  ia                    por-que-sangran-las-encias
+   L 151  ia                    escaner-intraoral-vs-moldes-de-pasta
+   L 208  ia                    bruxismo-como-saber-si-aprietas-los-dientes
+   L 266  ia                    primera-consulta-que-esperar
+
+src/content/tratamientos/cirugia-y-periodoncia.ts  —  21 ia · 1 pendiente-validacion
+   L   4  ia                    cirugia-y-periodoncia
+   L  79  ia                    ¿El láser duele menos?
+   L  85  ia                    ¿Cuánto dura la recuperación?
+   L  91  ia                    ¿Por qué me sangran las encías?
+   L  97  ia                    ¿Se puede corregir la sonrisa gingival?
+   L 103  pendiente-validacion  ¿Cuánto cuesta una extracción o una cirugía de encía?
+   L 111  ia                    extracciones-dentales
+   L 156  ia                    ¿Duele después?
+   L 162  ia                    ¿Puedo quedarme sin reponer la pieza?
+   L 168  ia                    ¿Cuánto hay que esperar para el implante?
+   L 181  ia                    frenectomia-laser
+   L 226  ia                    ¿Deja cicatriz?
+   L 232  ia                    ¿Cierra solo el espacio entre los dientes?
+   L 238  ia                    ¿Qué cuidados hay después?
+   L 251  ia                    gingivectomia-laser
+   L 296  ia                    ¿La encía vuelve a crecer?
+   L 302  ia                    ¿Se puede hacer junto con las carillas?
+   L 308  ia                    ¿Es dolorosa?
+   L 321  ia                    retracciones-gingivales
+   L 371  ia                    ¿La encía vuelve sola a su lugar?
+   L 377  ia                    ¿Por qué me duele con el frío?
+   L 383  ia                    ¿Estoy cepillando mal?
+
+src/content/tratamientos/endodoncia.ts  —  13 ia · 1 pendiente-validacion
+   L   4  ia                    endodoncia
+   L  79  ia                    ¿Duele el tratamiento de conducto?
+   L  85  ia                    ¿Cuántas sesiones lleva?
+   L  91  ia                    ¿Hay que ponerle corona después?
+   L  97  ia                    ¿Un diente endodonciado se oscurece?
+   L 103  pendiente-validacion  ¿Cuánto cuesta una endodoncia?
+   L 111  ia                    tratamiento-de-conducto
+   L 156  ia                    ¿Puedo comer después de la sesión?
+   L 162  ia                    ¿Es cierto que un conducto puede volver a infectarse?
+   L 168  ia                    ¿Se puede hacer con embarazo?
+   L 181  ia                    postes-y-reconstruccion
+   L 226  ia                    ¿Todos los dientes con conducto necesitan poste?
+   L 232  ia                    ¿El poste se ve?
+   L 238  ia                    ¿Cuánto puedo esperar antes de reconstruir?
+
+src/content/tratamientos/estetica-dental.ts  —  17 ia · 1 pendiente-validacion
+   L   4  ia                    estetica-dental
+   L  79  ia                    ¿Cuánto dura un tratamiento de diseño de sonrisa?
+   L  85  ia                    ¿Hay que tallar los dientes sí o sí?
+   L  91  ia                    ¿El resultado se ve natural?
+   L  97  pendiente-validacion  ¿Cuánto cuesta un diseño de sonrisa?
+   L 103  ia                    ¿Cuánto dura una carilla de porcelana?
+   L 112  ia                    diseno-de-sonrisa
+   L 157  ia                    ¿El diseño de sonrisa es un tratamiento en sí mismo?
+   L 163  ia                    ¿Puedo ver cómo voy a quedar antes de decidir?
+   L 169  ia                    ¿Sirve si tengo ortodoncia pendiente?
+   L 182  ia                    carillas-de-porcelana
+   L 227  ia                    ¿Se manchan con el café o el vino?
+   L 233  ia                    ¿Duele el procedimiento?
+   L 239  ia                    ¿Qué pasa si aprieto los dientes de noche?
+   L 252  ia                    blanqueamiento-dental
+   L 297  ia                    ¿Da sensibilidad?
+   L 303  ia                    ¿Cuánto dura el resultado?
+   L 309  ia                    ¿Blanquea las coronas y las restauraciones?
+
+src/content/tratamientos/implantes-dentales.ts  —  13 ia · 1 pendiente-validacion
+   L   4  ia                    implantes-dentales
+   L  78  ia                    ¿Duele colocar un implante?
+   L  84  ia                    ¿Cuánto tiempo lleva todo el tratamiento?
+   L  90  ia                    ¿Me quedo sin diente durante la espera?
+   L  96  ia                    ¿Cualquiera puede hacerse un implante?
+   L 102  pendiente-validacion  ¿Cuánto cuesta un implante dental?
+   L 110  ia                    implantes-unitarios
+   L 155  ia                    ¿Se ve distinto al resto de los dientes?
+   L 161  ia                    ¿Se puede colocar el mismo día de la extracción?
+   L 167  ia                    ¿Qué cuidados necesita después?
+   L 180  ia                    rehabilitacion-sobre-implantes
+   L 225  ia                    ¿Cuántos implantes necesito?
+   L 231  ia                    ¿La prótesis se saca para limpiar?
+   L 237  ia                    ¿Sirve si vengo del exterior?
+
+src/content/tratamientos/odontologia-general.ts  —  13 ia · 0 pendiente-validacion
+   L   4  ia                    odontologia-general
+   L  79  ia                    ¿Cada cuánto tengo que hacerme una limpieza?
+   L  85  ia                    ¿La limpieza debilita el esmalte?
+   L  91  ia                    ¿Cómo sé si tengo caries si no me duele?
+   L  97  ia                    ¿Qué incluye la consulta inicial?
+   L 105  ia                    limpieza-profunda
+   L 150  ia                    ¿Duele?
+   L 156  ia                    ¿Me van a quedar los dientes más separados?
+   L 162  ia                    ¿Blanquea los dientes?
+   L 175  ia                    restauraciones-caries
+   L 220  ia                    ¿Se nota la restauración?
+   L 226  ia                    ¿Cuánto dura?
+   L 232  ia                    ¿Puedo comer después?
+
+src/content/tratamientos/ortodoncia.ts  —  13 ia · 1 pendiente-validacion
+   L   4  ia                    ortodoncia
+   L  79  ia                    ¿Cuánto dura un tratamiento de ortodoncia?
+   L  85  ia                    ¿Los alineadores sirven para cualquier caso?
+   L  91  ia                    ¿Cuántas horas por día hay que usar los alineadores?
+   L  97  ia                    ¿Los dientes se vuelven a mover después?
+   L 103  pendiente-validacion  ¿Cuánto cuesta la ortodoncia?
+   L 112  ia                    alineadores-invisibles
+   L 157  ia                    ¿Se notan?
+   L 163  ia                    ¿Puedo comer con ellos puestos?
+   L 169  ia                    ¿Duelen?
+   L 178  ia                    brackets
+   L 223  ia                    ¿Cómo higienizo con brackets?
+   L 229  ia                    ¿Se despegan?
+   L 235  ia                    ¿Se manchan los dientes debajo?
+
+src/content/tratamientos/rehabilitacion-oral.ts  —  21 ia · 1 pendiente-validacion
+   L   4  ia                    rehabilitacion-oral
+   L  79  ia                    ¿Corona o incrustación?
+   L  85  ia                    ¿Cuánto duran las coronas?
+   L  91  ia                    ¿Se puede hacer todo de una vez?
+   L  97  ia                    ¿Hay que sacar las amalgamas?
+   L 103  pendiente-validacion  ¿Cuánto cuesta una rehabilitación?
+   L 112  ia                    coronas-dentales
+   L 157  ia                    ¿Se nota que es una corona?
+   L 163  ia                    ¿Duele?
+   L 169  ia                    ¿Necesito tratamiento de conducto antes?
+   L 182  ia                    incrustaciones-ceramicas
+   L 227  ia                    ¿Por qué no una tapadura común?
+   L 233  ia                    ¿Se ve el material?
+   L 239  ia                    ¿Cuánto dura?
+   L 252  ia                    incrustaciones-de-resina
+   L 297  ia                    ¿Cuál es la diferencia con la cerámica?
+   L 303  ia                    ¿Se mancha con el tiempo?
+   L 309  ia                    ¿Sirve si tengo bruxismo?
+   L 322  ia                    cambio-de-amalgamas
+   L 367  ia                    ¿Hay que cambiarlas todas?
+   L 373  ia                    ¿Se puede resolver en una sola sesión?
+   L 379  ia                    ¿Queda del color del diente?
+
+src/content/turismo.ts  —  6 ia · 9 pendiente-validacion
+   L 158  pendiente-validacion  Blanqueamiento dental
+   L 165  pendiente-validacion  Carillas de porcelana
+   L 173  pendiente-validacion  Diseño de sonrisa completo
+   L 180  pendiente-validacion  Corona dental
+   L 187  pendiente-validacion  Tratamiento de conducto
+   L 195  pendiente-validacion  Implante unitario
+   L 203  pendiente-validacion  Rehabilitación sobre implantes
+   L 210  pendiente-validacion  Limpieza profunda
+   L 217  pendiente-validacion  Ortodoncia con Invisalign
+   L 254  ia                    ¿Cómo empieza el proceso si vivo afuera?
+   L 260  ia                    ¿Cuántos días necesito quedarme?
+   L 266  ia                    ¿En qué moneda se paga?
+   L 272  ia                    ¿Qué pasa si necesito un control después de volver?
+   L 278  ia                    ¿El programa incluye el alojamiento?
+   L 284  ia                    ¿Atienden en inglés?
+
+Total: 153 registros — 138 generados por IA · 15 pendientes de validación del cliente
+
+
+> ai-website-clone-template@0.4.0 build
+> next build
+
+▲ Next.js 16.3.0 (Turbopack)
+- Environments: .env.local
+⚠ Specified "redirects" will not automatically work with "output: export". See more info here: https://nextjs.org/docs/messages/export-no-custom-routes
+✓ Running next.config.ts took 28ms
+
+  Creating an optimized production build ...
+⚠ Specified "redirects" will not automatically work with "output: export". See more info here: https://nextjs.org/docs/messages/export-no-custom-routes
+✓ Compiled successfully in 866ms
+  Running TypeScript ...
+  Finished TypeScript in 2.5s ...
+  Collecting page data using 11 workers ...
+  Generating static pages using 11 workers (0/49) ...
+  Generating static pages using 11 workers (12/49) 
+  Generating static pages using 11 workers (24/49) 
+  Generating static pages using 11 workers (36/49) 
+✓ Generating static pages using 11 workers (49/49) in 823ms
+  Finalizing page optimization ...
+⚠ rewrites, redirects, and headers are not applied when exporting your application, detected (redirects). See more info here: https://nextjs.org/docs/messages/export-no-custom-routes
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /alineadores-vs-brackets
+├ ○ /api/google-reviews
+├ ○ /blog
+├   /blog/[slug]
+│ ├ ● /blog/carillas-de-porcelana-lo-que-nadie-te-cuenta
+│ ├ ● /blog/por-que-sangran-las-encias
+│ ├ ● /blog/escaner-intraoral-vs-moldes-de-pasta
+│ └ ● [+2 more paths]
+├ ○ /carillas-vs-coronas
+├ ○ /casos
+├   /casos/[slug]
+│ ├ ● /casos/rehabilitacion-oral-restauracion-forma-y-color-natural
+│ ├ ● /casos/diseno-de-sonrisa-cierre-de-espacios-y-armonia-dental
+│ └ ● /casos/blanqueamiento-y-alineacion-sonrisa-renovada
+├ ○ /contacto
+├ ○ /dentista-en-nunez
+├   /equipo/[slug]
+│ ├ ● /equipo/alan-cunningham
+│ └ ● /equipo/marcela-altamiranda
+├ ○ /faq
+├ ○ /implantes-vs-protesis
+├ ○ /nosotros
+├ ○ /nosotros/instalaciones
+├ ○ /nosotros/tecnologia
+├ ○ /robots.txt
+├ ○ /sitemap.xml
+├ ○ /tratamientos
+├   /tratamientos/[slug]
+│ ├ ● /tratamientos/diseno-de-sonrisa
+│ ├ ● /tratamientos/carillas-de-porcelana
+│ ├ ● /tratamientos/blanqueamiento-dental
+│ └ ● [+16 more paths]
+└ ○ /turismo-odontologico
+
+
+○  (Static)  prerendered as static content
+●  (SSG)     prerendered as static HTML (uses generateStaticParams)
+

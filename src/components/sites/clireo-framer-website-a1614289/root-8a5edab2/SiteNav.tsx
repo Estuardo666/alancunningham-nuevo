@@ -9,7 +9,7 @@ import { ThemeToggle } from "../shared/ThemeToggle";
 import { LanguageSwitch } from "@/i18n/LanguageSwitch";
 import { useTr } from "@/i18n/LanguageProvider";
 import type { NavLink } from "@/types/clireo";
-import { CLINICA, whatsappHref } from "@/content/clinica";
+import { CLINICA, TURNOS_HREF } from "@/content/clinica";
 
 /**
  * Six destinations, no more (plan §2.1). This is the correction of AM's double
@@ -103,7 +103,7 @@ export function SiteNav({ overLight = false }: { overLight?: boolean } = {}) {
           <div className="flex items-center gap-3">
             <PrimaryButton
               label="Agendá tu consulta"
-              href={whatsappHref()}
+              href={TURNOS_HREF}
               variant="dark"
               className="hidden rounded-[11px] lg:flex"
             />
@@ -167,7 +167,7 @@ export function SiteNav({ overLight = false }: { overLight?: boolean } = {}) {
             <ItemMenu abierto={abierto} indice={LINKS.length} className="mt-2">
               <PrimaryButton
                 label="Agendá tu consulta"
-                href={whatsappHref()}
+                href={TURNOS_HREF}
                 variant="dark"
                 className="rounded-[12px]"
               />

@@ -11,7 +11,7 @@ import {
 } from "@/components/site/PageShell";
 import { ContextualFaq } from "@/components/site/ContextualFaq";
 import { ConsultaForm } from "@/components/site/ConsultaForm";
-import { Relacionados } from "@/components/site/Blocks";
+import { Galeria, Relacionados } from "@/components/site/Blocks";
 import { JsonLd } from "@/components/site/JsonLd";
 import {
   breadcrumbSchema,
@@ -105,6 +105,16 @@ export default async function TratamientoPage({
               <Prose parrafos={tratamiento.queEs} />
             </div>
 
+            {tratamiento.slug === "tratamiento-de-conducto" ? (
+              <div className="flex flex-col gap-6">
+                <SectionHeading titulo="Microcirugía apical" compact />
+                <Galeria imagenes={[{
+                  src: "/images/microcirugia-apical.jpg",
+                  alt: "Registro clínico de microcirugía apical realizado en el consultorio",
+                }]} />
+              </div>
+            ) : null}
+
             <div className="flex flex-col gap-6">
               <SectionHeading titulo="Para quién es" compact />
               <Checklist items={tratamiento.paraQuien} compact />
@@ -157,7 +167,7 @@ export default async function TratamientoPage({
           </div>
 
           <ConsultaForm
-            titulo="Consultá por este tratamiento"
+            titulo="Reservá tu turno para este tratamiento"
             contexto={tratamiento.nombre.toLowerCase()}
             tratamientos={[
               { slug: tratamiento.slug, nombre: tratamiento.nombre },

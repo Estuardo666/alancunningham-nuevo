@@ -7,6 +7,8 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 import type { MiembroCarrusel } from "@/content/equipo";
 import { cn } from "@/lib/utils";
+/** "Ver ficha" link on member cards — hidden for now. */
+const MOSTRAR_FICHA = false;
 
 /**
  * Team member carousel. Moving the carousel only highlights a card; the meta
@@ -33,16 +35,67 @@ const SLOP = 6;
 /** Palette tints. The owner is the only solid, dark card. */
 const TONOS: Record<MiembroCarrusel["tono"], string> = {
   titular: "bg-hero text-on-strong",
-  coral: "bg-accent-coral/20 text-foreground",
-  cyan: "bg-secondary/20 text-foreground",
-  lima: "bg-accent-yellow/30 text-foreground",
-  violeta: "bg-primary/15 text-foreground",
+  coral: "bg-[color-mix(in_srgb,var(--accent-coral)_22%,var(--card))] text-foreground",
+  cyan: "bg-[color-mix(in_srgb,var(--secondary)_22%,var(--card))] text-foreground",
+  lima: "bg-[color-mix(in_srgb,var(--accent-yellow)_32%,var(--card))] text-foreground",
+  violeta: "bg-[color-mix(in_srgb,var(--primary)_18%,var(--card))] text-foreground",
   // Plain white: the lavender band already owns `--surface-secondary`, so a
   // lavender card would vanish into the section behind it.
   blanca: "bg-card text-foreground",
 };
 
-export function TeamCarousel({
+/** Up to this many people a carousel is pointless: show them side by side. */
+const MAX_EN_GRILLA = 2;
+
+export function TeamCarousel(props: {
+  miembros: MiembroCarrusel[];
+  className?: string;
+}) {
+  return props.miembros.length <= MAX_EN_GRILLA ? (
+    <TeamGrid {...props} />
+  ) : (
+    <Carrusel {...props} />
+  );
+}
+
+/** Static, larger cards for a small team. Tapping a card still opens its panel. */
+function TeamGrid({
+  miembros,
+  className,
+}: {
+  miembros: MiembroCarrusel[];
+  className?: string;
+}) {
+  const [abierto, setAbierto] = useState<number | null>(null);
+
+  return (
+    <ul
+      className={cn(
+        "mx-auto grid w-full max-w-[1100px] list-none grid-cols-1 gap-6 [--alto:clamp(560px,150vw,680px)] md:grid-cols-2 lg:gap-8 lg:[--alto:720px]",
+        className,
+      )}
+      aria-label="Equipo del consultorio"
+      onKeyDown={(event) => {
+        if (event.key === "Escape") setAbierto(null);
+      }}
+    >
+      {miembros.map((miembro, indice) => (
+        <li key={miembro.slug}>
+          <Card
+            miembro={miembro}
+            activo
+            abierto={indice === abierto}
+            onTocar={() =>
+              setAbierto((previo) => (previo === indice ? null : indice))
+            }
+          />
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+function Carrusel({
   miembros,
   className,
 }: {
@@ -271,9 +324,7 @@ function Card({
     <article
       aria-current={activo}
       className={cn(
-        "relative h-[var(--alto)] rounded-[24px] p-[12px]",
-        // A card with a list of areas needs a taller panel than a bare one.
-        miembro.especialidades ? "[--reveal:46%]" : null,
+        "relative flex h-[var(--alto)] flex-col rounded-[24px] p-[12px]",
         TONOS[miembro.tono],
         "transition-[scale,box-shadow,opacity] duration-[450ms] ease-[cubic-bezier(0.32,0.72,0,1)] motion-reduce:transition-none",
         activo
@@ -292,22 +343,15 @@ function Card({
         className="absolute inset-0 z-10 cursor-pointer rounded-[24px] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-current"
       />
 
-      <div
-        className={cn(
-          // Opening is slow and deliberate; closing gets out of the way.
-          "absolute inset-[12px] motion-reduce:transition-none",
-          abierto
-            ? "duration-[650ms] [clip-path:inset(0_0_var(--reveal)_0_round_14px)]"
-            : "duration-[420ms] [clip-path:inset(0_0_0_0_round_14px)]",
-          "transition-[clip-path] ease-[cubic-bezier(0.32,0.72,0,1)]",
-        )}
-      >
+      {/* The portrait takes whatever the panel leaves, so the panel is exactly
+          as tall as its content (no dead space) and the face stays in frame. */}
+      <div className="relative min-h-0 flex-1 overflow-hidden rounded-[14px]">
         <Image
           src={miembro.foto.src}
           alt={miembro.foto.alt}
           fill
-          sizes="(min-width: 1024px) 340px, 72vw"
-          className="object-cover object-top"
+          sizes="(min-width: 1024px) 540px, (min-width: 768px) 50vw, 100vw"
+          className="object-cover object-[50%_8%]"
           draggable={false}
         />
       </div>
@@ -315,88 +359,97 @@ function Card({
       <div
         aria-hidden={!abierto}
         className={cn(
-          // Name block hangs under the portrait; the pill and the button stay
-          // pinned to the foot of the card so every card ends on the same line.
-          "absolute inset-x-[12px] top-[calc(100%-var(--reveal)+16px)] bottom-[12px] flex flex-col items-start justify-between gap-4",
-          "transition-[opacity,transform,filter] ease-out motion-reduce:transition-opacity",
+          "grid transition-[grid-template-rows] ease-[cubic-bezier(0.32,0.72,0,1)] motion-reduce:transition-none",
           abierto
-            ? "translate-y-0 opacity-100 blur-0 delay-200 duration-[450ms]"
-            : "pointer-events-none translate-y-1 opacity-0 blur-[2px] duration-200",
+            ? "grid-rows-[1fr] duration-[650ms]"
+            : "grid-rows-[0fr] duration-[420ms]",
         )}
       >
-        <div className="flex flex-col gap-[2px]">
-          <h3
+        <div className="min-h-0 overflow-hidden">
+          <div
             className={cn(
-              "text-[21px] leading-[25px] font-semibold tracking-[-0.84px]",
-              oscuro ? "text-on-strong" : "text-foreground",
+              "flex flex-col gap-5 px-1 pt-5 pb-1",
+              "transition-[opacity,transform,filter] ease-out motion-reduce:transition-opacity",
+              abierto
+                ? "translate-y-0 opacity-100 blur-0 delay-200 duration-[450ms]"
+                : "pointer-events-none translate-y-1 opacity-0 blur-[2px] duration-200",
             )}
           >
-            {miembro.nombre}
-          </h3>
-          {/* The list replaces the role line: it already says the same thing. */}
-          {miembro.especialidades ? null : (
-            <p
-              className={cn(
-                "line-clamp-2 text-[15px] leading-[20px] tracking-[-0.3px]",
-                oscuro ? "text-on-strong/70" : "text-foreground/65",
-              )}
-            >
-              {miembro.especialidad}
-            </p>
-          )}
-
-          {miembro.especialidades ? (
-            <ul className="mt-3 flex list-none flex-col gap-[5px]">
-              {miembro.especialidades.map((area) => (
-                <li
-                  key={area}
+            <div className="flex flex-col gap-[2px]">
+              <h3
+                className={cn(
+                  "text-[21px] leading-[25px] font-semibold tracking-[-0.84px] lg:text-[26px] lg:leading-[31px] lg:tracking-[-1px]",
+                  oscuro ? "text-on-strong" : "text-foreground",
+                )}
+              >
+                {miembro.nombre}
+              </h3>
+              {/* The list replaces the role line: it already says the same thing. */}
+              {miembro.especialidades ? null : (
+                <p
                   className={cn(
-                    "flex items-center gap-[9px] text-[14px] leading-[19px] tracking-[-0.14px]",
-                    oscuro ? "text-on-strong/75" : "text-foreground/70",
+                    "text-[15px] leading-[21px] tracking-[-0.3px] lg:text-[17px] lg:leading-[24px]",
+                    oscuro ? "text-on-strong/70" : "text-foreground/70",
                   )}
                 >
-                  <span
-                    aria-hidden="true"
-                    className={cn(
-                      "block h-[5px] w-[5px] shrink-0 rounded-[1.5px]",
-                      oscuro ? "bg-on-strong/60" : "bg-foreground/45",
-                    )}
-                  />
-                  {area}
-                </li>
-              ))}
-            </ul>
-          ) : null}
-        </div>
-
-        <div className="flex w-full items-center justify-between gap-3">
-          <span
-            className={cn(
-              "rounded-full px-3 py-[5px] text-[12px] leading-[17px] tracking-[-0.12px]",
-              oscuro
-                ? "bg-on-strong/12 text-on-strong/80"
-                : "bg-foreground/[0.07] text-foreground/70",
-            )}
-          >
-            {miembro.etiqueta}
-          </span>
-
-          {miembro.ficha ? (
-            <Link
-              href={`/equipo/${miembro.slug}`}
-              tabIndex={abierto ? undefined : -1}
-              className={cn(
-                "relative z-20 inline-flex items-center rounded-full px-4 py-[8px] text-[13px] leading-[19px] tracking-[-0.13px]",
-                "transition-[scale] duration-150 ease-out active:scale-[0.97] motion-reduce:transition-none",
-                "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-current",
-                oscuro
-                  ? "bg-on-strong text-hero"
-                  : "bg-foreground text-background",
+                  {miembro.bio ?? miembro.especialidad}
+                </p>
               )}
-            >
-              Ver ficha
-            </Link>
-          ) : null}
+
+              {miembro.especialidades ? (
+                <ul className="mt-3 flex list-none flex-col gap-[6px]">
+                  {miembro.especialidades.map((area) => (
+                    <li
+                      key={area}
+                      className={cn(
+                        "flex items-center gap-[10px] text-[14px] leading-[19px] tracking-[-0.14px] lg:text-[17px] lg:leading-[24px] lg:tracking-[-0.2px]",
+                        oscuro ? "text-on-strong/80" : "text-foreground/75",
+                      )}
+                    >
+                      <span
+                        aria-hidden="true"
+                        className={cn(
+                          "block h-[5px] w-[5px] shrink-0 rounded-[1.5px]",
+                          oscuro ? "bg-on-strong/60" : "bg-foreground/45",
+                        )}
+                      />
+                      {area}
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
+            </div>
+
+            <div className="flex w-full items-center justify-between gap-3">
+              <span
+                className={cn(
+                  "rounded-full px-3 py-[5px] text-[12px] leading-[17px] tracking-[-0.12px] lg:px-4 lg:py-[6px] lg:text-[14px] lg:leading-[20px]",
+                  oscuro
+                    ? "bg-on-strong/12 text-on-strong/80"
+                    : "bg-foreground/[0.07] text-foreground/70",
+                )}
+              >
+                {miembro.etiqueta}
+              </span>
+
+              {MOSTRAR_FICHA && miembro.ficha ? (
+                <Link
+                  href={`/equipo/${miembro.slug}`}
+                  tabIndex={abierto ? undefined : -1}
+                  className={cn(
+                    "relative z-20 inline-flex items-center rounded-full px-4 py-[8px] text-[13px] leading-[19px] tracking-[-0.13px] lg:px-5 lg:py-[10px] lg:text-[15px] lg:leading-[21px]",
+                    "transition-[scale] duration-150 ease-out active:scale-[0.97] motion-reduce:transition-none",
+                    "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-current",
+                    oscuro
+                      ? "bg-on-strong text-hero"
+                      : "bg-foreground text-background",
+                  )}
+                >
+                  Ver ficha
+                </Link>
+              ) : null}
+            </div>
+          </div>
         </div>
       </div>
     </article>

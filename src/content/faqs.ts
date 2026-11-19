@@ -73,7 +73,7 @@ export const FAQS: Faq[] = [
     bloque: "Primera consulta",
     pregunta: "¿Cómo pido un turno?",
     respuesta:
-      "Por WhatsApp al +54 9 11 2156 1445 o completando el formulario del sitio. Si escribís por el formulario, te contactamos para coordinar día y horario.",
+      "Podés reservar online desde el botón Agendá tu consulta, a través de Exodental. También podés escribirnos por WhatsApp al +54 9 11 2156 1445 o completar el formulario del sitio para coordinar día y horario.",
   },
   {
     _fuente: "ia",

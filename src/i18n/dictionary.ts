@@ -9,6 +9,16 @@
  * fight, English wins on brevity, not on symmetry.
  */
 export const EN: Record<string, string> = {
+  "Estudio Odontológico Dr. Esp. Cunningham": "Dr. Cunningham Dental Practice",
+  "Diseño de sonrisa y planificación implantológica guiada": "Smile design and guided implant planning",
+  "De la estética a la rehabilitación. Un gran cambio conlleva una gran responsabilidad y orden.": "From aesthetics to rehabilitation. A major change calls for responsibility and a clear plan.",
+  "Los profesionales a cargo de tu tratamiento": "The professionals in charge of your treatment",
+  "Múltiples especialistas a cargo": "A team of specialists",
+  "Rehabilitación sobre carillas.": "Rehabilitation with veneers.",
+  "Rehabilitación bimaxilar sobre carillas feldespáticas y disilicato": "Full-mouth rehabilitation with feldspathic and disilicate veneers",
+  "Microcirugía apical": "Apical microsurgery",
+  "Combinamos especialidades y especialistas para una rehabilitación cómoda y minuciosa, con un plan de tratamiento guiado por parámetros estéticos y una hoja de ruta clara.": "Our specialists work together to make your rehabilitation comfortable and thorough. Each specialty contributes to a treatment plan guided by aesthetic parameters and a clear clinical roadmap.",
+  "Distintas especialidades trabajan de forma coordinada para brindar mejores resultados en cada etapa de tu rehabilitación.": "Our specialists coordinate every stage of your rehabilitation.",
   // ─── Navigation and global CTAs ────────────────────────────────────────────
   Nosotros: "About",
   Tratamientos: "Treatments",

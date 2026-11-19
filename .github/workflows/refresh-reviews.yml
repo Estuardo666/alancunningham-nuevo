@@ -1,0 +1,22 @@
+name: Refresh Google reviews
+
+on:
+  schedule:
+    - cron: "0 10 * * *"
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Request Render rebuild
+        env:
+          DEPLOY_HOOK: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+        run: |
+          if [ -z "$DEPLOY_HOOK" ]; then
+            echo "::error::Configure RENDER_DEPLOY_HOOK_URL to refresh reviews daily."
+            exit 1
+          fi
+          curl --fail --silent --show-error --output /dev/null --request POST "$DEPLOY_HOOK"

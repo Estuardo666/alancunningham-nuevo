@@ -76,7 +76,7 @@ export default async function ProfesionalPage({
       <PageHero
         eyebrow="Equipo"
         h1={`${profesional.nombre} — ${profesional.especialidad} en Núñez`}
-        bajada={`${profesional.titulo} · ${profesional.matricula}`}
+        bajada={[profesional.titulo, profesional.matricula].filter(Boolean).join(" · ")}
         migas={migas}
         imagen={{ src: "/images/thumbnail_image1-2-jpg-1440x800.webp" }}
       />

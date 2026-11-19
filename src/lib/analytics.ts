@@ -8,6 +8,7 @@
 
 export const EVENTOS = {
   formularioEnviado: "formulario_consulta_enviado",
+  turnoOnlineAbierto: "turno_online_abierto",
   whatsappAbierto: "whatsapp_abierto",
   newsletterSuscripcion: "newsletter_suscripcion",
   casoAbierto: "caso_abierto",

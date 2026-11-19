@@ -39,8 +39,8 @@ export const RAZONES: {
     descripcion:
       "La evaluación empieza online con fotos y estudios. Llegás con el plan, la cantidad de sesiones y los días de estadía estimados.",
     imagen: {
-      src: "/images/obelisco-buenos-aires.jpg",
-      alt: "Obelisco de Buenos Aires al atardecer",
+      src: "/images/estudio-16x9/turismo-plan.webp",
+      alt: "Paciente revisando su plan de tratamiento por videollamada antes de viajar",
     },
   },
   {
@@ -48,17 +48,17 @@ export const RAZONES: {
     descripcion:
       "Escáner intraoral Runyes 3DS para los registros y láser para procedimientos de tejido blando, que acorta el postoperatorio: importa cuando tenés vuelo de vuelta.",
     imagen: {
-      src: "/images/escaner-intraoral-3shape.jpg",
-      alt: "Imagen ilustrativa de un escáner intraoral 3Shape",
+      src: "/images/estudio-16x9/turismo-tecnologia.webp",
+      alt: "Escáner intraoral junto al sillón odontológico",
     },
   },
   {
-    titulo: "Un solo responsable del caso",
+    titulo: "Múltiples especialistas a cargo",
     descripcion:
-      "El titular es especialista en rehabilitación dentobucomaxilar y técnico de laboratorio. La planificación y la ejecución técnica están en la misma cabeza.",
+      "Distintas especialidades y especialistas trabajan de forma coordinada, con una planificación guiada por parámetros estéticos y una hoja de ruta para cada tratamiento.",
     imagen: {
-      src: "/images/Asset-1.png",
-      alt: "Profesional del estudio odontológico",
+      src: "/images/estudio-16x9/turismo-especialistas.webp",
+      alt: "Dos odontólogos revisando juntos una radiografía",
     },
   },
   {
@@ -66,8 +66,8 @@ export const RAZONES: {
     descripcion:
       "Buenos Aires tiene con qué llenar los días que no estás en el sillón, y el consultorio está en Núñez, bien conectado con el resto de la ciudad.",
     imagen: {
-      src: "/images/vicente-lopez.jpg",
-      alt: "Costanera y espacios verdes cerca de Buenos Aires",
+      src: "/images/estudio-16x9/turismo-ciudad.webp",
+      alt: "Calle arbolada de Buenos Aires con jacarandás",
     },
   },
 ];

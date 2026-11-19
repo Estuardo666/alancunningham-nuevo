@@ -3,14 +3,9 @@
 import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
 import { useRef, useState } from "react";
 
-const VIDEOS = [
-  "WhatsApp Video 2026-08-09 at 13.39.05.mp4",
-  "WhatsApp Video 2026-08-09 at 13.39.06.mp4",
-  "WhatsApp Video 2026-08-09 at 13.39.07.mp4",
-  "WhatsApp Video 2026-08-09 at 13.39.08.mp4",
-  "WhatsApp Video 2026-08-09 at 13.39.14.mp4",
-  "WhatsApp Video 2026-08-09 at 13.39.15.mp4",
-].map((filename) => `/consultorio/videos/${encodeURIComponent(filename)}`);
+const VIDEOS = [1, 2, 3, 4, 5].map(
+  (n) => `/videos/estudio/web/reel-${n}.mp4`,
+);
 
 const VIDEOS_POR_VISTA = 4;
 

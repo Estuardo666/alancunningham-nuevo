@@ -54,6 +54,9 @@ export const CLINICA = {
 /** The single primary CTA verb used across the whole site (plan §8.3). */
 export const CTA_PRIMARIO = "Agendá tu consulta";
 
+export const TURNOS_HREF =
+  "https://www.exodentalsoft.com/turno-senia?clinicId=1&odontologoId=17";
+
 /**
  * WhatsApp deep link with the message preloaded from the page context, so the
  * patient never has to write the first message (plan §8.1).

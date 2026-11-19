@@ -113,10 +113,7 @@ export function CasoCard({ caso }: { caso: Caso }) {
       </div>
       <div className="flex w-full flex-col gap-3 px-2 pb-2">
         <div className="flex w-full flex-col gap-1.5">
-          <p className="text-[13px] leading-[18px] tracking-[-0.1px] text-muted-foreground">
-            <T>{caso.tratamiento}</T> · <T>{caso.duracion}</T>
-          </p>
-          <h3 className="line-clamp-2 text-[18px] font-medium leading-[23px] tracking-[-0.45px] text-foreground">
+          <h3 className="text-[18px] font-medium leading-[23px] tracking-[-0.45px] text-foreground">
             {caso.titulo}
           </h3>
         </div>

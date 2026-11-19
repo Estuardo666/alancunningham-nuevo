@@ -1,4 +1,5 @@
 import { SparkleIcon } from "../shared/icons";
+import { MarqueeTrack } from "./MarqueeTrack";
 
 import { TRATAMIENTOS } from "@/content/tratamientos";
 import { T } from "@/i18n/LanguageProvider";
@@ -23,7 +24,7 @@ export function TickerSection() {
       className="flex justify-center overflow-hidden bg-surface-secondary px-5 pt-10 pb-12 lg:px-8 lg:pt-[60px] lg:pb-[70px]"
     >
       <div className="w-full max-w-[1400px] overflow-hidden">
-        <div className="flex w-max animate-[clireo-marquee_28s_linear_infinite] items-center gap-[60px] motion-reduce:animate-none">
+        <MarqueeTrack>
           {[0, 1].map((copy) => (
             <ul
               key={copy}
@@ -43,7 +44,7 @@ export function TickerSection() {
               ))}
             </ul>
           ))}
-        </div>
+        </MarqueeTrack>
       </div>
     </section>
   );

@@ -34,7 +34,7 @@ const FORMACION_TONES = [
  * `src/content/equipo.ts` plus a page, with no change to this component.
  */
 export function DoctorsSection() {
-  const unico = EQUIPO.length === 1;
+  const unico = EQUIPO_CARRUSEL.length === 1;
 
   return (
     <section
@@ -46,7 +46,7 @@ export function DoctorsSection() {
           <SectionEyebrow>Quién te va a atender</SectionEyebrow>
           <RevealText
             as="h2"
-            text="El profesional detrás de cada tratamiento"
+            text="Los profesionales a cargo de tu tratamiento"
             blur={8}
             className="max-w-[600px] text-center text-[36px] leading-[40px] tracking-[-2px] text-foreground lg:text-[54px] lg:leading-[56.16px] lg:tracking-[-3.24px]"
           />

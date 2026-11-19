@@ -1,10 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Clock3, MapPin } from "lucide-react";
-import { asset } from "../shared/assets";
 import { PrimaryButton } from "../shared/PrimaryButton";
+
+const CTA_FONDOS = [
+  "/images/estudio-16x9/cta-1.webp",
+  "/images/estudio-16x9/cta-2.webp",
+] as const;
+
+/** Each page picks one of the clinic photographs for the closing CTA. */
+function ctaFondo() {
+  return CTA_FONDOS[Math.floor(Math.random() * CTA_FONDOS.length)];
+}
 import { RevealText } from "../shared/RevealText";
-import { CLINICA, CTA_PRIMARIO, whatsappHref } from "@/content/clinica";
+import { CLINICA, CTA_PRIMARIO, TURNOS_HREF, whatsappHref } from "@/content/clinica";
 import { TRATAMIENTOS, rutaTratamiento } from "@/content/tratamientos";
 import { INTENCIONES } from "@/content/intenciones";
 import { GoogleRatingSummary } from "@/components/site/GoogleReviews";
@@ -129,7 +138,7 @@ export function SiteFooter({
           <div className="w-full px-5 lg:px-8">
             <div className="relative flex w-full max-w-[1300px] flex-col items-center justify-end gap-6 overflow-clip rounded-[20px] px-6 pt-12 pb-14 lg:mx-auto lg:min-h-[450px] lg:px-10 lg:pb-[70px]">
               <Image
-                src={asset("PnpAr08n1JUeJxXkKediO8U3i0.webp")}
+                src={ctaFondo()}
                 alt=""
                 fill
                 sizes="1300px"
@@ -164,7 +173,7 @@ export function SiteFooter({
                     <div className="flex flex-col items-center gap-2">
                       <PrimaryButton
                         label={CTA_PRIMARIO}
-                        href={whatsappHref()}
+                        href={TURNOS_HREF}
                         variant="dark"
                       />
                     </div>

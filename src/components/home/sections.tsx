@@ -19,43 +19,37 @@ import { T } from "@/i18n/LanguageProvider";
 
 const TURISMO_STEP_ICONS = [MessageCircle, FileText, CalendarDays] as const;
 
-const HOME_CONSULTORIO_VIDEOS = [
-  "WhatsApp Video 2026-08-09 at 13.39.05.mp4",
-  "WhatsApp Video 2026-08-09 at 13.39.07.mp4",
-  "WhatsApp Video 2026-08-09 at 13.39.14.mp4",
-  "WhatsApp Video 2026-08-09 at 13.39.15.mp4",
-].map((filename) => `/consultorio/videos/${encodeURIComponent(filename)}`);
-
 const HOME_CONSULTORIO_MEDIA: MediaAsset[] = [
-  INSTALACIONES[8],
+  INSTALACIONES[0],
   {
-    src: HOME_CONSULTORIO_VIDEOS[0],
-    poster: INSTALACIONES[2].src,
+    src: "/videos/estudio/web/reel-3.mp4",
+    poster: "/videos/estudio/web/reel-3.webp",
     tipo: "video",
-    alt: "Video del equipamiento del consultorio odontológico",
-  },
-  INSTALACIONES[3],
-  INSTALACIONES[10],
-  {
-    src: HOME_CONSULTORIO_VIDEOS[1],
-    poster: INSTALACIONES[5].src,
-    tipo: "video",
-    alt: "Video de una sala de atención del consultorio",
-  },
-  INSTALACIONES[1],
-  {
-    src: HOME_CONSULTORIO_VIDEOS[2],
-    poster: INSTALACIONES[7].src,
-    tipo: "video",
-    alt: "Video del espacio de trabajo del consultorio",
+    alt: "Video del consultorio con el microscopio",
   },
   INSTALACIONES[6],
+  INSTALACIONES[9],
+  {
+    src: "/videos/estudio/web/reel-1.mp4",
+    poster: "/videos/estudio/web/reel-1.webp",
+    tipo: "video",
+    alt: "Video del instrumental odontológico",
+  },
+  INSTALACIONES[1],
   INSTALACIONES[4],
   {
-    src: HOME_CONSULTORIO_VIDEOS[3],
-    poster: INSTALACIONES[9].src,
+    src: "/videos/estudio/web/reel-4.mp4",
+    poster: "/videos/estudio/web/reel-4.webp",
     tipo: "video",
-    alt: "Video del consultorio odontológico",
+    alt: "Video del escaneo intraoral",
+  },
+  INSTALACIONES[7],
+  INSTALACIONES[12],
+  {
+    src: "/videos/estudio/web/reel-5.mp4",
+    poster: "/videos/estudio/web/reel-5.webp",
+    tipo: "video",
+    alt: "Video del equipamiento del consultorio",
   },
 ];
 
@@ -66,7 +60,7 @@ export function HomeCasos() {
       <SectionHeading
         eyebrow="Resultados reales"
         titulo="Casos tratados en el consultorio"
-        bajada="Tres casos reales con el tratamiento indicado y su duración."
+        bajada="Rehabilitación sobre carillas."
       />
       <div className="grid w-full gap-8 lg:grid-cols-3">
         {CASOS.map((caso) => (
@@ -74,8 +68,7 @@ export function HomeCasos() {
             key={caso.slug}
             antes={caso.antes}
             despues={caso.despues}
-            etiqueta={caso.etiqueta}
-            duracion={caso.duracion}
+            etiqueta={caso.titulo}
           />
         ))}
       </div>

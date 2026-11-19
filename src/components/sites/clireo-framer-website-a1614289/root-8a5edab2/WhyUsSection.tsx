@@ -84,7 +84,7 @@ export function WhyUsSection() {
               className="max-w-[700px] text-center text-[34px] leading-[38px] tracking-[-1.8px] text-foreground lg:text-[46px] lg:leading-[49.68px] lg:tracking-[-2.53px]"
             />
             <p className="max-w-[600px] text-center text-[18px] leading-[24.3px] tracking-[-0.54px] text-muted-foreground">
-              Un especialista que planifica y ejecuta tu caso, equipamiento con
+              Múltiples especialistas que planifican tu caso, equipamiento con
               nombre propio y un plan claro antes de empezar.
             </p>
           </div>

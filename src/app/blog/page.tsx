@@ -52,7 +52,8 @@ export default function BlogPage() {
         h1="Información odontológica clara en Núñez"
         bajada="Ideas prácticas para entender tratamientos, planificación y cuidados antes de tomar una decisión."
         migas={MIGAS}
-        imagen={{ src: "/images/thumbnail_image1-jpg-1440x800.webp" }}
+        imagen={{ src: "/images/estudio-16x9/hero-blog-2.webp" }}
+        fondoAleatorio={false}
       />
 
       <Section banda="background">
