@@ -31,9 +31,9 @@ const ETAPAS = [
 ];
 
 // Preserve published URLs while replacing the previous draft case narratives.
-const REGISTROS = [
+const REGISTROS: { slug: string; foto: string; antes: string; despues: string; despuesSrc?: string }[] = [
   { slug: "rehabilitacion-oral-restauracion-forma-y-color-natural", foto: "patricia", antes: "1", despues: "2" },
-  { slug: "diseno-de-sonrisa-cierre-de-espacios-y-armonia-dental", foto: "sofia", antes: "1", despues: "2" },
+  { slug: "diseno-de-sonrisa-cierre-de-espacios-y-armonia-dental", foto: "sofia", antes: "1", despues: "2", despuesSrc: "/images/sofia-despues-nuevo.webp" },
   { slug: "blanqueamiento-y-alineacion-sonrisa-renovada", foto: "puchi", antes: "2", despues: "1" },
 ];
 
@@ -50,7 +50,7 @@ export const CASOS: Caso[] = REGISTROS.map((registro, index) => ({
     alt: `Caso ${index + 1}: antes de la rehabilitación bimaxilar sobre carillas`,
   },
   despues: {
-    src: `/images/${registro.foto}${registro.despues}-jpg.webp`,
+    src: registro.despuesSrc ?? `/images/${registro.foto}${registro.despues}-jpg.webp`,
     alt: `Caso ${index + 1}: después de la rehabilitación bimaxilar sobre carillas`,
   },
   tratamientoSlug: "carillas-de-porcelana",
