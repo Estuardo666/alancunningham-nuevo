@@ -65,8 +65,11 @@ export default function TratamientosPage() {
         h1="Tratamientos odontológicos en Núñez"
         bajada="Explorá cada tratamiento, su proceso y sus tiempos para elegir con claridad. La consulta inicial te ayuda a definir el próximo paso."
         migas={MIGAS}
-        imagen={{ src: "/images/estudio-16x9/hero-tratamientos.webp" }}
-        fondoAleatorio={false}
+        foto={{
+          src: "/images/estudio/consultorio-sillon-1.jpg",
+          alt: "Sillón odontológico del consultorio",
+          posicion: "50% 50%",
+        }}
       >
         <div className="flex flex-wrap items-center gap-6 pt-2">
           <CtaConMicrocopy contexto="tratamientos" variant="dark" />

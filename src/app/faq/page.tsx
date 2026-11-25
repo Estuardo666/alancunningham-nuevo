@@ -47,8 +47,11 @@ export default function FaqPage() {
         h1="Preguntas frecuentes sobre odontología en Núñez"
         bajada={`${FAQS.length} preguntas agrupadas por tema: tratamientos, medios de pago, primera consulta y turismo odontológico.`}
         migas={MIGAS}
-        imagen={{ src: "/images/estudio-16x9/hero-faq.webp" }}
-        fondoAleatorio={false}
+        foto={{
+          src: "/images/estudio/DSC08092.jpg",
+          alt: "Sala de espera con sillones, planta y bar de agua",
+          posicion: "50% 45%",
+        }}
       >
         <div className="pt-2">
           <CtaConMicrocopy contexto="una consulta inicial" variant="dark" />

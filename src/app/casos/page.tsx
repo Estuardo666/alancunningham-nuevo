@@ -43,8 +43,11 @@ export default function CasosPage() {
         h1="Resultados reales en Núñez, explicados paso a paso"
         bajada="Conocé el punto de partida, el tratamiento realizado y el tiempo de cada caso. Sin retoques: con el detalle clínico a la vista."
         migas={MIGAS}
-        imagen={{ src: "/images/estudio-16x9/hero-casos.webp" }}
-        fondoAleatorio={false}
+        foto={{
+          src: "/images/DSC_0123-1024x683.jpg",
+          alt: "Toma de color dental durante un tratamiento estético",
+          posicion: "50% 50%",
+        }}
       >
         <div className="pt-2">
           <CtaConMicrocopy contexto="un caso similar al mío" variant="dark" />

@@ -66,8 +66,11 @@ export default function DentistaEnNunezPage() {
         h1="Dentista en Núñez: Estudio Odontológico Cunningham"
         bajada={`${TITULAR.nombre}, ${TITULAR.especialidad}, ${TITULAR.matricula}. ${CLINICA.horariosTexto}.`}
         migas={MIGAS}
-        imagen={{ src: "/images/estudio-16x9/hero-dentista-en-nunez.webp" }}
-        fondoAleatorio={false}
+        foto={{
+          src: "/images/estudio/sala-espera-retrato.jpg",
+          alt: "Retrato en la sala de espera del consultorio en Núñez",
+          posicion: "50% 35%",
+        }}
       >
         <div className="pt-2">
           <CtaConMicrocopy contexto="un turno en Núñez" variant="dark" />

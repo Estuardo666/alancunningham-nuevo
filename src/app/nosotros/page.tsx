@@ -63,8 +63,11 @@ export default function NosotrosPage() {
         h1="Estudio Odontológico Cunningham en Núñez"
         bajada={`${CLINICA.direccion.calle}, ${CLINICA.direccion.barrio}. ${CLINICA.horariosTexto}.`}
         migas={MIGAS}
-        imagen={{ src: "/images/estudio-16x9/hero-nosotros.webp" }}
-        fondoAleatorio={false}
+        foto={{
+          src: "/images/estudio/DSC08120.jpg",
+          alt: "Sala de espera del Estudio Odontológico Cunningham en Núñez",
+          posicion: "50% 40%",
+        }}
       />
 
       {/* Nuestra historia: two clinic photos hold one half while the story, the CTA

@@ -49,6 +49,7 @@ export function PageHero({
   bajada,
   migas,
   imagen,
+  foto,
   fondoAleatorio = true,
   children,
 }: {
@@ -58,10 +59,61 @@ export function PageHero({
   migas: Miga[];
   /** Background photograph. The alt stays empty: it is decorative here. */
   imagen?: { src: string };
+  /** Real clinic photo shown beside the copy (two columns: 40% photo left, 60% text right). */
+  foto?: { src: string; alt: string; posicion?: string };
   /** Internal pages use a fresh clinic photograph unless explicitly disabled. */
   fondoAleatorio?: boolean;
   children?: ReactNode;
 }) {
+  if (foto) {
+    return (
+      <section className="page-hero relative flex justify-center overflow-hidden bg-hero px-5 pt-[120px] pb-12 lg:px-8 lg:pt-[150px] lg:pb-16">
+        <div className="relative z-10 grid w-full max-w-[1300px] grid-cols-1 items-center gap-10 lg:grid-cols-[2fr_3fr] lg:gap-14">
+          <div className="flex min-w-0 flex-col items-start gap-6">
+            <div className="hero-entrance hero-entrance-1">
+              <Breadcrumbs items={migas} />
+            </div>
+            <div className="flex flex-col items-start gap-[10px]">
+              <div className="hero-entrance hero-entrance-2">
+                <SectionEyebrow tone="light">{eyebrow}</SectionEyebrow>
+              </div>
+              <div className="hero-entrance hero-entrance-3">
+                <RevealText
+                  as="h1"
+                  text={h1}
+                  blur={5}
+                  duration={0.45}
+                  className="text-[40px] leading-[43px] tracking-[-2.2px] text-white lg:text-[58px] lg:leading-[61px] lg:tracking-[-3.4px]"
+                />
+              </div>
+            </div>
+            {bajada ? (
+              <div className="hero-entrance hero-entrance-4">
+                <p className="max-w-[640px] text-[16px] leading-[21.6px] tracking-[-0.48px] text-white/80 lg:text-[18px] lg:leading-[24.3px] lg:tracking-[-0.54px]">
+                  <T>{bajada}</T>
+                </p>
+              </div>
+            ) : null}
+            {children ? (
+              <div className="hero-entrance hero-entrance-5 w-full">{children}</div>
+            ) : null}
+          </div>
+          <div className="hero-entrance hero-entrance-3 relative aspect-[4/3] lg:order-first w-full overflow-hidden rounded-[24px] shadow-[var(--clireo-shadow-md)] sm:aspect-[16/10] lg:aspect-[4/5]">
+            <Image
+              src={foto.src}
+              alt={foto.alt}
+              fill
+              priority
+              sizes="(min-width: 1024px) 40vw, 100vw"
+              className="object-cover"
+              style={{ objectPosition: foto.posicion ?? "50% 50%" }}
+            />
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   const imagenHero = fondoAleatorio
     ? { src: heroAleatorio() }
     : imagen;

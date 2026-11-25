@@ -50,8 +50,11 @@ export default function TecnologiaPage() {
         h1="Tecnología odontológica en Núñez para cada etapa del tratamiento"
         bajada="Escáneres intraorales y facial, láser y planificación digital para acompañar cada etapa del tratamiento."
         migas={MIGAS}
-        imagen={{ src: "/images/estudio-16x9/hero-tecnologia.webp" }}
-        fondoAleatorio={false}
+        foto={{
+          src: "/images/estudio/microscopio-newton-1.jpg",
+          alt: "Microscopio clínico Newton del consultorio",
+          posicion: "50% 50%",
+        }}
       />
 
       {TECNOLOGIA.map((t, index) => (
