@@ -43,40 +43,33 @@ const STEPS: Step[] = COMO_TRABAJAMOS.map((paso, index) => ({
   Icon: ICONOS[index % ICONOS.length],
 }));
 
+/**
+ * Theme tokens, not hex: the band behind the pills is `surface-secondary`, which
+ * is deep purple in dark mode, so fixed purple ink disappeared there.
+ */
 const TAB_TONES = [
   {
-    activeBg: "#30005b",
-    activeFg: "#ffffff",
-    idleBg: "rgba(48, 0, 91, 0.12)",
-    idleFg: "#30005b",
-    marker: "#b4e843",
+    active: "bg-foreground text-background",
+    idle: "bg-foreground/10 text-foreground",
   },
   {
-    activeBg: "#ff6852",
-    activeFg: "#30005b",
-    idleBg: "rgba(255, 104, 82, 0.18)",
-    idleFg: "#30005b",
-    marker: "#30005b",
+    active: "bg-accent-coral text-accent-coral-foreground",
+    idle: "bg-accent-coral/20 text-foreground",
   },
   {
-    activeBg: "#01e2d8",
-    activeFg: "#000000",
-    idleBg: "rgba(1, 226, 216, 0.18)",
-    idleFg: "#30005b",
-    marker: "#30005b",
+    active: "bg-secondary text-secondary-foreground",
+    idle: "bg-secondary/20 text-foreground",
   },
   {
-    activeBg: "#b4e843",
-    activeFg: "#30005b",
-    idleBg: "rgba(180, 232, 67, 0.24)",
-    idleFg: "#30005b",
-    marker: "#30005b",
+    active: "bg-accent-yellow text-secondary-foreground",
+    idle: "bg-accent-yellow/25 text-foreground",
   },
 ] as const;
 
 const CARD_TONES = [
   {
-    surface: "bg-surface-strong",
+    // In dark mode the band is the same purple, so the card lifts with a tint.
+    surface: "bg-surface-strong dark:bg-white/[0.07] dark:ring-1 dark:ring-white/15",
     ink: "text-on-strong",
     muted: "text-on-strong/75",
     icon: "text-accent-yellow",
@@ -232,24 +225,15 @@ function StepPill({
   tone: (typeof TAB_TONES)[number];
 }) {
   return (
-    <motion.div
+    <div
       aria-current={active ? "step" : undefined}
-      animate={{
-        backgroundColor: active ? tone.activeBg : tone.idleBg,
-        color: active ? tone.activeFg : tone.idleFg,
-      }}
-      transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-      className="flex w-full items-center gap-3 rounded-[14px] px-5 py-[10px] shadow-[var(--clireo-shadow)]"
+      className={`flex w-full items-center gap-3 rounded-[14px] px-5 py-[10px] shadow-[var(--clireo-shadow)] transition-colors duration-[450ms] ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none ${active ? tone.active : tone.idle}`}
     >
-      <span
-        aria-hidden
-        className="block h-[7px] w-[7px] rounded-[1px]"
-        style={{ backgroundColor: tone.marker }}
-      />
+      <span aria-hidden className="block h-[7px] w-[7px] rounded-[1px] bg-current" />
       <span className="text-[18px] leading-[24.3px] tracking-[-0.54px]">
         <T>{label}</T>
       </span>
-    </motion.div>
+    </div>
   );
 }
 
