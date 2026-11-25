@@ -11,12 +11,12 @@ jobs:
   rebuild:
     runs-on: ubuntu-latest
     steps:
-      - name: Request Render rebuild
+      - name: Request Vercel rebuild
         env:
-          DEPLOY_HOOK: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+          DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}
         run: |
           if [ -z "$DEPLOY_HOOK" ]; then
-            echo "::error::Configure RENDER_DEPLOY_HOOK_URL to refresh reviews daily."
+            echo "::error::Configure VERCEL_DEPLOY_HOOK_URL to refresh reviews daily."
             exit 1
           fi
           curl --fail --silent --show-error --output /dev/null --request POST "$DEPLOY_HOOK"
