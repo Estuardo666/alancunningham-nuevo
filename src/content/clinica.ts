@@ -28,7 +28,7 @@ export const CLINICA = {
     { dias: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], desde: "09:00", hasta: "20:00" },
   ],
   horariosTexto: "Lunes a sábado de 9 a 20 h · Con turno previo",
-  modalidadAtencion: "Atención particular · No trabajamos con obras sociales ni prepagas.",
+  modalidadAtencion: "No atendemos prepagas (pero sí realizamos facturación de los tratamientos).",
   instagram: "https://www.instagram.com/smiledesigncenter.ba/",
   mapa: "https://maps.google.com/?q=Manuel+Ugarte+2548,+Núñez,+Buenos+Aires",
   zonas: [

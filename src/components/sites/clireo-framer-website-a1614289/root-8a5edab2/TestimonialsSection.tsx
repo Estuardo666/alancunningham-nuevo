@@ -18,10 +18,10 @@ export function TestimonialsSection() {
     >
       <div className="flex w-full max-w-[1300px] flex-col items-center gap-10 lg:gap-[50px]">
         <div className="flex flex-col items-center gap-[10px]">
-          <SectionEyebrow>Opiniones de pacientes</SectionEyebrow>
+          <SectionEyebrow>Opiniones reales</SectionEyebrow>
           <RevealText
             as="h2"
-            text="Lo que dicen quienes se atendieron acá"
+            text="Comentarios de personas y su experiencia con nosotros"
             blur={8}
             className="max-w-[600px] text-center text-[34px] leading-[38px] tracking-[-1.8px] text-foreground lg:text-[46px] lg:leading-[49.68px] lg:tracking-[-2.53px]"
           />

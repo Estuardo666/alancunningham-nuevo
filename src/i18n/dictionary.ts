@@ -114,20 +114,22 @@ export const EN: Record<string, string> = {
   "De la evaluación inicial al control de mantenimiento: qué pasa en cada etapa y qué te llevás de cada una.":
     "From the first visit to maintenance check-ups: what happens at each stage.",
   "Evaluación inicial": "First visit",
-  "Una primera evaluación de 40 minutos para revisar encías, piezas y mordida, y tomar los registros que hagan falta. Te explicamos el diagnóstico y el próximo paso, sin compromiso.":
-    "A 40-minute check of gums, teeth and bite, plus any records needed. You get the diagnosis and the next step, with no commitment.",
+  "Una primera evaluación de 60 minutos para diagnosticar, verificar tejidos blandos y oclusión, y tomar registros digitales y fotográficos. Te explicamos tu diagnóstico y cómo seguir, paso por paso.":
+    "A 60-minute visit to diagnose, check soft tissues and bite, and take digital and photographic records. We explain your diagnosis and how to proceed, step by step.",
   Plan: "Plan",
   "Te llevás el plan con lo que hay que hacer, en qué orden y cuánto lleva, separado en urgente, conveniente y opcional.":
     "You leave with what to do, in what order and how long it takes, split into urgent, advisable and optional.",
   Tratamiento: "Treatment",
-  "Escaneo intraoral en lugar de moldes, prueba en boca antes de lo definitivo y control de mordida en cada etapa.":
-    "Intraoral scanning instead of impressions, a try-in before anything final, and bite checks at every stage.",
+  "Escaneo intraoral y fotografías en vez de registros convencionales con pastas, prueba de maquetas y control de oclusión y estética en todas las etapas.":
+    "Intraoral scanning and photography instead of conventional putty impressions, mock-up try-ins, and bite and aesthetic checks at every stage.",
   Controles: "Check-ups",
   "El tratamiento no termina cuando se cementa la última pieza. Quedan los controles que hacen que el trabajo dure.":
     "Treatment does not end with the last crown. The check-ups are what make the work last.",
 
   // ─── Reviews ───────────────────────────────────────────────────────────────
   "Opiniones de pacientes": "Patient reviews",
+  "Opiniones reales": "Real reviews",
+  "Comentarios de personas y su experiencia con nosotros": "What people say about their experience with us",
   "Lo que dicen quienes se atendieron acá": "What our patients say",
   "Ver reseñas anteriores": "Previous reviews",
   "Ver más reseñas": "More reviews",
@@ -177,8 +179,8 @@ export const EN: Record<string, string> = {
   "Ver todas las preguntas": "See all questions",
   "¿Qué medios de pago aceptan?": "Which payment methods do you take?",
   "¿Qué pasa en la primera consulta?": "What happens at the first visit?",
-  "Dura alrededor de 40 minutos. Se revisa la boca completa, se evalúan encías y piezas, se toman los registros que hagan falta y salís con un plan de tratamiento por escrito.":
-    "It takes about 40 minutes. We check the whole mouth, gums and teeth, take any records needed, and you leave with a written plan.",
+  "Dura alrededor de 60 minutos. Se revisa la boca completa, se evalúan encías y piezas, se toman los registros que hagan falta y salís con un plan de tratamiento por escrito.":
+    "It takes about 60 minutes. We check the whole mouth, gums and teeth, take any records needed, and you leave with a written plan.",
   "¿Cuánto dura un diseño de sonrisa?": "How long does a smile design take?",
   "Entre cuatro y seis semanas en la mayoría de los casos, contando la planificación digital, la prueba en boca y la ejecución. Los casos que sólo requieren blanqueamiento y retoques se resuelven en dos o tres sesiones.":
     "Four to six weeks in most cases, including digital planning, the try-in and the work itself. Whitening-only cases take two or three sessions.",
@@ -202,6 +204,8 @@ export const EN: Record<string, string> = {
   "Dentista en Núñez": "Dentist in Núñez",
   "Lunes a sábado de 9 a 20 h · Con turno previo":
     "Monday to Saturday 9–20 h · By appointment",
+  "No atendemos prepagas (pero sí realizamos facturación de los tratamientos).":
+    "We do not work with prepaid health plans, but we do issue invoices for treatments.",
   "Todos los derechos reservados.": "All rights reserved.",
   "Carillas o coronas": "Veneers or crowns",
   "Alineadores o brackets": "Aligners or braces",
@@ -243,8 +247,8 @@ export const EN: Record<string, string> = {
   "Su práctica se concentra en rehabilitación oral, implantes y estética dental, con un criterio conservador: se desgasta lo mínimo indispensable, se conserva todo lo que sea conservable y cada plan se entrega por escrito, con lo urgente separado de lo conveniente y de lo opcional.":
     "His work centres on oral rehabilitation, implants and cosmetic dentistry, with a conservative rule: grind the minimum, keep whatever can be kept, and put every plan in writing, with urgent, advisable and optional kept apart.",
   Odontólogo: "Dentist",
-  "Especialista en rehabilitación oral y prótesis":
-    "Specialist in oral rehabilitation and prosthetics",
+  "Especialista en Rehabilitación Oral y Prótesis (UBA)":
+    "Specialist in Oral Rehabilitation and Prosthetics (UBA)",
   "Técnico de laboratorio dental": "Dental laboratory technician",
   "Docente de la Universidad de Buenos Aires (UBA)":
     "Lecturer at the University of Buenos Aires",

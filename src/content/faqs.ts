@@ -80,7 +80,7 @@ export const FAQS: Faq[] = [
     bloque: "Primera consulta",
     pregunta: "¿Qué pasa en la primera consulta?",
     respuesta:
-      "Dura alrededor de 40 minutos. Se revisa la boca completa, se evalúan encías y piezas, se toman los registros que hagan falta y salís con un plan de tratamiento por escrito.",
+      "Dura alrededor de 60 minutos. Se revisa la boca completa, se evalúan encías y piezas, se toman los registros que hagan falta y salís con un plan de tratamiento por escrito.",
   },
   {
     _fuente: "ia",

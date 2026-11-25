@@ -140,7 +140,7 @@ export default async function ProfesionalPage({
           <SectionHeading
             eyebrow="Turnos"
             titulo={`Agendá con ${profesional.nombre}`}
-            bajada="Consulta inicial de 40 minutos, con diagnóstico y plan de tratamiento por escrito."
+            bajada="Consulta inicial de 60 minutos, con diagnóstico y plan de tratamiento por escrito."
           />
           <ConsultaForm
             titulo="Pedí tu turno"

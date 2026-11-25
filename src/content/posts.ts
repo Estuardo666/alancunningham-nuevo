@@ -285,7 +285,7 @@ export const POSTS: Post[] = [
       {
         titulo: "Cuánto dura y qué incluye",
         parrafos: [
-          "En nuestro consultorio la primera consulta dura alrededor de 40 minutos. Incluye una revisión completa de la boca: estado de las encías, de cada pieza, de las restauraciones existentes y de cómo contactan los dientes al morder.",
+          "En nuestro consultorio la primera consulta dura alrededor de 60 minutos. Incluye una revisión completa de la boca: estado de las encías, de cada pieza, de las restauraciones existentes y de cómo contactan los dientes al morder.",
           "Cuando hace falta, se toman los registros correspondientes. No se hace tratamiento en esa cita, salvo que haya una urgencia que contener.",
         ],
       },

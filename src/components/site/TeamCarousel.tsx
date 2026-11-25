@@ -109,7 +109,14 @@ function Carrusel({
   const [reduce, setReduce] = useState(false);
 
   const trackRef = useRef<HTMLUListElement>(null);
+  const viewportRef = useRef<HTMLDivElement>(null);
   const pasoRef = useRef(0);
+  /** Furthest the track may travel (px) without leaving empty space on the right. */
+  const [tope, setTope] = useState(0);
+  /** Last index the strip can start at; on desktop several cards share the view. */
+  const [ultimo, setUltimo] = useState(miembros.length - 1);
+  /** True when more than one card fits, so a tap opens in place instead of travelling. */
+  const [variosVisibles, setVariosVisibles] = useState(false);
   const inicio = useRef({ x: 0, t: 0 });
   const presionando = useRef(false);
   const movido = useRef(false);
@@ -136,24 +143,44 @@ function Carrusel({
 
   useEffect(() => {
     const sync = () => {
-      pasoRef.current = medirPaso();
+      const paso = medirPaso();
+      pasoRef.current = paso;
+      const track = trackRef.current;
+      const viewport = viewportRef.current;
+      if (!track || !viewport || !paso) return;
+      const ultimaCard = track.lastElementChild as HTMLElement | null;
+      const anchoTotal = ultimaCard
+        ? ultimaCard.offsetLeft + ultimaCard.offsetWidth
+        : track.scrollWidth;
+      const visibles = viewport.clientWidth / paso;
+      const multi = visibles >= 1.5;
+      const max = multi ? Math.max(0, anchoTotal - viewport.clientWidth) : Infinity;
+      setVariosVisibles(multi);
+      setTope(max);
+      setUltimo(
+        multi ? Math.min(total - 1, Math.ceil(max / paso - 0.01)) : total - 1,
+      );
     };
     sync();
     window.addEventListener("resize", sync);
     return () => window.removeEventListener("resize", sync);
-  }, [medirPaso]);
+  }, [medirPaso, total]);
 
   /** Travelling closes whatever was open: the strip should arrive quiet. */
   const ir = useCallback(
     (indice: number) => {
-      setActivo(Math.min(Math.max(indice, 0), total - 1));
+      setActivo(Math.min(Math.max(indice, 0), ultimo));
       setAbierto(null);
     },
-    [total],
+    [ultimo],
   );
 
   /** Clicking a side card brings it to the centre and opens it in one move. */
   function alTocarCard(indice: number) {
+    if (variosVisibles) {
+      setAbierto((previo) => (previo === indice ? null : indice));
+      return;
+    }
     if (indice !== activo) {
       setActivo(indice);
       setAbierto(indice);
@@ -185,7 +212,7 @@ function Carrusel({
     }
 
     const enElBorde =
-      (activo === 0 && delta > 0) || (activo === total - 1 && delta < 0);
+      (activo === 0 && delta > 0) || (activo === ultimo && delta < 0);
     // Friction past the ends rather than an invisible wall.
     setDrag(enElBorde ? delta * 0.32 : delta);
   }
@@ -228,7 +255,7 @@ function Carrusel({
       aria-label="Equipo del consultorio"
     >
       <div
-        className="relative w-full [--alto:clamp(460px,125vw,600px)] [--ancho:100%] [--gap:24px] [--paso:calc(var(--ancho)+var(--gap))] [--reveal:36%] lg:[--alto:clamp(360px,92vw,500px)] lg:[--ancho:clamp(240px,72vw,340px)] lg:[--gap:36px]"
+        className="relative w-full [--alto:clamp(460px,125vw,600px)] [--ancho:calc((100%-var(--gap))/1.15)] [--gap:16px] [--paso:calc(var(--ancho)+var(--gap))] md:[--alto:clamp(440px,58vw,560px)] md:[--ancho:calc((100%-2*var(--gap))/2.5)] md:[--gap:20px] lg:[--gap:28px]"
         onKeyDown={(event) => {
           if (event.key === "ArrowRight") ir(activo + 1);
           if (event.key === "ArrowLeft") ir(activo - 1);
@@ -236,7 +263,8 @@ function Carrusel({
         }}
       >
         <div
-          className="touch-pan-y overflow-hidden px-[max(0px,calc(50%-var(--ancho)/2))] py-2 select-none"
+          ref={viewportRef}
+          className="touch-pan-y overflow-hidden py-2 select-none"
           onClickCapture={onClickCapture}
           onPointerDown={onPointerDown}
           onPointerMove={onPointerMove}
@@ -247,7 +275,9 @@ function Carrusel({
             ref={trackRef}
             className="flex list-none gap-[var(--gap)] will-change-transform"
             style={{
-              transform: `translate3d(calc(${-activo} * var(--paso) + ${drag}px), 0, 0)`,
+              transform: Number.isFinite(tope)
+                ? `translate3d(max(calc(${-activo} * var(--paso) + ${drag}px), ${-tope + Math.min(0, drag) * 0.32}px), 0, 0)`
+                : `translate3d(calc(${-activo} * var(--paso) + ${drag}px), 0, 0)`,
               transition:
                 reduce || arrastrando
                   ? "none"
@@ -258,7 +288,7 @@ function Carrusel({
               <li key={miembro.slug} className="w-[var(--ancho)] shrink-0">
                 <Card
                   miembro={miembro}
-                  activo={indice === activo}
+                  activo={variosVisibles || indice === activo}
                   abierto={indice === abierto}
                   onTocar={() => alTocarCard(indice)}
                 />
@@ -276,7 +306,7 @@ function Carrusel({
             />
             <Flecha
               lado="derecha"
-              disabled={activo === total - 1}
+              disabled={activo >= ultimo}
               onClick={() => ir(activo + 1)}
             />
           </>
@@ -285,12 +315,12 @@ function Carrusel({
 
       {solo ? null : (
         <ol className="flex list-none items-center gap-2">
-          {miembros.map((miembro, indice) => (
+          {miembros.slice(0, ultimo + 1).map((miembro, indice) => (
             <li key={miembro.slug} className="flex">
               <button
                 type="button"
                 onClick={() => ir(indice)}
-                aria-label={`Ver a ${miembro.nombre}`}
+                aria-label={`Ir a ${miembro.nombre}`}
                 aria-current={indice === activo}
                 className={cn(
                   "block h-[6px] rounded-full transition-[width,background-color] duration-300 ease-out active:scale-95 motion-reduce:transition-none",
@@ -350,7 +380,7 @@ function Card({
           src={miembro.foto.src}
           alt={miembro.foto.alt}
           fill
-          sizes="(min-width: 1024px) 540px, (min-width: 768px) 50vw, 100vw"
+          sizes="(min-width: 1024px) 460px, (min-width: 768px) 40vw, 90vw"
           className="object-cover object-[50%_8%]"
           draggable={false}
         />

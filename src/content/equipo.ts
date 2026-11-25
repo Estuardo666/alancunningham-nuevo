@@ -28,7 +28,7 @@ export const EQUIPO: Profesional[] = [
     matricula: "M.N. 42463",
     especialidad: "Especialista en rehabilitación dentobucomaxilar",
     foto: {
-      src: "/team/Alan.jpeg",
+      src: "/team/alan-cunningham.jpg",
       alt: "Od. Alan Cunningham, titular del consultorio",
     },
     bio: [
@@ -38,7 +38,7 @@ export const EQUIPO: Profesional[] = [
     ],
     formacion: [
       "Odontólogo",
-      "Especialista en rehabilitación oral y prótesis",
+      "Especialista en Rehabilitación Oral y Prótesis (UBA)",
       "Técnico de laboratorio dental",
       "Docente de la Universidad de Buenos Aires (UBA)",
     ],
@@ -133,24 +133,51 @@ export const EQUIPO_CARRUSEL: MiembroCarrusel[] = [
     ficha: true,
     bio: "Marcela es nuestra especialista en ortodoncia y alineadores. Cuenta con acreditaciones de Invisalign, Keep Smile, Line Up, Little Smile y UFORIA, además de conocimientos en diseño y fabricación de alineadores.",
   },
-];
-
-/** Confirmed biographies; portraits will be supplied separately. */
-export const EQUIPO_PENDIENTE_FOTO = [
   {
+    _fuente: "real",
+    slug: "andres-loyola",
     nombre: "Dr. Esp. Andrés Loyola",
+    especialidad: "Especialista en endodoncia y microcirugía apical",
+    etiqueta: "Endodoncia",
+    foto: {
+      src: "/team/andres-loyola.jpg",
+      alt: "Dr. Esp. Andrés Loyola, especialista en endodoncia y microcirugía apical",
+    },
+    tono: "cyan",
     bio: "Andrés es nuestro especialista en endodoncia y microcirugía apical, además de ser docente de la Universidad de Buenos Aires.",
   },
   {
+    _fuente: "real",
+    slug: "estefano-alban",
     nombre: "Dr. Esp. Estefano Alban",
+    especialidad: "Especialista en endodoncia y microcirugía apical",
+    etiqueta: "Endodoncia",
+    foto: {
+      src: "/team/estefano-alban.jpg",
+      alt: "Dr. Esp. Estefano Alban, especialista en endodoncia y microcirugía apical",
+    },
+    tono: "lima",
     bio: "Estefano es nuestro segundo especialista en endodoncia y microcirugía apical, además de ser docente de la Universidad de Buenos Aires. Se destaca por la eliminación de instrumentos fracturados y la atención de derivaciones de colegas.",
   },
   {
+    _fuente: "real",
+    slug: "avril-penalva",
+    nombre: "Avril Peñalva",
+    especialidad: "Asistente dental",
+    etiqueta: "Asistente dental",
+    foto: {
+      src: "/team/avril-penalva.jpg",
+      alt: "Avril Peñalva, asistente dental",
+    },
+    tono: "violeta",
+    bio: "Avril es nuestra asistente dental y está a cargo de la organización y el orden de nuestra clínica.",
+  },
+];
+
+/** Confirmed biography; the portrait will be supplied separately. */
+export const EQUIPO_PENDIENTE_FOTO = [
+  {
     nombre: "Dra. Meryl Williams",
     bio: "Meryl es nuestra especialista en periodoncia y está a cargo de las cirugías periodontales. Actualmente es docente de la Universidad de Buenos Aires.",
-  },
-  {
-    nombre: "Avril Peñalva",
-    bio: "Avril es nuestra asistente dental y está a cargo de la organización y el orden de nuestra clínica.",
   },
 ] as const;

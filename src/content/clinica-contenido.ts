@@ -161,6 +161,30 @@ export const TECNOLOGIA: Tecnologia[] = [
     nombre: "Escáner facial Omni (Italia)",
     descripcion:
       "Registra rasgos faciales para complementar la planificación digital de la sonrisa y valorar su integración estética.",
+    imagen: {
+      src: "/images/tecnologia/escaner-facial-omni.jpg",
+      alt: "Escáner facial Omni registrando el rostro de una paciente",
+    },
+  },
+  {
+    _fuente: "real",
+    nombre: "Escáner intraoral 3Shape TRIOS",
+    descripcion:
+      "Toma una impresión digital en color de dientes y encías en pocos minutos. Permite ver el escaneo en pantalla con el paciente y enviar el archivo directo al laboratorio, sin pastas ni moldes.",
+    imagen: {
+      src: "/images/tecnologia/escaner-3shape.jpg",
+      alt: "Escáner intraoral 3Shape",
+    },
+  },
+  {
+    _fuente: "real",
+    nombre: "Horno de cerámica",
+    descripcion:
+      "Cuece y glasea la porcelana de carillas y coronas con ciclos de temperatura controlados. Permite ajustar color, forma y brillo de cada pieza antes del cementado definitivo.",
+    imagen: {
+      src: "/images/tecnologia/horno-ceramica.jpg",
+      alt: "Horno de cerámica dental",
+    },
   },
   {
     _fuente: "real",
@@ -190,7 +214,7 @@ export const COMO_TRABAJAMOS = [
   {
     titulo: "Evaluación inicial",
     descripcion:
-      "Una primera evaluación de 40 minutos para revisar encías, piezas y mordida, y tomar los registros que hagan falta. Te explicamos el diagnóstico y el próximo paso, sin compromiso.",
+      "Una primera evaluación de 60 minutos para diagnosticar, verificar tejidos blandos y oclusión, y tomar registros digitales y fotográficos. Te explicamos tu diagnóstico y cómo seguir, paso por paso.",
     imagen: {
       src: "/images/estudio-16x9/paso-evaluacion.webp",
       alt: "Odontólogo revisando a un paciente en el sillón del consultorio",
@@ -208,7 +232,7 @@ export const COMO_TRABAJAMOS = [
   {
     titulo: "Tratamiento",
     descripcion:
-      "Escaneo intraoral en lugar de moldes, prueba en boca antes de lo definitivo y control de mordida en cada etapa.",
+      "Escaneo intraoral y fotografías en vez de registros convencionales con pastas, prueba de maquetas y control de oclusión y estética en todas las etapas.",
     imagen: {
       src: "/images/estudio-16x9/paso-tratamiento.webp",
       alt: "Escáner intraoral en mano junto al sillón odontológico",
@@ -240,7 +264,7 @@ export const DIFERENCIALES = [
   {
     titulo: "Equipamiento con nombre propio",
     descripcion:
-      "Escáneres intraorales Runyes 3DS V3 Pro y Straumann SIRIOS, escáner facial Omni de Italia y láser para tejido blando.",
+      "Escáneres intraorales Runyes 3DS V3 Pro, Straumann SIRIOS y 3Shape, escáner facial Omni de Italia, horno de cerámica y láser para tejido blando.",
   },
   {
     titulo: "Acreditados por Invisalign",

@@ -81,7 +81,7 @@ export default function DentistaEnNunezPage() {
             <Prose
               parrafos={[
                 `El consultorio está en ${CLINICA.direccion.calle}, en pleno ${CLINICA.direccion.barrio}, a pocas cuadras del límite con Belgrano. Atendemos ${CLINICA.horariosTexto.toLowerCase()}.`,
-                "La consulta inicial dura alrededor de 40 minutos y termina con un plan de tratamiento por escrito, con lo urgente separado de lo conveniente y de lo opcional. No hay tratamientos inventados ni urgencias fabricadas para cerrar una venta.",
+                "La consulta inicial dura alrededor de 60 minutos y termina con un plan de tratamiento por escrito, con lo urgente separado de lo conveniente y de lo opcional. No hay tratamientos inventados ni urgencias fabricadas para cerrar una venta.",
                 "Trabajamos con escáner intraoral Runyes 3DS para los registros —sin pasta de impresión— y con láser para los procedimientos de tejido blando, lo que acorta el postoperatorio.",
               ]}
             />

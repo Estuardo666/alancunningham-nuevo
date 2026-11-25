@@ -51,3 +51,5 @@ temp/
 # Raw media (too large for git)
 public/Nueva multimedia/
 *.wav
+
+.env*

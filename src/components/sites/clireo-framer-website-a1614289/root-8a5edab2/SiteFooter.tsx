@@ -220,8 +220,11 @@ export function SiteFooter({
                     strokeWidth={1.8}
                     aria-hidden
                   />
-                  <span>
+                  <span className="flex flex-col gap-1">
                     <T>{CLINICA.horariosTexto}</T>
+                    <span className="text-white/60">
+                      <T>{CLINICA.modalidadAtencion}</T>
+                    </span>
                   </span>
                 </span>
               </address>

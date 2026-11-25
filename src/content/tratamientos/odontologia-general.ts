@@ -34,7 +34,7 @@ export const ODONTOLOGIA_GENERAL: Pilar = {
     {
       titulo: "Consulta inicial",
       descripcion:
-        "Revisión completa de la boca, evaluación de encías y de piezas, y estudio radiográfico cuando corresponde. La consulta inicial dura alrededor de 40 minutos.",
+        "Revisión completa de la boca, evaluación de encías y de piezas, y estudio radiográfico cuando corresponde. La consulta inicial dura alrededor de 60 minutos.",
     },
     {
       titulo: "Plan por escrito",
@@ -56,7 +56,7 @@ export const ODONTOLOGIA_GENERAL: Pilar = {
     {
       titulo: "Consulta inicial",
       descripcion:
-        "40 minutos de evaluación, diagnóstico y plan por escrito, sin compromiso de tratamiento.",
+        "60 minutos de evaluación, diagnóstico y plan por escrito, sin compromiso de tratamiento.",
     },
     {
       titulo: "Se dice lo que no hace falta",
