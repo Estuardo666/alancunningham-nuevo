@@ -8,6 +8,11 @@ export interface Profesional extends ConFuente {
   matricula: string;
   especialidad: string;
   foto: Imagen;
+  /**
+   * Tailwind `object-[x_y]` class that keeps the face in frame when the team
+   * card opens and the portrait gets shorter. Defaults to `object-[50%_8%]`.
+   */
+  encuadre?: string;
   bio: string[];
   formacion: string[];
   /** Slugs of the treatments this professional works on. */
@@ -31,6 +36,7 @@ export const EQUIPO: Profesional[] = [
       src: "/team/alan-cunningham.jpg",
       alt: "Od. Alan Cunningham, titular del consultorio",
     },
+    encuadre: "object-[50%_42%]",
     bio: [
       "Alan Cunningham es odontólogo, especialista en rehabilitación dentobucomaxilar y docente de la Universidad de Buenos Aires. Es el titular del Estudio Odontológico Cunningham, en Núñez. El estudio está acreditado por Invisalign y los parámetros estéticos se definen tomando como referencia bibliográfica a Fradiani.",
       "Su formación tiene una particularidad que se nota en el trabajo diario: además de odontólogo es técnico de laboratorio. Eso significa que conoce de primera mano cómo se fabrica una corona, una carilla o una prótesis, y no sólo cómo se indica. La distancia entre lo que se diseña en el consultorio y lo que llega terminado desde el laboratorio se acorta cuando la misma persona entiende los dos lados del proceso.",
@@ -99,6 +105,8 @@ export interface MiembroCarrusel extends ConFuente {
   /** Credentials listed under the role line. */
   especialidades?: string[];
   foto: Imagen;
+  /** See `Profesional.encuadre`. */
+  encuadre?: string;
   /** Palette tint for the card. `titular` is the only solid one. */
   tono: "titular" | "coral" | "cyan" | "lima" | "violeta" | "blanca";
   /** Only the owner links to a profile page. */
@@ -115,6 +123,7 @@ export const EQUIPO_CARRUSEL: MiembroCarrusel[] = [
     etiqueta: TITULAR.matricula,
     especialidades: TITULAR.formacion,
     foto: TITULAR.foto,
+    encuadre: TITULAR.encuadre,
     tono: "titular",
     ficha: true,
     bio: TITULAR.bio[0],

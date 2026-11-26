@@ -82,6 +82,7 @@
   --color-button-secondary-arrow-hover-foreground: var(--button-secondary-arrow-hover-foreground);
   --color-success: var(--success);
   --color-on-strong: var(--on-strong);
+  --color-on-dark-accent: var(--on-dark-accent);
   --color-hairline: var(--hairline);
   --color-tint-1-bg: var(--tint-1-bg);
   --color-tint-1-border: var(--tint-1-border);
@@ -139,14 +140,16 @@
   --accent-coral: #2563eb;
   --accent-coral-foreground: #fafaf7;
   --accent-coral-strong: #0e0f12;
-  --accent-yellow: #c9d9fc;
-  --accent-yellow-strong: #0e0f12;
+  --accent-yellow: #9db9fb;
+  --accent-yellow-strong: #1d4ed8;
   --button-light-hover: #ebebe6;
   --button-tinted-hover: #d3e0fc;
   --accent-coral-hover: #1d4ed8;
   --accent-coral-hover-foreground: #fafaf7;
   --success: #15803d;
   --on-strong: #fafaf7;
+  /* Blue that reads on the always-dark footer and hero surfaces. */
+  --on-dark-accent: #5b8cff;
   --hairline: rgba(14, 15, 18, 0.14);
 
   /* CTA system: one dark-surface variant, two light-surface variants. */
@@ -231,7 +234,7 @@
   --accent-coral: #5b8cff;
   --accent-coral-foreground: #0e0f12;
   --accent-coral-strong: #5b8cff;
-  --accent-yellow: #26345a;
+  --accent-yellow: #5b8cff;
   --accent-yellow-strong: #7da3ff;
   --button-light-hover: #1c1d22;
   --button-tinted-hover: #26345a;
@@ -309,7 +312,7 @@
     --accent-coral: #5b8cff;
     --accent-coral-foreground: #0e0f12;
     --accent-coral-strong: #5b8cff;
-    --accent-yellow: #26345a;
+    --accent-yellow: #5b8cff;
     --accent-yellow-strong: #7da3ff;
     --button-light-hover: #1c1d22;
     --button-tinted-hover: #26345a;
@@ -445,7 +448,7 @@
 
   .faq-accordion__item:not([data-open="true"]):hover .faq-accordion__icon {
     background: var(--accent-yellow);
-    color: var(--accent-foreground);
+    color: var(--color-black);
   }
 
   .faq-accordion__item[data-open="true"] .faq-accordion__icon {

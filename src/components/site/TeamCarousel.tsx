@@ -381,7 +381,10 @@ function Card({
           alt={miembro.foto.alt}
           fill
           sizes="(min-width: 1024px) 460px, (min-width: 768px) 40vw, 90vw"
-          className="object-cover object-[50%_8%]"
+          className={cn(
+            "object-cover",
+            miembro.encuadre ?? "object-[50%_8%]",
+          )}
           draggable={false}
         />
       </div>

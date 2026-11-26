@@ -39,7 +39,7 @@ export function BlogCard({
           <p className="text-[16px] leading-[23.2px] tracking-[-0.24px] text-muted-foreground">
             {post.fechaTexto}
           </p>
-          <span className="rounded-full bg-accent-yellow px-2 py-1 text-xs leading-none font-medium text-accent-foreground">
+          <span className="rounded-full bg-accent-yellow px-2 py-1 text-xs leading-none font-medium text-black">
             {post.categoria}
           </span>
         </div>

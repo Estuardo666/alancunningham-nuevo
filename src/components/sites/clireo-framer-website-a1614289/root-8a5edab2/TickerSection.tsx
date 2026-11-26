@@ -8,7 +8,7 @@ const ITEMS = TRATAMIENTOS.map((t) => t.nombre);
 const SPARKLE_COLORS = [
   "text-accent-coral",
   "text-accent-yellow",
-  "text-secondary",
+  "text-primary",
   "text-brand",
 ] as const;
 

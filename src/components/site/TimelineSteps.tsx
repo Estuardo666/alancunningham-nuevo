@@ -56,7 +56,7 @@ export function TimelineSteps({
                 className={cn(
                   "flex h-10 w-10 shrink-0 items-center justify-center rounded-[12px]",
                   claro
-                    ? "bg-accent-yellow text-secondary-foreground"
+                    ? "bg-accent-yellow text-black"
                     : STEP_ACCENTS[index % STEP_ACCENTS.length],
                 )}
               >

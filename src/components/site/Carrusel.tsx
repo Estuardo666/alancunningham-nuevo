@@ -108,7 +108,7 @@ function Flecha({
       aria-label={label}
       onClick={onClick}
       disabled={disabled}
-      className="flex h-11 w-11 items-center justify-center rounded-[20px] bg-secondary text-secondary-foreground transition-colors duration-300 hover:bg-button-tinted-hover disabled:pointer-events-none disabled:opacity-50"
+      className="flex h-11 w-11 items-center justify-center rounded-[20px] bg-primary text-primary-foreground transition-colors duration-300 hover:bg-brand-hover disabled:pointer-events-none disabled:opacity-50"
     >
       <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden fill="none">
         <path

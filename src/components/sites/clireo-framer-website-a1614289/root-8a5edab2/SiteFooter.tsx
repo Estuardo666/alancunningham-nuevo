@@ -69,10 +69,10 @@ const SOCIAL_LINKS = [
 ] as const;
 
 const FOOTER_HOVER_TONES = [
-  "hover:text-accent-coral",
-  "hover:text-secondary",
-  "hover:text-accent-yellow",
-  "hover:text-white/70",
+  "hover:text-on-dark-accent",
+  "hover:text-on-dark-accent",
+  "hover:text-on-dark-accent",
+  "hover:text-on-dark-accent",
 ] as const;
 
 const WHATSAPP_PATH =
@@ -198,7 +198,7 @@ export function SiteFooter({
               <address className="flex flex-col gap-2 text-[17px] leading-[23.46px] tracking-[-0.34px] text-white not-italic">
                 <span className="flex items-start gap-2">
                   <MapPin
-                    className="mt-1 h-4 w-4 shrink-0 text-accent-yellow"
+                    className="mt-1 h-4 w-4 shrink-0 text-on-dark-accent"
                     strokeWidth={1.8}
                     aria-hidden
                   />
@@ -216,7 +216,7 @@ export function SiteFooter({
                 </a>
                 <span className="flex items-start gap-2 text-white/70">
                   <Clock3
-                    className="mt-1 h-4 w-4 shrink-0 text-accent-yellow"
+                    className="mt-1 h-4 w-4 shrink-0 text-on-dark-accent"
                     strokeWidth={1.8}
                     aria-hidden
                   />
@@ -239,7 +239,7 @@ export function SiteFooter({
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={label}
-                    className="flex h-8 w-8 items-center justify-center rounded-full border border-white/25 text-white transition-colors duration-200 hover:border-accent-yellow hover:bg-accent-yellow hover:text-secondary-foreground"
+                    className="flex h-8 w-8 items-center justify-center rounded-full border border-white/25 text-white transition-colors duration-200 hover:border-on-dark-accent hover:bg-on-dark-accent hover:text-black"
                   >
                     <SocialIcon name={icon} />
                   </a>
@@ -250,7 +250,7 @@ export function SiteFooter({
             <div className="grid flex-1 grid-cols-2 gap-8 lg:grid-cols-4">
               {COLUMNS.map((column, columnIndex) => (
                 <div key={column.heading} className="flex flex-col gap-3">
-                  <p className="text-[14px] leading-[18.2px] tracking-[1.26px] text-white uppercase">
+                  <p className="text-[14px] leading-[18.2px] tracking-[1.26px] text-on-dark-accent uppercase">
                     <T>{column.heading}</T>
                   </p>
                   {column.links.map((link) => (
@@ -271,10 +271,10 @@ export function SiteFooter({
 
       <div className="w-full px-5 lg:px-8">
         <div className="mx-auto flex w-full max-w-[1300px] flex-col items-center justify-between gap-2 py-10 sm:flex-row">
-          <p className="text-[16px] leading-[23.2px] tracking-[-0.24px] text-white">
+          <p className="text-[16px] leading-[23.2px] tracking-[-0.24px] text-on-dark-accent">
             © 2026 {CLINICA.nombre}. <T>Todos los derechos reservados.</T>
           </p>
-          <p className="text-[16px] leading-[23.2px] tracking-[-0.24px] text-white">
+          <p className="text-[16px] leading-[23.2px] tracking-[-0.24px] text-on-dark-accent">
             {CLINICA.titular} · M.N. 42463 · Núñez, Buenos Aires
           </p>
         </div>

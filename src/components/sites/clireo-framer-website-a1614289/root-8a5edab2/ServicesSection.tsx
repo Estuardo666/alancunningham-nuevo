@@ -146,7 +146,7 @@ function CarouselButton({
       type="button"
       aria-label={tr(label)}
       onClick={onClick}
-      className="flex h-11 w-11 items-center justify-center rounded-[20px] bg-secondary text-secondary-foreground transition-colors duration-300 hover:bg-button-tinted-hover"
+      className="flex h-11 w-11 items-center justify-center rounded-[20px] bg-primary text-primary-foreground transition-colors duration-300 hover:bg-brand-hover"
     >
       <Image
         src={asset(icon)}

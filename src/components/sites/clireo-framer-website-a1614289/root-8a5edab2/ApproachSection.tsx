@@ -61,7 +61,7 @@ const TAB_TONES = [
     idle: "bg-secondary/20 text-foreground",
   },
   {
-    active: "bg-accent-yellow text-secondary-foreground",
+    active: "bg-accent-yellow text-black",
     idle: "bg-accent-yellow/25 text-foreground",
   },
 ] as const;
