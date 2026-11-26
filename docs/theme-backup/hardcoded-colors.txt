@@ -1,0 +1,44 @@
+== src/app/turismo-odontologico/page.tsx
+57:  "bg-[#f8f0eb] border-[#ecd0c5] dark:bg-[#321c1a] dark:border-[#7d4a43]",
+58:  "bg-[#eff8f7] border-[#c8e7e3] dark:bg-[#163d3b] dark:border-[#3f8580]",
+59:  "bg-[#f2efff] border-[#d9cff7] dark:bg-[#272044] dark:border-[#6253a3]",
+60:  "bg-[#f8f5e8] border-[#e8dbaf] dark:bg-[#343d1b] dark:border-[#6a7b32]",
+64:  "bg-[#fff1ed] border-[#f1c9bf] dark:bg-[#321c1a] dark:border-[#7d4a43]",
+65:  "bg-[#f1edff] border-[#d7ccf7] dark:bg-[#272044] dark:border-[#6253a3]",
+66:  "bg-[#e9fbf9] border-[#bce9e5] dark:bg-[#163d3b] dark:border-[#3f8580]",
+67:  "bg-[#f4f8e2] border-[#dce8af] dark:bg-[#343d1b] dark:border-[#6a7b32]",
+68:  "bg-[#edf5ff] border-[#c9def4] dark:bg-[#20334a] dark:border-[#4f79a1]",
+73:  "bg-[#d7ccf7] text-[#4d2c98] dark:bg-[#6253a3] dark:text-white",
+74:  "bg-[#bce9e5] text-[#147a76] dark:bg-[#3f8580] dark:text-white",
+75:  "bg-[#dce8af] text-[#68751f] dark:bg-[#6a7b32] dark:text-white",
+76:  "bg-[#c9def4] text-[#2d5f8f] dark:bg-[#4f79a1] dark:text-white",
+== src/components/site/Cards.tsx
+19:  "bg-[#fff1ed] border-[#f1c9bf] dark:bg-[#321c1a] dark:border-[#7d4a43]",
+20:  "bg-[#f1edff] border-[#d7ccf7] dark:bg-[#272044] dark:border-[#6253a3]",
+21:  "bg-[#e9fbf9] border-[#bce9e5] dark:bg-[#163d3b] dark:border-[#3f8580]",
+22:  "bg-[#f4f8e2] border-[#dce8af] dark:bg-[#343d1b] dark:border-[#6a7b32]",
+23:  "bg-[#f5effb] border-[#ddc9ef] dark:bg-[#302040] dark:border-[#765196]",
+24:  "bg-[#fff6df] border-[#f0dca8] dark:bg-[#413316] dark:border-[#8c6d2f]",
+25:  "bg-[#edf5ff] border-[#c9def4] dark:bg-[#20334a] dark:border-[#4f79a1]",
+== src/components/site/PageShell.tsx
+432:    "border-[#f1c9bf] bg-[#fff1ed] dark:border-[#7d4a43] dark:bg-[#321c1a]",
+433:    "border-[#bce9e5] bg-[#e9fbf9] dark:border-[#3f8580] dark:bg-[#163d3b]",
+434:    "border-[#dce8af] bg-[#f4f8e2] dark:border-[#6a7b32] dark:bg-[#343d1b]",
+== src/components/site/TimelineSteps.tsx
+24:  "bg-[#e9fbf9] text-[#147a76]",
+25:  "bg-[#f5effb] text-[#74449c]",
+== src/components/site/ConsultaForm.tsx
+35:        "relative w-full overflow-hidden rounded-[20px] bg-[#30005b] p-[30px] text-white ring-1 ring-white/10 shadow-[var(--clireo-shadow-md)]",
+== src/components/site/Blocks.tsx
+124:      <span className="flex h-10 w-10 items-center justify-center rounded-[10px] bg-[#009ee3]/10">
+== src/components/sites/clireo-framer-website-a1614289/shared/pilarColores.ts
+9: * None of them may be the section background (`--surface-strong`, #30005b) or a
+16:  { bg: "#6e55ff", fg: "#ffffff" }, // brand
+17:  { bg: "#f2f0ff", fg: "#30005b" }, // surface-secondary
+18:  { bg: "#ff6852", fg: "#30005b" }, // accent-coral
+19:  { bg: "#4f37d1", fg: "#ffffff" }, // brand-hover
+20:  { bg: "#b4e843", fg: "#30005b" }, // accent-yellow
+21:  { bg: "#d94332", fg: "#ffffff" }, // coral-hover (dark)
+22:  { bg: "#8f7bff", fg: "#1d0038" }, // brand tint
+== src/app/contacto/page.tsx
+168:          className="pointer-events-none absolute left-1/2 top-[52%] h-11 w-11 -translate-x-1/2 -translate-y-full text-accent-coral drop-shadow-[0_3px_4px_rgba(38,7,78,0.28)]"
