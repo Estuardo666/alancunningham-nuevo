@@ -119,7 +119,7 @@ function SocialIcon({ name }: { name: (typeof SOCIAL_LINKS)[number]["icon"] }) {
 
 function WhatsAppMark() {
   return (
-    <svg viewBox="0 0 24 24" className="h-4 w-4" aria-hidden>
+    <svg viewBox="0 0 24 24" className="h-4 w-4 shrink-0 text-on-dark-accent" aria-hidden>
       <path d={WHATSAPP_PATH} fill="currentColor" />
     </svg>
   );
@@ -239,7 +239,7 @@ export function SiteFooter({
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={label}
-                    className="flex h-8 w-8 items-center justify-center rounded-full border border-white/25 text-white transition-colors duration-200 hover:border-on-dark-accent hover:bg-on-dark-accent hover:text-black"
+                    className="flex h-8 w-8 items-center justify-center rounded-full border border-on-dark-accent/40 text-on-dark-accent transition-colors duration-200 hover:border-on-dark-accent hover:bg-on-dark-accent hover:text-black"
                   >
                     <SocialIcon name={icon} />
                   </a>
@@ -271,10 +271,10 @@ export function SiteFooter({
 
       <div className="w-full px-5 lg:px-8">
         <div className="mx-auto flex w-full max-w-[1300px] flex-col items-center justify-between gap-2 py-10 sm:flex-row">
-          <p className="text-[16px] leading-[23.2px] tracking-[-0.24px] text-on-dark-accent">
+          <p className="text-[16px] leading-[23.2px] tracking-[-0.24px] text-white">
             © 2026 {CLINICA.nombre}. <T>Todos los derechos reservados.</T>
           </p>
-          <p className="text-[16px] leading-[23.2px] tracking-[-0.24px] text-on-dark-accent">
+          <p className="text-[16px] leading-[23.2px] tracking-[-0.24px] text-white">
             {CLINICA.titular} · M.N. 42463 · Núñez, Buenos Aires
           </p>
         </div>

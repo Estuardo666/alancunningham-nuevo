@@ -157,11 +157,11 @@ function MapaContacto() {
           src={MAP_SRC}
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          className="h-full w-full border-0 saturate-[0.72] hue-rotate-[170deg]"
+          className="h-full w-full border-0 grayscale dark:invert dark:contrast-[0.92]"
         />
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 bg-primary/10 mix-blend-multiply"
+          className="pointer-events-none absolute inset-0 bg-primary opacity-45 mix-blend-color dark:opacity-60"
         />
         <MapPin
           aria-hidden
