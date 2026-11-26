@@ -165,7 +165,7 @@ function MapaContacto() {
         />
         <MapPin
           aria-hidden
-          className="pointer-events-none absolute left-1/2 top-[52%] h-11 w-11 -translate-x-1/2 -translate-y-full text-accent-coral drop-shadow-[0_3px_4px_rgba(38,7,78,0.28)]"
+          className="pointer-events-none absolute left-1/2 top-[52%] h-11 w-11 -translate-x-1/2 -translate-y-full text-accent-coral drop-shadow-[0_3px_4px_rgba(14,15,18,0.28)]"
           fill="currentColor"
           stroke="white"
           strokeWidth={1.5}

@@ -32,7 +32,7 @@ export function ConsultaForm({
   return (
     <div
       className={cn(
-        "relative w-full overflow-hidden rounded-[20px] bg-[#30005b] p-[30px] text-white ring-1 ring-white/10 shadow-[var(--clireo-shadow-md)]",
+        "relative w-full overflow-hidden rounded-[20px] bg-surface-strong p-[30px] text-white ring-1 ring-white/10 shadow-[var(--clireo-shadow-md)]",
         sticky && "lg:sticky lg:top-[90px]",
         sinPaddingMobile && "rounded-[16px] p-6 lg:p-[30px]",
         className,

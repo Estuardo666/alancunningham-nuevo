@@ -21,8 +21,8 @@ const STEP_ACCENTS = [
   "bg-accent-coral/20 text-accent-coral-strong",
   "bg-accent-yellow/45 text-secondary-foreground",
   "bg-secondary/30 text-secondary-foreground",
-  "bg-[#e9fbf9] text-[#147a76]",
-  "bg-[#f5effb] text-[#74449c]",
+  "bg-tint-badge-bg text-tint-badge-fg",
+  "bg-foreground/8 text-foreground",
 ];
 
 /**
